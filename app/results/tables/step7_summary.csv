@@ -1,0 +1,4 @@
+dataset,question,best blanket policy,engine value,engine vs best blanket,engine choice
+X5,whom to contact (message cost 0.033),message nobody (0.6038),0.6143,+0.0106; vs message everyone +0.0136 (+0.0062 to +0.0201),message 38%
+Starbucks,which offer,DISC 10/2 10d to all,16.11,-0.02 (-0.36 to +0.33),"DISC 10/2 10d 95%, DISC 7/3 7d 2%, BOGO 5/5 5d 1%, INFO 0/0 3d 1%"
+Hillstrom,which message,men's email to all,1.269,+0.000 (+0.000 to +0.000),Mens E-Mail 100%

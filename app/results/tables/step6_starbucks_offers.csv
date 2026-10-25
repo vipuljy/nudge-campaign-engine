@@ -1,0 +1,11 @@
+offer,type,social,buy_lift_pts,spend_lift,reward_paid,net_value
+DISC 10/2 10d,discount,True,22.07,8.16,0.81,7.35
+DISC 7/3 7d,discount,True,20.98,7.05,1.34,5.72
+BOGO 5/5 5d,bogo,True,20.33,7.13,2.21,4.92
+INFO 0/0 3d,informational,True,16.66,4.68,0.0,4.68
+BOGO 10/10 5d,bogo,True,21.37,6.72,3.43,3.3
+BOGO 10/10 7d,bogo,True,18.16,6.11,3.29,2.82
+INFO 0/0 4d,informational,False,8.28,2.73,0.0,2.73
+DISC 10/2 7d,discount,False,8.03,3.16,0.62,2.54
+BOGO 5/5 7d,bogo,False,8.92,3.35,1.82,1.54
+DISC 20/5 10d,discount,False,4.26,1.8,0.85,0.96

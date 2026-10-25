@@ -1,0 +1,4 @@
+row,Qini,top-30% lift (pts),% of clean-test quality
+ignore the chance,0.0045,3.9691,31.0
+use the recorded chance,0.0088,5.2631,61.0
+clean random test (reference),0.0145,5.5079,100.0

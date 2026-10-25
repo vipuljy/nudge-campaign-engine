@@ -1,0 +1,27 @@
+# Raw and derived data: never pushed (licences and customer privacy)
+data/
+data_x5/
+data_offers/
+models/
+
+# Virtual environments
+.venv/
+.venv-*/
+**/.venv/
+
+# Secrets (API keys)
+.streamlit/secrets.toml
+**/.streamlit/secrets.toml
+
+# Python and Jupyter clutter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# QA screenshots (local review only)
+qa_screenshots/
+
+# Local working notes and the first app attempt: kept on the laptop, not published
+CLAUDE.md
+APP_SPEC.md
+app/old_attempt/

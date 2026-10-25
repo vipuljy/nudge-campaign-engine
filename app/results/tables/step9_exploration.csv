@@ -1,0 +1,8 @@
+training data,customers,Qini,top-30% lift (pts),% of clean-test quality
+"Clean random test, all build customers",160031,0.0145,5.5079,100.0
+"Targeted only: top 30% messaged, rest not",79872,-0.0102,1.5552,-71.0
+Random exploration slice only (5%),8001,0.008,5.1706,55.0
+Random exploration slice only (10%),16003,0.0068,5.0141,47.0
+Random exploration slice only (20%),32006,0.0091,5.4629,63.0
+Random exploration slice only (30%),48009,0.0108,5.4404,75.0
+Random exploration slice only (50%),80015,0.0111,5.5468,76.0

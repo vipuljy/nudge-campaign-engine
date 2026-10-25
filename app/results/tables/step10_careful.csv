@@ -1,0 +1,3 @@
+control group,matched pairs,placebo gap $/wk,placebo passes,effect $/wk,effect %,low95 %,high95 %
+never-targeted look-alikes,742,-2.68,True,5.9,10.7,5.1,16.6
+targeted-later look-alikes,742,2.23,True,-3.63,-6.5,-11.2,-1.3

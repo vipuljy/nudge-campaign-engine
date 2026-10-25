@@ -1,0 +1,10 @@
+pandas
+numpy
+duckdb>=1.1,<2
+pyarrow
+matplotlib
+ipykernel
+nbconvert
+scikit-learn>=1.5,<1.8
+scikit-uplift
+lxml

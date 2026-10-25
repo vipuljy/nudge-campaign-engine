@@ -1,0 +1,139 @@
+{
+ "generated": "2026-10-25 16:00",
+ "assumptions": {
+  "basket_rs": {
+   "value": 1000,
+   "source": "Assumption: average Indian grocery basket"
+  },
+  "gross_margin": {
+   "value": 0.15,
+   "source": "Indian supermarket ~15% gross margin (DMart FY21-23 annual reports)"
+  },
+  "profit_per_purchase_rs": {
+   "value": 150.0,
+   "source": "basket x gross margin"
+  },
+  "channels_rs_per_contact": {
+   "Email": {
+    "value": 0.01,
+    "source": "Bulk email via AWS SES, about $0.10 per 1,000"
+   },
+   "SMS": {
+    "value": 0.1,
+    "source": "Promotional SMS ₹0.08-0.12 (Message Central, 2026)"
+   },
+   "WhatsApp": {
+    "value": 1.02,
+    "source": "Meta marketing template ₹0.8631 + 18% GST (MyOperator, 2026)"
+   },
+   "AI voice call": {
+    "value": 3.33,
+    "source": "~₹5 per minute, 40-second call (Edesy, 2026)"
+   }
+  },
+  "cashback_redeem_share": {
+   "value": 0.75,
+   "source": "Reward breakage typically 20-30% (Stashfin)"
+  },
+  "cafe_margin": {
+   "value": 0.75,
+   "source": "Costa Coffee India FY25 gross margin 75.4%"
+  },
+  "usd_to_rs_price_level": {
+   "value": 70,
+   "source": "Price-level conversion (US tall latte ~$5, India ~₹350), not the exchange rate"
+  },
+  "per_customers": 100000
+ },
+ "data_notes": {
+  "X5": "X5 RetailHero (Russian retail), random SMS test; roubles not used: rupee values are illustrative assumptions",
+  "Starbucks": "Simulated data released by Starbucks for analysis",
+  "Hillstrom": "MineThatData e-mail test, US, public",
+  "Complete Journey": "Dunnhumby, US, company chose whom to target (no random test)"
+ },
+ "files": [
+  "chart_complete_journey_weekly.csv",
+  "chart_qini.csv",
+  "printed_results.json",
+  "tables/step10_careful.csv",
+  "tables/step10_naive.csv",
+  "tables/step10_summary.csv",
+  "tables/step4_exam.csv",
+  "tables/step4_leaderboard.csv",
+  "tables/step4_share_of_extra_buyers.csv",
+  "tables/step5_by_share.csv",
+  "tables/step5_personas.csv",
+  "tables/step5_segments.csv",
+  "tables/step5_top20.csv",
+  "tables/step6_hillstrom_by_group.csv",
+  "tables/step6_hillstrom_effects.csv",
+  "tables/step6_starbucks_best_by_group.csv",
+  "tables/step6_starbucks_offer_types.csv",
+  "tables/step6_starbucks_offers.csv",
+  "tables/step7_summary.csv",
+  "tables/step7_x5_by_cost.csv",
+  "tables/step8_breakeven.csv",
+  "tables/step8_channel_ladder.csv",
+  "tables/step8_offer_economics.csv",
+  "tables/step8_offer_effects.csv",
+  "tables/step8_starbucks_budget.csv",
+  "tables/step8_starbucks_policies.csv",
+  "tables/step8_stress_test.csv",
+  "tables/step8_whatsapp_budget.csv",
+  "tables/step9_control_group.csv",
+  "tables/step9_decision_flip.csv",
+  "tables/step9_drift.csv",
+  "tables/step9_exploration.csv",
+  "tables/step9_lift_ladder.csv",
+  "tables/step9_monthly_behaviour.csv",
+  "tables/step9_naive_fair.csv",
+  "tables/step9_playbook.csv",
+  "tables/step9_recorded_chance.csv",
+  "tables/step9_sample_size.csv",
+  "tables/step9_send_time.csv",
+  "tables/step9_weeks_needed.csv",
+  "x5_boots.npz",
+  "x5_curves.csv",
+  "x5_summary.json",
+  "meta.json"
+ ],
+ "sources": {
+  "step4_leaderboard": "04_model_selection.ipynb cell 7",
+  "step4_exam": "04_model_selection.ipynb cell 10",
+  "step4_share_of_extra_buyers": "04_model_selection.ipynb cell 10",
+  "step5_top20": "05_who_to_message.ipynb cell 4",
+  "step5_by_share": "05_who_to_message.ipynb cell 8",
+  "step5_segments": "05_who_to_message.ipynb cell 14",
+  "step5_personas": "05_who_to_message.ipynb cell 14",
+  "step6_starbucks_offer_types": "06_offer_types.ipynb cell 10",
+  "step6_starbucks_offers": "06_offer_types.ipynb cell 12",
+  "step6_starbucks_best_by_group": "06_offer_types.ipynb cell 14",
+  "step6_hillstrom_effects": "06_offer_types.ipynb cell 18",
+  "step6_hillstrom_by_group": "06_offer_types.ipynb cell 20",
+  "step7_x5_by_cost": "07_engine.ipynb cell 5",
+  "step7_summary": "07_engine.ipynb cell 13",
+  "step8_channel_ladder": "08_money.ipynb cell 6",
+  "step8_whatsapp_budget": "08_money.ipynb cell 8",
+  "step8_offer_economics": "08_money.ipynb cell 10",
+  "step8_offer_effects": "08_money.ipynb cell 10",
+  "step8_starbucks_policies": "08_money.ipynb cell 12",
+  "step8_starbucks_budget": "08_money.ipynb cell 14",
+  "step8_breakeven": "08_money.ipynb cell 16",
+  "step8_stress_test": "08_money.ipynb cell 18",
+  "step9_naive_fair": "09_measure.ipynb cell 4",
+  "step9_decision_flip": "09_measure.ipynb cell 6",
+  "step9_sample_size": "09_measure.ipynb cell 8",
+  "step9_control_group": "09_measure.ipynb cell 10",
+  "step9_weeks_needed": "09_measure.ipynb cell 12",
+  "step9_exploration": "09_measure.ipynb cell 14",
+  "step9_recorded_chance": "09_measure.ipynb cell 18",
+  "step9_drift": "09_measure.ipynb cell 21",
+  "step9_monthly_behaviour": "09_measure.ipynb cell 21",
+  "step9_lift_ladder": "09_measure.ipynb cell 23",
+  "step9_send_time": "09_measure.ipynb cell 25",
+  "step9_playbook": "09_measure.ipynb cell 27",
+  "step10_naive": "10_contrast.ipynb cell 4",
+  "step10_careful": "10_contrast.ipynb cell 6",
+  "step10_summary": "10_contrast.ipynb cell 8"
+ }
+}

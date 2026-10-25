@@ -1,0 +1,85 @@
+{
+ "experiment_customers": 200039,
+ "all_customers": 400162,
+ "purchases_millions": 45.8,
+ "exam_customers": 40008,
+ "measures": 66,
+ "buy_rate_held_back": 0.6032800975434248,
+ "buy_rate_messaged": 0.6365109370780448,
+ "lift": 0.03323083953462003,
+ "lift_low95": 0.028978913610298758,
+ "lift_high95": 0.037482765458941296,
+ "largest_balance_gap": 0.012507284673062481,
+ "balance_top10": {
+  "card_issued_in_history": 0.0125,
+  "repeat_product_share": 0.0108,
+  "share_spend_last30d": 0.0094,
+  "days_since_first_bill": 0.0086,
+  "card_tenure_days": 0.0085,
+  "active_span_days": 0.0082,
+  "n_bills": 0.0073,
+  "ever_redeemed_by_cutoff": 0.0069,
+  "share_bills_exp_earned": 0.0068,
+  "bills_trend_30d": 0.0067
+ },
+ "exam_lift": 0.03323927827740247,
+ "top30_by_uplift": {
+  "share": 0.30001499700059986,
+  "rate_contacted": 0.5216733870967742,
+  "rate_held_back": 0.46108081308874566,
+  "n_contacted": 5952,
+  "n_held_back": 6051,
+  "se_lift": 0.009110585175974198
+ },
+ "top_half": {
+  "share": 0.5,
+  "rate_contacted": 0.5486153224176269,
+  "rate_held_back": 0.5050445103857567,
+  "n_contacted": 9894,
+  "n_held_back": 10110,
+  "se_lift": 0.0070540352253307395
+ },
+ "bottom_half": {
+  "share": 0.5,
+  "rate_contacted": 0.7226291823401306,
+  "rate_held_back": 0.7035952332862048,
+  "n_contacted": 10102,
+  "n_held_back": 9902,
+  "se_lift": 0.006395829448082941
+ },
+ "thirds": {
+  "bottom": {
+   "share": 0.3333333333333333,
+   "rate_contacted": 0.7446997776130467,
+   "rate_held_back": 0.7352450311030193,
+   "n_contacted": 6745,
+   "n_held_back": 6591,
+   "se_lift": 0.007598022429117908
+  },
+  "middle": {
+   "share": 0.3333333333333333,
+   "rate_contacted": 0.635255155803101,
+   "rate_held_back": 0.6064545047064097,
+   "n_contacted": 6643,
+   "n_held_back": 6693,
+   "se_lift": 0.008399379213632223
+  },
+  "top": {
+   "share": 0.3333333333333333,
+   "rate_contacted": 0.5273910411622276,
+   "rate_held_back": 0.4708680142687277,
+   "n_contacted": 6608,
+   "n_held_back": 6728,
+   "se_lift": 0.008646537394635955
+  }
+ },
+ "top10": {
+  "share": 0.10000499900019996,
+  "rate_contacted": 0.5268490374873354,
+  "rate_held_back": 0.4099654662062161,
+  "n_contacted": 1974,
+  "n_held_back": 2027,
+  "se_lift": 0.015676095962362562
+ },
+ "top10_vs_average": 3.5164292770033416
+}

@@ -1,0 +1,7 @@
+policy,value_per_customer,low95,high95,mix,vs_baseline,vs_low95,vs_high95,reward cost ₹
+Send nothing,393.3,358.7,432.8,none 100%,,,,0.0
+Random offers (the test),577.0,553.6,601.6,"bogo 31%, discount 30%, none 25%, informational 15%",183.8,146.2,215.5,33.5
+All reminders,619.9,556.9,689.1,informational 100%,225.8,146.0,303.8,0.0
+All discounts,621.1,576.4,661.8,discount 100%,228.6,172.5,285.9,63.8
+All BOGO,662.5,619.0,717.6,bogo 100%,269.3,209.3,333.4,47.1
+Nudge engine,662.5,619.0,717.6,bogo 100%,269.3,209.3,333.4,47.1

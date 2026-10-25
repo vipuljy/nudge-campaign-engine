@@ -1,0 +1,154 @@
+share,extra_buyers_per_customer,model
+2e-05,0.0,First model (Step 3)
+0.02002,0.0023,First model (Step 3)
+0.04002,0.00363,First model (Step 3)
+0.06001,0.00424,First model (Step 3)
+0.08001,0.00402,First model (Step 3)
+0.1,0.00422,First model (Step 3)
+0.12,0.00455,First model (Step 3)
+0.14,0.00469,First model (Step 3)
+0.16002,0.00584,First model (Step 3)
+0.18001,0.00602,First model (Step 3)
+0.20001,0.00681,First model (Step 3)
+0.22001,0.00644,First model (Step 3)
+0.24,0.00677,First model (Step 3)
+0.26,0.00697,First model (Step 3)
+0.27999,0.00762,First model (Step 3)
+0.30001,0.00848,First model (Step 3)
+0.32001,0.00851,First model (Step 3)
+0.34001,0.0089,First model (Step 3)
+0.36,0.00887,First model (Step 3)
+0.38,0.00956,First model (Step 3)
+0.4,0.01013,First model (Step 3)
+0.41999,0.0101,First model (Step 3)
+0.44001,0.01116,First model (Step 3)
+0.46001,0.01123,First model (Step 3)
+0.48,0.01193,First model (Step 3)
+0.5,0.01242,First model (Step 3)
+0.52,0.01306,First model (Step 3)
+0.53999,0.01263,First model (Step 3)
+0.55999,0.0125,First model (Step 3)
+0.58001,0.01295,First model (Step 3)
+0.6,0.01257,First model (Step 3)
+0.62,0.01292,First model (Step 3)
+0.64,0.01308,First model (Step 3)
+0.65999,0.01298,First model (Step 3)
+0.67999,0.013,First model (Step 3)
+0.69999,0.01384,First model (Step 3)
+0.72001,0.01411,First model (Step 3)
+0.74,0.01422,First model (Step 3)
+0.76,0.01429,First model (Step 3)
+0.77999,0.01428,First model (Step 3)
+0.79999,0.01511,First model (Step 3)
+0.81999,0.015,First model (Step 3)
+0.83998,0.01544,First model (Step 3)
+0.86,0.01537,First model (Step 3)
+0.88,0.01528,First model (Step 3)
+0.9,0.01552,First model (Step 3)
+0.91999,0.01607,First model (Step 3)
+0.93999,0.01633,First model (Step 3)
+0.95998,0.01592,First model (Step 3)
+0.97998,0.0163,First model (Step 3)
+1.0,0.01661,First model (Step 3)
+2e-05,2e-05,Champion ensemble (Step 4)
+0.02002,0.00232,Champion ensemble (Step 4)
+0.04002,0.0033,Champion ensemble (Step 4)
+0.06001,0.00391,Champion ensemble (Step 4)
+0.08001,0.00491,Champion ensemble (Step 4)
+0.1,0.00577,Champion ensemble (Step 4)
+0.12,0.00645,Champion ensemble (Step 4)
+0.14,0.00716,Champion ensemble (Step 4)
+0.16002,0.00823,Champion ensemble (Step 4)
+0.18001,0.00858,Champion ensemble (Step 4)
+0.20001,0.00873,Champion ensemble (Step 4)
+0.22001,0.00859,Champion ensemble (Step 4)
+0.24,0.00873,Champion ensemble (Step 4)
+0.26,0.00845,Champion ensemble (Step 4)
+0.27999,0.00855,Champion ensemble (Step 4)
+0.30001,0.00901,Champion ensemble (Step 4)
+0.32001,0.00938,Champion ensemble (Step 4)
+0.34001,0.00926,Champion ensemble (Step 4)
+0.36,0.00948,Champion ensemble (Step 4)
+0.38,0.00949,Champion ensemble (Step 4)
+0.4,0.00943,Champion ensemble (Step 4)
+0.41999,0.00944,Champion ensemble (Step 4)
+0.44001,0.00997,Champion ensemble (Step 4)
+0.46001,0.01056,Champion ensemble (Step 4)
+0.48,0.01082,Champion ensemble (Step 4)
+0.5,0.01078,Champion ensemble (Step 4)
+0.52,0.01154,Champion ensemble (Step 4)
+0.53999,0.01183,Champion ensemble (Step 4)
+0.55999,0.01219,Champion ensemble (Step 4)
+0.58001,0.0126,Champion ensemble (Step 4)
+0.6,0.01309,Champion ensemble (Step 4)
+0.62,0.01289,Champion ensemble (Step 4)
+0.64,0.01328,Champion ensemble (Step 4)
+0.65999,0.01388,Champion ensemble (Step 4)
+0.67999,0.01488,Champion ensemble (Step 4)
+0.69999,0.01561,Champion ensemble (Step 4)
+0.72001,0.01589,Champion ensemble (Step 4)
+0.74,0.01572,Champion ensemble (Step 4)
+0.76,0.01538,Champion ensemble (Step 4)
+0.77999,0.01581,Champion ensemble (Step 4)
+0.79999,0.01535,Champion ensemble (Step 4)
+0.81999,0.01574,Champion ensemble (Step 4)
+0.83998,0.01618,Champion ensemble (Step 4)
+0.86,0.01608,Champion ensemble (Step 4)
+0.88,0.01647,Champion ensemble (Step 4)
+0.9,0.01674,Champion ensemble (Step 4)
+0.91999,0.01662,Champion ensemble (Step 4)
+0.93999,0.01681,Champion ensemble (Step 4)
+0.95998,0.01734,Champion ensemble (Step 4)
+0.97998,0.01669,Champion ensemble (Step 4)
+1.0,0.01661,Champion ensemble (Step 4)
+2e-05,0.0,Random order
+0.02002,0.00013,Random order
+0.04002,0.00059,Random order
+0.06001,0.00108,Random order
+0.08001,0.00102,Random order
+0.1,0.0014,Random order
+0.12,0.0019,Random order
+0.14,0.00255,Random order
+0.16002,0.00268,Random order
+0.18001,0.00338,Random order
+0.20001,0.00384,Random order
+0.22001,0.00402,Random order
+0.24,0.00448,Random order
+0.26,0.0047,Random order
+0.27999,0.00549,Random order
+0.30001,0.00596,Random order
+0.32001,0.00621,Random order
+0.34001,0.00669,Random order
+0.36,0.00652,Random order
+0.38,0.00665,Random order
+0.4,0.00647,Random order
+0.41999,0.00637,Random order
+0.44001,0.00694,Random order
+0.46001,0.00718,Random order
+0.48,0.0076,Random order
+0.5,0.00823,Random order
+0.52,0.00852,Random order
+0.53999,0.00821,Random order
+0.55999,0.00907,Random order
+0.58001,0.00922,Random order
+0.6,0.00933,Random order
+0.62,0.01014,Random order
+0.64,0.0107,Random order
+0.65999,0.01095,Random order
+0.67999,0.01094,Random order
+0.69999,0.01157,Random order
+0.72001,0.01169,Random order
+0.74,0.01141,Random order
+0.76,0.01123,Random order
+0.77999,0.01164,Random order
+0.79999,0.01166,Random order
+0.81999,0.0125,Random order
+0.83998,0.01283,Random order
+0.86,0.01338,Random order
+0.88,0.01366,Random order
+0.9,0.01405,Random order
+0.91999,0.01463,Random order
+0.93999,0.01489,Random order
+0.95998,0.01517,Random order
+0.97998,0.01616,Random order
+1.0,0.01661,Random order

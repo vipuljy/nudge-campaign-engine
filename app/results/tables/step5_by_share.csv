@@ -1,0 +1,5 @@
+method,Random,Heavy-shoppers rule,Likely-buyer model,Uplift champion
+10,28.0,3.0,3.0,117.0
+20,77.0,19.0,15.0,177.0
+30,119.0,50.0,39.0,182.0
+50,165.0,113.0,115.0,218.0

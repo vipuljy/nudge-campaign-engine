@@ -1,0 +1,20 @@
+# Streamlit Community Cloud reads this file from the repository root (local runs from app/ use app/.streamlit/config.toml).
+# Look and feel: light theme, one accent colour (deep indigo); green / amber / red are used only for verdicts.
+[theme]
+base = "light"
+primaryColor = "#4338CA"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F4F5FB"
+textColor = "#1E1B3A"
+font = "sans serif"
+baseRadius = "0.6rem"
+
+[client]
+toolbarMode = "minimal"
+
+[browser]
+gatherUsageStats = false
+
+[logger]
+# Also switches off Streamlit's developer pop-up ("Help agents write better apps / Install"), so no visitor ever sees it.
+hideWelcomeMessage = true

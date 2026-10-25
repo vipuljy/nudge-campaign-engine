@@ -1,0 +1,9 @@
+row,Jan 22 - Feb 18,Dec 25 - Jan 21 (New Year),Nov 27 - Dec 24 (pre-New Year)
+n_bills,0.001,0.006,0.003
+spend,0.001,0.001,0.009
+bill_mean,0.002,0.003,0.004
+bill_max,0.002,0.004,0.006
+express_points_spent,0.0,0.0,0.0
+n_stores,0.0,0.0,0.001
+share_weekend,0.002,0.029,0.004
+days_since_last_bill,0.043,0.043,0.028

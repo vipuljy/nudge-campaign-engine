@@ -1,0 +1,8 @@
+what,how,why
+Permanent control group,Hold back a random 10% (bases near 1 lakh) or 2% (near 10 lakh) every campaign,Proves the profit; catches a halving of lift
+Explore and record,Targeting keeps ~20% randomness and records each customer chance (or a random slice of...,Clean data to retrain; targeted-only data makes the model worse than random
+Report,"Always contacted vs control: extra buyers, extra profit, 95% range",Naive reports overstate ~9x and can make a losing campaign look profitable
+Drift alarm,Monthly PSI on every customer measure vs the build period,Amber 0.1-0.25 watch; red over 0.25 retrain; festive months shift behaviour
+Lift-ladder alarm,Each campaign: real lift in top / middle / bottom thirds,Top third under 1.5x average or out of order: retrain
+Retrain,"Quarterly on exploration data (weighted by recorded chance), or at once on a red alarm",Re-run the Step 4 model check before switching
+Send-time test,"Once: control / morning / evening / when due, ~10-17k per group",Adds the best time to send

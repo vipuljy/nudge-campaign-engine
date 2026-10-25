@@ -1,0 +1,4 @@
+tier,share,real_lift_pts,extra_buyers_per_10k,median_bills_4m,median_spend,median_age,median_card_days,median_points_30d,share_using_promo_points
+High,0.17,6.36,107.45,13.0,4527.379883,59.0,193.0,10.0,0.44
+Medium,0.74,2.92,215.15,14.0,5908.870117,44.0,532.0,12.4,0.13
+Low,0.09,1.18,11.17,44.0,14331.700195,35.0,496.0,30.4,0.12

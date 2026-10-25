@@ -1,0 +1,5 @@
+row,target_top_%,method,share,buy_rate_if_messaged,real_lift_pts,extra_buyers_per_10k
+4,20,Random,0.2,0.648,3.836,76.714
+5,20,Heavy-shoppers rule,0.2,0.905,0.969,19.377
+6,20,Likely-buyer model,0.2,0.93,0.752,15.032
+7,20,Uplift champion,0.2,0.518,8.868,177.359

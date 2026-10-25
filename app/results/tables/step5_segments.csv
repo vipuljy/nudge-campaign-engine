@@ -1,0 +1,6 @@
+rule,share_%,predicted_lift_pts (80%),real_lift_pts (locked 20%),tier
+exp_points_spent_30d > 16.50,5.9,11.3,8.4,High
+exp_points_spent_30d <= 16.50 AND age_clean > 50.50 AND card_tenure_days <= 337.50,10.8,7.9,5.2,High
+exp_points_spent_30d <= 16.50 AND age_clean > 50.50 AND card_tenure_days > 337.50,27.5,3.5,2.9,Medium
+exp_points_spent_30d <= 16.50 AND age_clean <= 50.50 AND gap_mean > 3.47,46.7,2.3,2.8,Medium
+exp_points_spent_30d <= 16.50 AND age_clean <= 50.50 AND gap_mean <= 3.47,9.2,-3.1,1.2,Low

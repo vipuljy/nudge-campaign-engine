@@ -1,0 +1,10 @@
+{
+ "step5_uplift_vs_likely_20pct": "Uplift minus likely-buyer at 20%: +161 extra buyers per 10k (95% range +110 to +211)",
+ "step5_rules_vs_champion": "Rules (High tier, 17% of customers): 107 extra buyers per 10k\nChampion at the same 17%: 161 extra buyers per 10k\nRules keep 67% of the champion's gain with no model at all",
+ "step8_20k_difference": "₹20,000 WhatsApp budget: uplift beats likely-buyer by ₹246,299 (95% range ₹177,507 to ₹319,244)",
+ "step8_sms_peak": "locked exam: 40,008 customers, scaled to 100,000 | prepared in 6s\nPeak: contact 95% -> 3,370 extra buyers, profit ₹495,972 (95% range ₹332,402 to ₹623,614)",
+ "step9_formula_vs_simulation": "Formula: 3,346 per group detects the real 3.32-pt lift 80% of the time. Simulation on real customers: 79.0% of 2,000 repeats detected it.",
+ "step9_targeted_only_cost": "Top-30% lift: clean model 5.5 pts vs targeted-only model 1.6 pts -> about ₹177,870 of profit lost per campaign of 1 lakh customers.",
+ "step9_drift_alarm_calibration": "Alarm calibration: no change -> largest PSI 0.000 (quiet) | festive-style shift -> largest PSI 0.846 (fires)",
+ "step4_improvement": "Improvement in Qini: +27% | top-10% lift: 8.4 -> 11.7 pts"
+}

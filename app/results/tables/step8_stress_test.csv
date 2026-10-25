@@ -1,0 +1,6 @@
+scenario,old plan profit ₹,contact-everyone profit ₹,re-optimised share,re-optimised profit ₹,old plan ≥ everyone,re-optimised makes money
+Base,422100.0,396600.0,96%,422100.0,True,True
+Margin halved,162100.0,147300.0,72%,165400.0,True,True
+WhatsApp cost doubled,324100.0,294600.0,72%,330900.0,True,True
+Model 30% too optimistic,266100.0,247000.0,96%,266100.0,True,True
+All three at once,-13800.0,-29500.0,16%,55000.0,True,True
