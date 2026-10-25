@@ -5,7 +5,7 @@
 Nudge learns from a randomised campaign test who responds to a contact (uplift modelling), then plans whom to contact, with which
 offer and channel, for what budget in rupees, and how to prove it worked. Every result is measured on customers the model never saw.
 
-- **Live app:** link coming after deployment
+- **Live app:** [uplift-engine.streamlit.app](https://uplift-engine.streamlit.app/) (try the synthetic sample on *Plan my campaign*)
 - **How it was built:** 10 steps, each with a pass/fail gate set in advance; see [`notebooks/`](notebooks) and the
   [project write-up](docs/PROJECT_PLAYBOOK.md)
 
