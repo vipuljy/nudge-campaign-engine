@@ -17,7 +17,8 @@ from sklearn.model_selection import KFold, StratifiedKFold
 # ---------- scores that work for yes/no and for amounts ----------
 def qini(y, t, u) -> float:
     """Area between the model's Qini curve and the random line, per customer. Higher = better ranking; 0 = random."""
-    o = np.argsort(-u, kind='stable'); y, t = y[o], t[o]; n = len(y)
+    p = np.random.default_rng(0).permutation(len(u)); o = p[np.argsort(-np.asarray(u)[p], kind='stable')]   # ties: random order
+    y, t = y[o], t[o]; n = len(y)
     nt, nc = np.cumsum(t), np.cumsum(1 - t)
     q = np.cumsum(y * t) - np.cumsum(y * (1 - t)) * np.divide(nt, nc, out=np.zeros(n), where=nc > 0)
     return float(q.mean() / n - q[-1] / n / 2)
@@ -125,7 +126,7 @@ def run(prep: dict, res: dict, status=None, folds=5) -> dict:
         u_fast = eng.tau[o].predict(Xb)                                 # the fast engine's own ranking for this option
         rng = np.random.default_rng(1); B = [rng.integers(0, len(yb), len(yb)) for _ in range(200)]
         locked = []
-        for name, u in [(f'Winner: {winner}', u_win), ('Fast engine (DR, default)', u_fast)]:
+        for name, u in [(f'Winner: {winner}', u_win), ('Fast engine (DR)', u_fast)]:
             bq = [qini(yb[i], tb[i], u[i]) for i in B]
             locked.append({'model': name, **_metrics(yb, tb, u), 'qini_low95': np.percentile(bq, 2.5), 'qini_high95': np.percentile(bq, 97.5)})
         d = [qini(yb[i], tb[i], u_win[i]) - qini(yb[i], tb[i], u_fast[i]) for i in B]

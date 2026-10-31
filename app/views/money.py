@@ -54,7 +54,7 @@ with left:
                 if chan == 'Custom' else CH[chan])
         budget = st.number_input('Budget (₹)', 0, 100_000_000, 20_000, 5_000)
         base = st.number_input('Customers in your base', 1_000, 100_000_000,
-                               100_000 if X5_MODE else int(round(len(ss['plan']['prep']['data']), -3)), 10_000)
+                               100_000 if X5_MODE else max(1_000, int(round(len(ss['plan']['prep']['data']), -3))), 10_000)   # files under 1,500 rows
         with st.popover('Where do these numbers come from?', icon=':material/info:'):
             st.markdown('\n'.join([f"- **Basket and margin:** {A['basket_rs']['source']}; {A['gross_margin']['source']}"] +
                                   [f'- **{c}, ₹{CH[c]}:** {CH_SRC[c]}' for c in CH]))

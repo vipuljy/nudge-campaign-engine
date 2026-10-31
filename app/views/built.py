@@ -201,7 +201,7 @@ with a:
     st.subheader('Honesty rules')
     st.markdown('- Every profit is **measured** on customers the model never saw; business inputs are marked **assumed**\n'
                 '- 95% ranges wherever they exist\n'
-                '- Choices made on a validation slice, results reported on an untouched part\n'
+                '- Choices made on honest 5-fold scores, results reported on an untouched part\n'
                 '- No raw customer rows from X5, Starbucks or Dunnhumby in this app: aggregates only')
 with b:
     st.subheader('Data')

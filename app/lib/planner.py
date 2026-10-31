@@ -1,10 +1,10 @@
-"""Plan my campaign: learn on 64% of the file, choose on a 16% validation slice, report on an untouched 20%.
+"""Plan my campaign: learn and choose on 80% of the file (honest out-of-fold scores), report on an untouched 20%.
 
-Why three parts: if the same customers were used both to choose between the personalised and the simple plan and to report
+Why two parts: if the same customers were used both to choose between the personalised and the simple plan and to report
 the result, the report would flatter the winner (the 'winner's curse'). So:
-    build (64%)       the Nudge engine and the usual approach learn here
-    validation (16%)  decides between the engine's cautious plan (its learned safety margin), its fully personalised plan
-                      (each customer's predicted best option), and the best simple plan (everyone / nobody)
+    80% (build 64% + validation 16%)  the ranking learns here; every customer is scored by models that never saw them (5 folds,
+                      lib/robust.py), and those honest scores choose between personalised plans (several safety margins) and the
+                      best simple plan (everyone / nobody). The fast engine and the usual approach learn on the 64%.
     test (20%)        untouched until the end; every number shown is measured here
 
 Units: with reminders only, the engine learns in the file's own outcome units (bought 1/0, or amount) and rupees are applied
@@ -18,13 +18,22 @@ import lightgbm as lgb
 import numpy as np
 import pandas as pd
 
+from lib.robust import RobustEngine
 from lib.upload import MAX_ROWS
 from nudge_engine import NudgeEngine, average_effects, evaluate_policies, policy_value, split_by_group
 
 # cost of an offer per buyer who uses it, as a share of its face value
+MARGINS = [0, 0.1, 0.25, 0.5, 1, 2]          # safety margins tried by the plan choice (x the best option's average effect)
 OFFER_TYPES = {'Reminder (no offer)': None, 'Discount': 'every buyer gets the full face value',
                'Cashback': 'face value x share who redeem', 'Wallet credit': 'face value x share who use it',
                'Free item': 'face value x cost of goods share'}
+
+
+def _desc(score, seed=0):
+    """Positions from highest to lowest score; customers with the same score come in random order (not file order, which can be
+    sorted by option and would bias every 'top x%' figure)."""
+    score = np.asarray(score, float); p = np.random.default_rng(seed).permutation(len(score))
+    return p[np.argsort(-score[p], kind='stable')]
 
 
 def reward_per_buyer(offer: dict) -> float:
@@ -42,8 +51,8 @@ def _usual_model(kind: str, n: int):
     return lgb.LGBMClassifier(**p) if kind == 'binary' else lgb.LGBMRegressor(**p)
 
 
-def train(prep: dict, value_per_unit: float, cost: float, offers: dict, status=None) -> dict:
-    """Fit everything once. status(text) reports progress to the page."""
+def train(prep: dict, value_per_unit: float, cost: float, offers: dict, status=None, ranker: str = 'ensemble') -> dict:
+    """Fit everything once. status(text) reports progress to the page. ranker: 'ensemble' (default) or 'fast'."""
     say = status or (lambda s: None)
     d, feats, ctrl = prep['data'].copy(), prep['features'], prep['control']
     rewards = {o: reward_per_buyer(offers.get(o)) for o in prep['options']}
@@ -61,8 +70,11 @@ def train(prep: dict, value_per_unit: float, cost: float, offers: dict, status=N
     say('Training the usual approach (who is most likely to buy when contacted)...')
     contacted = build[build._option != ctrl]
     usual = _usual_model(prep['kind'], len(contacted)).fit(contacted[feats], contacted._y)
-    return {'engine': eng, 'usual': usual, 'build': build, 'val': val, 'test': te, 'target': target, 'fixed_scale': scale,
-            'rewards': rewards, 'has_reward': has_reward, 'secs': time.time() - t0, 'sampled': len(pool) < len(d)}
+    pool80 = pd.concat([build, val])
+    rob = RobustEngine(eng, ranker).fit(pool80, prep, target, say)
+    return {'engine': rob, 'fast_engine': eng, 'usual': usual, 'build': build, 'val': val, 'pool': pool80, 'test': te, 'target': target,
+            'fixed_scale': scale, 'rewards': rewards, 'has_reward': has_reward, 'secs': time.time() - t0, 'sampled': len(pool) < len(d),
+            'ranker': rob.ranker, 'fallback_reason': rob.fallback_reason, 'folds': rob.folds}
 
 
 def _scale(res, value_per_unit):
@@ -79,27 +91,35 @@ def _policies(res, prep, df, best_opt, margin=None):
     margin=None uses the engine's learned safety margin; 0 means fully personalised."""
     eng, ctrl = res['engine'], prep['control']
     rec = eng.recommend(df, margin_mult=margin).values; n = len(df); k = int(round(np.mean(rec != ctrl) * n))
-    order = np.argsort(-_score(res['usual'], df[prep['features']]), kind='stable')
+    order = _desc(_score(res['usual'], df[prep['features']]))
     usual = np.array([ctrl] * n, dtype=object); usual[order[:k]] = best_opt
     return {'Nudge plan': rec, 'Usual approach': usual, f'Contact everyone ({best_opt})': [best_opt] * n, 'Contact nobody': [ctrl] * n}
 
 
-def plan(res: dict, prep: dict, value_per_unit: float, cost: float) -> dict:
-    """Everything the page shows. Chosen on the validation slice, measured on the untouched 20%. No training here."""
+def plan(res: dict, prep: dict, value_per_unit: float, cost: float, costs: dict = None) -> dict:
+    """Everything the page shows. Chosen on the honest (out-of-fold) scores of the 80%, measured on the untouched 20%. No training
+    here. costs: optional contact cost per option (₹); by default every option costs `cost`."""
     eng, te, ctrl, tg = res['engine'], res['test'], prep['control'], res['target']
-    k = _scale(res, value_per_unit); oc = {o: cost / k for o in prep['options']}
+    k = _scale(res, value_per_unit); oc = {o: (costs or {}).get(o, cost) / k for o in prep['options']}
     eng.with_costs(oc, res['build'])
-    best_opt = eng.predict(res['build']).drop(columns=ctrl).mean().idxmax()     # best single option, judged on build data
+    O = eng.oof_predict(); best_opt = O.drop(columns=ctrl).mean().idxmax()   # best single option, judged on the honest scores
 
-    # 1. decide on the validation slice: cautious plan vs fully personalised plan vs the best simple plan
-    val = res['val']; v = {}
-    for name, m in [('cautious', None), ('personal', 0)]:
-        v[name] = policy_value(val, '_option', tg, _policies(res, prep, val, best_opt, m)['Nudge plan'], eng.prop, oc)
-    for name, p in list(_policies(res, prep, val, best_opt).items())[2:]:
-        v[name] = policy_value(val, '_option', tg, p, eng.prop, oc)
-    margin = None if v['cautious'] >= v['personal'] else 0
+    # 1. decide on the 80%: personalised plans (each safety margin) vs the best simple plan, valued on customers no model had seen
+    pool = res['pool']; v = {}
+    if eng.signal:
+        for mlt in MARGINS:
+            v[f'margin x{mlt}'] = policy_value(pool, '_option', tg, eng.recommend_oof(mlt), eng.prop, oc)
+    v[f'Contact everyone ({best_opt})'] = policy_value(pool, '_option', tg, [best_opt] * len(pool), eng.prop, oc)
+    v['Contact nobody'] = policy_value(pool, '_option', tg, [ctrl] * len(pool), eng.prop, oc)
     blanket = max([f'Contact everyone ({best_opt})', 'Contact nobody'], key=v.get)
-    personalise = max(v['cautious'], v['personal']) > v[blanket]
+    pers = {c: x for c, x in v.items() if c.startswith('margin')}
+    margin = float(max(pers, key=pers.get).split('x')[1]) if pers else 0.0
+    personalise = bool(pers) and max(pers.values()) > v[blanket]
+    eng.margin_mult = margin
+    signal_message = None if eng.signal else (
+        'No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes '
+        'zero). So Nudge does not personalise and recommends the simple plan: '
+        + ('contact nobody.' if blanket == 'Contact nobody' else f'contact everyone with {best_opt}.'))
 
     # 2. report on the untouched test part
     pol = _policies(res, prep, te, best_opt, margin)
@@ -115,8 +135,9 @@ def plan(res: dict, prep: dict, value_per_unit: float, cost: float) -> dict:
     recommended = 'Nudge plan' if personalise else blanket
     tiers = pd.qcut(pd.Series(gain).rank(method='first'), 3, labels=['Low', 'Medium', 'High']).values
     ladder = _ladder(te, tiers, ctrl, prep['kind'], value_per_unit)
-    return {'pred': pred, 'rec': rec, 'gain': gain, 'share': share, 'best_opt': best_opt, 'n_test': n, 'n_val': len(val),
-            'margin': margin, 'val_values': v,
+    return {'pred': pred, 'rec': rec, 'gain': gain, 'share': share, 'best_opt': best_opt, 'n_test': n, 'n_choose': len(pool),
+            'margin': margin, 'choice_values': {c: x * k for c, x in v.items()}, 'signal_message': signal_message,
+            'signal': dict(eng.diag), 'ranker': res['ranker'], 'folds': res['folds'],
             'money': money, 'blanket': blanket, 'personalise': personalise, 'recommended': recommended,
             'diff': {'usual': row(vs_usual, 'Nudge plan', 'Usual approach'), 'blanket': row(vs_blanket, 'Nudge plan', blanket)},
             'vs_usual_all': {q: row(vs_usual, q, 'Usual approach') for q in pol if q != 'Usual approach'},
@@ -138,11 +159,10 @@ def plan_order(res: dict, prep: dict, P: dict) -> tuple:
     if P['personalise']:
         inplan = rec != ctrl
         own = pred.to_numpy()[np.arange(n), pred.columns.get_indexer(rec)]
-        order = np.r_[np.flatnonzero(inplan)[np.argsort(-own[inplan], kind='stable')],
-                      np.flatnonzero(~inplan)[np.argsort(-pred[best_opt].values[~inplan], kind='stable')]]
+        order = np.r_[np.flatnonzero(inplan)[_desc(own[inplan])], np.flatnonzero(~inplan)[_desc(pred[best_opt].values[~inplan])]]
         give = np.where(inplan, rec, best_opt)
     elif P['recommended'] == 'Contact nobody':                         # nothing pays: show Nudge's ranking of the best single option
-        order = np.argsort(-pred[best_opt].values, kind='stable'); give = np.full(n, best_opt, dtype=object)
+        order = _desc(pred[best_opt].values); give = np.full(n, best_opt, dtype=object)
     else:
         order = np.random.default_rng(11).permutation(n); give = np.full(n, best_opt, dtype=object)
     return order, give
@@ -180,7 +200,7 @@ def curves(res: dict, prep: dict, P: dict, status=None) -> pd.DataFrame:
         say(f'Measuring profit when contacting {s:.0%} of customers...')
         k = int(round(s * n)); a = np.array([ctrl] * n, dtype=object); b = a.copy()
         a[order[:k]] = give[order[:k]]
-        b[np.argsort(-likely, kind='stable')[:k]] = best_opt
+        b[_desc(likely)[:k]] = best_opt
         # 100 bootstrap repeats per point (not 200) keeps 30 points on 40,000 customers to about 20 seconds
         r = evaluate_policies(te, '_option', tg, {'nudge': a, 'usual': b, 'nobody': [ctrl] * n}, eng.prop, n_boot=100,
                               baseline='nobody', seed=j)

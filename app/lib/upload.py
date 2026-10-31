@@ -27,9 +27,41 @@ OUTCOME_HINTS = ('target', 'conversion', 'converted', 'bought', 'purchase', 'buy
 ID_HINTS = ('id', 'customer', 'client', 'user', 'member', 'account')
 
 
+def _separator(data: bytes) -> str:
+    """Comma, semicolon (European Excel), tab or pipe: whichever appears most in the header line."""
+    line = data[:65536].split(b'\n', 1)[0].decode('utf-8', 'ignore')
+    counts = {s: line.count(s) for s in (',', ';', '\t', '|')}
+    return max(counts, key=counts.get) if max(counts.values()) else ','
+
+
 @st.cache_data(show_spinner=False)
 def read_csv(data: bytes) -> pd.DataFrame:
-    return pd.read_csv(io.BytesIO(data), compression='infer', low_memory=False)
+    return pd.read_csv(io.BytesIO(data), sep=_separator(data), compression='infer', low_memory=False)
+
+
+YES_NO = {'yes': 1, 'y': 1, 'true': 1, 'no': 0, 'n': 0, 'false': 0}
+
+
+def to_number(s: pd.Series) -> pd.Series:
+    """Outcome as a number: 1/0, True/False and yes/no text (any case) become 1/0; anything else unreadable becomes missing."""
+    if pd.api.types.is_bool_dtype(s) or pd.api.types.is_numeric_dtype(s):
+        return pd.to_numeric(s, errors='coerce')
+    t = s.astype(str).str.strip().str.lower()
+    return pd.to_numeric(t.map(YES_NO).where(t.isin(YES_NO), s), errors='coerce')
+
+
+def _is_yes_no(s: pd.Series) -> bool:
+    v = s.dropna()
+    return (not pd.api.types.is_numeric_dtype(s)) and len(v) > 0 and set(v.astype(str).str.strip().str.lower()) <= set(YES_NO)
+
+
+def _id_like(df: pd.DataFrame, c) -> bool:
+    """A customer id or a row number: named like an id ("customer_id", "ID", "Unnamed: 0") with mostly distinct values.
+    Never a customer measure."""
+    n = str(c).lower().strip()
+    named = (re.search(r'(^|[^a-z])id([^a-z]|$)', n) is not None or n in ('customer', 'client', 'user', 'member', 'account')
+             or n.startswith('unnamed'))
+    return named and df[c].nunique() >= 0.5 * max(len(df), 1)
 
 
 # Two built-in samples. Each says which column is which, which channel to start with, and how to explain itself.
@@ -106,13 +138,15 @@ def guess_mapping(df: pd.DataFrame) -> dict:
                        + 0.5 * (c.lower() in ARM_HINTS) - 0.1 * df[c].nunique())     # exact names and few values win ties
     ranked = sorted(small, key=lambda c: -score(c))
     option = ranked[0] if ranked else cols[0]
-    control = control_value(option, False) or (str(df[option].dropna().iloc[0]) if len(df) else None)
-    numeric = [c for c in cols if c != option and pd.api.types.is_numeric_dtype(df[c])]
+    control = control_value(option, False)              # no control-like value: left empty, the user must choose one
+    # outcome: numbers or yes/no text ("Purchased?" = Yes/No), named like an outcome, strongest hint first
+    numeric = [c for c in cols if c != option and (pd.api.types.is_numeric_dtype(df[c]) or _is_yes_no(df[c]))]
     hinted = [(min(i for i, h in enumerate(OUTCOME_HINTS) if h in c.lower()), c) for c in numeric if _looks_like(c, OUTCOME_HINTS)]
     outcome = min(hinted)[1] if hinted else (numeric[-1] if numeric else None)
-    ids = [c for c in cols if df[c].is_unique and _looks_like(c, ID_HINTS)]
-    cid = ids[0] if ids else None
-    features = [c for c in cols if c not in (option, outcome, cid) and not _looks_like(c, OUTCOME_HINTS)]
+    ids = ([c for c in cols if df[c].is_unique and _looks_like(c, ID_HINTS)]
+           or [c for c in cols if _id_like(df, c) and not str(c).lower().startswith('unnamed')])
+    cid = ids[0] if ids else None                       # an id may repeat (a customer in the file twice)
+    features = [c for c in cols if c not in (option, outcome, cid) and not _looks_like(c, OUTCOME_HINTS) and not _id_like(df, c)]
     return {'option': option, 'control': control, 'outcome': outcome, 'id': cid, 'features': features}
 
 
@@ -125,32 +159,62 @@ def outcome_kind(s: pd.Series) -> str:
 def validate(df: pd.DataFrame, m: dict) -> list:
     """Checks before training. Returns [(level, message)] with level 'error' (cannot train) or 'warning'."""
     out = []
+    if len(df) == 0:
+        return [('error', 'The file has column names but no rows of data. Export the file again with the customer rows.')]
+    if df.shape[1] < 3:
+        return [('error', f'The file was read as {df.shape[1]} column{"" if df.shape[1] == 1 else "s"} only. It needs at least an option, '
+                          'an outcome and one customer measure, each in its own column. Check that it is a CSV '
+                          '(values separated by commas or semicolons).')]
     if m['option'] is None or m['outcome'] is None:
         return [('error', 'Choose the option column and the outcome column.')]
     if m['option'] == m['outcome']:
         return [('error', 'The option column and the outcome column must be different.')]
-    opt = df[m['option']].astype(str)
+    blank = df[m['option']].isna() | (df[m['option']].astype(str).str.strip() == '')
+    if blank.all():
+        return [('error', f'"{m["option"]}" is empty in every row. Choose the column that says which option each customer got.')]
+    if blank.any():
+        out.append(('warning', f'{int(blank.sum()):,} rows have no value in "{m["option"]}" (which option the customer got) '
+                               'and will be left out.'))
+    opt = df.loc[~blank, m['option']].astype(str)
     if opt.nunique() > 10:
         out.append(('error', f'"{m["option"]}" has {opt.nunique()} different values. The option column should hold a few options '
                              '(for example "SMS", "discount", "nothing"), not a measure.'))
     if m['control'] is None or str(m['control']) not in set(opt):
-        out.append(('error', 'Choose which option value is the control group (customers who got nothing). '
-                             'Without a control group nobody can tell what the campaign caused.'))
+        vals = ', '.join(f'"{v}"' for v in opt.unique()[:6])
+        out.append(('error', f'Choose which value of "{m["option"]}" is the control group (customers who got nothing). '
+                             f'Its values: {vals}. If every customer got some option, '
+                             'the file has no control group and nobody can tell what the campaign caused.'))
     elif not (_looks_like(str(m['control']) + ' ', CONTROL_HINTS) or str(m['control']) in ('0', 'False')):
         out.append(('warning', f'Make sure "{m["control"]}" really means customers got nothing. If every customer got some option, '
                                'there is no control group and nobody can tell what the campaign caused.'))
     if opt.nunique() < 2:
         out.append(('error', 'The option column needs at least two values: one option and the control.'))
-    y = pd.to_numeric(df[m['outcome']].replace({True: 1, False: 0, 'yes': 1, 'no': 0, 'Yes': 1, 'No': 0}), errors='coerce')
+    y = to_number(df[m['outcome']])
     bad = y.isna().mean()
     if bad == 1:
         out.append(('error', f'The outcome "{m["outcome"]}" is not numeric. Use 1/0 for bought yes/no, or an amount.'))
     elif bad > 0:
         out.append(('warning', f'{bad:.1%} of rows have no usable outcome and will be left out.'))
+    if bad < 1 and y.dropna().nunique() == 1:
+        v = y.dropna().iloc[0]
+        out.append(('error', f'The outcome "{m["outcome"]}" is {v:g} for every customer'
+                             + (' (nobody bought)' if v == 0 else ' (everybody bought)' if v == 1 else '')
+                             + '. With no difference between customers, there is nothing to learn about what the campaign changed. '
+                               'Check that this is the right column and the right period.'))
     if not m['features']:
         out.append(('error', 'Choose at least one customer measure (known before the contact).'))
     if m['id'] and m['id'] in m['features']:
         out.append(('error', 'The id column cannot also be a customer measure.'))
+    if m['id']:
+        dup = df[m['id']].duplicated(keep=False)
+        if dup.any():
+            out.append(('warning', f'{df.loc[dup, m["id"]].nunique():,} customers appear more than once ({int(dup.sum()):,} rows). '
+                                   'That is fine if they were contacted more than once; Nudge keeps all rows of a customer '
+                                   'in the same part when it tests itself. If they are copies, remove them first.'))
+    id_meas = [c for c in m['features'] if _id_like(df, c)]
+    if id_meas:
+        out.append(('warning', f'{", ".join(id_meas)} look{"s" if len(id_meas) == 1 else ""} like an id or a row number, '
+                               'not a customer measure; it can only add noise. Remove it from the measures.'))
     for v, n in opt.value_counts().items():
         if n < MIN_PER_OPTION:
             out.append(('warning', f'Only {n:,} customer{"" if n == 1 else "s"} got "{v}". Under about {MIN_PER_OPTION:,} per option, '
@@ -170,9 +234,10 @@ def prepare(df: pd.DataFrame, m: dict) -> dict:
     """Clean table for the engine: option as text, outcome numeric, measures numeric (text columns with up to
     20 values become yes/no columns; others are left out and reported)."""
     d = df.copy()
+    blank = d[m['option']].isna() | (d[m['option']].astype(str).str.strip() == '')
     d['_option'] = d[m['option']].astype(str).astype(object)   # plain Python text: pandas' Arrow text is slow to loop over
-    d['_y'] = pd.to_numeric(d[m['outcome']].replace({True: 1, False: 0, 'yes': 1, 'no': 0, 'Yes': 1, 'No': 0}), errors='coerce')
-    d = d[d._y.notna()].reset_index(drop=True)
+    d['_y'] = to_number(d[m['outcome']])
+    d = d[d._y.notna() & ~blank].reset_index(drop=True)        # rows without an option or an outcome are left out (validate says so)
     d['_id'] = d[m['id']].astype(str) if m['id'] else (d.index + 1).astype(str)
     feats, dropped, readable = [], [], {}
     for c in m['features']:                          # internal names m0, m1, ... (LightGBM rejects symbols in names)

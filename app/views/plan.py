@@ -1,5 +1,5 @@
 """Plan my campaign: upload a randomised test (or a sample) -> check it is fair -> train -> whom to contact, with which option
--> chosen on a validation slice, proven on an untouched 20% -> download the target list. Optional thorough mode repeats Step 4."""
+-> chosen on honest 5-fold scores of 80% of the file, proven on an untouched 20% -> download the target list. Optional thorough mode repeats Step 4."""
 import numpy as np
 import pandas as pd
 import streamlit as st
@@ -77,8 +77,9 @@ with st.expander('Columns: what each one means', expanded=not sample):
     opt_col = a.selectbox('Option given', cols, index=cols.index(guess['option']), key=f'opt_{key}',
                           help='Which option each customer got, assigned at random.')
     values = [str(v) for v in df[opt_col].dropna().unique()][:50]
-    ctrl = b.selectbox('Control value ("nothing")', values,
-                       index=values.index(str(guess['control'])) if str(guess['control']) in values else 0, key=f'ctrl_{key}_{opt_col}')
+    ctrl = b.selectbox('Control value ("nothing")', values, placeholder='Choose the control value',   # no guess: the user must choose
+                       index=values.index(str(guess['control'])) if guess['control'] is not None and str(guess['control']) in values else None,
+                       key=f'ctrl_{key}_{opt_col}')
     out_choices = [x for x in cols if x != opt_col]
     outcome = c.selectbox('Outcome', out_choices, key=f'out_{key}',
                           index=out_choices.index(guess['outcome']) if guess['outcome'] in out_choices else 0,
@@ -102,7 +103,8 @@ if any(l == 'error' for l, _ in checks):
 
 prep = upload.prepare(df, mapping)
 if prep['dropped']:
-    st.caption(f"Left out (text with more than 20 values): {', '.join(prep['dropped'])}")
+    st.caption(f"Not used as measures: {', '.join(prep['dropped'])}. They are text with more than 20 different values "
+               "(such as free text, dates or cities), which the model cannot use as they are.")
 
 # ---------------- 3. fairness ----------------
 light, reason, ok_gap = upload.fairness(prep['max_gap'], prep['min_group'], prep['n_control'])
@@ -188,6 +190,9 @@ if ss.get('plan', {}).get('sig') != sig:
     st.stop()
 
 res = ss['plan']['res']
+if res.get('fallback_reason'):
+    st.warning('The thorough ranking could not run on this file, so the plan uses the fast engine instead '
+               f"({res['fallback_reason']}).", icon=':material/warning:')
 memo = ss['plan'].setdefault('memo', {})
 if (value, cost) not in memo:
     with st.spinner('Updating the plan...'):
@@ -203,12 +208,14 @@ du, db = P['diff']['usual'], P['diff']['blanket']
 R = P['recommended']; ru = P['vs_usual_all'][R]
 rng_txt = lambda d: f"{fmt.rs(abs(d[0]) * per)} per 1,000 customers (95% range {fmt.rs(d[1] * per)} to {fmt.rs(d[2] * per)})"
 st.subheader('Your plan')
+if P.get('signal_message'):
+    st.info(P['signal_message'], icon=':material/info:')
 if P['personalise']:
     if db[0] >= 0:
         verdict = (f"earns {rng_txt(db)} more than <i>{P['blanket'].lower()}</i>: "
                    + ('proven.' if db[1] > 0 else 'ahead, but the range includes zero, so keep a control group to confirm.'))
     else:
-        verdict = (f"earns {rng_txt(db)} less than <i>{P['blanket'].lower()}</i>: the validation check preferred the personalised plan, "
+        verdict = (f"earns {rng_txt(db)} less than <i>{P['blanket'].lower()}</i>: the 5-fold check on the 80% preferred the personalised plan, "
                    'but the untouched 20% does not confirm it, so treat it with caution and keep a control group.')
     ui.decision(f"Contact <b>{P['share']:.0%}</b> of customers (about {fmt.count(P['share'] * N)} of {fmt.count(N)}) by {chan_short}, with these options: {mix_txt}. "
                 f"Leave the other {1 - P['share']:.0%} alone. On the untouched 20% this plan {verdict}")
@@ -225,7 +232,7 @@ elif db[0] < 0:
                 f"this one: {fmt.rs(db[1] * per)} to {fmt.rs(db[2] * per)}). Everyone gets the option that works best on average: "
                 f"{fmt.rs(M.loc[R, 'extra_vs_nobody'] * per)} extra profit per 1,000 customers.")
 else:
-    ui.decision(f"<b>Send {P['best_opt']} to everyone</b> by {chan_short}. The personalised plan did not beat it on the validation check. On the untouched "
+    ui.decision(f"<b>Send {P['best_opt']} to everyone</b> by {chan_short}. The personalised plan did not beat it on the 5-fold check. On the untouched "
                 f"20% personalising would have changed profit by +{rng_txt(db)}: not a reliable gain, so Nudge keeps the simple plan.")
 if P['personalise'] and not P['ladder_top']:
     st.warning('The lift ladder below is out of order (the "High" group did not respond more than "Low"). Treat the plan with caution.',
@@ -300,12 +307,12 @@ if sample and sample.get('truth'):
     tr = res['test'][['_id']].merge(upload.load_truth(src['sample']), left_on='_id', right_on='customer_id', how='left')
     true_lift, persona = tr.true_lift.values, tr.true_persona.values
     gain = P['gain']; n = len(gain)
-    top17 = np.argsort(-gain)[:int(0.17 * n)]; bot9 = np.argsort(gain)[:int(0.09 * n)]
+    top17 = planner._desc(gain)[:int(0.17 * n)]; bot9 = planner._desc(-gain)[:int(0.09 * n)]
     found_top = np.mean(persona[top17] == 'Nudgeable'); found_bot = np.mean(persona[bot9] == 'Loyal regular')
     contact = P['rec'] != prep['control'] if P['personalise'] else np.full(n, P['blanket'] != 'Contact nobody')
     true_profit = lambda sel: (true_lift[sel] * value - cost).sum() / n * per
     best = true_profit(true_lift * value > cost)
-    usual_sel = np.zeros(n, bool); usual_sel[np.argsort(-planner._score(res['usual'], res['test'][prep['features']]))[:int(contact.sum())]] = True
+    usual_sel = np.zeros(n, bool); usual_sel[planner._desc(planner._score(res['usual'], res['test'][prep['features']]))[:int(contact.sum())]] = True
     ui.kpi_grid([
         {'label': 'Ranking quality', 'value': f'{spearmanr(gain, true_lift)[0]:.2f}', 'note': 'rank correlation with the true lift (1 = perfect)',
          'source': 'synthetic truth'},
@@ -422,15 +429,19 @@ st.caption(f"{fmt.count(len(T))} rows, {fmt.count((T.in_plan == 'yes').sum())} i
 
 with st.expander('How was this calculated?'):
     st.markdown(f"""
-- **Three parts:** {fmt.count(len(res['build']))} customers to learn from (64%), {fmt.count(P['n_val'])} to choose the plan (validation, 16%),
-  {fmt.count(P['n_test'])} untouched until the end (20%). Every result above is measured on the untouched 20%, which played no part in any
-  choice, so the winning plan's numbers are not flattered.{' Training used a random 2 lakh rows of your file.' if res['sampled'] else ''}
-- **Nudge engine:** one doubly robust uplift model per option (LightGBM, 2-fold cross-fitting) predicts each customer's *extra* outcome
-  from each option. A customer gets their personal best option only when it beats the best-on-average option by a safety margin learned
-  from the data, and nothing when no option pays for its cost.
-- **Choosing the plan (validation slice):** three candidates compete: the engine's cautious plan (it personalises only past a
-  safety margin learned from the data), its fully personalised plan (each customer gets their predicted best option, or nothing), and
-  the best simple plan (everyone, or nobody). The simple plan wins unless a personalised one earns more.
+- **Two parts:** {fmt.count(P['n_choose'])} customers to learn from and to choose the plan (80%), {fmt.count(P['n_test'])} untouched
+  until the end (20%). Every result above is measured on the untouched 20%, which played no part in any choice, so the winning plan's
+  numbers are not flattered.{' Training used a random 2 lakh rows of your file.' if res['sampled'] else ''}
+- **Honest scores:** the 80% is split into {P['folds']} parts by customer; each customer is scored by models trained on the other parts,
+  so no customer is scored by a model that saw them.
+- **Ranking:** {'three standard uplift learners (S, X and DR, as in Step 4) each rank the customers and the ranks are averaged' if P['ranker'] == 'ensemble' else 'the fast engine (one doubly robust model per option)'}.
+  The ranking is turned into a predicted extra outcome per customer by matching the measured lift in each tenth of customers (the order
+  of customers does not change).
+- **No reliable signal:** if no option's ranking beats a random order on the honest scores (95% range of the Qini includes zero),
+  Nudge does not personalise and says so.
+- **Choosing the plan:** personalised plans (a customer gets their personal best option only when it beats the best-on-average option
+  by a safety margin; several margins are tried) compete with the best simple plan (everyone, or nobody), all valued on the honest
+  scores. The simple plan wins unless a personalised one earns more.
 - **Usual approach:** a model of who buys when contacted (as in Step 5), contacting the same number of customers, most likely first.
 - **Measured value of a plan:** customers whose random option matches the plan's choice are averaged, weighted by how likely that option
   was (inverse propensity weighting). 95% ranges: 200 bootstrap repeats, paired across plans.

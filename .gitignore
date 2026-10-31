@@ -25,3 +25,10 @@ qa_screenshots/
 CLAUDE.md
 APP_SPEC.md
 app/old_attempt/
+
+# Validation: environments and downloaded benchmark data (raw rows never pushed)
+validation/.venv*/
+data_benchmarks/
+
+# Backup of the app before the validated merge (local only)
+_backup_app_before_merge/

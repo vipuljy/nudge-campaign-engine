@@ -200,7 +200,8 @@ def profit_curve(score, treated, outcome, value_per_unit, contact_cost, shares=N
     scale converts the test size to a business size (e.g. 100000 / len(test) = per 1 lakh customers).
     With n_boot > 0, adds 95% ranges (bootstrap)."""
     score, t, y = np.asarray(score, float), np.asarray(treated, int), np.asarray(outcome, float)
-    n = len(score); order = np.argsort(-score, kind='stable'); t, y = t[order], y[order]
+    n = len(score); p = np.random.default_rng(0).permutation(n)          # ties in random order, not file order
+    order = p[np.argsort(-score[p], kind='stable')]; t, y = t[order], y[order]
     shares = np.round(np.arange(0, 1.0001, 0.05), 2) if shares is None else np.asarray(shares)
     ks = np.clip(np.round(shares * n).astype(int), 0, n)
 

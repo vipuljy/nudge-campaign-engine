@@ -33,8 +33,9 @@ METHODS = """Methods and terms (plain words):
   randomly held-back look-alikes did.
 - Nudge engine: one doubly robust (DR) uplift model per option, using LightGBM with cross-fitting. It gives a customer their personal best
   option only when that clearly beats the best option on average (a safety margin learned from the data).
-- Plan choice: the file is split into build (64%), validation (16%) and an untouched 20%. The validation part chooses between the
-  personalised plan and the best simple plan (contact everyone or nobody); every number shown is measured on the untouched 20%,
+- Plan choice: the file is split into 80% and an untouched 20%. On the 80%, every customer is scored by models that never saw them
+  (5 folds), and those honest scores choose between personalised plans and the best simple plan (contact everyone or nobody). If the
+  ranking does not beat a random order there, Nudge says "no reliable signal" and keeps the simple plan. Every number shown is measured on the untouched 20%,
   so the winner is not flattered. If personalising does not pay, Nudge keeps the simple plan (the safe fallback).
 - Usual approach: a model of who is most likely to buy when contacted (the common CRM practice), contacting the same number of customers.
 - Measured vs assumed: measured numbers are counted on customers the model never saw; assumed numbers are business inputs
