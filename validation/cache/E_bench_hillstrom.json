@@ -1,0 +1,86 @@
+{
+ "variants": {
+  "current": {
+   "recommended": "Contact everyone (treat)",
+   "share_contacted": 1.0,
+   "secs_decision": 0.6559112071990967,
+   "measured_extra_per_customer": 6.957525112631183,
+   "message": null
+  },
+  "v2_5f": {
+   "recommended": "Nudge plan (margin x0)",
+   "share_contacted": 1.0,
+   "secs_decision": 17.011813163757324,
+   "measured_extra_per_customer": 6.957525112631183,
+   "message": null,
+   "vs_current": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "signal_fired": false,
+   "proof": null,
+   "proof_fired": false,
+   "guard_switched": {
+    "treat": false
+   },
+   "reliable": {
+    "treat": true
+   }
+  },
+  "v2_5f_proof": {
+   "recommended": "Contact everyone (treat)",
+   "share_contacted": 1.0,
+   "secs_decision": 18.172991514205933,
+   "measured_extra_per_customer": 6.957525112631183,
+   "message": "Personalising was not clearly better than the simple plan on customers the model had not seen (the 95% range of the gain includes zero), so Nudge recommends the simple plan: contact everyone (treat).",
+   "vs_current": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "signal_fired": false,
+   "proof": {
+    "margin": "margin x0",
+    "gain": 0.0,
+    "low95": 0.0,
+    "high95": 0.0,
+    "proven": false
+   },
+   "proof_fired": true,
+   "guard_switched": {
+    "treat": false
+   },
+   "reliable": {
+    "treat": true
+   }
+  },
+  "v2_3f_proof": {
+   "recommended": "Contact everyone (treat)",
+   "share_contacted": 1.0,
+   "secs_decision": 12.558166980743408,
+   "measured_extra_per_customer": 6.957525112631183,
+   "message": "Personalising was not clearly better than the simple plan on customers the model had not seen (the 95% range of the gain includes zero), so Nudge recommends the simple plan: contact everyone (treat).",
+   "vs_current": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "signal_fired": false,
+   "proof": {
+    "margin": "margin x0",
+    "gain": 0.0,
+    "low95": 0.0,
+    "high95": 0.0,
+    "proven": false
+   },
+   "proof_fired": true,
+   "guard_switched": {
+    "treat": false
+   },
+   "reliable": {
+    "treat": true
+   }
+  }
+ }
+}

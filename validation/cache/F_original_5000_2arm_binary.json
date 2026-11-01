@@ -1,0 +1,60 @@
+{
+ "n": 5000,
+ "arms": 2,
+ "outcome": "binary",
+ "seed": 12,
+ "null": false,
+ "measured_fix_minus_current": [
+  1.5249219274356602,
+  -1.832720300500231,
+  4.659917889168746
+ ],
+ "current": {
+  "recommended": "Nudge plan",
+  "kind": "personalised",
+  "share_contacted": 0.586,
+  "measured_extra_per_customer": [
+   -1.462034138593396,
+   -9.172262438643356,
+   4.918865140099021
+  ],
+  "qini": 0.04502762535879624,
+  "decide_s": 0.09705138206481934,
+  "A2": {
+   "ratio": 0.5340148052366293,
+   "low95": 0.46271199947648955,
+   "high95": 0.6033047302346544,
+   "plan_per_customer": 1.4800610828318503,
+   "oracle_per_customer": 2.7715731255353777
+  },
+  "A1": {
+   "spearman": 0.4850435330435331,
+   "low95": 0.4333897781055744,
+   "high95": 0.5320441567581697
+  }
+ },
+ "fix": {
+  "recommended": "Nudge plan (margin x0)",
+  "kind": "personalised",
+  "share_contacted": 0.55,
+  "measured_extra_per_customer": [
+   0.06288778884226409,
+   -7.554828428592428,
+   5.905485175396509
+  ],
+  "qini": 0.08910166071738627,
+  "decide_s": 3.6193060874938965,
+  "A2": {
+   "ratio": 0.6324859235120791,
+   "low95": 0.5651712757027728,
+   "high95": 0.695128850848164,
+   "plan_per_customer": 1.7529809878855027,
+   "oracle_per_customer": 2.7715731255353777
+  },
+  "A1": {
+   "spearman": 0.5617433617433617,
+   "low95": 0.5172448984812585,
+   "high95": 0.6014025154201729
+  }
+ }
+}

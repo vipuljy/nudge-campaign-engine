@@ -1,0 +1,74 @@
+{
+ "variants": {
+  "current": {
+   "recommended": "Contact everyone (treat)",
+   "share_contacted": 1.0,
+   "secs_decision": 4.250987768173218,
+   "measured_extra_per_customer": 0.15844365162053717,
+   "message": null
+  },
+  "v2_5f": {
+   "recommended": "Contact everyone (treat)",
+   "share_contacted": 1.0,
+   "secs_decision": 15884.858401536942,
+   "measured_extra_per_customer": 0.15844365162053717,
+   "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact everyone (treat).",
+   "vs_current": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "signal_fired": true,
+   "proof": null,
+   "proof_fired": false,
+   "guard_switched": {
+    "treat": true
+   },
+   "reliable": {
+    "treat": false
+   }
+  },
+  "v2_5f_proof": {
+   "recommended": "Contact everyone (treat)",
+   "share_contacted": 1.0,
+   "secs_decision": 5141.233322143555,
+   "measured_extra_per_customer": 0.15844365162053717,
+   "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact everyone (treat).",
+   "vs_current": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "signal_fired": true,
+   "proof": null,
+   "proof_fired": false,
+   "guard_switched": {
+    "treat": true
+   },
+   "reliable": {
+    "treat": false
+   }
+  },
+  "v2_3f_proof": {
+   "recommended": "Contact everyone (treat)",
+   "share_contacted": 1.0,
+   "secs_decision": 79.63830661773682,
+   "measured_extra_per_customer": 0.15844365162053717,
+   "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact everyone (treat).",
+   "vs_current": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "signal_fired": true,
+   "proof": null,
+   "proof_fired": false,
+   "guard_switched": {
+    "treat": false
+   },
+   "reliable": {
+    "treat": false
+   }
+  }
+ }
+}

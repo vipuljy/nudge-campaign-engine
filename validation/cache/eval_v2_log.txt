@@ -1,0 +1,58 @@
+sample synthetic
+sample hillstrom
+hillstrom ...
+    option treat: fold 1/5 done
+    option treat: fold 2/5 done
+    option treat: fold 3/5 done
+    option treat: fold 4/5 done
+    option treat: fold 5/5 done
+megafon ...
+    option treat: fold 1/5 done
+    option treat: fold 2/5 done
+    option treat: fold 3/5 done
+    option treat: fold 4/5 done
+    option treat: fold 5/5 done
+criteo10 ...
+    option treat: fold 1/5 done
+    option treat: fold 2/5 done
+    option treat: fold 3/5 done
+    option treat: fold 4/5 done
+    option treat: fold 5/5 done
+lenta ...
+    option treat: fold 1/5 done
+    option treat: fold 2/5 done
+    option treat: fold 3/5 done
+    option treat: fold 4/5 done
+    option treat: fold 5/5 done
+V_dev_5000_2arm_binary
+V_dev_5000_2arm_revenue
+V_dev_5000_4arm_binary
+V_dev_5000_4arm_revenue
+V_dev_50000_2arm_binary
+V_dev_50000_2arm_revenue
+V_dev_50000_4arm_binary
+V_dev_50000_4arm_revenue
+V_dev_200000_2arm_binary
+V_dev_200000_2arm_revenue
+V_dev_200000_4arm_binary
+V_dev_200000_4arm_revenue
+null 8101 {'fast/full': 'Contact nobody', 'fast/no_guard': 'Contact nobody', 'fast/no_signal_rule': 'Nudge plan (margin x0.25)', 'fast/no_calibration': 'Contact nobody', 'ensemble/full': 'Contact nobody', 'ensemble/no_guard': 'Contact nobody', 'ensemble/no_signal_rule': 'Nudge plan (margin x0.1)'}
+null 8102 {'fast/full': 'Nudge plan (margin x0.5)', 'fast/no_guard': 'Contact everyone (Message)', 'fast/no_signal_rule': 'Nudge plan (margin x0.5)', 'fast/no_calibration': 'Nudge plan (margin x0)', 'ensemble/full': 'Nudge plan (margin x0.5)', 'ensemble/no_guard': 'Contact everyone (Message)', 'ensemble/no_signal_rule': 'Nudge plan (margin x0.5)'}
+null 8103 {'fast/full': 'Contact nobody', 'fast/no_guard': 'Contact nobody', 'fast/no_signal_rule': 'Nudge plan (margin x0.25)', 'fast/no_calibration': 'Contact nobody', 'ensemble/full': 'Contact nobody', 'ensemble/no_guard': 'Contact nobody', 'ensemble/no_signal_rule': 'Nudge plan (margin x0)'}
+null 8104 {'fast/full': 'Contact nobody', 'fast/no_guard': 'Contact nobody', 'fast/no_signal_rule': 'Nudge plan (margin x0)', 'fast/no_calibration': 'Contact nobody', 'ensemble/full': 'Contact nobody', 'ensemble/no_guard': 'Contact nobody', 'ensemble/no_signal_rule': 'Nudge plan (margin x0)'}
+null 8105 {'fast/full': 'Contact nobody', 'fast/no_guard': 'Contact nobody', 'fast/no_signal_rule': 'Nudge plan (margin x0.25)', 'fast/no_calibration': 'Contact nobody', 'ensemble/full': 'Contact nobody', 'ensemble/no_guard': 'Contact nobody', 'ensemble/no_signal_rule': 'Nudge plan (margin x0)'}
+null 8106 {'fast/full': 'Contact nobody', 'fast/no_guard': 'Contact nobody', 'fast/no_signal_rule': 'Nudge plan (margin x0)', 'fast/no_calibration': 'Contact nobody', 'ensemble/full': 'Contact nobody', 'ensemble/no_guard': 'Contact nobody', 'ensemble/no_signal_rule': 'Nudge plan (margin x0.25)'}
+null 8107 {'fast/full': 'Contact nobody', 'fast/no_guard': 'Contact nobody', 'fast/no_signal_rule': 'Nudge plan (margin x0)', 'fast/no_calibration': 'Contact nobody', 'ensemble/full': 'Contact nobody', 'ensemble/no_guard': 'Contact nobody', 'ensemble/no_signal_rule': 'Nudge plan (margin x0)'}
+null 8108 {'fast/full': 'Contact nobody', 'fast/no_guard': 'Contact nobody', 'fast/no_signal_rule': 'Nudge plan (margin x0.1)', 'fast/no_calibration': 'Contact nobody', 'ensemble/full': 'Contact nobody', 'ensemble/no_guard': 'Contact nobody', 'ensemble/no_signal_rule': 'Nudge plan (margin x0.1)'}
+null 8109 {'fast/full': 'Contact nobody', 'fast/no_guard': 'Contact nobody', 'fast/no_signal_rule': 'Nudge plan (margin x0)', 'fast/no_calibration': 'Contact nobody', 'ensemble/full': 'Contact nobody', 'ensemble/no_guard': 'Contact nobody', 'ensemble/no_signal_rule': 'Nudge plan (margin x0)'}
+null 8110 {'fast/full': 'Contact nobody', 'fast/no_guard': 'Contact nobody', 'fast/no_signal_rule': 'Nudge plan (margin x0)', 'fast/no_calibration': 'Contact nobody', 'ensemble/full': 'Contact nobody', 'ensemble/no_guard': 'Contact nobody', 'ensemble/no_signal_rule': 'Nudge plan (margin x0)'}
+null 8111 {'fast/full': 'Contact nobody', 'fast/no_guard': 'Contact nobody', 'fast/no_signal_rule': 'Nudge plan (margin x0.1)', 'fast/no_calibration': 'Contact nobody', 'ensemble/full': 'Contact nobody', 'ensemble/no_guard': 'Contact nobody', 'ensemble/no_signal_rule': 'Nudge plan (margin x0)'}
+null 8112 {'fast/full': 'Contact everyone (Message)', 'fast/no_guard': 'Contact everyone (Message)', 'fast/no_signal_rule': 'Nudge plan (margin x0)', 'fast/no_calibration': 'Contact everyone (Message)', 'ensemble/full': 'Contact everyone (Message)', 'ensemble/no_guard': 'Contact everyone (Message)', 'ensemble/no_signal_rule': 'Nudge plan (margin x0)'}
+null 8113 {'fast/full': 'Contact nobody', 'fast/no_guard': 'Contact nobody', 'fast/no_signal_rule': 'Nudge plan (margin x0)', 'fast/no_calibration': 'Contact nobody', 'ensemble/full': 'Contact nobody', 'ensemble/no_guard': 'Contact nobody', 'ensemble/no_signal_rule': 'Nudge plan (margin x0)'}
+null 8114 {'fast/full': 'Contact nobody', 'fast/no_guard': 'Contact nobody', 'fast/no_signal_rule': 'Nudge plan (margin x0)', 'fast/no_calibration': 'Contact nobody', 'ensemble/full': 'Contact nobody', 'ensemble/no_guard': 'Contact nobody', 'ensemble/no_signal_rule': 'Nudge plan (margin x0.5)'}
+null 8115 {'fast/full': 'Contact nobody', 'fast/no_guard': 'Contact nobody', 'fast/no_signal_rule': 'Nudge plan (margin x0)', 'fast/no_calibration': 'Contact nobody', 'ensemble/full': 'Contact nobody', 'ensemble/no_guard': 'Contact nobody', 'ensemble/no_signal_rule': 'Nudge plan (margin x0)'}
+null 8116 {'fast/full': 'Contact nobody', 'fast/no_guard': 'Contact nobody', 'fast/no_signal_rule': 'Nudge plan (margin x0.1)', 'fast/no_calibration': 'Contact nobody', 'ensemble/full': 'Contact nobody', 'ensemble/no_guard': 'Contact nobody', 'ensemble/no_signal_rule': 'Nudge plan (margin x0.1)'}
+null 8117 {'fast/full': 'Contact nobody', 'fast/no_guard': 'Contact nobody', 'fast/no_signal_rule': 'Nudge plan (margin x0.1)', 'fast/no_calibration': 'Contact nobody', 'ensemble/full': 'Contact nobody', 'ensemble/no_guard': 'Contact nobody', 'ensemble/no_signal_rule': 'Nudge plan (margin x0)'}
+null 8118 {'fast/full': 'Contact nobody', 'fast/no_guard': 'Contact nobody', 'fast/no_signal_rule': 'Nudge plan (margin x0)', 'fast/no_calibration': 'Contact nobody', 'ensemble/full': 'Contact nobody', 'ensemble/no_guard': 'Contact nobody', 'ensemble/no_signal_rule': 'Nudge plan (margin x0)'}
+null 8119 {'fast/full': 'Contact nobody', 'fast/no_guard': 'Contact nobody', 'fast/no_signal_rule': 'Nudge plan (margin x0)', 'fast/no_calibration': 'Contact nobody', 'ensemble/full': 'Contact nobody', 'ensemble/no_guard': 'Contact nobody', 'ensemble/no_signal_rule': 'Nudge plan (margin x0.5)'}
+null 8120 {'fast/full': 'Contact nobody', 'fast/no_guard': 'Contact nobody', 'fast/no_signal_rule': 'Nudge plan (margin x0)', 'fast/no_calibration': 'Contact nobody', 'ensemble/full': 'Contact nobody', 'ensemble/no_guard': 'Contact nobody', 'ensemble/no_signal_rule': 'Nudge plan (margin x1)'}

@@ -1,0 +1,28 @@
+A_run2_50000_2arm_binary: spearman 0.665 [0.651, 0.677], plan/oracle 0.728 [0.711, 0.742] (Nudge plan (margin x0))
+A_run2_50000_2arm_revenue: spearman 0.510 [0.494, 0.525], plan/oracle 0.629 [0.611, 0.646] (Nudge plan (margin x1))
+A_run2_50000_4arm_binary: spearman 0.517 [0.508, 0.526], plan/oracle 0.747 [0.740, 0.755] (Nudge plan (margin x0.5))
+A_run2_50000_4arm_revenue: spearman 0.443 [0.429, 0.453], plan/oracle 0.731 [0.722, 0.738] (Nudge plan (margin x1))
+A_run2_200000_2arm_binary: spearman 0.817 [0.813, 0.820], plan/oracle 0.862 [0.857, 0.866] (Nudge plan (margin x1))
+A_run2_200000_2arm_revenue: spearman 0.821 [0.816, 0.825], plan/oracle 0.871 [0.866, 0.875] (Nudge plan (margin x0.1))
+A_run2_200000_4arm_binary: spearman 0.749 [0.746, 0.752], plan/oracle 0.896 [0.893, 0.897] (Nudge plan (margin x0))
+A_run2_200000_4arm_revenue: spearman 0.673 [0.669, 0.676], plan/oracle 0.876 [0.873, 0.879] (Nudge plan (margin x0))
+null seed 1: Contact nobody
+null seed 2: Contact nobody
+null seed 3: Nudge plan (margin x2)
+null seed 4: Contact nobody
+null seed 5: Contact nobody
+null seed 6: Contact nobody
+null seed 7: Contact nobody
+null seed 8: Contact nobody
+null seed 9: Contact nobody
+null seed 10: Nudge plan (margin x2)
+null seed 11: Contact nobody
+null seed 12: Contact nobody
+null seed 13: Contact nobody
+null seed 14: Contact nobody
+null seed 15: Contact nobody
+null seed 16: Nudge plan (margin x2)
+null seed 17: Contact nobody
+null seed 18: Contact nobody
+null seed 19: Contact nobody
+null seed 20: Contact nobody

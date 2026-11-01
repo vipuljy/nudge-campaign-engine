@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
-from lib import analyst, charts, fmt, money, planner, ui, upload, x5
+from lib import analyst, charts, fmt, money, planner, shared, ui, upload, x5
 from nudge_engine import breakeven_uplift
 
 A = x5.meta()['assumptions']
@@ -71,7 +71,9 @@ else:
     store = ss['plan'].setdefault('curves', {}); ckey = (cur['value'], cur['cost'])    # the plan exactly as chosen on the Plan page
     if ckey not in store:
         with st.status('Measuring profit at every share contacted on your untouched 20%...', expanded=True) as box:
-            store[ckey] = planner.curves(res, prep, cur['P'], status=box.write)
+            make = lambda: planner.curves(res, prep, cur['P'], status=box.write)
+            store[ckey] = (shared.get('extra', (repr(ss['plan']['sig']), 'curves') + ckey, make) if ss['plan'].get('sample')
+                           else make())                        # built-in samples: measured once, shared by every visitor
             box.update(label='Profit curves ready', state='complete', expanded=False)
         st.rerun()                                                    # redraw without the progress box
     Cu = store[ckey]; scale = res['fixed_scale'] or k; RANKED = Cu.attrs.get('ranked', True)

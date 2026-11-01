@@ -1,0 +1,60 @@
+{
+ "n": 50000,
+ "arms": 2,
+ "outcome": "binary",
+ "seed": 22,
+ "null": false,
+ "measured_fix_minus_current": [
+  2.8636568480301214,
+  0.9962442690093145,
+  4.926172754898952
+ ],
+ "current": {
+  "recommended": "Contact everyone (Message)",
+  "kind": "everyone",
+  "share_contacted": 1.0,
+  "measured_extra_per_customer": [
+   0.17367680605445968,
+   -2.740850595687174,
+   2.957199070143914
+  ],
+  "qini": 0.04234349006828,
+  "decide_s": 0.7353150844573975,
+  "A2": {
+   "ratio": 0.3224828216090211,
+   "low95": 0.28564872714972117,
+   "high95": 0.3562431903249823,
+   "plan_per_customer": 0.9412414674419511,
+   "oracle_per_customer": 2.9187336638449364
+  },
+  "A1": {
+   "spearman": 0.6330743086987431,
+   "low95": 0.6205477207351939,
+   "high95": 0.6463905396506271
+  }
+ },
+ "fix": {
+  "recommended": "Nudge plan (margin x0)",
+  "kind": "personalised",
+  "share_contacted": 0.5118,
+  "measured_extra_per_customer": [
+   3.0373336540845814,
+   1.101693264068316,
+   4.9442459184333645
+  ],
+  "qini": 0.04759210103106074,
+  "decide_s": 24.657753229141235,
+  "A2": {
+   "ratio": 0.7280999423835504,
+   "low95": 0.7114562341053491,
+   "high95": 0.7424871205373238,
+   "plan_per_customer": 2.125129812478427,
+   "oracle_per_customer": 2.9187336638449364
+  },
+  "A1": {
+   "spearman": 0.6654326936823269,
+   "low95": 0.650606679432818,
+   "high95": 0.6769405753505585
+  }
+ }
+}

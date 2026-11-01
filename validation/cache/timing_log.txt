@@ -1,0 +1,13 @@
+start 21:12:43 (CPU free)
+1 {'current': 12.4, 'fix': 39.6}
+2 {'current': 14.0, 'fix': 39.5}
+3 {'current': 14.3, 'fix': 39.3}
+{'current': {'median_s': 14.000688076019287, 'min_s': 12.429465055465698, 'max_s': 14.254729747772217}, 'fix': {'median_s': 39.4567551612854, 'min_s': 39.27943134307861, 'max_s': 39.553425788879395}, 'extra_s': 25.456067085266113}
+end 21:25:36
+pinned-core runs start 21:26:37
+RESULT ensemble 2 100000 5 1.8 cores busy {'read_prepare': 0.3, 'planner_train': 12.5, 'current_plan_step': 3.1, 'scores_kfold': 88.1, 'plan': 4.7, 'current_app_total': 15.9, 'v2_total': 108.7} 378 MB
+RESULT fast 2 100000 5 1.7 cores busy {'read_prepare': 0.5, 'planner_train': 16.5, 'current_plan_step': 3.8, 'scores_kfold': 23.3, 'plan': 3.2, 'current_app_total': 20.7, 'v2_total': 47.3} 371 MB
+RESULT ensemble 2 200000 5 1.6 cores busy {'read_prepare': 0.5, 'planner_train': 23.1, 'current_plan_step': 5.7, 'scores_kfold': 143.5, 'plan': 7.2, 'current_app_total': 29.4, 'v2_total': 180.0} 524 MB
+RESULT fast 2 200000 5 1.5 cores busy {'read_prepare': 0.5, 'planner_train': 23.6, 'current_plan_step': 5.9, 'scores_kfold': 33.5, 'plan': 7.4, 'current_app_total': 30.0, 'v2_total': 70.9} 510 MB
+RESULT ensemble 2 100000 3 1.5 cores busy {'read_prepare': 0.3, 'planner_train': 13.4, 'current_plan_step': 3.2, 'scores_kfold': 43.0, 'plan': 3.4, 'current_app_total': 16.9, 'v2_total': 63.3} 371 MB
+end 21:34:44

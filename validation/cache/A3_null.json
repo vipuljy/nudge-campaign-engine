@@ -1,0 +1,264 @@
+{
+ "runs": [
+  {
+   "seed": 1,
+   "personalise": false,
+   "recommended": "Contact nobody",
+   "rec_share": 0.0,
+   "val_values": {
+    "cautious": 0.30096960642571535,
+    "personal": 0.3008994826585356,
+    "Contact everyone (Message)": 0.30007293938625407,
+    "Contact nobody": 0.30465861473995565
+   },
+   "fairness": "green"
+  },
+  {
+   "seed": 2,
+   "personalise": false,
+   "recommended": "Contact everyone (Message)",
+   "rec_share": 1.0,
+   "val_values": {
+    "cautious": 0.31583256397141046,
+    "personal": 0.31436096236525224,
+    "Contact everyone (Message)": 0.3163920199501246,
+    "Contact nobody": 0.3100250626566416
+   },
+   "fairness": "green"
+  },
+  {
+   "seed": 3,
+   "personalise": true,
+   "recommended": "Nudge plan",
+   "rec_share": 0.4489,
+   "val_values": {
+    "cautious": 0.313698387953273,
+    "personal": 0.3117619604005442,
+    "Contact everyone (Message)": 0.30191115639327565,
+    "Contact nobody": 0.3136966126656848
+   },
+   "fairness": "green"
+  },
+  {
+   "seed": 4,
+   "personalise": false,
+   "recommended": "Contact nobody",
+   "rec_share": 0.0,
+   "val_values": {
+    "cautious": 0.30998080693981106,
+    "personal": 0.30998080693981106,
+    "Contact everyone (Message)": 0.3105803526448362,
+    "Contact nobody": 0.3230769230769231
+   },
+   "fairness": "green"
+  },
+  {
+   "seed": 5,
+   "personalise": false,
+   "recommended": "Contact nobody",
+   "rec_share": 0.0,
+   "val_values": {
+    "cautious": 0.3102589641434263,
+    "personal": 0.30654234821710497,
+    "Contact everyone (Message)": 0.30318995983935737,
+    "Contact nobody": 0.3102589641434263
+   },
+   "fairness": "green"
+  },
+  {
+   "seed": 6,
+   "personalise": false,
+   "recommended": "Contact everyone (Message)",
+   "rec_share": 1.0,
+   "val_values": {
+    "cautious": 0.314963011306323,
+    "personal": 0.314963011306323,
+    "Contact everyone (Message)": 0.3219807300720139,
+    "Contact nobody": 0.30732443996979614
+   },
+   "fairness": "green"
+  },
+  {
+   "seed": 7,
+   "personalise": true,
+   "recommended": "Nudge plan",
+   "rec_share": 0.4348,
+   "val_values": {
+    "cautious": 0.3057007717201893,
+    "personal": 0.3094729242213761,
+    "Contact everyone (Message)": 0.3082891287973889,
+    "Contact nobody": 0.3057007717201893
+   },
+   "fairness": "green"
+  },
+  {
+   "seed": 8,
+   "personalise": false,
+   "recommended": "Contact everyone (Message)",
+   "rec_share": 1.0,
+   "val_values": {
+    "cautious": 0.30542812025308436,
+    "personal": 0.3058035661330052,
+    "Contact everyone (Message)": 0.307202478314746,
+    "Contact nobody": 0.30693568726355613
+   },
+   "fairness": "green"
+  },
+  {
+   "seed": 9,
+   "personalise": false,
+   "recommended": "Contact everyone (Message)",
+   "rec_share": 1.0,
+   "val_values": {
+    "cautious": 0.30711461947934493,
+    "personal": 0.30750938762863705,
+    "Contact everyone (Message)": 0.3204681954137586,
+    "Contact nobody": 0.30842527582748236
+   },
+   "fairness": "green"
+  },
+  {
+   "seed": 10,
+   "personalise": false,
+   "recommended": "Contact nobody",
+   "rec_share": 0.0,
+   "val_values": {
+    "cautious": 0.32472049689440996,
+    "personal": 0.31388675610479394,
+    "Contact everyone (Message)": 0.30263396226415096,
+    "Contact nobody": 0.32472049689440996
+   },
+   "fairness": "green"
+  },
+  {
+   "seed": 11,
+   "personalise": false,
+   "recommended": "Contact everyone (Message)",
+   "rec_share": 1.0,
+   "val_values": {
+    "cautious": 0.3062072336265884,
+    "personal": 0.3078420841319509,
+    "Contact everyone (Message)": 0.31228904810644836,
+    "Contact nobody": 0.3062072336265884
+   },
+   "fairness": "green"
+  },
+  {
+   "seed": 12,
+   "personalise": false,
+   "recommended": "Contact everyone (Message)",
+   "rec_share": 1.0,
+   "val_values": {
+    "cautious": 0.30544899598393577,
+    "personal": 0.30255791013712624,
+    "Contact everyone (Message)": 0.30544899598393577,
+    "Contact nobody": 0.30353585657370524
+   },
+   "fairness": "green"
+  },
+  {
+   "seed": 13,
+   "personalise": false,
+   "recommended": "Contact nobody",
+   "rec_share": 0.0,
+   "val_values": {
+    "cautious": 0.3062479203263781,
+    "personal": 0.3062479203263781,
+    "Contact everyone (Message)": 0.31215223420647137,
+    "Contact nobody": 0.31734047735021914
+   },
+   "fairness": "green"
+  },
+  {
+   "seed": 14,
+   "personalise": false,
+   "recommended": "Contact nobody",
+   "rec_share": 0.0,
+   "val_values": {
+    "cautious": 0.3162123717858248,
+    "personal": 0.31080537231138483,
+    "Contact everyone (Message)": 0.2882985346134411,
+    "Contact nobody": 0.32360217714002976
+   },
+   "fairness": "green"
+  },
+  {
+   "seed": 15,
+   "personalise": false,
+   "recommended": "Contact everyone (Message)",
+   "rec_share": 1.0,
+   "val_values": {
+    "cautious": 0.32099734372489663,
+    "personal": 0.32099734372489663,
+    "Contact everyone (Message)": 0.3242928553647,
+    "Contact nobody": 0.32086367060005017
+   },
+   "fairness": "green"
+  },
+  {
+   "seed": 16,
+   "personalise": false,
+   "recommended": "Contact nobody",
+   "rec_share": 0.0,
+   "val_values": {
+    "cautious": 0.30231053862169766,
+    "personal": 0.30026000658391194,
+    "Contact everyone (Message)": 0.3034506825515016,
+    "Contact nobody": 0.308990178796273
+   },
+   "fairness": "green"
+  },
+  {
+   "seed": 17,
+   "personalise": false,
+   "recommended": "Contact nobody",
+   "rec_share": 0.0,
+   "val_values": {
+    "cautious": 0.3112334250688016,
+    "personal": 0.29762252183926674,
+    "Contact everyone (Message)": 0.298970671996003,
+    "Contact nobody": 0.3112334250688016
+   },
+   "fairness": "green"
+  },
+  {
+   "seed": 18,
+   "personalise": false,
+   "recommended": "Contact nobody",
+   "rec_share": 0.0,
+   "val_values": {
+    "cautious": 0.3085728359955334,
+    "personal": 0.3085728359955334,
+    "Contact everyone (Message)": 0.31075225384034244,
+    "Contact nobody": 0.31173988582774886
+   },
+   "fairness": "green"
+  },
+  {
+   "seed": 19,
+   "personalise": true,
+   "recommended": "Nudge plan",
+   "rec_share": 0.4212,
+   "val_values": {
+    "cautious": 0.30757459831675593,
+    "personal": 0.3099732090962984,
+    "Contact everyone (Message)": 0.30185408188281443,
+    "Contact nobody": 0.30757459831675593
+   },
+   "fairness": "green"
+  },
+  {
+   "seed": 20,
+   "personalise": false,
+   "recommended": "Contact nobody",
+   "rec_share": 0.0,
+   "val_values": {
+    "cautious": 0.306014873109563,
+    "personal": 0.3037307763767811,
+    "Contact everyone (Message)": 0.2965707865168539,
+    "Contact nobody": 0.30838548185231535
+   },
+   "fairness": "green"
+  }
+ ]
+}

@@ -1,15 +1,26 @@
 """Plan my campaign: upload a randomised test (or a sample) -> check it is fair -> train -> whom to contact, with which option
 -> chosen on honest 5-fold scores of 80% of the file, proven on an untouched 20% -> download the target list. Optional thorough mode repeats Step 4."""
+import copy
+import math
+import time
+
 import numpy as np
 import pandas as pd
 import streamlit as st
 from scipy.stats import norm, spearmanr
 
-from lib import analyst, charts, fmt, planner, thorough, ui, upload, x5
+from lib import analyst, charts, fmt, planner, shared, thorough, ui, upload, x5
 
 ASSUME = x5.meta()['assumptions']
 CHANNELS = {k: v['value'] for k, v in ASSUME['channels_rs_per_contact'].items()}
 ss = st.session_state
+
+
+def _own_copy(res: dict) -> dict:
+    """A visitor's own view of a shared plan: the engines hold settings each visitor changes (contact cost, safety margin)."""
+    r = dict(res); eng = copy.copy(res['engine']); eng.base = copy.copy(res['engine'].base); eng._cache = []
+    r['engine'], r['fast_engine'] = eng, eng.base
+    return r
 
 
 def use_sample(key: str) -> None:
@@ -181,10 +192,20 @@ sig = (key, repr(mapping), repr(offers), value if has_offer else None)
 if ss.get('plan', {}).get('sig') != sig:
     if 'plan' in ss:
         st.info('Your settings changed since the last plan. Rebuild to update it.', icon=':material/refresh:')
+    est = planner.expected_seconds(len(prep['data']), len(prep['options']))
+    lo = max(1, math.floor(0.8 * est / 60)); hi = max(lo + 1, math.ceil(1.6 * est / 60))
+    parts = 3 if min(len(prep['data']), upload.MAX_ROWS) * 0.8 > 150_000 else 5
+    st.caption(f":material/schedule: Building takes about **{lo}–{hi} minutes** for {fmt.count(len(prep['data']))} rows and "
+               f"{len(prep['options'])} option{'' if len(prep['options']) == 1 else 's'}: three uplift models are trained on {parts} parts of the "
+               'file, and the page shows each step while it works.'
+               + (' This sample loads instantly if anyone has built it since the app last restarted.' if sample else ''))
     if st.button('Build my plan', type='primary', icon=':material/rocket_launch:'):
         with st.status('Building your plan...', expanded=True) as box:
-            res = planner.train(prep, value, cost, offers, status=box.write)
-            box.update(label=f"Done in {res['secs']:.0f} s", state='complete', expanded=False)
+            t0 = time.time()
+            res = (_own_copy(shared.get('plan', repr(sig), lambda: planner.train(prep, value, cost, offers, status=box.write)))
+                   if sample else planner.train(prep, value, cost, offers, status=box.write))
+            box.update(label=(f"Done in {res['secs']:.0f} s" if time.time() - t0 > 3 else
+                              'Ready: this sample was already built on the server'), state='complete', expanded=False)
         ss['plan'] = {'sig': sig, 'res': res, 'prep': prep, 'source': src['name'], 'sample': src['sample']}
         ss.pop('thorough_out', None); st.rerun()
     st.stop()
@@ -219,6 +240,14 @@ if P['personalise']:
                    'but the untouched 20% does not confirm it, so treat it with caution and keep a control group.')
     ui.decision(f"Contact <b>{P['share']:.0%}</b> of customers (about {fmt.count(P['share'] * N)} of {fmt.count(N)}) by {chan_short}, with these options: {mix_txt}. "
                 f"Leave the other {1 - P['share']:.0%} alone. On the untouched 20% this plan {verdict}")
+elif P.get('audit_failed'):
+    ui.decision((f"<b>Do not run this campaign at {fmt.cost(cost)} per contact.</b>" if P['blanket'] == 'Contact nobody' else
+                 f"<b>Send {P['best_opt']} to everyone</b> by {chan_short}.")
+                + f" The 5-fold check on the 80% preferred a personalised plan, but the final check on the untouched 20% did not confirm it: "
+                f"it earned {rng_txt(db)} less than {P['blanket'].lower()}. So Nudge recommends the simple plan"
+                + ('' if P['blanket'] == 'Contact nobody' else
+                   f" ({fmt.rs(M.loc[R, 'extra_vs_nobody'] * per)} extra profit per 1,000 customers, measured on the untouched 20%)")
+                + '. Keep a control group, and test personalising again when you have more data.')
 elif P['blanket'] == 'Contact nobody':
     ui.decision(f"<b>Do not run this campaign at {fmt.cost(cost)} per contact.</b> No option earns back its cost. "
                 'Try a cheaper channel above, or a cheaper offer.')
@@ -417,7 +446,11 @@ except Exception as e:
 
 # ---------------- 9. download ----------------
 st.subheader('Download the target list')
-T = planner.target_list(res, prep, value, P['margin'])
+tkey = ('target', value, cost)                   # scoring every row of the file is slow: once per setting, not on every click
+if tkey not in memo:
+    make = lambda: planner.target_list(res, prep, value, P['margin'])
+    memo[tkey] = shared.get('extra', (repr(ss['plan']['sig']), 'target', value, cost), make) if src['sample'] else make()
+T = memo[tkey].copy()
 if not P['personalise']:
     T['in_plan'] = 'yes' if P['blanket'] != 'Contact nobody' else 'no'
     T['recommended_option'] = P['best_opt'] if P['blanket'] != 'Contact nobody' else prep['control']
@@ -442,6 +475,8 @@ with st.expander('How was this calculated?'):
 - **Choosing the plan:** personalised plans (a customer gets their personal best option only when it beats the best-on-average option
   by a safety margin; several margins are tried) compete with the best simple plan (everyone, or nobody), all valued on the honest
   scores. The simple plan wins unless a personalised one earns more.
+- **Final check:** if the untouched 20% shows the chosen personalised plan earning less than the simple plan, Nudge recommends the
+  simple plan instead (a last yes/no gate, like a go/no-go check).
 - **Usual approach:** a model of who buys when contacted (as in Step 5), contacting the same number of customers, most likely first.
 - **Measured value of a plan:** customers whose random option matches the plan's choice are averaged, weighted by how likely that option
   was (inverse propensity weighting). 95% ranges: 200 bootstrap repeats, paired across plans.

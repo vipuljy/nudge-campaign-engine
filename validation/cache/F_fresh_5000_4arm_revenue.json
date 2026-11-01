@@ -1,0 +1,60 @@
+{
+ "n": 5000,
+ "arms": 4,
+ "outcome": "revenue",
+ "seed": 7114,
+ "null": false,
+ "measured_fix_minus_current": [
+  -6.560873183678822,
+  -14.718553867266756,
+  1.4775650888049359
+ ],
+ "current": {
+  "recommended": "Contact everyone (Discount Rs20)",
+  "kind": "everyone",
+  "share_contacted": 1.0,
+  "measured_extra_per_customer": [
+   22.197604732070012,
+   10.464483183920592,
+   34.99752837705226
+  ],
+  "qini": 0.8805358750098513,
+  "decide_s": 0.14590072631835938,
+  "A2": {
+   "ratio": 0.4334736703773222,
+   "low95": 0.38679254794557705,
+   "high95": 0.4789383673490369,
+   "plan_per_customer": 4.023054587137252,
+   "oracle_per_customer": 9.280966439404121
+  },
+  "A1": {
+   "spearman": 0.4515998109229706,
+   "low95": 0.4225889712941524,
+   "high95": 0.47878892689557556
+  }
+ },
+ "fix": {
+  "recommended": "Nudge plan (margin x0.25)",
+  "kind": "personalised",
+  "share_contacted": 0.908,
+  "measured_extra_per_customer": [
+   15.63673154839119,
+   3.5828015970248765,
+   28.414477126444762
+  ],
+  "qini": 0.8505841505989616,
+  "decide_s": 5.878054857254028,
+  "A2": {
+   "ratio": 0.638920001599727,
+   "low95": 0.6056147211607507,
+   "high95": 0.6691115471965726,
+   "plan_per_customer": 5.929795092311093,
+   "oracle_per_customer": 9.280966439404121
+  },
+  "A1": {
+   "spearman": 0.4660881980711135,
+   "low95": 0.4345114765795334,
+   "high95": 0.4955638826849725
+  }
+ }
+}

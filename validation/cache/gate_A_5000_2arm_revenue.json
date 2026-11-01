@@ -1,0 +1,72 @@
+{
+ "n": 5000,
+ "arms": 2,
+ "outcome": "revenue",
+ "seed": 9112,
+ "train_secs": 5.774427890777588,
+ "folds": 5,
+ "ranker": "ensemble",
+ "fallback_reason": null,
+ "n_test": 1000,
+ "A2": {
+  "contact Rs5": {
+   "ratio": 0.0,
+   "low95": 0.0,
+   "high95": 0.0,
+   "plan_per_customer": 0.0,
+   "oracle_per_customer": 3.094111662051275,
+   "personalise": false,
+   "recommended": "Contact nobody",
+   "margin": 0.0,
+   "share_contacted": 0.0,
+   "signal_message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+   "signal": {
+    "Message": {
+     "qini": -0.7355538287313652,
+     "qini_low95": -3.3096008085821076,
+     "qini_high95": 1.802042020639678,
+     "reliable": false,
+     "ate": 14.883964137275854
+    }
+   },
+   "choice_values": {
+    "Contact everyone (Message)": 44.78374285714285,
+    "Contact nobody": 45.318553615960106
+   }
+  },
+  "contact Rs1.02": {
+   "ratio": 0.885361597454564,
+   "low95": 0.859145225000158,
+   "high95": 0.9094263357733562,
+   "plan_per_customer": 5.169709110209821,
+   "oracle_per_customer": 5.839093456360497,
+   "personalise": false,
+   "recommended": "Contact everyone (Message)",
+   "margin": 0.0,
+   "share_contacted": 1.0,
+   "signal_message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact everyone with Message.",
+   "signal": {
+    "Message": {
+     "qini": -0.7355538287313652,
+     "qini_low95": -3.3096008085821076,
+     "qini_high95": 1.802042020639678,
+     "reliable": false,
+     "ate": 14.883964137275854
+    }
+   },
+   "choice_values": {
+    "Contact everyone (Message)": 48.76374285714285,
+    "Contact nobody": 45.318553615960106
+   }
+  }
+ },
+ "judged_cost": "contact Rs5",
+ "A1": {
+  "per_option": {
+   "Message": 0.0
+  },
+  "spearman": 0.0,
+  "low95": 0.0,
+  "high95": 0.0
+ }
+}

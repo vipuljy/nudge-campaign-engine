@@ -1,0 +1,34 @@
+{
+ "sample": "hillstrom",
+ "value_per_unit": 14.25,
+ "cost": 0.01,
+ "measured_fix_minus_current": [
+  -6.652224413693107,
+  -14.462729531644666,
+  0.06085105034676348
+ ],
+ "current": {
+  "recommended": "Contact everyone (Mens E-Mail)",
+  "kind": "everyone",
+  "share_contacted": 1.0,
+  "measured_extra_per_customer": [
+   12.648745726981979,
+   3.7281331084226608,
+   22.566892798602876
+  ],
+  "qini": -0.03931888543164101,
+  "decide_s": 2.48684024810791
+ },
+ "fix": {
+  "recommended": "Nudge plan (margin x0.1)",
+  "kind": "personalised",
+  "share_contacted": 0.85078125,
+  "measured_extra_per_customer": [
+   5.996521313288872,
+   -1.5300571385105164,
+   14.789897662743742
+  ],
+  "qini": -0.06824160109822354,
+  "decide_s": 71.69764637947083
+ }
+}

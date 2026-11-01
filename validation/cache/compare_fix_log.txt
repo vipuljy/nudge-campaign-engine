@@ -1,0 +1,90 @@
+F_original_5000_2arm_binary: current 0.534 (personalised) -> fix 0.632 (personalised); spearman 0.485 -> 0.562
+Traceback (most recent call last):
+  File "C:\Users\vipul\Documents\CampaignROI\validation\run_compare_fix.py", line 11, in <module>
+    cf.run_seeds('original', 0, range(1, 21), log)
+  File "C:\Users\vipul\Documents\CampaignROI\validation\compare_fix.py", line 102, in run_seeds
+    r = synth_file(n, arms, outcome, run_part_a.seed_of(n, arms, outcome) + offset); common.save(name, r)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vipul\Documents\CampaignROI\validation\compare_fix.py", line 73, in synth_file
+    res, rules, diff = both_rules(prep, value, contact, offers, float(np.mean(list(contact.values()))))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vipul\Documents\CampaignROI\validation\compare_fix.py", line 54, in both_rules
+    r['qini'] = _qini(te, prep, r['engine'])
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vipul\Documents\CampaignROI\validation\compare_fix.py", line 36, in _qini
+    qs.append(qini_auc_score(te._y.values[idx], pred[o].values[idx], (te._option.values[idx] == o).astype(int)))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vipul\Documents\CampaignROI\validation\.venv\Lib\site-packages\sklift\metrics\metrics.py", line 359, in qini_auc_score
+    check_is_binary(y_true)
+  File "C:\Users\vipul\Documents\CampaignROI\validation\.venv\Lib\site-packages\sklift\utils\utils.py", line 10, in check_is_binary
+    if not np.all(np.unique(array) == np.array([0, 1])):
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: operands could not be broadcast together with shapes (341,) (2,) 
+F_original_5000_2arm_revenue: current 0.318 (everyone) -> fix 0.318 (everyone); spearman 0.532 -> 0.534
+F_original_5000_4arm_binary: current 0.463 (everyone) -> fix 0.463 (everyone); spearman 0.495 -> 0.502
+F_original_5000_4arm_revenue: current 0.542 (everyone) -> fix 0.542 (everyone); spearman 0.217 -> 0.243
+F_original_50000_2arm_binary: current 0.322 (everyone) -> fix 0.728 (personalised); spearman 0.633 -> 0.665
+F_original_50000_2arm_revenue: current 0.589 (personalised) -> fix 0.629 (personalised); spearman 0.483 -> 0.510
+F_original_50000_4arm_binary: current 0.657 (personalised) -> fix 0.747 (personalised); spearman 0.474 -> 0.517
+F_original_50000_4arm_revenue: current 0.674 (personalised) -> fix 0.731 (personalised); spearman 0.429 -> 0.443
+F_original_200000_2arm_binary: current 0.847 (personalised) -> fix 0.862 (personalised); spearman 0.792 -> 0.817
+F_original_200000_2arm_revenue: current 0.846 (personalised) -> fix 0.871 (personalised); spearman 0.789 -> 0.821
+F_original_200000_4arm_binary: current 0.862 (personalised) -> fix 0.896 (personalised); spearman 0.691 -> 0.749
+F_original_200000_4arm_revenue: current 0.852 (personalised) -> fix 0.876 (personalised); spearman 0.630 -> 0.673
+F_original_null seed 1: current nobody -> fix personalised
+F_original_null seed 2: current everyone -> fix nobody
+F_original_null seed 3: current personalised -> fix personalised
+F_original_null seed 4: current nobody -> fix nobody
+F_original_null seed 5: current nobody -> fix nobody
+F_original_null seed 6: current everyone -> fix everyone
+F_original_null seed 7: current personalised -> fix nobody
+F_original_null seed 8: current everyone -> fix nobody
+F_original_null seed 9: current everyone -> fix everyone
+F_original_null seed 10: current nobody -> fix nobody
+F_original_null seed 11: current everyone -> fix nobody
+F_original_null seed 12: current everyone -> fix everyone
+F_original_null seed 13: current nobody -> fix nobody
+F_original_null seed 14: current nobody -> fix nobody
+F_original_null seed 15: current everyone -> fix everyone
+F_original_null seed 16: current nobody -> fix personalised
+F_original_null seed 17: current nobody -> fix nobody
+F_original_null seed 18: current nobody -> fix nobody
+F_original_null seed 19: current personalised -> fix personalised
+F_original_null seed 20: current nobody -> fix nobody
+F_fresh_5000_2arm_binary: current 0.418 (everyone) -> fix 0.589 (personalised); spearman 0.384 -> 0.406
+F_fresh_5000_2arm_revenue: current 0.000 (nobody) -> fix 0.697 (personalised); spearman 0.595 -> 0.614
+F_fresh_5000_4arm_binary: current 0.533 (everyone) -> fix 0.569 (personalised); spearman 0.238 -> 0.269
+F_fresh_5000_4arm_revenue: current 0.433 (everyone) -> fix 0.639 (personalised); spearman 0.452 -> 0.466
+F_fresh_50000_2arm_binary: current 0.341 (everyone) -> fix 0.743 (personalised); spearman 0.611 -> 0.657
+F_fresh_50000_2arm_revenue: current 0.322 (everyone) -> fix 0.683 (personalised); spearman 0.614 -> 0.592
+F_fresh_50000_4arm_binary: current 0.693 (personalised) -> fix 0.709 (personalised); spearman 0.435 -> 0.475
+F_fresh_50000_4arm_revenue: current 0.712 (personalised) -> fix 0.740 (personalised); spearman 0.435 -> 0.469
+F_fresh_200000_2arm_binary: current 0.832 (personalised) -> fix 0.857 (personalised); spearman 0.796 -> 0.824
+F_fresh_200000_2arm_revenue: current 0.781 (personalised) -> fix 0.864 (personalised); spearman 0.763 -> 0.811
+F_fresh_200000_4arm_binary: current 0.852 (personalised) -> fix 0.879 (personalised); spearman 0.749 -> 0.776
+F_fresh_200000_4arm_revenue: current 0.831 (personalised) -> fix 0.853 (personalised); spearman 0.623 -> 0.672
+F_fresh_null seed 7101: current nobody -> fix nobody
+F_fresh_null seed 7102: current nobody -> fix nobody
+F_fresh_null seed 7103: current everyone -> fix nobody
+F_fresh_null seed 7104: current nobody -> fix nobody
+F_fresh_null seed 7105: current nobody -> fix nobody
+F_fresh_null seed 7106: current personalised -> fix personalised
+F_fresh_null seed 7107: current nobody -> fix nobody
+F_fresh_null seed 7108: current nobody -> fix nobody
+F_fresh_null seed 7109: current everyone -> fix nobody
+F_fresh_null seed 7110: current nobody -> fix nobody
+F_fresh_null seed 7111: current everyone -> fix nobody
+F_fresh_null seed 7112: current everyone -> fix everyone
+F_fresh_null seed 7113: current nobody -> fix nobody
+F_fresh_null seed 7114: current nobody -> fix nobody
+F_fresh_null seed 7115: current everyone -> fix personalised
+F_fresh_null seed 7116: current nobody -> fix nobody
+F_fresh_null seed 7117: current nobody -> fix nobody
+F_fresh_null seed 7118: current everyone -> fix nobody
+F_fresh_null seed 7119: current nobody -> fix personalised
+F_fresh_null seed 7120: current nobody -> fix nobody
+sample synthetic: Nudge plan -> Nudge plan (margin x0.5)
+sample hillstrom: Contact everyone (Mens E-Mail) -> Nudge plan (margin x0.1)
+benchmark hillstrom: qini 0.0521 -> 0.0588
+benchmark megafon: qini 0.2139 -> 0.2144
+done

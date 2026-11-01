@@ -1,0 +1,84 @@
+{
+ "n": 200000,
+ "arms": 2,
+ "outcome": "binary",
+ "seed": 9032,
+ "train_secs": 87.50018095970154,
+ "folds": 5,
+ "ranker": "ensemble",
+ "fallback_reason": null,
+ "n_test": 40000,
+ "A2": {
+  "contact Rs5": {
+   "ratio": 0.94317981611783,
+   "low95": 0.9411470825488104,
+   "high95": 0.9453503394838962,
+   "plan_per_customer": 2.779104785890249,
+   "oracle_per_customer": 2.946526991352686,
+   "personalise": true,
+   "recommended": "Nudge plan",
+   "margin": 0.5,
+   "share_contacted": 0.6266,
+   "signal_message": null,
+   "signal": {
+    "Message": {
+     "qini": 0.005288257799284834,
+     "qini_low95": 0.004595573028130648,
+     "qini_high95": 0.006019773610849853,
+     "reliable": true,
+     "ate": 0.03936274886549396
+    }
+   },
+   "choice_values": {
+    "margin x0": 49.33473091111064,
+    "margin x0.1": 49.39113921827144,
+    "margin x0.25": 49.35514999513473,
+    "margin x0.5": 49.48003652391839,
+    "margin x1": 49.47502117185017,
+    "margin x2": 49.399197267360506,
+    "Contact everyone (Message)": 47.62550924475086,
+    "Contact nobody": 46.721096914926775
+   }
+  },
+  "contact Rs1.02": {
+   "ratio": 0.9673908692735345,
+   "low95": 0.9659843967820707,
+   "high95": 0.9688984329258685,
+   "plan_per_customer": 5.490585878745068,
+   "oracle_per_customer": 5.675664359813777,
+   "personalise": true,
+   "recommended": "Nudge plan",
+   "margin": 0.25,
+   "share_contacted": 0.864425,
+   "signal_message": null,
+   "signal": {
+    "Message": {
+     "qini": 0.005288257799284834,
+     "qini_low95": 0.004595573028130648,
+     "qini_high95": 0.006019773610849853,
+     "reliable": true,
+     "ate": 0.03936274886549396
+    }
+   },
+   "choice_values": {
+    "margin x0": 52.09477286608962,
+    "margin x0.1": 52.108289373402776,
+    "margin x0.25": 52.124446899417755,
+    "margin x0.5": 52.04185452287428,
+    "margin x1": 51.60550924475087,
+    "margin x2": 51.60550924475087,
+    "Contact everyone (Message)": 51.60550924475087,
+    "Contact nobody": 46.721096914926775
+   }
+  }
+ },
+ "judged_cost": "contact Rs5",
+ "A1": {
+  "per_option": {
+   "Message": 0.9273862417964253
+  },
+  "spearman": 0.9273862417964253,
+  "low95": 0.925977715145832,
+  "high95": 0.9287534842691869
+ }
+}

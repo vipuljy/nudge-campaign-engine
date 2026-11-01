@@ -1,0 +1,53 @@
+{
+ "2cores_100000rows": {
+  "read_prepare_s": 0.6699874401092529,
+  "train_s": 53.97259449958801,
+  "plan_s": 6.134306192398071,
+  "total_s": 60.77688813209534,
+  "peak_memory_mb": 427.716608,
+  "avg_cores_busy": 1.5149876663241761,
+  "folds": 5,
+  "ranker": "ensemble",
+  "progress_messages": 8,
+  "first_messages": [
+   "Training the Nudge engine on 64,000 customers (one uplift model per option)...",
+   "Training the usual approach (who is most likely to buy when contacted)...",
+   "Learning \"Message\" (option 1 of 1): part 1 of 5 (3 learners)...",
+   "Learning \"Message\" (option 1 of 1): part 2 of 5 (3 learners)..."
+  ]
+ },
+ "2cores_200000rows": {
+  "read_prepare_s": 1.3302927017211914,
+  "train_s": 69.07088470458984,
+  "plan_s": 8.92113995552063,
+  "total_s": 79.32231736183167,
+  "peak_memory_mb": 620.879872,
+  "avg_cores_busy": 1.5249216359638722,
+  "folds": 3,
+  "ranker": "ensemble",
+  "progress_messages": 6,
+  "first_messages": [
+   "Training the Nudge engine on 128,000 customers (one uplift model per option)...",
+   "Training the usual approach (who is most likely to buy when contacted)...",
+   "Learning \"Message\" (option 1 of 1): part 1 of 3 (3 learners)...",
+   "Learning \"Message\" (option 1 of 1): part 2 of 3 (3 learners)..."
+  ]
+ },
+ "12cores_100000rows": {
+  "read_prepare_s": 0.6302580833435059,
+  "train_s": 58.079761266708374,
+  "plan_s": 3.789304733276367,
+  "total_s": 62.49932408332825,
+  "peak_memory_mb": 434.458624,
+  "avg_cores_busy": 4.937705659040484,
+  "folds": 5,
+  "ranker": "ensemble",
+  "progress_messages": 8,
+  "first_messages": [
+   "Training the Nudge engine on 64,000 customers (one uplift model per option)...",
+   "Training the usual approach (who is most likely to buy when contacted)...",
+   "Learning \"Message\" (option 1 of 1): part 1 of 5 (3 learners)...",
+   "Learning \"Message\" (option 1 of 1): part 2 of 5 (3 learners)..."
+  ]
+ }
+}

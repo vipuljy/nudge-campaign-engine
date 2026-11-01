@@ -1,0 +1,384 @@
+{
+ "runs": [
+  {
+   "seed": 9101,
+   "personalise": false,
+   "recommended": "Contact nobody",
+   "signal_fired": true,
+   "share_contacted": 0.0,
+   "true_profit_per_customer": -0.0,
+   "signal": {
+    "Message": {
+     "qini": -0.0009263478595376681,
+     "qini_low95": -0.002096947007531598,
+     "qini_high95": 0.000383151405004675,
+     "reliable": false,
+     "ate": -0.00017946723603334824
+    }
+   },
+   "ranker": "ensemble",
+   "folds": 5
+  },
+  {
+   "seed": 9102,
+   "personalise": false,
+   "recommended": "Contact nobody",
+   "signal_fired": true,
+   "share_contacted": 0.0,
+   "true_profit_per_customer": -0.0,
+   "signal": {
+    "Message": {
+     "qini": 0.0005544632911928967,
+     "qini_low95": -0.000630716620653785,
+     "qini_high95": 0.0018521650000179791,
+     "reliable": false,
+     "ate": 0.0036741094456724244
+    }
+   },
+   "ranker": "ensemble",
+   "folds": 5
+  },
+  {
+   "seed": 9103,
+   "personalise": false,
+   "recommended": "Contact nobody",
+   "signal_fired": true,
+   "share_contacted": 0.0,
+   "true_profit_per_customer": -0.0,
+   "signal": {
+    "Message": {
+     "qini": -0.0013698098660098507,
+     "qini_low95": -0.002463382314522833,
+     "qini_high95": -0.0001407870570941323,
+     "reliable": false,
+     "ate": -0.0017839117606126553
+    }
+   },
+   "ranker": "ensemble",
+   "folds": 5
+  },
+  {
+   "seed": 9104,
+   "personalise": false,
+   "recommended": "Contact nobody",
+   "signal_fired": false,
+   "share_contacted": 0.0,
+   "true_profit_per_customer": -0.0,
+   "signal": {
+    "Message": {
+     "qini": 0.0013611413334262855,
+     "qini_low95": 0.00010936585463948073,
+     "qini_high95": 0.002556777538534717,
+     "reliable": true,
+     "ate": -0.0008340905297986034
+    }
+   },
+   "ranker": "ensemble",
+   "folds": 5
+  },
+  {
+   "seed": 9105,
+   "personalise": false,
+   "recommended": "Contact nobody",
+   "signal_fired": true,
+   "share_contacted": 0.0,
+   "true_profit_per_customer": -0.0,
+   "signal": {
+    "Message": {
+     "qini": 0.000728407002560916,
+     "qini_low95": -0.0006062227803351661,
+     "qini_high95": 0.00231339345184293,
+     "reliable": false,
+     "ate": -0.004484991614596978
+    }
+   },
+   "ranker": "ensemble",
+   "folds": 5
+  },
+  {
+   "seed": 9106,
+   "personalise": false,
+   "recommended": "Contact nobody",
+   "signal_fired": true,
+   "share_contacted": 0.0,
+   "true_profit_per_customer": -0.0,
+   "signal": {
+    "Message": {
+     "qini": 0.000961718171162007,
+     "qini_low95": -0.0005415456290609927,
+     "qini_high95": 0.002116331513921164,
+     "reliable": false,
+     "ate": -0.005368176588177009
+    }
+   },
+   "ranker": "ensemble",
+   "folds": 5
+  },
+  {
+   "seed": 9107,
+   "personalise": false,
+   "recommended": "Contact nobody",
+   "signal_fired": true,
+   "share_contacted": 0.0,
+   "true_profit_per_customer": -0.0,
+   "signal": {
+    "Message": {
+     "qini": 0.00028999013789991735,
+     "qini_low95": -0.0010621541215974696,
+     "qini_high95": 0.001564175484536574,
+     "reliable": false,
+     "ate": -0.0026605396928304215
+    }
+   },
+   "ranker": "ensemble",
+   "folds": 5
+  },
+  {
+   "seed": 9108,
+   "personalise": false,
+   "recommended": "Contact nobody",
+   "signal_fired": true,
+   "share_contacted": 0.0,
+   "true_profit_per_customer": -0.0,
+   "signal": {
+    "Message": {
+     "qini": 0.0001690155289416109,
+     "qini_low95": -0.000975587675817235,
+     "qini_high95": 0.0014864199887356894,
+     "reliable": false,
+     "ate": -0.003305204748350943
+    }
+   },
+   "ranker": "ensemble",
+   "folds": 5
+  },
+  {
+   "seed": 9109,
+   "personalise": false,
+   "recommended": "Contact nobody",
+   "signal_fired": true,
+   "share_contacted": 0.0,
+   "true_profit_per_customer": -0.0,
+   "signal": {
+    "Message": {
+     "qini": -0.0011552546934871025,
+     "qini_low95": -0.002405138028522576,
+     "qini_high95": 6.209544448952308e-05,
+     "reliable": false,
+     "ate": 0.00465513393592637
+    }
+   },
+   "ranker": "ensemble",
+   "folds": 5
+  },
+  {
+   "seed": 9110,
+   "personalise": false,
+   "recommended": "Contact nobody",
+   "signal_fired": true,
+   "share_contacted": 0.0,
+   "true_profit_per_customer": -0.0,
+   "signal": {
+    "Message": {
+     "qini": -0.0012461855635475401,
+     "qini_low95": -0.002506538566275693,
+     "qini_high95": 7.367042567529025e-05,
+     "reliable": false,
+     "ate": 0.0004232742389453925
+    }
+   },
+   "ranker": "ensemble",
+   "folds": 5
+  },
+  {
+   "seed": 9111,
+   "personalise": false,
+   "recommended": "Contact nobody",
+   "signal_fired": true,
+   "share_contacted": 0.0,
+   "true_profit_per_customer": -0.0,
+   "signal": {
+    "Message": {
+     "qini": -3.0586144644869956e-05,
+     "qini_low95": -0.0011393001758044329,
+     "qini_high95": 0.0014469908558713634,
+     "reliable": false,
+     "ate": -0.003026841561957261
+    }
+   },
+   "ranker": "ensemble",
+   "folds": 5
+  },
+  {
+   "seed": 9112,
+   "personalise": false,
+   "recommended": "Contact nobody",
+   "signal_fired": true,
+   "share_contacted": 0.0,
+   "true_profit_per_customer": -0.0,
+   "signal": {
+    "Message": {
+     "qini": -0.0004501250097645905,
+     "qini_low95": -0.001752487390695768,
+     "qini_high95": 0.0008997024827560543,
+     "reliable": false,
+     "ate": 0.001314659998994605
+    }
+   },
+   "ranker": "ensemble",
+   "folds": 5
+  },
+  {
+   "seed": 9113,
+   "personalise": false,
+   "recommended": "Contact nobody",
+   "signal_fired": true,
+   "share_contacted": 0.0,
+   "true_profit_per_customer": -0.0,
+   "signal": {
+    "Message": {
+     "qini": -0.0004846145017069316,
+     "qini_low95": -0.0017383863291108028,
+     "qini_high95": 0.0010781646455287047,
+     "reliable": false,
+     "ate": -0.003894328860159446
+    }
+   },
+   "ranker": "ensemble",
+   "folds": 5
+  },
+  {
+   "seed": 9114,
+   "personalise": false,
+   "recommended": "Contact nobody",
+   "signal_fired": true,
+   "share_contacted": 0.0,
+   "true_profit_per_customer": -0.0,
+   "signal": {
+    "Message": {
+     "qini": -0.0017177564036091513,
+     "qini_low95": -0.003178098999786538,
+     "qini_high95": -0.0005006205642036412,
+     "reliable": false,
+     "ate": -0.006785021642548572
+    }
+   },
+   "ranker": "ensemble",
+   "folds": 5
+  },
+  {
+   "seed": 9115,
+   "personalise": false,
+   "recommended": "Contact everyone (Message)",
+   "signal_fired": true,
+   "share_contacted": 1.0,
+   "true_profit_per_customer": -1.02,
+   "signal": {
+    "Message": {
+     "qini": -0.0016460914870486693,
+     "qini_low95": -0.002777829529693239,
+     "qini_high95": -0.0003052692024509805,
+     "reliable": false,
+     "ate": 0.007190590354450077
+    }
+   },
+   "ranker": "ensemble",
+   "folds": 5
+  },
+  {
+   "seed": 9116,
+   "personalise": false,
+   "recommended": "Contact nobody",
+   "signal_fired": true,
+   "share_contacted": 0.0,
+   "true_profit_per_customer": -0.0,
+   "signal": {
+    "Message": {
+     "qini": -0.00026744745151949234,
+     "qini_low95": -0.0014231789434529202,
+     "qini_high95": 0.000985289887312047,
+     "reliable": false,
+     "ate": 0.004410910057396966
+    }
+   },
+   "ranker": "ensemble",
+   "folds": 5
+  },
+  {
+   "seed": 9117,
+   "personalise": false,
+   "recommended": "Contact nobody",
+   "signal_fired": true,
+   "share_contacted": 0.0,
+   "true_profit_per_customer": -0.0,
+   "signal": {
+    "Message": {
+     "qini": -6.648902436719542e-05,
+     "qini_low95": -0.0014666087072456983,
+     "qini_high95": 0.001315693530720731,
+     "reliable": false,
+     "ate": -0.003952120469713605
+    }
+   },
+   "ranker": "ensemble",
+   "folds": 5
+  },
+  {
+   "seed": 9118,
+   "personalise": false,
+   "recommended": "Contact nobody",
+   "signal_fired": true,
+   "share_contacted": 0.0,
+   "true_profit_per_customer": -0.0,
+   "signal": {
+    "Message": {
+     "qini": 0.00018105865355280974,
+     "qini_low95": -0.0010252679321198234,
+     "qini_high95": 0.0012958012413774632,
+     "reliable": false,
+     "ate": -0.005201540032450713
+    }
+   },
+   "ranker": "ensemble",
+   "folds": 5
+  },
+  {
+   "seed": 9119,
+   "personalise": false,
+   "recommended": "Contact nobody",
+   "signal_fired": true,
+   "share_contacted": 0.0,
+   "true_profit_per_customer": -0.0,
+   "signal": {
+    "Message": {
+     "qini": 0.00023023130271548724,
+     "qini_low95": -0.0012148498562509927,
+     "qini_high95": 0.001548904882878856,
+     "reliable": false,
+     "ate": 0.005404709133958463
+    }
+   },
+   "ranker": "ensemble",
+   "folds": 5
+  },
+  {
+   "seed": 9120,
+   "personalise": false,
+   "recommended": "Contact nobody",
+   "signal_fired": true,
+   "share_contacted": 0.0,
+   "true_profit_per_customer": -0.0,
+   "signal": {
+    "Message": {
+     "qini": 0.00041324481213499375,
+     "qini_low95": -0.0008423730445002742,
+     "qini_high95": 0.0018124203547573861,
+     "reliable": false,
+     "ate": -0.0033933147475430636
+    }
+   },
+   "ranker": "ensemble",
+   "folds": 5
+  }
+ ]
+}

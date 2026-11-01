@@ -1,0 +1,32 @@
+{
+ "dataset": "hillstrom",
+ "measured_fix_minus_current": [
+  0.0,
+  0.0,
+  0.0
+ ],
+ "current": {
+  "recommended": "Contact everyone (treat)",
+  "kind": "everyone",
+  "share_contacted": 1.0,
+  "measured_extra_per_customer": [
+   6.957525112631183,
+   4.70315935025504,
+   8.880993123633631
+  ],
+  "qini": 0.05213632737613254,
+  "decide_s": 1.3403820991516113
+ },
+ "fix": {
+  "recommended": "Contact everyone (treat)",
+  "kind": "everyone",
+  "share_contacted": 1.0,
+  "measured_extra_per_customer": [
+   6.957525112631183,
+   4.70315935025504,
+   8.880993123633631
+  ],
+  "qini": 0.05878810380508591,
+  "decide_s": 40.37664794921875
+ }
+}

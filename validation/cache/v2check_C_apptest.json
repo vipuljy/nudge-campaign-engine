@@ -1,0 +1,137 @@
+{
+ "missing_values": {
+  "file": "missing_values",
+  "stages": [
+   [
+    "loaded",
+    {
+     "errors": [],
+     "warnings": [
+      "197 rows have no value in \"option\" (which option the customer got) and will be left out.",
+      "1.9% of rows have no usable outcome and will be left out."
+     ],
+     "exceptions": []
+    }
+   ],
+   [
+    "built (after rerun)",
+    {
+     "errors": [],
+     "warnings": [
+      "197 rows have no value in \"option\" (which option the customer got) and will be left out.",
+      "1.9% of rows have no usable outcome and will be left out."
+     ],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/money.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/prove.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ]
+  ],
+  "success": [
+   "**Is the test fair? Yes.** The groups look alike on every measure, as a random test should. Largest gap between groups: 0.024 on *x8* (under 0.05 is what chance alone gives at this size)."
+  ],
+  "markdown_count": 20
+ },
+ "rows_500": {
+  "file": "rows_500",
+  "stages": [
+   [
+    "loaded",
+    {
+     "errors": [],
+     "warnings": [
+      "Only 257 customers got \"No message\". Under about 1,000 per option, per-customer estimates are noisy; the ranges shown will be wide.",
+      "Only 243 customers got \"Message\". Under about 1,000 per option, per-customer estimates are noisy; the ranges shown will be wide."
+     ],
+     "exceptions": []
+    }
+   ],
+   [
+    "built (after rerun)",
+    {
+     "errors": [],
+     "warnings": [
+      "Only 257 customers got \"No message\". Under about 1,000 per option, per-customer estimates are noisy; the ranges shown will be wide.",
+      "Only 243 customers got \"Message\". Under about 1,000 per option, per-customer estimates are noisy; the ranges shown will be wide."
+     ],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/money.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/prove.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ]
+  ],
+  "success": [
+   "**Is the test fair? Yes.** The groups look alike on every measure, as a random test should. Largest gap between groups: 0.236 on *x7* (under 0.27 is what chance alone gives at this size)."
+  ],
+  "markdown_count": 20
+ },
+ "x_semicolon": {
+  "file": "x_semicolon",
+  "stages": [
+   [
+    "loaded",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "built (after rerun)",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/money.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/prove.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ]
+  ],
+  "success": [
+   "**Is the test fair? Yes.** The groups look alike on every measure, as a random test should. Largest gap between groups: 0.069 on *joined via = store* (under 0.08 is what chance alone gives at this size)."
+  ],
+  "markdown_count": 20
+ }
+}

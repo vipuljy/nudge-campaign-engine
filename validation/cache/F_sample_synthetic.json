@@ -1,0 +1,40 @@
+{
+ "sample": "synthetic",
+ "value_per_unit": 150.0,
+ "cost": 5.0,
+ "measured_fix_minus_current": [
+  -0.1223724296540496,
+  -0.6382210673932646,
+  0.4228410891404417
+ ],
+ "current": {
+  "recommended": "Nudge plan",
+  "kind": "personalised",
+  "share_contacted": 0.2819,
+  "measured_extra_per_customer": [
+   1.5944508975442029,
+   0.8913451937038359,
+   2.4650241094105203
+  ],
+  "qini": 0.01230372300088035,
+  "decide_s": 2.5915586948394775,
+  "true_profit_per_1000": 1250.8631375000002,
+  "true_share_of_oracle": 0.7247581409101657,
+  "true_spearman": 0.5301906835304491
+ },
+ "fix": {
+  "recommended": "Nudge plan (margin x0.5)",
+  "kind": "personalised",
+  "share_contacted": 0.315975,
+  "measured_extra_per_customer": [
+   1.4720784678901533,
+   0.7348521905226479,
+   2.2868347501574804
+  ],
+  "qini": 0.010868650756973724,
+  "decide_s": 53.50188612937927,
+  "true_profit_per_1000": 1269.167325,
+  "true_share_of_oracle": 0.7353637047849513,
+  "true_spearman": 0.5780526492624433
+ }
+}

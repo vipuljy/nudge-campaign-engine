@@ -1,0 +1,764 @@
+{
+ "runs": [
+  {
+   "n": 50000,
+   "arms": 2,
+   "outcome": "binary",
+   "seed": 7101,
+   "null": true,
+   "measured_fix_minus_current": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "current": {
+    "recommended": "Contact nobody",
+    "kind": "nobody",
+    "share_contacted": 0.0,
+    "measured_extra_per_customer": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "qini": 7.170059337020536e-05,
+    "decide_s": 0.7669517993927002,
+    "true_profit_per_customer": 0.0
+   },
+   "fix": {
+    "recommended": "Contact nobody",
+    "kind": "nobody",
+    "share_contacted": 0.0,
+    "measured_extra_per_customer": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "qini": -0.0010147844446583303,
+    "decide_s": 42.661455154418945,
+    "true_profit_per_customer": 0.0
+   }
+  },
+  {
+   "n": 50000,
+   "arms": 2,
+   "outcome": "binary",
+   "seed": 7102,
+   "null": true,
+   "measured_fix_minus_current": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "current": {
+    "recommended": "Contact nobody",
+    "kind": "nobody",
+    "share_contacted": 0.0,
+    "measured_extra_per_customer": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "qini": -0.00785101081316279,
+    "decide_s": 1.0102496147155762,
+    "true_profit_per_customer": 0.0
+   },
+   "fix": {
+    "recommended": "Contact nobody",
+    "kind": "nobody",
+    "share_contacted": 0.0,
+    "measured_extra_per_customer": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "qini": -0.010475739149016207,
+    "decide_s": 33.022209882736206,
+    "true_profit_per_customer": 0.0
+   }
+  },
+  {
+   "n": 50000,
+   "arms": 2,
+   "outcome": "binary",
+   "seed": 7103,
+   "null": true,
+   "measured_fix_minus_current": [
+    1.6720441043270695,
+    -1.147027410845692,
+    4.448428439088276
+   ],
+   "current": {
+    "recommended": "Contact everyone (Message)",
+    "kind": "everyone",
+    "share_contacted": 1.0,
+    "measured_extra_per_customer": [
+     -1.6720441043270695,
+     -4.448428439088275,
+     1.1470274108456926
+    ],
+    "qini": 0.003724442224470303,
+    "decide_s": 0.683356761932373,
+    "true_profit_per_customer": -1.0199999999999996
+   },
+   "fix": {
+    "recommended": "Contact nobody",
+    "kind": "nobody",
+    "share_contacted": 0.0,
+    "measured_extra_per_customer": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "qini": 0.010523479023229919,
+    "decide_s": 33.466460943222046,
+    "true_profit_per_customer": 0.0
+   }
+  },
+  {
+   "n": 50000,
+   "arms": 2,
+   "outcome": "binary",
+   "seed": 7104,
+   "null": true,
+   "measured_fix_minus_current": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "current": {
+    "recommended": "Contact nobody",
+    "kind": "nobody",
+    "share_contacted": 0.0,
+    "measured_extra_per_customer": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "qini": 0.005789950589548531,
+    "decide_s": 0.708040714263916,
+    "true_profit_per_customer": 0.0
+   },
+   "fix": {
+    "recommended": "Contact nobody",
+    "kind": "nobody",
+    "share_contacted": 0.0,
+    "measured_extra_per_customer": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "qini": 0.007414025416560142,
+    "decide_s": 22.64668583869934,
+    "true_profit_per_customer": 0.0
+   }
+  },
+  {
+   "n": 50000,
+   "arms": 2,
+   "outcome": "binary",
+   "seed": 7105,
+   "null": true,
+   "measured_fix_minus_current": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "current": {
+    "recommended": "Contact nobody",
+    "kind": "nobody",
+    "share_contacted": 0.0,
+    "measured_extra_per_customer": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "qini": 0.008195142576300288,
+    "decide_s": 0.713878870010376,
+    "true_profit_per_customer": 0.0
+   },
+   "fix": {
+    "recommended": "Contact nobody",
+    "kind": "nobody",
+    "share_contacted": 0.0,
+    "measured_extra_per_customer": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "qini": -0.00149245742138183,
+    "decide_s": 24.147003650665283,
+    "true_profit_per_customer": 0.0
+   }
+  },
+  {
+   "n": 50000,
+   "arms": 2,
+   "outcome": "binary",
+   "seed": 7106,
+   "null": true,
+   "measured_fix_minus_current": [
+    -0.6911005606336174,
+    -1.7864815967471035,
+    0.5152290373597331
+   ],
+   "current": {
+    "recommended": "Nudge plan",
+    "kind": "personalised",
+    "share_contacted": 0.4923,
+    "measured_extra_per_customer": [
+     1.1354277405098117,
+     -0.405456496358192,
+     2.723290987984317
+    ],
+    "qini": 0.014077841469653421,
+    "decide_s": 1.1490087509155273,
+    "true_profit_per_customer": -0.5021459999999999
+   },
+   "fix": {
+    "recommended": "Nudge plan (margin x0)",
+    "kind": "personalised",
+    "share_contacted": 0.5108,
+    "measured_extra_per_customer": [
+     0.4443271798761944,
+     -1.25863415565159,
+     2.087750330237638
+    ],
+    "qini": 0.008504836369972197,
+    "decide_s": 22.381882905960083,
+    "true_profit_per_customer": -0.521016
+   }
+  },
+  {
+   "n": 50000,
+   "arms": 2,
+   "outcome": "binary",
+   "seed": 7107,
+   "null": true,
+   "measured_fix_minus_current": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "current": {
+    "recommended": "Contact nobody",
+    "kind": "nobody",
+    "share_contacted": 0.0,
+    "measured_extra_per_customer": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "qini": -0.029748924214441246,
+    "decide_s": 0.7672226428985596,
+    "true_profit_per_customer": 0.0
+   },
+   "fix": {
+    "recommended": "Contact nobody",
+    "kind": "nobody",
+    "share_contacted": 0.0,
+    "measured_extra_per_customer": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "qini": -0.020831210137855345,
+    "decide_s": 22.837833642959595,
+    "true_profit_per_customer": 0.0
+   }
+  },
+  {
+   "n": 50000,
+   "arms": 2,
+   "outcome": "binary",
+   "seed": 7108,
+   "null": true,
+   "measured_fix_minus_current": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "current": {
+    "recommended": "Contact nobody",
+    "kind": "nobody",
+    "share_contacted": 0.0,
+    "measured_extra_per_customer": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "qini": -0.020433015303630796,
+    "decide_s": 0.7434821128845215,
+    "true_profit_per_customer": 0.0
+   },
+   "fix": {
+    "recommended": "Contact nobody",
+    "kind": "nobody",
+    "share_contacted": 0.0,
+    "measured_extra_per_customer": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "qini": -0.004878109614051583,
+    "decide_s": 35.211856842041016,
+    "true_profit_per_customer": 0.0
+   }
+  },
+  {
+   "n": 50000,
+   "arms": 2,
+   "outcome": "binary",
+   "seed": 7109,
+   "null": true,
+   "measured_fix_minus_current": [
+    3.1682730581468146,
+    0.48222260053951826,
+    5.601965975776398
+   ],
+   "current": {
+    "recommended": "Contact everyone (Message)",
+    "kind": "everyone",
+    "share_contacted": 1.0,
+    "measured_extra_per_customer": [
+     -3.1682730581468146,
+     -5.601965975776398,
+     -0.48222260053951815
+    ],
+    "qini": 0.002313233711319431,
+    "decide_s": 0.6852207183837891,
+    "true_profit_per_customer": -1.0199999999999996
+   },
+   "fix": {
+    "recommended": "Contact nobody",
+    "kind": "nobody",
+    "share_contacted": 0.0,
+    "measured_extra_per_customer": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "qini": -0.0020949648520447246,
+    "decide_s": 44.56835103034973,
+    "true_profit_per_customer": 0.0
+   }
+  },
+  {
+   "n": 50000,
+   "arms": 2,
+   "outcome": "binary",
+   "seed": 7110,
+   "null": true,
+   "measured_fix_minus_current": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "current": {
+    "recommended": "Contact nobody",
+    "kind": "nobody",
+    "share_contacted": 0.0,
+    "measured_extra_per_customer": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "qini": 0.010184744147695053,
+    "decide_s": 0.8299746513366699,
+    "true_profit_per_customer": 0.0
+   },
+   "fix": {
+    "recommended": "Contact nobody",
+    "kind": "nobody",
+    "share_contacted": 0.0,
+    "measured_extra_per_customer": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "qini": 0.009385596994199856,
+    "decide_s": 43.82767343521118,
+    "true_profit_per_customer": 0.0
+   }
+  },
+  {
+   "n": 50000,
+   "arms": 2,
+   "outcome": "binary",
+   "seed": 7111,
+   "null": true,
+   "measured_fix_minus_current": [
+    2.4745449309087593,
+    -0.2183785554753977,
+    5.682043942777312
+   ],
+   "current": {
+    "recommended": "Contact everyone (Message)",
+    "kind": "everyone",
+    "share_contacted": 1.0,
+    "measured_extra_per_customer": [
+     -2.4745449309087593,
+     -5.682043942777312,
+     0.2183785554753982
+    ],
+    "qini": -0.0027680000442105606,
+    "decide_s": 0.811647891998291,
+    "true_profit_per_customer": -1.0199999999999996
+   },
+   "fix": {
+    "recommended": "Contact nobody",
+    "kind": "nobody",
+    "share_contacted": 0.0,
+    "measured_extra_per_customer": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "qini": 0.004067288707726367,
+    "decide_s": 55.92423605918884,
+    "true_profit_per_customer": 0.0
+   }
+  },
+  {
+   "n": 50000,
+   "arms": 2,
+   "outcome": "binary",
+   "seed": 7112,
+   "null": true,
+   "measured_fix_minus_current": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "current": {
+    "recommended": "Contact everyone (Message)",
+    "kind": "everyone",
+    "share_contacted": 1.0,
+    "measured_extra_per_customer": [
+     -1.6976155169319247,
+     -4.152704425273578,
+     0.7530694163673911
+    ],
+    "qini": 0.0057887664437390775,
+    "decide_s": 0.8678839206695557,
+    "true_profit_per_customer": -1.0199999999999996
+   },
+   "fix": {
+    "recommended": "Contact everyone (Message)",
+    "kind": "everyone",
+    "share_contacted": 1.0,
+    "measured_extra_per_customer": [
+     -1.6976155169319247,
+     -4.152704425273578,
+     0.7530694163673911
+    ],
+    "qini": 0.008506845645087977,
+    "decide_s": 49.979440689086914,
+    "true_profit_per_customer": -1.0199999999999996
+   }
+  },
+  {
+   "n": 50000,
+   "arms": 2,
+   "outcome": "binary",
+   "seed": 7113,
+   "null": true,
+   "measured_fix_minus_current": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "current": {
+    "recommended": "Contact nobody",
+    "kind": "nobody",
+    "share_contacted": 0.0,
+    "measured_extra_per_customer": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "qini": 0.006313908436799881,
+    "decide_s": 0.6939356327056885,
+    "true_profit_per_customer": 0.0
+   },
+   "fix": {
+    "recommended": "Contact nobody",
+    "kind": "nobody",
+    "share_contacted": 0.0,
+    "measured_extra_per_customer": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "qini": 0.009750262163104102,
+    "decide_s": 46.00450110435486,
+    "true_profit_per_customer": 0.0
+   }
+  },
+  {
+   "n": 50000,
+   "arms": 2,
+   "outcome": "binary",
+   "seed": 7114,
+   "null": true,
+   "measured_fix_minus_current": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "current": {
+    "recommended": "Contact nobody",
+    "kind": "nobody",
+    "share_contacted": 0.0,
+    "measured_extra_per_customer": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "qini": 0.009162760108641243,
+    "decide_s": 0.8426094055175781,
+    "true_profit_per_customer": 0.0
+   },
+   "fix": {
+    "recommended": "Contact nobody",
+    "kind": "nobody",
+    "share_contacted": 0.0,
+    "measured_extra_per_customer": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "qini": 0.022826634032155093,
+    "decide_s": 48.03651213645935,
+    "true_profit_per_customer": 0.0
+   }
+  },
+  {
+   "n": 50000,
+   "arms": 2,
+   "outcome": "binary",
+   "seed": 7115,
+   "null": true,
+   "measured_fix_minus_current": [
+    0.8458006129912848,
+    -1.4016979976066555,
+    2.8910765014693163
+   ],
+   "current": {
+    "recommended": "Contact everyone (Message)",
+    "kind": "everyone",
+    "share_contacted": 1.0,
+    "measured_extra_per_customer": [
+     0.4257369973670627,
+     -2.789064904556187,
+     2.772753397907897
+    ],
+    "qini": 0.005549751256829148,
+    "decide_s": 0.8916299343109131,
+    "true_profit_per_customer": -1.0199999999999996
+   },
+   "fix": {
+    "recommended": "Nudge plan (margin x0)",
+    "kind": "personalised",
+    "share_contacted": 0.4813,
+    "measured_extra_per_customer": [
+     1.2715376103583476,
+     -0.7016201244641608,
+     3.2211770819147296
+    ],
+    "qini": 0.006068093826684608,
+    "decide_s": 45.55192470550537,
+    "true_profit_per_customer": -0.49092600000000003
+   }
+  },
+  {
+   "n": 50000,
+   "arms": 2,
+   "outcome": "binary",
+   "seed": 7116,
+   "null": true,
+   "measured_fix_minus_current": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "current": {
+    "recommended": "Contact nobody",
+    "kind": "nobody",
+    "share_contacted": 0.0,
+    "measured_extra_per_customer": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "qini": 0.012078785121616099,
+    "decide_s": 0.8245158195495605,
+    "true_profit_per_customer": 0.0
+   },
+   "fix": {
+    "recommended": "Contact nobody",
+    "kind": "nobody",
+    "share_contacted": 0.0,
+    "measured_extra_per_customer": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "qini": 0.009224625388905998,
+    "decide_s": 47.61982440948486,
+    "true_profit_per_customer": 0.0
+   }
+  },
+  {
+   "n": 50000,
+   "arms": 2,
+   "outcome": "binary",
+   "seed": 7117,
+   "null": true,
+   "measured_fix_minus_current": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "current": {
+    "recommended": "Contact nobody",
+    "kind": "nobody",
+    "share_contacted": 0.0,
+    "measured_extra_per_customer": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "qini": 0.006678307627153282,
+    "decide_s": 0.754570722579956,
+    "true_profit_per_customer": 0.0
+   },
+   "fix": {
+    "recommended": "Contact nobody",
+    "kind": "nobody",
+    "share_contacted": 0.0,
+    "measured_extra_per_customer": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "qini": 0.01728280579274854,
+    "decide_s": 33.79321503639221,
+    "true_profit_per_customer": 0.0
+   }
+  },
+  {
+   "n": 50000,
+   "arms": 2,
+   "outcome": "binary",
+   "seed": 7118,
+   "null": true,
+   "measured_fix_minus_current": [
+    3.378685586028979,
+    0.4738217142407157,
+    5.997228790437454
+   ],
+   "current": {
+    "recommended": "Contact everyone (Message)",
+    "kind": "everyone",
+    "share_contacted": 1.0,
+    "measured_extra_per_customer": [
+     -3.378685586028979,
+     -5.997228790437453,
+     -0.4738217142407155
+    ],
+    "qini": -0.01815248359206965,
+    "decide_s": 0.8765964508056641,
+    "true_profit_per_customer": -1.0199999999999996
+   },
+   "fix": {
+    "recommended": "Contact nobody",
+    "kind": "nobody",
+    "share_contacted": 0.0,
+    "measured_extra_per_customer": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "qini": -0.018165192237180924,
+    "decide_s": 32.45611810684204,
+    "true_profit_per_customer": 0.0
+   }
+  },
+  {
+   "n": 50000,
+   "arms": 2,
+   "outcome": "binary",
+   "seed": 7119,
+   "null": true,
+   "measured_fix_minus_current": [
+    0.3494299202178308,
+    -1.3288928256125947,
+    1.942282842697029
+   ],
+   "current": {
+    "recommended": "Contact nobody",
+    "kind": "nobody",
+    "share_contacted": 0.0,
+    "measured_extra_per_customer": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "qini": 0.00923029311096562,
+    "decide_s": 0.7514102458953857,
+    "true_profit_per_customer": 0.0
+   },
+   "fix": {
+    "recommended": "Nudge plan (margin x0.1)",
+    "kind": "personalised",
+    "share_contacted": 0.4359,
+    "measured_extra_per_customer": [
+     0.3494299202178308,
+     -1.3288928256125947,
+     1.942282842697029
+    ],
+    "qini": 0.01180666664016563,
+    "decide_s": 43.273115158081055,
+    "true_profit_per_customer": -0.444618
+   }
+  },
+  {
+   "n": 50000,
+   "arms": 2,
+   "outcome": "binary",
+   "seed": 7120,
+   "null": true,
+   "measured_fix_minus_current": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "current": {
+    "recommended": "Contact nobody",
+    "kind": "nobody",
+    "share_contacted": 0.0,
+    "measured_extra_per_customer": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "qini": -0.009356858954873091,
+    "decide_s": 0.7839293479919434,
+    "true_profit_per_customer": 0.0
+   },
+   "fix": {
+    "recommended": "Contact nobody",
+    "kind": "nobody",
+    "share_contacted": 0.0,
+    "measured_extra_per_customer": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "qini": -0.005857417531822137,
+    "decide_s": 37.037185192108154,
+    "true_profit_per_customer": 0.0
+   }
+  }
+ ]
+}

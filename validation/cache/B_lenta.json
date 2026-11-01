@@ -1,0 +1,327 @@
+{
+ "dataset": "lenta",
+ "description": "Lenta (Russian grocery): SMS vs no SMS; outcome = came and bought (response_att)",
+ "rows_total": 687029,
+ "rows_train": 200000,
+ "rows_test": 137406,
+ "treated_share": 0.7509028003184727,
+ "outcome_rate": 0.10824579457344595,
+ "ate_full": {
+  "ate": 0.0075471269267721325,
+  "low95": 0.005874949095901839,
+  "high95": 0.009219304757642426
+ },
+ "ate_test": {
+  "ate": 0.007549164484561097,
+  "low95": 0.003810021009599676,
+  "high95": 0.011288307959522518
+ },
+ "checks": [
+  [
+   "warning",
+   "The file has 337,406 rows. Training uses a random 200,000 of them to stay fast; the download still scores every row."
+  ]
+ ],
+ "fairness": "red",
+ "max_gap": 0.19331691534355766,
+ "features_used": 195,
+ "features_dropped": [],
+ "secs": {
+  "Likely-buyer model": 11.545983791351318,
+  "Nudge fast engine": 29.358031272888184,
+  "Nudge ensemble (thorough)": 80.71847295761108,
+  "econml CausalForestDML": 1011.3647871017456,
+  "econml R-learner (NonParamDML)": 32.51493310928345
+ },
+ "methods": {
+  "Random order": {
+   "qini": -0.012057724451547359,
+   "qini_low95": -0.022385670826725466,
+   "qini_high95": -0.00035419833920222735,
+   "auuc": -0.006641047109879136,
+   "auuc_low95": -0.01228034178108273,
+   "auuc_high95": -0.0002126716033681209,
+   "top10_lift": -0.0019137652596677712,
+   "top10_lift_low95": -0.014007911655817941,
+   "top10_lift_high95": 0.010316808439172823,
+   "top30_lift": 0.000789245546024081,
+   "top30_lift_low95": -0.005390375428781545,
+   "top30_lift_high95": 0.007596327382430633,
+   "profit_top30_per_customer": -0.2704839504289164,
+   "profit_top30_per_customer_low95": -0.5485668942951696,
+   "profit_top30_per_customer_high95": 0.03583473220937847,
+   "engine_minus_this_qini": 0.010852163636892228,
+   "engine_minus_this_qini_low95": -0.007259573515457917,
+   "engine_minus_this_qini_high95": 0.0325101513691481
+  },
+  "Likely-buyer model": {
+   "qini": 0.010708414208429893,
+   "qini_low95": -0.0016995172266745843,
+   "qini_high95": 0.021426967670023892,
+   "auuc": 0.005803502695784832,
+   "auuc_low95": -0.0009723872874396443,
+   "auuc_high95": 0.011605605012593978,
+   "top10_lift": 0.023422244773455336,
+   "top10_lift_low95": 0.00237809158053708,
+   "top10_lift_high95": 0.04091027776232684,
+   "top30_lift": 0.012054183609821884,
+   "top30_lift_low95": 0.002495698879610227,
+   "top30_lift_high95": 0.020927167827497175,
+   "profit_top30_per_customer": 0.23643826244198474,
+   "profit_top30_per_customer_low95": -0.19369355041753977,
+   "profit_top30_per_customer_high95": 0.6357225522373728,
+   "engine_minus_this_qini": -0.011913975023085024,
+   "engine_minus_this_qini_low95": -0.027209208367691473,
+   "engine_minus_this_qini_high95": 0.005210993025337102
+  },
+  "Nudge fast engine": {
+   "qini": -0.0012055608146551316,
+   "qini_low95": -0.01664121952674449,
+   "qini_high95": 0.01320208708062395,
+   "auuc": -0.0006685618081748952,
+   "auuc_low95": -0.009192114952275988,
+   "auuc_high95": 0.007287533165186798,
+   "top10_lift": 0.010078946040718295,
+   "top10_lift_low95": -0.008866868104382104,
+   "top10_lift_high95": 0.027466785425469212,
+   "top30_lift": 0.008456155808024585,
+   "top30_lift_low95": 0.00019256730763394725,
+   "top30_lift_high95": 0.01771307373963196,
+   "profit_top30_per_customer": 0.07452701136110629,
+   "profit_top30_per_customer_low95": -0.2973344711564724,
+   "profit_top30_per_customer_high95": 0.4910883182834381,
+   "calibration": {
+    "by_decile": [
+     {
+      "decile": 1,
+      "predicted": 0.04893716947795605,
+      "measured": 0.010078946040718295
+     },
+     {
+      "decile": 2,
+      "predicted": 0.01508049704956499,
+      "measured": 0.007269026751822116
+     },
+     {
+      "decile": 3,
+      "predicted": 0.007323415320954614,
+      "measured": 0.010940400342878256
+     },
+     {
+      "decile": 4,
+      "predicted": 0.004629115099173074,
+      "measured": 0.0068977881056242266
+     },
+     {
+      "decile": 5,
+      "predicted": 0.003763319595708558,
+      "measured": -0.0008286681587392972
+     },
+     {
+      "decile": 6,
+      "predicted": 0.00302629609643698,
+      "measured": 0.0037597363291997574
+     },
+     {
+      "decile": 7,
+      "predicted": 0.0024027228694724918,
+      "measured": 0.008043173580965353
+     },
+     {
+      "decile": 8,
+      "predicted": 0.0013359328370239154,
+      "measured": 0.009450742492664976
+     },
+     {
+      "decile": 9,
+      "predicted": -0.005220105600689495,
+      "measured": -0.0023915140090401132
+     },
+     {
+      "decile": 10,
+      "predicted": -0.038226165865255936,
+      "measured": 0.0162986122386502
+     }
+    ],
+    "slope_measured_on_predicted": -0.03837992319498865
+   }
+  },
+  "Nudge ensemble (thorough)": {
+   "qini": 0.0015806876763784807,
+   "qini_low95": -0.012782772034380467,
+   "qini_high95": 0.014344191524238324,
+   "auuc": 0.0008312016232107851,
+   "auuc_low95": -0.007071658104420351,
+   "auuc_high95": 0.007684741071896528,
+   "top10_lift": 0.015154100656705333,
+   "top10_lift_low95": -0.0026496361264636294,
+   "top10_lift_high95": 0.03484252031557833,
+   "top30_lift": 0.010318530781606466,
+   "top30_lift_low95": 0.0026290738215293276,
+   "top30_lift_high95": 0.01891869348353035,
+   "profit_top30_per_customer": 0.15833388517229097,
+   "profit_top30_per_customer_low95": -0.18769167803118025,
+   "profit_top30_per_customer_high95": 0.5453412067588659,
+   "engine_minus_this_qini": -0.002786248491033612,
+   "engine_minus_this_qini_low95": -0.013290091101743253,
+   "engine_minus_this_qini_high95": 0.009026428623234465
+  },
+  "econml CausalForestDML": {
+   "qini": 0.008464476096930582,
+   "qini_low95": -0.002792124286602894,
+   "qini_high95": 0.019774187155653898,
+   "auuc": 0.004657203563609463,
+   "auuc_low95": -0.001516281718349607,
+   "auuc_high95": 0.010800835674956231,
+   "top10_lift": 0.015571656917635956,
+   "top10_lift_low95": -0.0009786566044930375,
+   "top10_lift_high95": 0.02962692676544258,
+   "top30_lift": 0.010088559746804643,
+   "top30_lift_low95": 0.0016876716189128714,
+   "top30_lift_high95": 0.01726194648122381,
+   "profit_top30_per_customer": 0.1479851886062089,
+   "profit_top30_per_customer_low95": -0.2300547771489208,
+   "profit_top30_per_customer_high95": 0.47078759165507156,
+   "engine_minus_this_qini": -0.009670036911585713,
+   "engine_minus_this_qini_low95": -0.027125126280352973,
+   "engine_minus_this_qini_high95": 0.005464195091946485,
+   "calibration": {
+    "by_decile": [
+     {
+      "decile": 1,
+      "predicted": 0.017090416982433188,
+      "measured": 0.015571656917635956
+     },
+     {
+      "decile": 2,
+      "predicted": 0.010890631100350177,
+      "measured": 0.0004919121444909857
+     },
+     {
+      "decile": 3,
+      "predicted": 0.008202850017882476,
+      "measured": 0.014061941894360372
+     },
+     {
+      "decile": 4,
+      "predicted": 0.00621566715830613,
+      "measured": 0.01206681011393368
+     },
+     {
+      "decile": 5,
+      "predicted": 0.00452996261954137,
+      "measured": 0.013049119037986681
+     },
+     {
+      "decile": 6,
+      "predicted": 0.002982540181642303,
+      "measured": 0.002753977968176252
+     },
+     {
+      "decile": 7,
+      "predicted": 0.0014409796184442043,
+      "measured": 0.003243469586837619
+     },
+     {
+      "decile": 8,
+      "predicted": -0.000239525290923844,
+      "measured": 0.006633093776071644
+     },
+     {
+      "decile": 9,
+      "predicted": -0.0023554832801088057,
+      "measured": 0.0063350462351483144
+     },
+     {
+      "decile": 10,
+      "predicted": -0.006810404203440634,
+      "measured": -0.0009934690863959983
+     }
+    ],
+    "slope_measured_on_predicted": 0.5115797475826319
+   }
+  },
+  "econml R-learner (NonParamDML)": {
+   "qini": -0.000676284767224017,
+   "qini_low95": -0.016531596592462845,
+   "qini_high95": 0.011169398513924213,
+   "auuc": -0.00035194769830221366,
+   "auuc_low95": -0.009072486581336069,
+   "auuc_high95": 0.006159665573389487,
+   "top10_lift": 0.002044356160922467,
+   "top10_lift_low95": -0.015103931016954774,
+   "top10_lift_high95": 0.02012888451260926,
+   "top30_lift": 0.00997936280828074,
+   "top30_lift_low95": 0.0015952635018022451,
+   "top30_lift_high95": 0.017664001081469916,
+   "profit_top30_per_customer": 0.14307132637263328,
+   "profit_top30_per_customer_low95": -0.23421314241889898,
+   "profit_top30_per_customer_high95": 0.48888004866614615,
+   "engine_minus_this_qini": -0.0005292760474311146,
+   "engine_minus_this_qini_low95": -0.012266540142435538,
+   "engine_minus_this_qini_high95": 0.014426544334560445,
+   "calibration": {
+    "by_decile": [
+     {
+      "decile": 1,
+      "predicted": 0.04518810211468464,
+      "measured": 0.002044356160922467
+     },
+     {
+      "decile": 2,
+      "predicted": 0.013142701376389275,
+      "measured": 0.013776929589043335
+     },
+     {
+      "decile": 3,
+      "predicted": 0.006409187219296627,
+      "measured": 0.012028327770895464
+     },
+     {
+      "decile": 4,
+      "predicted": 0.0043078194823164655,
+      "measured": 0.0038774030739607
+     },
+     {
+      "decile": 5,
+      "predicted": 0.0036836943098882816,
+      "measured": 0.006034122191421722
+     },
+     {
+      "decile": 6,
+      "predicted": 0.0030956402151138965,
+      "measured": 0.005884413206018277
+     },
+     {
+      "decile": 7,
+      "predicted": 0.0029997560620340937,
+      "measured": -0.00131883218410897
+     },
+     {
+      "decile": 8,
+      "predicted": 0.0023423491677275255,
+      "measured": 0.0050578832400884205
+     },
+     {
+      "decile": 9,
+      "predicted": -0.002292830694494186,
+      "measured": 0.007519209973411239
+     },
+     {
+      "decile": 10,
+      "predicted": -0.03346035106096134,
+      "measured": 0.013161459320132574
+     }
+    ],
+    "slope_measured_on_predicted": -0.10870455522520366
+   }
+  },
+  "Treat everyone": {
+   "qini": null,
+   "note": "no ranking (Qini undefined; same as random order)",
+   "profit_all_per_customer": 0.11237467268416457,
+   "profit_top30_per_customer": null
+  }
+ },
+ "tie_break": "random: test rows shuffled once (seed 2027) before scoring"
+}

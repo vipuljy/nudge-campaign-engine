@@ -1,0 +1,60 @@
+{
+ "n": 5000,
+ "arms": 4,
+ "outcome": "revenue",
+ "seed": 114,
+ "null": false,
+ "measured_fix_minus_current": [
+  0.0,
+  0.0,
+  0.0
+ ],
+ "current": {
+  "recommended": "Contact everyone (WhatsApp reminder)",
+  "kind": "everyone",
+  "share_contacted": 1.0,
+  "measured_extra_per_customer": [
+   19.778805642633245,
+   7.276611896127395,
+   32.76736245386115
+  ],
+  "qini": -4.264166739154095,
+  "decide_s": 0.16441607475280762,
+  "A2": {
+   "ratio": 0.5415334105243576,
+   "low95": 0.5087982483992807,
+   "high95": 0.5691712350688509,
+   "plan_per_customer": 5.055364464103734,
+   "oracle_per_customer": 9.335277133148095
+  },
+  "A1": {
+   "spearman": 0.21698054159982094,
+   "low95": 0.1816535519151154,
+   "high95": 0.25336707057648333
+  }
+ },
+ "fix": {
+  "recommended": "Contact everyone (WhatsApp reminder)",
+  "kind": "everyone",
+  "share_contacted": 1.0,
+  "measured_extra_per_customer": [
+   19.778805642633245,
+   7.276611896127395,
+   32.76736245386115
+  ],
+  "qini": -3.816390546374939,
+  "decide_s": 5.681027889251709,
+  "A2": {
+   "ratio": 0.5415334105243576,
+   "low95": 0.5087982483992807,
+   "high95": 0.5691712350688509,
+   "plan_per_customer": 5.055364464103734,
+   "oracle_per_customer": 9.335277133148095
+  },
+  "A1": {
+   "spearman": 0.2433300639640558,
+   "low95": 0.21207061604696173,
+   "high95": 0.27693723464928477
+  }
+ }
+}

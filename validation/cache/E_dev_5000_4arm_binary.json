@@ -1,0 +1,104 @@
+{
+ "variants": {
+  "current": {
+   "recommended": "Nudge plan",
+   "share_contacted": 0.857,
+   "secs_decision": 0.14034509658813477,
+   "measured_extra_per_customer": 5.432311651390762,
+   "message": null,
+   "A2_ratio": 0.6244386789709748,
+   "A2_low95": 0.5925219140199706,
+   "A2_high95": 0.6502555073856497
+  },
+  "v2_5f": {
+   "recommended": "Contact everyone (WhatsApp reminder)",
+   "share_contacted": 1.0,
+   "secs_decision": 13.723697185516357,
+   "measured_extra_per_customer": 6.718095238095231,
+   "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact everyone (whatsapp reminder).",
+   "vs_current": [
+    1.7176448781056752,
+    -7.869662903776946,
+    11.482671449773704
+   ],
+   "signal_fired": true,
+   "proof": null,
+   "proof_fired": false,
+   "guard_switched": {
+    "SMS reminder": true,
+    "Discount Rs20": true,
+    "WhatsApp reminder": false
+   },
+   "reliable": {
+    "SMS reminder": false,
+    "Discount Rs20": false,
+    "WhatsApp reminder": false
+   },
+   "A2_ratio": 0.5422754000267387,
+   "A2_low95": 0.5150628585529016,
+   "A2_high95": 0.5715242340666871,
+   "true_per_customer": 5.045315032729683,
+   "A1_spearman_used": 0.0
+  },
+  "v2_5f_proof": {
+   "recommended": "Contact everyone (WhatsApp reminder)",
+   "share_contacted": 1.0,
+   "secs_decision": 13.890417337417603,
+   "measured_extra_per_customer": 6.718095238095231,
+   "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact everyone (whatsapp reminder).",
+   "vs_current": [
+    1.7176448781056752,
+    -7.869662903776946,
+    11.482671449773704
+   ],
+   "signal_fired": true,
+   "proof": null,
+   "proof_fired": false,
+   "guard_switched": {
+    "SMS reminder": true,
+    "Discount Rs20": true,
+    "WhatsApp reminder": false
+   },
+   "reliable": {
+    "SMS reminder": false,
+    "Discount Rs20": false,
+    "WhatsApp reminder": false
+   },
+   "A2_ratio": 0.5422754000267387,
+   "A2_low95": 0.5150628585529016,
+   "A2_high95": 0.5715242340666871,
+   "true_per_customer": 5.045315032729683,
+   "A1_spearman_used": 0.0
+  },
+  "v2_3f_proof": {
+   "recommended": "Contact everyone (WhatsApp reminder)",
+   "share_contacted": 1.0,
+   "secs_decision": 7.344961643218994,
+   "measured_extra_per_customer": 6.718095238095231,
+   "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact everyone (whatsapp reminder).",
+   "vs_current": [
+    1.7176448781056752,
+    -7.869662903776946,
+    11.482671449773704
+   ],
+   "signal_fired": true,
+   "proof": null,
+   "proof_fired": false,
+   "guard_switched": {
+    "SMS reminder": true,
+    "Discount Rs20": true,
+    "WhatsApp reminder": false
+   },
+   "reliable": {
+    "SMS reminder": false,
+    "Discount Rs20": false,
+    "WhatsApp reminder": false
+   },
+   "A2_ratio": 0.5422754000267387,
+   "A2_low95": 0.5150628585529016,
+   "A2_high95": 0.5715242340666871,
+   "true_per_customer": 5.045315032729683,
+   "A1_spearman_used": 0.0
+  }
+ }
+}

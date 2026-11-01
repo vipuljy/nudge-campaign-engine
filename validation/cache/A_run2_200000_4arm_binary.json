@@ -1,0 +1,31 @@
+{
+ "n": 200000,
+ "arms": 4,
+ "outcome": "binary",
+ "seed": 34,
+ "null": false,
+ "recommended": "Nudge plan (margin x0)",
+ "personalise": true,
+ "cv_values": {
+  "margin x0": 54.649,
+  "margin x0.1": 54.525,
+  "margin x0.25": 54.465,
+  "margin x0.5": 54.439,
+  "margin x1": 54.173,
+  "margin x2": 53.636,
+  "everyone": 51.499,
+  "nobody": 46.675
+ },
+ "A2": {
+  "ratio": 0.8955126764081268,
+  "low95": 0.8931431075264995,
+  "high95": 0.8974086322040145,
+  "plan_per_customer": 8.30309022018231,
+  "oracle_per_customer": 9.271884629803058
+ },
+ "A1": {
+  "spearman": 0.7492676048332924,
+  "low95": 0.7461736155443847,
+  "high95": 0.7518591749741016
+ }
+}

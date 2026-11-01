@@ -1,0 +1,1882 @@
+{
+ "runs": [
+  {
+   "variants": {
+    "current": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 0.8834331035614014,
+     "measured_extra_per_customer": 0.0,
+     "message": null,
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN
+    },
+    "v2_5f": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 47.78475213050842,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": true
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    },
+    "v2_5f_proof": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 47.83055591583252,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": true
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    },
+    "v2_3f_proof": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 43.74676847457886,
+     "measured_extra_per_customer": 0.0,
+     "message": "Personalising was not clearly better than the simple plan on customers the model had not seen (the 95% range of the gain includes zero), so Nudge recommends the simple plan: contact nobody.",
+     "vs_current": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "signal_fired": false,
+     "proof": {
+      "margin": "margin x1",
+      "gain": 0.4846474810545389,
+      "low95": -0.0895593417025426,
+      "high95": 1.1508017313754682,
+      "proven": false
+     },
+     "proof_fired": true,
+     "guard_switched": {
+      "Message": false
+     },
+     "reliable": {
+      "Message": true
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": NaN
+    }
+   },
+   "seed": 8101
+  },
+  {
+   "variants": {
+    "current": {
+     "recommended": "Contact everyone (Message)",
+     "share_contacted": 1.0,
+     "secs_decision": 0.6779313087463379,
+     "measured_extra_per_customer": -1.0819444187442628,
+     "message": null,
+     "A2_ratio": -Infinity,
+     "A2_low95": NaN,
+     "A2_high95": NaN
+    },
+    "v2_5f": {
+     "recommended": "Nudge plan (margin x0.5)",
+     "share_contacted": 0.59,
+     "secs_decision": 35.231088399887085,
+     "measured_extra_per_customer": -0.5336774504826725,
+     "message": null,
+     "vs_current": [
+      0.5110944738262481,
+      -0.9398057032336472,
+      1.859984835686903
+     ],
+     "signal_fired": false,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": true
+     },
+     "reliable": {
+      "Message": true
+     },
+     "A2_ratio": -Infinity,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": -0.6017999999999999,
+     "A1_spearman_used": NaN
+    },
+    "v2_5f_proof": {
+     "recommended": "Contact everyone (Message)",
+     "share_contacted": 1.0,
+     "secs_decision": 36.65138220787048,
+     "measured_extra_per_customer": -1.0819444187442628,
+     "message": "Personalising was not clearly better than the simple plan on customers the model had not seen (the 95% range of the gain includes zero), so Nudge recommends the simple plan: contact everyone (message).",
+     "vs_current": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "signal_fired": false,
+     "proof": {
+      "margin": "margin x0.5",
+      "gain": 0.561577731570703,
+      "low95": -0.21917799453669562,
+      "high95": 1.400202531911518,
+      "proven": false
+     },
+     "proof_fired": true,
+     "guard_switched": {
+      "Message": true
+     },
+     "reliable": {
+      "Message": true
+     },
+     "A2_ratio": -Infinity,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": -1.0199999999999996,
+     "A1_spearman_used": NaN
+    },
+    "v2_3f_proof": {
+     "recommended": "Contact everyone (Message)",
+     "share_contacted": 1.0,
+     "secs_decision": 28.463081121444702,
+     "measured_extra_per_customer": -1.0819444187442628,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact everyone (message).",
+     "vs_current": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": true
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": -Infinity,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": -1.0199999999999996,
+     "A1_spearman_used": 0.0
+    }
+   },
+   "seed": 8102
+  },
+  {
+   "variants": {
+    "current": {
+     "recommended": "Nudge plan",
+     "share_contacted": 0.4614,
+     "secs_decision": 0.6894950866699219,
+     "measured_extra_per_customer": 0.2399679960386425,
+     "message": null,
+     "A2_ratio": -Infinity,
+     "A2_low95": NaN,
+     "A2_high95": NaN
+    },
+    "v2_5f": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 32.836177349090576,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      -0.2417744517522056,
+      -2.0077160056750873,
+      1.7279344475500455
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": true
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    },
+    "v2_5f_proof": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 32.85779118537903,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      -0.2417744517522056,
+      -2.0077160056750873,
+      1.7279344475500455
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": true
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    },
+    "v2_3f_proof": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 16.956859588623047,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      -0.2417744517522056,
+      -2.0077160056750873,
+      1.7279344475500455
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": true
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    }
+   },
+   "seed": 8103
+  },
+  {
+   "variants": {
+    "current": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 0.7127189636230469,
+     "measured_extra_per_customer": 0.0,
+     "message": null,
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN
+    },
+    "v2_5f": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 32.88473868370056,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": false
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    },
+    "v2_5f_proof": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 33.0982506275177,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": false
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    },
+    "v2_3f_proof": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 16.03735065460205,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": true
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    }
+   },
+   "seed": 8104
+  },
+  {
+   "variants": {
+    "current": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 0.7965977191925049,
+     "measured_extra_per_customer": 0.0,
+     "message": null,
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN
+    },
+    "v2_5f": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 23.219340801239014,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": false
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    },
+    "v2_5f_proof": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 23.423803091049194,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": false
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    },
+    "v2_3f_proof": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 15.069735765457153,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": false
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    }
+   },
+   "seed": 8105
+  },
+  {
+   "variants": {
+    "current": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 0.7031972408294678,
+     "measured_extra_per_customer": 0.0,
+     "message": null,
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN
+    },
+    "v2_5f": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 22.19330143928528,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": false
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    },
+    "v2_5f_proof": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 22.060384511947632,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": false
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    },
+    "v2_3f_proof": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 13.726762056350708,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": true
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    }
+   },
+   "seed": 8106
+  },
+  {
+   "variants": {
+    "current": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 0.8847870826721191,
+     "measured_extra_per_customer": 0.0,
+     "message": null,
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN
+    },
+    "v2_5f": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 24.806339740753174,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": false
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    },
+    "v2_5f_proof": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 24.926856994628906,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": false
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    },
+    "v2_3f_proof": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 17.7212815284729,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": true
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    }
+   },
+   "seed": 8107
+  },
+  {
+   "variants": {
+    "current": {
+     "recommended": "Nudge plan",
+     "share_contacted": 0.4552,
+     "secs_decision": 0.7573590278625488,
+     "measured_extra_per_customer": -1.1208536502196553,
+     "message": null,
+     "A2_ratio": -Infinity,
+     "A2_low95": NaN,
+     "A2_high95": NaN
+    },
+    "v2_5f": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 25.825516939163208,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      1.0852028346861213,
+      -0.5554826377308549,
+      2.8327562097800687
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": true
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    },
+    "v2_5f_proof": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 25.678196907043457,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      1.0852028346861213,
+      -0.5554826377308549,
+      2.8327562097800687
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": true
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    },
+    "v2_3f_proof": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 18.41473126411438,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      1.0852028346861213,
+      -0.5554826377308549,
+      2.8327562097800687
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": true
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    }
+   },
+   "seed": 8108
+  },
+  {
+   "variants": {
+    "current": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 0.7923309803009033,
+     "measured_extra_per_customer": 0.0,
+     "message": null,
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN
+    },
+    "v2_5f": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 26.581469535827637,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": false
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    },
+    "v2_5f_proof": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 26.515233039855957,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": false
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    },
+    "v2_3f_proof": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 16.050878763198853,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": true
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    }
+   },
+   "seed": 8109
+  },
+  {
+   "variants": {
+    "current": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 0.8274097442626953,
+     "measured_extra_per_customer": 0.0,
+     "message": null,
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN
+    },
+    "v2_5f": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 25.28312921524048,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": true
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    },
+    "v2_5f_proof": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 25.564523220062256,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": true
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    },
+    "v2_3f_proof": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 17.945852994918823,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": true
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    }
+   },
+   "seed": 8110
+  },
+  {
+   "variants": {
+    "current": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 0.7069737911224365,
+     "measured_extra_per_customer": 0.0,
+     "message": null,
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN
+    },
+    "v2_5f": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 23.748589038848877,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": true
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    },
+    "v2_5f_proof": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 23.717843055725098,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": true
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    },
+    "v2_3f_proof": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 12.217498302459717,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": true
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    }
+   },
+   "seed": 8111
+  },
+  {
+   "variants": {
+    "current": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 0.8766980171203613,
+     "measured_extra_per_customer": 0.0,
+     "message": null,
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN
+    },
+    "v2_5f": {
+     "recommended": "Contact everyone (Message)",
+     "share_contacted": 1.0,
+     "secs_decision": 18.935410737991333,
+     "measured_extra_per_customer": 0.105328133203339,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact everyone (message).",
+     "vs_current": [
+      0.06883770050668908,
+      -2.818241621842882,
+      2.45290809318999
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": false
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": -Infinity,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": -1.0199999999999996,
+     "A1_spearman_used": 0.0
+    },
+    "v2_5f_proof": {
+     "recommended": "Contact everyone (Message)",
+     "share_contacted": 1.0,
+     "secs_decision": 18.889389038085938,
+     "measured_extra_per_customer": 0.105328133203339,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact everyone (message).",
+     "vs_current": [
+      0.06883770050668908,
+      -2.818241621842882,
+      2.45290809318999
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": false
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": -Infinity,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": -1.0199999999999996,
+     "A1_spearman_used": 0.0
+    },
+    "v2_3f_proof": {
+     "recommended": "Contact everyone (Message)",
+     "share_contacted": 1.0,
+     "secs_decision": 12.531462669372559,
+     "measured_extra_per_customer": 0.105328133203339,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact everyone (message).",
+     "vs_current": [
+      0.06883770050668908,
+      -2.818241621842882,
+      2.45290809318999
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": true
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": -Infinity,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": -1.0199999999999996,
+     "A1_spearman_used": 0.0
+    }
+   },
+   "seed": 8112
+  },
+  {
+   "variants": {
+    "current": {
+     "recommended": "Nudge plan",
+     "share_contacted": 0.4799,
+     "secs_decision": 0.8766698837280273,
+     "measured_extra_per_customer": -1.3585807468162903,
+     "message": null,
+     "A2_ratio": -Infinity,
+     "A2_low95": NaN,
+     "A2_high95": NaN
+    },
+    "v2_5f": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 18.076561212539673,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      1.4282731174828514,
+      -0.3848057346119637,
+      3.0352219643510203
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": false
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    },
+    "v2_5f_proof": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 18.240947246551514,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      1.4282731174828514,
+      -0.3848057346119637,
+      3.0352219643510203
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": false
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    },
+    "v2_3f_proof": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 10.581790208816528,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      1.4282731174828514,
+      -0.3848057346119637,
+      3.0352219643510203
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": false
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    }
+   },
+   "seed": 8113
+  },
+  {
+   "variants": {
+    "current": {
+     "recommended": "Contact everyone (Message)",
+     "share_contacted": 1.0,
+     "secs_decision": 0.8656539916992188,
+     "measured_extra_per_customer": 0.6874603710985389,
+     "message": null,
+     "A2_ratio": -Infinity,
+     "A2_low95": NaN,
+     "A2_high95": NaN
+    },
+    "v2_5f": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 26.890418529510498,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      -0.696382149875024,
+      -3.5002390227375555,
+      1.60838766241416
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": false
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    },
+    "v2_5f_proof": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 26.51146912574768,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      -0.696382149875024,
+      -3.5002390227375555,
+      1.60838766241416
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": false
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    },
+    "v2_3f_proof": {
+     "recommended": "Nudge plan (margin x0.5)",
+     "share_contacted": 0.1946,
+     "secs_decision": 18.654398202896118,
+     "measured_extra_per_customer": -0.17361140824903865,
+     "message": null,
+     "vs_current": [
+      -0.946483986363442,
+      -3.4810614873292196,
+      1.3699216105945895
+     ],
+     "signal_fired": false,
+     "proof": {
+      "margin": "margin x0.5",
+      "gain": 0.6879344411421661,
+      "low95": 0.06357126207223704,
+      "high95": 1.320158226098566,
+      "proven": true
+     },
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": false
+     },
+     "reliable": {
+      "Message": true
+     },
+     "A2_ratio": -Infinity,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": -0.198492,
+     "A1_spearman_used": NaN
+    }
+   },
+   "seed": 8114
+  },
+  {
+   "variants": {
+    "current": {
+     "recommended": "Contact everyone (Message)",
+     "share_contacted": 1.0,
+     "secs_decision": 0.676306962966919,
+     "measured_extra_per_customer": -0.6055077825245531,
+     "message": null,
+     "A2_ratio": -Infinity,
+     "A2_low95": NaN,
+     "A2_high95": NaN
+    },
+    "v2_5f": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 26.688039779663086,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      0.8063254299154982,
+      -1.7914512183320164,
+      3.4982625850167444
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": true
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    },
+    "v2_5f_proof": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 27.12773871421814,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      0.8063254299154982,
+      -1.7914512183320164,
+      3.4982625850167444
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": true
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    },
+    "v2_3f_proof": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 16.905269622802734,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      0.8063254299154982,
+      -1.7914512183320164,
+      3.4982625850167444
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": true
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    }
+   },
+   "seed": 8115
+  },
+  {
+   "variants": {
+    "current": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 0.7696411609649658,
+     "measured_extra_per_customer": 0.0,
+     "message": null,
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN
+    },
+    "v2_5f": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 28.080251932144165,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": true
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    },
+    "v2_5f_proof": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 28.146761655807495,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": true
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    },
+    "v2_3f_proof": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 16.689138889312744,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": true
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    }
+   },
+   "seed": 8116
+  },
+  {
+   "variants": {
+    "current": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 0.6950297355651855,
+     "measured_extra_per_customer": 0.0,
+     "message": null,
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN
+    },
+    "v2_5f": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 24.461677074432373,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": false
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    },
+    "v2_5f_proof": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 24.357892990112305,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": false
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    },
+    "v2_3f_proof": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 10.920437812805176,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": false
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    }
+   },
+   "seed": 8117
+  },
+  {
+   "variants": {
+    "current": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 0.7933337688446045,
+     "measured_extra_per_customer": 0.0,
+     "message": null,
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN
+    },
+    "v2_5f": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 15.872668743133545,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": true
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    },
+    "v2_5f_proof": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 15.968522071838379,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": true
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    },
+    "v2_3f_proof": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 9.926944494247437,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": false
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    }
+   },
+   "seed": 8118
+  },
+  {
+   "variants": {
+    "current": {
+     "recommended": "Nudge plan",
+     "share_contacted": 0.4645,
+     "secs_decision": 1.037048578262329,
+     "measured_extra_per_customer": 0.21245500004936912,
+     "message": null,
+     "A2_ratio": -Infinity,
+     "A2_low95": NaN,
+     "A2_high95": NaN
+    },
+    "v2_5f": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 21.70795202255249,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      -0.3016697522761019,
+      -2.155170151991702,
+      1.4595297168347812
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": false
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    },
+    "v2_5f_proof": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 21.479085206985474,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      -0.3016697522761019,
+      -2.155170151991702,
+      1.4595297168347812
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": false
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    },
+    "v2_3f_proof": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 12.133528470993042,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      -0.3016697522761019,
+      -2.155170151991702,
+      1.4595297168347812
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": false
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    }
+   },
+   "seed": 8119
+  },
+  {
+   "variants": {
+    "current": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 0.8975582122802734,
+     "measured_extra_per_customer": 0.0,
+     "message": null,
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN
+    },
+    "v2_5f": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 19.92619800567627,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": true
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    },
+    "v2_5f_proof": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 20.14584183692932,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": true
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    },
+    "v2_3f_proof": {
+     "recommended": "Contact nobody",
+     "share_contacted": 0.0,
+     "secs_decision": 19.63600516319275,
+     "measured_extra_per_customer": 0.0,
+     "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody.",
+     "vs_current": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "signal_fired": true,
+     "proof": null,
+     "proof_fired": false,
+     "guard_switched": {
+      "Message": false
+     },
+     "reliable": {
+      "Message": false
+     },
+     "A2_ratio": NaN,
+     "A2_low95": NaN,
+     "A2_high95": NaN,
+     "true_per_customer": 0.0,
+     "A1_spearman_used": 0.0
+    }
+   },
+   "seed": 8120
+  }
+ ]
+}

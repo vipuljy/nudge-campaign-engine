@@ -1,0 +1,58 @@
+{
+ "n": 50000,
+ "arms": 2,
+ "outcome": "binary",
+ "seed": 22,
+ "train_secs": 7.629599094390869,
+ "n_test": 10000,
+ "fairness": "green",
+ "warnings": [],
+ "A1": {
+  "per_option": {
+   "Message": {
+    "spearman": 0.6330743086987431,
+    "low95": 0.6205477207351939,
+    "high95": 0.6463905396506271
+   }
+  },
+  "spearman": 0.6330743086987431,
+  "low95": 0.6205477207351939,
+  "high95": 0.6463905396506271
+ },
+ "A2": {
+  "contact Rs5": {
+   "ratio": 0.3224828216090211,
+   "low95": 0.28564872714972117,
+   "high95": 0.3562431903249823,
+   "plan_per_customer": 0.9412414674419511,
+   "oracle_per_customer": 2.9187336638449364,
+   "personalise": false,
+   "recommended": "Contact everyone (Message)",
+   "margin": null,
+   "share_contacted": 1.0,
+   "mix": {
+    "Message": 1.0
+   },
+   "best_blanket_truth_ratio": 0.3224828216090211,
+   "matches_planner_plan": true
+  },
+  "contact Rs1.02": {
+   "ratio": 0.876660145845222,
+   "low95": 0.8691631913237091,
+   "high95": 0.8849602725898127,
+   "plan_per_customer": 4.921241467441952,
+   "oracle_per_customer": 5.613625178200832,
+   "personalise": false,
+   "recommended": "Contact everyone (Message)",
+   "margin": null,
+   "share_contacted": 1.0,
+   "mix": {
+    "Message": 1.0
+   },
+   "best_blanket_truth_ratio": 0.876660145845222,
+   "matches_planner_plan": true
+  }
+ },
+ "judged_cost": "contact Rs5",
+ "total_secs": 14.459580659866333
+}

@@ -35,7 +35,8 @@ METHODS = """Methods and terms (plain words):
   option only when that clearly beats the best option on average (a safety margin learned from the data).
 - Plan choice: the file is split into 80% and an untouched 20%. On the 80%, every customer is scored by models that never saw them
   (5 folds), and those honest scores choose between personalised plans and the best simple plan (contact everyone or nobody). If the
-  ranking does not beat a random order there, Nudge says "no reliable signal" and keeps the simple plan. Every number shown is measured on the untouched 20%,
+  ranking does not beat a random order there, Nudge says "no reliable signal" and keeps the simple plan. If the untouched 20% then shows the
+  personalised plan earning less than the simple plan, Nudge recommends the simple plan (a final yes/no check). Every number shown is measured on the untouched 20%,
   so the winner is not flattered. If personalising does not pay, Nudge keeps the simple plan (the safe fallback).
 - Usual approach: a model of who is most likely to buy when contacted (the common CRM practice), contacting the same number of customers.
 - Measured vs assumed: measured numbers are counted on customers the model never saw; assumed numbers are business inputs

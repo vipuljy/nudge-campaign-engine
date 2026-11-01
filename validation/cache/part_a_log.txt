@@ -1,0 +1,33 @@
+A_5000_2arm_binary: spearman 0.485 [0.433, 0.532] | plan/oracle 0.534 [0.463, 0.603] (Nudge plan) | 3 s
+A_5000_2arm_revenue: spearman 0.532 [0.492, 0.570] | plan/oracle 0.318 [0.198, 0.415] (Contact everyone (Message)) | 3 s
+A_5000_4arm_binary: spearman 0.495 [0.465, 0.521] | plan/oracle 0.463 [0.437, 0.485] (Contact everyone (SMS reminder)) | 3 s
+A_5000_4arm_revenue: spearman 0.217 [0.182, 0.253] | plan/oracle 0.542 [0.509, 0.569] (Contact everyone (WhatsApp reminder)) | 3 s
+A_50000_2arm_binary: spearman 0.633 [0.621, 0.646] | plan/oracle 0.322 [0.286, 0.356] (Contact everyone (Message)) | 14 s
+A_50000_2arm_revenue: spearman 0.483 [0.468, 0.500] | plan/oracle 0.589 [0.570, 0.604] (Nudge plan) | 17 s
+A_50000_4arm_binary: spearman 0.474 [0.464, 0.484] | plan/oracle 0.657 [0.649, 0.667] (Nudge plan) | 20 s
+A_50000_4arm_revenue: spearman 0.429 [0.418, 0.439] | plan/oracle 0.674 [0.665, 0.682] (Nudge plan) | 22 s
+A_200000_2arm_binary: spearman 0.792 [0.788, 0.796] | plan/oracle 0.847 [0.843, 0.853] (Nudge plan) | 39 s
+A_200000_2arm_revenue: spearman 0.789 [0.784, 0.793] | plan/oracle 0.846 [0.840, 0.850] (Nudge plan) | 37 s
+A_200000_4arm_binary: spearman 0.691 [0.688, 0.693] | plan/oracle 0.862 [0.860, 0.864] (Nudge plan) | 56 s
+A_200000_4arm_revenue: spearman 0.630 [0.626, 0.633] | plan/oracle 0.852 [0.849, 0.855] (Nudge plan) | 57 s
+null seed 1: personalise=False -> Contact nobody
+null seed 2: personalise=False -> Contact everyone (Message)
+null seed 3: personalise=True -> Nudge plan
+null seed 4: personalise=False -> Contact nobody
+null seed 5: personalise=False -> Contact nobody
+null seed 6: personalise=False -> Contact everyone (Message)
+null seed 7: personalise=True -> Nudge plan
+null seed 8: personalise=False -> Contact everyone (Message)
+null seed 9: personalise=False -> Contact everyone (Message)
+null seed 10: personalise=False -> Contact nobody
+null seed 11: personalise=False -> Contact everyone (Message)
+null seed 12: personalise=False -> Contact everyone (Message)
+null seed 13: personalise=False -> Contact nobody
+null seed 14: personalise=False -> Contact nobody
+null seed 15: personalise=False -> Contact everyone (Message)
+null seed 16: personalise=False -> Contact nobody
+null seed 17: personalise=False -> Contact nobody
+null seed 18: personalise=False -> Contact nobody
+null seed 19: personalise=True -> Nudge plan
+null seed 20: personalise=False -> Contact nobody
+Part A done in 521 s

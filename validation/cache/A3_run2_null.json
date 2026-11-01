@@ -1,0 +1,384 @@
+{
+ "runs": [
+  {
+   "n": 50000,
+   "arms": 2,
+   "outcome": "binary",
+   "seed": 1,
+   "null": true,
+   "recommended": "Contact nobody",
+   "personalise": false,
+   "cv_values": {
+    "margin x0": 44.814,
+    "margin x0.1": 44.965,
+    "margin x0.25": 44.999,
+    "margin x0.5": 45.115,
+    "margin x1": 45.43,
+    "margin x2": 45.594,
+    "everyone": 41.957,
+    "nobody": 45.711
+   }
+  },
+  {
+   "n": 50000,
+   "arms": 2,
+   "outcome": "binary",
+   "seed": 2,
+   "null": true,
+   "recommended": "Contact nobody",
+   "personalise": false,
+   "cv_values": {
+    "margin x0": 44.573,
+    "margin x0.1": 44.645,
+    "margin x0.25": 44.639,
+    "margin x0.5": 44.997,
+    "margin x1": 45.446,
+    "margin x2": 45.384,
+    "everyone": 41.472,
+    "nobody": 45.819
+   }
+  },
+  {
+   "n": 50000,
+   "arms": 2,
+   "outcome": "binary",
+   "seed": 3,
+   "null": true,
+   "recommended": "Nudge plan (margin x2)",
+   "personalise": true,
+   "cv_values": {
+    "margin x0": 45.544,
+    "margin x0.1": 45.665,
+    "margin x0.25": 45.889,
+    "margin x0.5": 46.071,
+    "margin x1": 46.206,
+    "margin x2": 46.494,
+    "everyone": 41.668,
+    "nobody": 46.429
+   }
+  },
+  {
+   "n": 50000,
+   "arms": 2,
+   "outcome": "binary",
+   "seed": 4,
+   "null": true,
+   "recommended": "Contact nobody",
+   "personalise": false,
+   "cv_values": {
+    "margin x0": 45.033,
+    "margin x0.1": 45.249,
+    "margin x0.25": 45.386,
+    "margin x0.5": 45.625,
+    "margin x1": 46.309,
+    "margin x2": 46.97,
+    "everyone": 41.981,
+    "nobody": 46.994
+   }
+  },
+  {
+   "n": 50000,
+   "arms": 2,
+   "outcome": "binary",
+   "seed": 5,
+   "null": true,
+   "recommended": "Contact nobody",
+   "personalise": false,
+   "cv_values": {
+    "margin x0": 44.925,
+    "margin x0.1": 45.056,
+    "margin x0.25": 45.206,
+    "margin x0.5": 45.531,
+    "margin x1": 46.061,
+    "margin x2": 46.356,
+    "everyone": 40.993,
+    "nobody": 46.588
+   }
+  },
+  {
+   "n": 50000,
+   "arms": 2,
+   "outcome": "binary",
+   "seed": 6,
+   "null": true,
+   "recommended": "Contact nobody",
+   "personalise": false,
+   "cv_values": {
+    "margin x0": 44.822,
+    "margin x0.1": 45.145,
+    "margin x0.25": 45.039,
+    "margin x0.5": 45.228,
+    "margin x1": 45.509,
+    "margin x2": 45.724,
+    "everyone": 41.9,
+    "nobody": 45.805
+   }
+  },
+  {
+   "n": 50000,
+   "arms": 2,
+   "outcome": "binary",
+   "seed": 7,
+   "null": true,
+   "recommended": "Contact nobody",
+   "personalise": false,
+   "cv_values": {
+    "margin x0": 44.867,
+    "margin x0.1": 44.949,
+    "margin x0.25": 45.22,
+    "margin x0.5": 45.527,
+    "margin x1": 45.699,
+    "margin x2": 45.892,
+    "everyone": 41.459,
+    "nobody": 46.102
+   }
+  },
+  {
+   "n": 50000,
+   "arms": 2,
+   "outcome": "binary",
+   "seed": 8,
+   "null": true,
+   "recommended": "Contact nobody",
+   "personalise": false,
+   "cv_values": {
+    "margin x0": 45.026,
+    "margin x0.1": 45.308,
+    "margin x0.25": 45.53,
+    "margin x0.5": 45.809,
+    "margin x1": 45.951,
+    "margin x2": 46.373,
+    "everyone": 41.614,
+    "nobody": 46.463
+   }
+  },
+  {
+   "n": 50000,
+   "arms": 2,
+   "outcome": "binary",
+   "seed": 9,
+   "null": true,
+   "recommended": "Contact nobody",
+   "personalise": false,
+   "cv_values": {
+    "margin x0": 44.302,
+    "margin x0.1": 44.483,
+    "margin x0.25": 44.529,
+    "margin x0.5": 44.843,
+    "margin x1": 44.985,
+    "margin x2": 45.327,
+    "everyone": 42.181,
+    "nobody": 45.783
+   }
+  },
+  {
+   "n": 50000,
+   "arms": 2,
+   "outcome": "binary",
+   "seed": 10,
+   "null": true,
+   "recommended": "Nudge plan (margin x2)",
+   "personalise": true,
+   "cv_values": {
+    "margin x0": 45.703,
+    "margin x0.1": 45.807,
+    "margin x0.25": 46.131,
+    "margin x0.5": 46.391,
+    "margin x1": 46.747,
+    "margin x2": 47.07,
+    "everyone": 41.672,
+    "nobody": 47.02
+   }
+  },
+  {
+   "n": 50000,
+   "arms": 2,
+   "outcome": "binary",
+   "seed": 11,
+   "null": true,
+   "recommended": "Contact nobody",
+   "personalise": false,
+   "cv_values": {
+    "margin x0": 44.12,
+    "margin x0.1": 44.336,
+    "margin x0.25": 44.541,
+    "margin x0.5": 44.936,
+    "margin x1": 45.485,
+    "margin x2": 46.298,
+    "everyone": 41.951,
+    "nobody": 46.671
+   }
+  },
+  {
+   "n": 50000,
+   "arms": 2,
+   "outcome": "binary",
+   "seed": 12,
+   "null": true,
+   "recommended": "Contact nobody",
+   "personalise": false,
+   "cv_values": {
+    "margin x0": 43.894,
+    "margin x0.1": 44.005,
+    "margin x0.25": 44.03,
+    "margin x0.5": 44.279,
+    "margin x1": 44.809,
+    "margin x2": 44.928,
+    "everyone": 42.326,
+    "nobody": 45.331
+   }
+  },
+  {
+   "n": 50000,
+   "arms": 2,
+   "outcome": "binary",
+   "seed": 13,
+   "null": true,
+   "recommended": "Contact nobody",
+   "personalise": false,
+   "cv_values": {
+    "margin x0": 45.122,
+    "margin x0.1": 45.145,
+    "margin x0.25": 45.249,
+    "margin x0.5": 45.702,
+    "margin x1": 45.892,
+    "margin x2": 46.441,
+    "everyone": 41.454,
+    "nobody": 46.607
+   }
+  },
+  {
+   "n": 50000,
+   "arms": 2,
+   "outcome": "binary",
+   "seed": 14,
+   "null": true,
+   "recommended": "Contact nobody",
+   "personalise": false,
+   "cv_values": {
+    "margin x0": 45.974,
+    "margin x0.1": 45.992,
+    "margin x0.25": 46.014,
+    "margin x0.5": 46.078,
+    "margin x1": 46.598,
+    "margin x2": 47.365,
+    "everyone": 41.327,
+    "nobody": 47.368
+   }
+  },
+  {
+   "n": 50000,
+   "arms": 2,
+   "outcome": "binary",
+   "seed": 15,
+   "null": true,
+   "recommended": "Contact nobody",
+   "personalise": false,
+   "cv_values": {
+    "margin x0": 44.783,
+    "margin x0.1": 44.899,
+    "margin x0.25": 44.974,
+    "margin x0.5": 45.16,
+    "margin x1": 45.397,
+    "margin x2": 45.809,
+    "everyone": 42.417,
+    "nobody": 46.279
+   }
+  },
+  {
+   "n": 50000,
+   "arms": 2,
+   "outcome": "binary",
+   "seed": 16,
+   "null": true,
+   "recommended": "Nudge plan (margin x2)",
+   "personalise": true,
+   "cv_values": {
+    "margin x0": 45.194,
+    "margin x0.1": 45.223,
+    "margin x0.25": 45.511,
+    "margin x0.5": 45.974,
+    "margin x1": 46.149,
+    "margin x2": 46.36,
+    "everyone": 41.893,
+    "nobody": 46.269
+   }
+  },
+  {
+   "n": 50000,
+   "arms": 2,
+   "outcome": "binary",
+   "seed": 17,
+   "null": true,
+   "recommended": "Contact nobody",
+   "personalise": false,
+   "cv_values": {
+    "margin x0": 44.756,
+    "margin x0.1": 45.042,
+    "margin x0.25": 45.234,
+    "margin x0.5": 45.498,
+    "margin x1": 45.746,
+    "margin x2": 46.139,
+    "everyone": 41.163,
+    "nobody": 46.32
+   }
+  },
+  {
+   "n": 50000,
+   "arms": 2,
+   "outcome": "binary",
+   "seed": 18,
+   "null": true,
+   "recommended": "Contact nobody",
+   "personalise": false,
+   "cv_values": {
+    "margin x0": 43.262,
+    "margin x0.1": 43.476,
+    "margin x0.25": 43.67,
+    "margin x0.5": 44.094,
+    "margin x1": 44.784,
+    "margin x2": 45.647,
+    "everyone": 41.183,
+    "nobody": 45.847
+   }
+  },
+  {
+   "n": 50000,
+   "arms": 2,
+   "outcome": "binary",
+   "seed": 19,
+   "null": true,
+   "recommended": "Contact nobody",
+   "personalise": false,
+   "cv_values": {
+    "margin x0": 45.709,
+    "margin x0.1": 45.721,
+    "margin x0.25": 45.85,
+    "margin x0.5": 45.919,
+    "margin x1": 46.175,
+    "margin x2": 46.475,
+    "everyone": 41.559,
+    "nobody": 46.617
+   }
+  },
+  {
+   "n": 50000,
+   "arms": 2,
+   "outcome": "binary",
+   "seed": 20,
+   "null": true,
+   "recommended": "Contact nobody",
+   "personalise": false,
+   "cv_values": {
+    "margin x0": 45.303,
+    "margin x0.1": 45.442,
+    "margin x0.25": 45.54,
+    "margin x0.5": 45.783,
+    "margin x1": 46.192,
+    "margin x2": 46.394,
+    "everyone": 41.365,
+    "nobody": 46.497
+   }
+  }
+ ]
+}

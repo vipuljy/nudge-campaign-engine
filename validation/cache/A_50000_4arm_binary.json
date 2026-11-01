@@ -1,0 +1,54 @@
+{
+ "n": 50000,
+ "arms": 4,
+ "outcome": "binary",
+ "seed": 24,
+ "train_secs": 14.128171443939209,
+ "n_test": 10000,
+ "fairness": "green",
+ "warnings": [],
+ "A1": {
+  "per_option": {
+   "SMS reminder": {
+    "spearman": 0.380204899162049,
+    "low95": 0.3630450368770406,
+    "high95": 0.3987298750479284
+   },
+   "WhatsApp reminder": {
+    "spearman": 0.429163703887637,
+    "low95": 0.41518140140120086,
+    "high95": 0.44381147502163754
+   },
+   "Discount Rs20": {
+    "spearman": 0.6119544504235446,
+    "low95": 0.5978127072370923,
+    "high95": 0.6252632887773851
+   }
+  },
+  "spearman": 0.4737743511577435,
+  "low95": 0.463885169615904,
+  "high95": 0.4836443079346329
+ },
+ "A2": {
+  "per-option costs": {
+   "ratio": 0.6574093714949776,
+   "low95": 0.6486169767183089,
+   "high95": 0.6669092103919518,
+   "plan_per_customer": 6.0920308698836125,
+   "oracle_per_customer": 9.266723496852606,
+   "personalise": true,
+   "recommended": "Nudge plan",
+   "margin": null,
+   "share_contacted": 0.9648,
+   "mix": {
+    "WhatsApp reminder": 0.696,
+    "SMS reminder": 0.151,
+    "Discount Rs20": 0.118,
+    "No message": 0.035
+   },
+   "best_blanket_truth_ratio": 0.5323777553340668
+  }
+ },
+ "judged_cost": "per-option costs",
+ "total_secs": 20.166958570480347
+}

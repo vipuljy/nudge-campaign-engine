@@ -1,0 +1,251 @@
+{
+ "secs_scores": 163.5008509159088,
+ "secs_by_model": {
+  "fast": 21.10757327079773,
+  "ensemble": 132.27027893066406,
+  "likely": 9.946476459503174
+ },
+ "variants": {
+  "fast/full": {
+   "per_option": {
+    "treat": {
+     "used": "fast",
+     "test_qini": 0.06621631974634194,
+     "rank_unchanged": true,
+     "slope_calibrated": 1.522061532340885,
+     "reliable": true
+    }
+   },
+   "measured_extra_per_customer": [
+    6.957525112631183,
+    4.70315935025504,
+    8.880993123633631
+   ],
+   "recommended": "Nudge plan (margin x0)",
+   "message": null,
+   "share_contacted": 1.0,
+   "oof_diag": {
+    "treat": {
+     "oof_qini": {
+      "fast": 0.002182271067681563,
+      "likely": 0.001460025701841814,
+      "ensemble": 0.0026968950168827343
+     },
+     "used": "fast",
+     "guard_switched": false,
+     "oof_qini_used_low95": 0.0013545252999845733,
+     "oof_qini_used_high95": 0.003163812389426265,
+     "reliable": true,
+     "ate_oof": 0.04324671223578955
+    }
+   }
+  },
+  "fast/no_guard": {
+   "per_option": {
+    "treat": {
+     "used": "fast",
+     "test_qini": 0.06621631974634194,
+     "rank_unchanged": true,
+     "slope_calibrated": 1.522061532340885,
+     "reliable": true
+    }
+   },
+   "measured_extra_per_customer": [
+    6.957525112631183,
+    4.70315935025504,
+    8.880993123633631
+   ],
+   "recommended": "Nudge plan (margin x0)",
+   "message": null,
+   "share_contacted": 1.0,
+   "oof_diag": {
+    "treat": {
+     "oof_qini": {
+      "fast": 0.002182271067681563,
+      "likely": 0.001460025701841814,
+      "ensemble": 0.0026968950168827343
+     },
+     "used": "fast",
+     "guard_switched": false,
+     "oof_qini_used_low95": 0.0013545252999845733,
+     "oof_qini_used_high95": 0.003163812389426265,
+     "reliable": true,
+     "ate_oof": 0.04324671223578955
+    }
+   }
+  },
+  "fast/no_signal_rule": {
+   "per_option": {
+    "treat": {
+     "used": "fast",
+     "test_qini": 0.06621631974634194,
+     "rank_unchanged": true,
+     "slope_calibrated": 1.522061532340885,
+     "reliable": true
+    }
+   },
+   "measured_extra_per_customer": [
+    6.957525112631183,
+    4.70315935025504,
+    8.880993123633631
+   ],
+   "recommended": "Nudge plan (margin x0)",
+   "message": null,
+   "share_contacted": 1.0,
+   "oof_diag": {
+    "treat": {
+     "oof_qini": {
+      "fast": 0.002182271067681563,
+      "likely": 0.001460025701841814,
+      "ensemble": 0.0026968950168827343
+     },
+     "used": "fast",
+     "guard_switched": false,
+     "oof_qini_used_low95": 0.0013545252999845733,
+     "oof_qini_used_high95": 0.003163812389426265,
+     "reliable": true,
+     "ate_oof": 0.04324671223578955
+    }
+   }
+  },
+  "fast/no_calibration": {
+   "per_option": {
+    "treat": {
+     "used": "fast",
+     "test_qini": 0.06621631974634194,
+     "rank_unchanged": true,
+     "slope_calibrated": 0.618484964293378,
+     "reliable": true
+    }
+   },
+   "measured_extra_per_customer": [
+    6.957525112631183,
+    4.70315935025504,
+    8.880993123633631
+   ],
+   "recommended": "Contact everyone (treat)",
+   "message": null,
+   "share_contacted": 1.0,
+   "oof_diag": {
+    "treat": {
+     "oof_qini": {
+      "fast": 0.002182271067681563,
+      "likely": 0.001460025701841814,
+      "ensemble": 0.0026968950168827343
+     },
+     "used": "fast",
+     "guard_switched": false,
+     "oof_qini_used_low95": 0.0013545252999845733,
+     "oof_qini_used_high95": 0.003163812389426265,
+     "reliable": true,
+     "ate_oof": 0.04324671223578955
+    }
+   }
+  },
+  "ensemble/full": {
+   "per_option": {
+    "treat": {
+     "used": "ensemble",
+     "test_qini": 0.07491625950361673,
+     "rank_unchanged": true,
+     "slope_calibrated": 1.4462817592648762,
+     "reliable": true
+    }
+   },
+   "measured_extra_per_customer": [
+    6.957525112631183,
+    4.70315935025504,
+    8.880993123633631
+   ],
+   "recommended": "Nudge plan (margin x0)",
+   "message": null,
+   "share_contacted": 1.0,
+   "oof_diag": {
+    "treat": {
+     "oof_qini": {
+      "fast": 0.002182271067681563,
+      "likely": 0.001460025701841814,
+      "ensemble": 0.0026968950168827343
+     },
+     "used": "ensemble",
+     "guard_switched": false,
+     "oof_qini_used_low95": 0.0017321175697126846,
+     "oof_qini_used_high95": 0.0036484639516033606,
+     "reliable": true,
+     "ate_oof": 0.04324671223578955
+    }
+   }
+  },
+  "ensemble/no_guard": {
+   "per_option": {
+    "treat": {
+     "used": "ensemble",
+     "test_qini": 0.07491625950361673,
+     "rank_unchanged": true,
+     "slope_calibrated": 1.4462817592648762,
+     "reliable": true
+    }
+   },
+   "measured_extra_per_customer": [
+    6.957525112631183,
+    4.70315935025504,
+    8.880993123633631
+   ],
+   "recommended": "Nudge plan (margin x0)",
+   "message": null,
+   "share_contacted": 1.0,
+   "oof_diag": {
+    "treat": {
+     "oof_qini": {
+      "fast": 0.002182271067681563,
+      "likely": 0.001460025701841814,
+      "ensemble": 0.0026968950168827343
+     },
+     "used": "ensemble",
+     "guard_switched": false,
+     "oof_qini_used_low95": 0.0017321175697126846,
+     "oof_qini_used_high95": 0.0036484639516033606,
+     "reliable": true,
+     "ate_oof": 0.04324671223578955
+    }
+   }
+  },
+  "ensemble/no_signal_rule": {
+   "per_option": {
+    "treat": {
+     "used": "ensemble",
+     "test_qini": 0.07491625950361673,
+     "rank_unchanged": true,
+     "slope_calibrated": 1.4462817592648762,
+     "reliable": true
+    }
+   },
+   "measured_extra_per_customer": [
+    6.957525112631183,
+    4.70315935025504,
+    8.880993123633631
+   ],
+   "recommended": "Nudge plan (margin x0)",
+   "message": null,
+   "share_contacted": 1.0,
+   "oof_diag": {
+    "treat": {
+     "oof_qini": {
+      "fast": 0.002182271067681563,
+      "likely": 0.001460025701841814,
+      "ensemble": 0.0026968950168827343
+     },
+     "used": "ensemble",
+     "guard_switched": false,
+     "oof_qini_used_low95": 0.0017321175697126846,
+     "oof_qini_used_high95": 0.0036484639516033606,
+     "reliable": true,
+     "ate_oof": 0.04324671223578955
+    }
+   }
+  }
+ },
+ "slope_app_engine": {
+  "treat": 0.5046234044584684
+ }
+}

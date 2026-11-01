@@ -1,0 +1,6 @@
+Nudge fast engine (all 80%) 101 s
+econml CausalForestDML (all 80%) 6582 s
+Nudge fast engine (all 80%) {'qini': 0.0108, 'qini_low95': -0.0007, 'qini_high95': 0.0255, 'range_above_0': False}
+econml CausalForestDML (all 80%) {'qini': 0.0095, 'qini_low95': -0.003, 'qini_high95': 0.021, 'range_above_0': False}
+Nudge fast engine (2 lakh, Part B) {'qini': -0.0012, 'qini_low95': -0.0166, 'qini_high95': 0.0132, 'range_above_0': False}
+econml CausalForestDML (2 lakh, Part B) {'qini': 0.0085, 'qini_low95': -0.0028, 'qini_high95': 0.0198, 'range_above_0': False}

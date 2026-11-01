@@ -32,3 +32,9 @@ data_benchmarks/
 
 # Backup of the app before the validated merge (local only)
 _backup_app_before_merge/
+
+# Local-only working files (not published)
+_backup_*/
+_*.tgz
+validation/app_v2/
+VALIDATION_PROGRESS.md

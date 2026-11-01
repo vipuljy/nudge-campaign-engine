@@ -1,0 +1,21 @@
+{
+ "recommended": "Nudge plan",
+ "share_contacted": 0.95703125,
+ "diff_blanket": [
+  -3.5199677127401183,
+  -8.625606387567862,
+  1.4781264326685961
+ ],
+ "app_v2_minus_everyone": [
+  -3.5199677127401183,
+  -8.625606387567862,
+  1.4781264326685961
+ ],
+ "note": "today's app recommends 'Contact everyone (Mens E-Mail)' on this sample (Run 1 / development)",
+ "page_exceptions": 0,
+ "caution_shown": true,
+ "caution_phrases": [
+  "does not confirm it"
+ ],
+ "page_harness_error": null
+}

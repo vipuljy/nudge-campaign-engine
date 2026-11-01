@@ -1,0 +1,86 @@
+{
+ "variants": {
+  "current": {
+   "recommended": "Nudge plan",
+   "share_contacted": 0.707975,
+   "secs_decision": 2.797837734222412,
+   "measured_extra_per_customer": 11.631357225206806,
+   "message": null
+  },
+  "v2_5f": {
+   "recommended": "Nudge plan (margin x0)",
+   "share_contacted": 0.636975,
+   "secs_decision": 66.21405696868896,
+   "measured_extra_per_customer": 11.876947104225769,
+   "message": null,
+   "vs_current": [
+    0.23959590441243075,
+    -0.11530958421346818,
+    0.5665852475948137
+   ],
+   "signal_fired": false,
+   "proof": null,
+   "proof_fired": false,
+   "guard_switched": {
+    "treat": false
+   },
+   "reliable": {
+    "treat": true
+   }
+  },
+  "v2_5f_proof": {
+   "recommended": "Nudge plan (margin x0)",
+   "share_contacted": 0.636975,
+   "secs_decision": 75.12707662582397,
+   "measured_extra_per_customer": 11.876947104225769,
+   "message": null,
+   "vs_current": [
+    0.23959590441243075,
+    -0.11530958421346818,
+    0.5665852475948137
+   ],
+   "signal_fired": false,
+   "proof": {
+    "margin": "margin x0",
+    "gain": 5.6247214687591764,
+    "low95": 5.288874043730209,
+    "high95": 5.949619446230654,
+    "proven": true
+   },
+   "proof_fired": false,
+   "guard_switched": {
+    "treat": false
+   },
+   "reliable": {
+    "treat": true
+   }
+  },
+  "v2_3f_proof": {
+   "recommended": "Nudge plan (margin x0.25)",
+   "share_contacted": 0.69095,
+   "secs_decision": 53.922926902770996,
+   "measured_extra_per_customer": 11.897149849226654,
+   "message": null,
+   "vs_current": [
+    0.2583266567554762,
+    -0.05158782170454601,
+    0.5348279080342726
+   ],
+   "signal_fired": false,
+   "proof": {
+    "margin": "margin x0.25",
+    "gain": 5.589836186727981,
+    "low95": 5.287948109785081,
+    "high95": 5.9156580935434455,
+    "proven": true
+   },
+   "proof_fired": false,
+   "guard_switched": {
+    "treat": false
+   },
+   "reliable": {
+    "treat": true
+   }
+  }
+ }
+}

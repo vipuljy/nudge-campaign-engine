@@ -1,0 +1,27 @@
+# Keeps the live app awake. Streamlit Community Cloud puts an app to sleep after 12 hours without visitors, and a recruiter
+# who opens a sleeping app has to press a button and wait. This job visits the app every 8 hours like a normal visitor and,
+# if it finds the sleep page, presses "Yes, get this app back up!". Free on GitHub Actions; it only opens the page.
+# Note: GitHub pauses scheduled jobs in a repository with no activity for 60 days (re-enable it from the Actions tab).
+name: Keep the app awake
+
+on:
+  schedule:
+    - cron: '17 */8 * * *'      # every 8 hours, at minute 17 (UTC)
+  workflow_dispatch:             # also runnable by hand from the Actions tab
+
+permissions:
+  contents: read
+
+jobs:
+  visit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install a headless browser
+        run: pip install playwright==1.49.1 && python -m playwright install --with-deps chromium
+      - name: Visit the app (and wake it if it is asleep)
+        run: python .github/scripts/wake_app.py https://uplift-engine.streamlit.app/

@@ -1,0 +1,103 @@
+{
+ "variants": {
+  "current": {
+   "recommended": "Contact everyone (Mens E-Mail)",
+   "share_contacted": 1.0,
+   "secs_decision": 1.1504719257354736,
+   "measured_extra_per_customer": 12.648745726981979,
+   "message": null
+  },
+  "fast_file": {
+   "recommended": "Nudge plan (margin x1)",
+   "share_contacted": 0.982578125,
+   "secs_decision": 35.469868659973145,
+   "measured_extra_per_customer": 12.245147081212863,
+   "message": null,
+   "vs_current": [
+    -0.39336613289075484,
+    -1.0792889529756573,
+    0.08458345329924226
+   ],
+   "signal_fired": false,
+   "proof": null,
+   "proof_fired": false,
+   "guard_switched": {
+    "Womens E-Mail": false,
+    "Mens E-Mail": false
+   },
+   "reliable": {
+    "Womens E-Mail": true,
+    "Mens E-Mail": true
+   }
+  },
+  "fast_file_noguard": {
+   "recommended": "Nudge plan (margin x1)",
+   "share_contacted": 0.982578125,
+   "secs_decision": 34.844470739364624,
+   "measured_extra_per_customer": 12.245147081212863,
+   "message": null,
+   "vs_current": [
+    -0.39336613289075484,
+    -1.0792889529756573,
+    0.08458345329924226
+   ],
+   "signal_fired": false,
+   "proof": null,
+   "proof_fired": false,
+   "guard_switched": {
+    "Womens E-Mail": false,
+    "Mens E-Mail": false
+   },
+   "reliable": {
+    "Womens E-Mail": true,
+    "Mens E-Mail": true
+   }
+  },
+  "ensemble_file": {
+   "recommended": "Nudge plan (margin x0.1)",
+   "share_contacted": 0.95703125,
+   "secs_decision": 122.8688337802887,
+   "measured_extra_per_customer": 9.128778014241862,
+   "message": null,
+   "vs_current": [
+    -3.3319341873023873,
+    -8.625606387567862,
+    1.4781264326685961
+   ],
+   "signal_fired": false,
+   "proof": null,
+   "proof_fired": false,
+   "guard_switched": {
+    "Womens E-Mail": false,
+    "Mens E-Mail": false
+   },
+   "reliable": {
+    "Womens E-Mail": true,
+    "Mens E-Mail": true
+   }
+  },
+  "ensemble_file_noguard": {
+   "recommended": "Nudge plan (margin x0.1)",
+   "share_contacted": 0.95703125,
+   "secs_decision": 123.26562452316284,
+   "measured_extra_per_customer": 9.128778014241862,
+   "message": null,
+   "vs_current": [
+    -3.3319341873023873,
+    -8.625606387567862,
+    1.4781264326685961
+   ],
+   "signal_fired": false,
+   "proof": null,
+   "proof_fired": false,
+   "guard_switched": {
+    "Womens E-Mail": false,
+    "Mens E-Mail": false
+   },
+   "reliable": {
+    "Womens E-Mail": true,
+    "Mens E-Mail": true
+   }
+  }
+ }
+}

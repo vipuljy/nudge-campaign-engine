@@ -1,0 +1,95 @@
+{
+ "variants": {
+  "current": {
+   "recommended": "Nudge plan",
+   "share_contacted": 0.2819,
+   "secs_decision": 2.6105847358703613,
+   "measured_extra_per_customer": 1.5944508975442029,
+   "message": null
+  },
+  "fast_file": {
+   "recommended": "Nudge plan (margin x0)",
+   "share_contacted": 0.146125,
+   "secs_decision": 7698.757188081741,
+   "measured_extra_per_customer": 1.2514425534904061,
+   "message": null,
+   "vs_current": [
+    -0.37727417039985717,
+    -1.0039669381897194,
+    0.15491696536465444
+   ],
+   "signal_fired": false,
+   "proof": null,
+   "proof_fired": false,
+   "guard_switched": {
+    "Message": false
+   },
+   "reliable": {
+    "Message": true
+   }
+  },
+  "fast_file_noguard": {
+   "recommended": "Nudge plan (margin x0)",
+   "share_contacted": 0.146125,
+   "secs_decision": 43735.35855770111,
+   "measured_extra_per_customer": 1.2514425534904061,
+   "message": null,
+   "vs_current": [
+    -0.37727417039985717,
+    -1.0039669381897194,
+    0.15491696536465444
+   ],
+   "signal_fired": false,
+   "proof": null,
+   "proof_fired": false,
+   "guard_switched": {
+    "Message": false
+   },
+   "reliable": {
+    "Message": true
+   }
+  },
+  "ensemble_file": {
+   "recommended": "Nudge plan (margin x0.5)",
+   "share_contacted": 0.223725,
+   "secs_decision": 140.9212293624878,
+   "measured_extra_per_customer": 1.6730796779662438,
+   "message": null,
+   "vs_current": [
+    0.032447381328377295,
+    -0.4828889821060872,
+    0.49115295695362554
+   ],
+   "signal_fired": false,
+   "proof": null,
+   "proof_fired": false,
+   "guard_switched": {
+    "Message": false
+   },
+   "reliable": {
+    "Message": true
+   }
+  },
+  "ensemble_file_noguard": {
+   "recommended": "Nudge plan (margin x0.5)",
+   "share_contacted": 0.223725,
+   "secs_decision": 142.30938005447388,
+   "measured_extra_per_customer": 1.6730796779662438,
+   "message": null,
+   "vs_current": [
+    0.032447381328377295,
+    -0.4828889821060872,
+    0.49115295695362554
+   ],
+   "signal_fired": false,
+   "proof": null,
+   "proof_fired": false,
+   "guard_switched": {
+    "Message": false
+   },
+   "reliable": {
+    "Message": true
+   }
+  }
+ }
+}

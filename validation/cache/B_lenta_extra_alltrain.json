@@ -1,0 +1,35 @@
+{
+ "note": "EXTRA, not part of the pass mark",
+ "rows_train": 549623,
+ "rows_test": 137406,
+ "secs": {
+  "Nudge fast engine (all 80%)": 100.69869065284729,
+  "econml CausalForestDML (all 80%)": 6581.793487548828
+ },
+ "methods": {
+  "Nudge fast engine (all 80%)": {
+   "qini": 0.01079464409012438,
+   "qini_low95": -0.0006744694401149913,
+   "qini_high95": 0.02545994114006012,
+   "range_above_0": false
+  },
+  "econml CausalForestDML (all 80%)": {
+   "qini": 0.009504517668172247,
+   "qini_low95": -0.002995505036262707,
+   "qini_high95": 0.02099870574047125,
+   "range_above_0": false
+  },
+  "Nudge fast engine (2 lakh, Part B)": {
+   "qini": -0.0012055608146551316,
+   "qini_low95": -0.01664121952674449,
+   "qini_high95": 0.01320208708062395,
+   "range_above_0": false
+  },
+  "econml CausalForestDML (2 lakh, Part B)": {
+   "qini": 0.008464476096930582,
+   "qini_low95": -0.002792124286602894,
+   "qini_high95": 0.019774187155653898,
+   "range_above_0": false
+  }
+ }
+}

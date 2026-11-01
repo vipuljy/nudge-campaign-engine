@@ -1,0 +1,286 @@
+{
+ "secs_scores": 119.02395462989807,
+ "secs_by_model": {
+  "fast": 6.1863112449646,
+  "ensemble": 107.30425977706909,
+  "likely": 5.4666807651519775
+ },
+ "variants": {
+  "fast/full": {
+   "per_option": {
+    "Message": {
+     "used": "fast",
+     "test_qini": 0.0393253409293987,
+     "rank_unchanged": true,
+     "slope_calibrated": 0.7268212291853046,
+     "reliable": true
+    }
+   },
+   "measured_extra_per_customer": [
+    2.5812211411739865,
+    -4.129061869584881,
+    9.817051449245778
+   ],
+   "recommended": "Nudge plan (margin x1)",
+   "message": null,
+   "share_contacted": 0.736,
+   "oof_diag": {
+    "Message": {
+     "oof_qini": {
+      "fast": 0.006132512705161413,
+      "likely": 0.0008271325215322926,
+      "ensemble": 0.0037376703641577285
+     },
+     "used": "fast",
+     "guard_switched": false,
+     "oof_qini_used_low95": 0.001802891128658366,
+     "oof_qini_used_high95": 0.010565076216648137,
+     "reliable": true,
+     "ate_oof": 0.05597759495886573
+    }
+   },
+   "A2_ratio": 0.5224408780750135,
+   "A2_low95": 0.4449034992161515,
+   "A2_high95": 0.5966881964773196,
+   "true_per_customer": 1.4651920235116225,
+   "A1_spearman_used": 0.4054777534777535
+  },
+  "fast/no_guard": {
+   "per_option": {
+    "Message": {
+     "used": "fast",
+     "test_qini": 0.0393253409293987,
+     "rank_unchanged": true,
+     "slope_calibrated": 0.7268212291853046,
+     "reliable": true
+    }
+   },
+   "measured_extra_per_customer": [
+    2.5812211411739865,
+    -4.129061869584881,
+    9.817051449245778
+   ],
+   "recommended": "Nudge plan (margin x1)",
+   "message": null,
+   "share_contacted": 0.736,
+   "oof_diag": {
+    "Message": {
+     "oof_qini": {
+      "fast": 0.006132512705161413,
+      "likely": 0.0008271325215322926,
+      "ensemble": 0.0037376703641577285
+     },
+     "used": "fast",
+     "guard_switched": false,
+     "oof_qini_used_low95": 0.001802891128658366,
+     "oof_qini_used_high95": 0.010565076216648137,
+     "reliable": true,
+     "ate_oof": 0.05597759495886573
+    }
+   },
+   "A2_ratio": 0.5224408780750135,
+   "A2_low95": 0.4449034992161515,
+   "A2_high95": 0.5966881964773196,
+   "true_per_customer": 1.4651920235116225,
+   "A1_spearman_used": 0.4054777534777535
+  },
+  "fast/no_signal_rule": {
+   "per_option": {
+    "Message": {
+     "used": "fast",
+     "test_qini": 0.0393253409293987,
+     "rank_unchanged": true,
+     "slope_calibrated": 0.7268212291853046,
+     "reliable": true
+    }
+   },
+   "measured_extra_per_customer": [
+    2.5812211411739865,
+    -4.129061869584881,
+    9.817051449245778
+   ],
+   "recommended": "Nudge plan (margin x1)",
+   "message": null,
+   "share_contacted": 0.736,
+   "oof_diag": {
+    "Message": {
+     "oof_qini": {
+      "fast": 0.006132512705161413,
+      "likely": 0.0008271325215322926,
+      "ensemble": 0.0037376703641577285
+     },
+     "used": "fast",
+     "guard_switched": false,
+     "oof_qini_used_low95": 0.001802891128658366,
+     "oof_qini_used_high95": 0.010565076216648137,
+     "reliable": true,
+     "ate_oof": 0.05597759495886573
+    }
+   },
+   "A2_ratio": 0.5224408780750135,
+   "A2_low95": 0.4449034992161515,
+   "A2_high95": 0.5966881964773196,
+   "true_per_customer": 1.4651920235116225,
+   "A1_spearman_used": 0.4054777534777535
+  },
+  "fast/no_calibration": {
+   "per_option": {
+    "Message": {
+     "used": "fast",
+     "test_qini": 0.0393253409293987,
+     "rank_unchanged": true,
+     "slope_calibrated": 0.4362617032726582,
+     "reliable": true
+    }
+   },
+   "measured_extra_per_customer": [
+    2.476421468705578,
+    -4.23557497172271,
+    9.763686149014578
+   ],
+   "recommended": "Nudge plan (margin x2)",
+   "message": null,
+   "share_contacted": 0.737,
+   "oof_diag": {
+    "Message": {
+     "oof_qini": {
+      "fast": 0.006132512705161413,
+      "likely": 0.0008271325215322926,
+      "ensemble": 0.0037376703641577285
+     },
+     "used": "fast",
+     "guard_switched": false,
+     "oof_qini_used_low95": 0.001802891128658366,
+     "oof_qini_used_high95": 0.010565076216648137,
+     "reliable": true,
+     "ate_oof": 0.05597759495886573
+    }
+   },
+   "A2_ratio": 0.5231727696048815,
+   "A2_low95": 0.4456342336361011,
+   "A2_high95": 0.5967210266211692,
+   "true_per_customer": 1.467244622526442,
+   "A1_spearman_used": 0.4054777534777535
+  },
+  "ensemble/full": {
+   "per_option": {
+    "Message": {
+     "used": "ensemble",
+     "test_qini": 0.05588448589125422,
+     "rank_unchanged": null,
+     "slope_calibrated": null,
+     "reliable": false
+    }
+   },
+   "measured_extra_per_customer": [
+    0.6207016575248719,
+    -8.296430554831472,
+    8.125823482727984
+   ],
+   "recommended": "Contact everyone (Message)",
+   "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact everyone (message).",
+   "share_contacted": 1.0,
+   "oof_diag": {
+    "Message": {
+     "oof_qini": {
+      "fast": 0.006132512705161413,
+      "likely": 0.0008271325215322926,
+      "ensemble": 0.0037376703641577285
+     },
+     "used": "ensemble",
+     "guard_switched": false,
+     "oof_qini_used_low95": -0.0005768725261131138,
+     "oof_qini_used_high95": 0.007221828969987034,
+     "reliable": false,
+     "ate_oof": 0.05597759495886573
+    }
+   },
+   "A2_ratio": 0.28656365219138863,
+   "A2_low95": 0.1703238872167126,
+   "A2_high95": 0.39084926204200854,
+   "true_per_customer": 0.8036713722828083,
+   "A1_spearman_used": 0.0
+  },
+  "ensemble/no_guard": {
+   "per_option": {
+    "Message": {
+     "used": "ensemble",
+     "test_qini": 0.05588448589125422,
+     "rank_unchanged": null,
+     "slope_calibrated": null,
+     "reliable": false
+    }
+   },
+   "measured_extra_per_customer": [
+    0.6207016575248719,
+    -8.296430554831472,
+    8.125823482727984
+   ],
+   "recommended": "Contact everyone (Message)",
+   "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact everyone (message).",
+   "share_contacted": 1.0,
+   "oof_diag": {
+    "Message": {
+     "oof_qini": {
+      "fast": 0.006132512705161413,
+      "likely": 0.0008271325215322926,
+      "ensemble": 0.0037376703641577285
+     },
+     "used": "ensemble",
+     "guard_switched": false,
+     "oof_qini_used_low95": -0.0005768725261131138,
+     "oof_qini_used_high95": 0.007221828969987034,
+     "reliable": false,
+     "ate_oof": 0.05597759495886573
+    }
+   },
+   "A2_ratio": 0.28656365219138863,
+   "A2_low95": 0.1703238872167126,
+   "A2_high95": 0.39084926204200854,
+   "true_per_customer": 0.8036713722828083,
+   "A1_spearman_used": 0.0
+  },
+  "ensemble/no_signal_rule": {
+   "per_option": {
+    "Message": {
+     "used": "ensemble",
+     "test_qini": 0.05588448589125422,
+     "rank_unchanged": true,
+     "slope_calibrated": 1.7860236037943114,
+     "reliable": false
+    }
+   },
+   "measured_extra_per_customer": [
+    2.6325447452298563,
+    -3.036514339279067,
+    9.032942499814814
+   ],
+   "recommended": "Nudge plan (margin x0)",
+   "message": null,
+   "share_contacted": 0.637,
+   "oof_diag": {
+    "Message": {
+     "oof_qini": {
+      "fast": 0.006132512705161413,
+      "likely": 0.0008271325215322926,
+      "ensemble": 0.0037376703641577285
+     },
+     "used": "ensemble",
+     "guard_switched": false,
+     "oof_qini_used_low95": -0.0005768725261131138,
+     "oof_qini_used_high95": 0.007221828969987034,
+     "reliable": false,
+     "ate_oof": 0.05597759495886573
+    }
+   },
+   "A2_ratio": 0.4849642704553952,
+   "A2_low95": 0.4205256836038745,
+   "A2_high95": 0.5456106650183176,
+   "true_per_customer": 1.360088405366613,
+   "A1_spearman_used": 0.3760806969078426
+  }
+ },
+ "slope_app_engine": {
+  "Message": 0.30168071665896207
+ }
+}

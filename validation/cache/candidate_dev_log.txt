@@ -1,0 +1,5 @@
+dev 50k 2-arm binary: spearman 0.636, plan/oracle 0.697 (Nudge plan (margin x1))
+dev 50k 2-arm revenue: spearman 0.621, plan/oracle 0.660 (Nudge plan (margin x2))
+dev 50k 4-arm binary: spearman 0.487, plan/oracle 0.751 (Nudge plan (margin x0.1))
+dev 50k 4-arm revenue: spearman 0.452, plan/oracle 0.693 (Nudge plan (margin x2))
+dev null: "do not personalise" in 18 of 20 (min_gain 0.0)

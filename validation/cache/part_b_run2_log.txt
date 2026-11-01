@@ -1,0 +1,4 @@
+hillstrom engine 0.0636 [0.0354, 0.0941] {'Random order': 0.0145, 'Likely-buyer model': 0.055, 'Nudge fast engine': 0.0636, 'Nudge ensemble (thorough)': 0.0645, 'econml CausalForestDML': 0.0675, 'econml R-learner (NonParamDML)': 0.0592}
+megafon engine 0.2165 [0.2087, 0.2247] {'Random order': 0.0097, 'Likely-buyer model': 0.1467, 'Nudge fast engine': 0.2165, 'Nudge ensemble (thorough)': 0.2075, 'econml CausalForestDML': 0.2062, 'econml R-learner (NonParamDML)': 0.2161}
+lenta engine -0.0012 [-0.0166, 0.0132] {'Random order': -0.0121, 'Likely-buyer model': 0.0107, 'Nudge fast engine': -0.0012, 'Nudge ensemble (thorough)': 0.0016, 'econml CausalForestDML': 0.0085, 'econml R-learner (NonParamDML)': -0.0007}
+criteo10 engine 0.0683 [0.0494, 0.0858] {'Random order': -0.0004, 'Likely-buyer model': 0.0894, 'Nudge fast engine': 0.0683, 'Nudge ensemble (thorough)': 0.0858, 'econml CausalForestDML': 0.0899, 'econml R-learner (NonParamDML)': 0.0672}

@@ -1,0 +1,38 @@
+sample hillstrom
+sample synthetic
+null 8101 {'current': 'Contact nobody', 'v2_5f': 'Contact nobody', 'v2_5f_proof': 'Contact nobody', 'v2_3f_proof': 'Contact nobody'}
+null 8102 {'current': 'Contact everyone (Message)', 'v2_5f': 'Nudge plan (margin x0.5)', 'v2_5f_proof': 'Contact everyone (Message)', 'v2_3f_proof': 'Contact everyone (Message)'}
+null 8103 {'current': 'Nudge plan', 'v2_5f': 'Contact nobody', 'v2_5f_proof': 'Contact nobody', 'v2_3f_proof': 'Contact nobody'}
+null 8104 {'current': 'Contact nobody', 'v2_5f': 'Contact nobody', 'v2_5f_proof': 'Contact nobody', 'v2_3f_proof': 'Contact nobody'}
+null 8105 {'current': 'Contact nobody', 'v2_5f': 'Contact nobody', 'v2_5f_proof': 'Contact nobody', 'v2_3f_proof': 'Contact nobody'}
+null 8106 {'current': 'Contact nobody', 'v2_5f': 'Contact nobody', 'v2_5f_proof': 'Contact nobody', 'v2_3f_proof': 'Contact nobody'}
+null 8107 {'current': 'Contact nobody', 'v2_5f': 'Contact nobody', 'v2_5f_proof': 'Contact nobody', 'v2_3f_proof': 'Contact nobody'}
+null 8108 {'current': 'Nudge plan', 'v2_5f': 'Contact nobody', 'v2_5f_proof': 'Contact nobody', 'v2_3f_proof': 'Contact nobody'}
+null 8109 {'current': 'Contact nobody', 'v2_5f': 'Contact nobody', 'v2_5f_proof': 'Contact nobody', 'v2_3f_proof': 'Contact nobody'}
+null 8110 {'current': 'Contact nobody', 'v2_5f': 'Contact nobody', 'v2_5f_proof': 'Contact nobody', 'v2_3f_proof': 'Contact nobody'}
+null 8111 {'current': 'Contact nobody', 'v2_5f': 'Contact nobody', 'v2_5f_proof': 'Contact nobody', 'v2_3f_proof': 'Contact nobody'}
+null 8112 {'current': 'Contact nobody', 'v2_5f': 'Contact everyone (Message)', 'v2_5f_proof': 'Contact everyone (Message)', 'v2_3f_proof': 'Contact everyone (Message)'}
+null 8113 {'current': 'Nudge plan', 'v2_5f': 'Contact nobody', 'v2_5f_proof': 'Contact nobody', 'v2_3f_proof': 'Contact nobody'}
+null 8114 {'current': 'Contact everyone (Message)', 'v2_5f': 'Contact nobody', 'v2_5f_proof': 'Contact nobody', 'v2_3f_proof': 'Nudge plan (margin x0.5)'}
+null 8115 {'current': 'Contact everyone (Message)', 'v2_5f': 'Contact nobody', 'v2_5f_proof': 'Contact nobody', 'v2_3f_proof': 'Contact nobody'}
+null 8116 {'current': 'Contact nobody', 'v2_5f': 'Contact nobody', 'v2_5f_proof': 'Contact nobody', 'v2_3f_proof': 'Contact nobody'}
+null 8117 {'current': 'Contact nobody', 'v2_5f': 'Contact nobody', 'v2_5f_proof': 'Contact nobody', 'v2_3f_proof': 'Contact nobody'}
+null 8118 {'current': 'Contact nobody', 'v2_5f': 'Contact nobody', 'v2_5f_proof': 'Contact nobody', 'v2_3f_proof': 'Contact nobody'}
+null 8119 {'current': 'Nudge plan', 'v2_5f': 'Contact nobody', 'v2_5f_proof': 'Contact nobody', 'v2_3f_proof': 'Contact nobody'}
+null 8120 {'current': 'Contact nobody', 'v2_5f': 'Contact nobody', 'v2_5f_proof': 'Contact nobody', 'v2_3f_proof': 'Contact nobody'}
+E_dev_5000_2arm_binary {'current': ('Contact everyone (Mess', np.float64(0.287)), 'v2_5f': ('Nudge plan (margin x1)', np.float64(0.522)), 'v2_5f_proof': ('Contact everyone (Mess', np.float64(0.287)), 'v2_3f_proof': ('Nudge plan (margin x1)', np.float64(0.503))}
+E_dev_5000_2arm_revenue {'current': ('Contact nobody', np.float64(0.0)), 'v2_5f': ('Contact everyone (Mess', np.float64(0.235)), 'v2_5f_proof': ('Contact everyone (Mess', np.float64(0.235)), 'v2_3f_proof': ('Contact everyone (Mess', np.float64(0.235))}
+E_dev_5000_4arm_binary {'current': ('Nudge plan', np.float64(0.624)), 'v2_5f': ('Contact everyone (What', np.float64(0.542)), 'v2_5f_proof': ('Contact everyone (What', np.float64(0.542)), 'v2_3f_proof': ('Contact everyone (What', np.float64(0.542))}
+E_dev_5000_4arm_revenue {'current': ('Contact nobody', np.float64(0.0)), 'v2_5f': ('Contact everyone (Disc', np.float64(0.409)), 'v2_5f_proof': ('Contact everyone (Disc', np.float64(0.409)), 'v2_3f_proof': ('Contact everyone (Disc', np.float64(0.409))}
+E_dev_50000_2arm_binary {'current': ('Nudge plan', np.float64(0.677)), 'v2_5f': ('Nudge plan (margin x0.', np.float64(0.706)), 'v2_5f_proof': ('Contact everyone (Mess', np.float64(0.315)), 'v2_3f_proof': ('Contact everyone (Mess', np.float64(0.315))}
+E_dev_50000_2arm_revenue {'current': ('Contact everyone (Mess', np.float64(0.325)), 'v2_5f': ('Nudge plan (margin x0.', np.float64(0.677)), 'v2_5f_proof': ('Contact everyone (Mess', np.float64(0.325)), 'v2_3f_proof': ('Contact everyone (Mess', np.float64(0.325))}
+E_dev_50000_4arm_binary {'current': ('Nudge plan', np.float64(0.738)), 'v2_5f': ('Nudge plan (margin x0.', np.float64(0.656)), 'v2_5f_proof': ('Nudge plan (margin x0.', np.float64(0.656)), 'v2_3f_proof': ('Nudge plan (margin x0.', np.float64(0.75))}
+E_dev_50000_4arm_revenue {'current': ('Nudge plan', np.float64(0.711)), 'v2_5f': ('Nudge plan (margin x0)', np.float64(0.687)), 'v2_5f_proof': ('Nudge plan (margin x0)', np.float64(0.687)), 'v2_3f_proof': ('Nudge plan (margin x0)', np.float64(0.67))}
+E_dev_200000_2arm_binary {'current': ('Nudge plan', np.float64(0.843)), 'v2_5f': ('Nudge plan (margin x0)', np.float64(0.877)), 'v2_5f_proof': ('Nudge plan (margin x0)', np.float64(0.877)), 'v2_3f_proof': ('Nudge plan (margin x1)', np.float64(0.83))}
+E_dev_200000_2arm_revenue {'current': ('Nudge plan', np.float64(0.836)), 'v2_5f': ('Nudge plan (margin x2)', np.float64(0.863)), 'v2_5f_proof': ('Nudge plan (margin x2)', np.float64(0.863)), 'v2_3f_proof': ('Nudge plan (margin x0.', np.float64(0.869))}
+E_dev_200000_4arm_binary {'current': ('Nudge plan', np.float64(0.858)), 'v2_5f': ('Nudge plan (margin x0)', np.float64(0.887)), 'v2_5f_proof': ('Nudge plan (margin x0)', np.float64(0.887)), 'v2_3f_proof': ('Nudge plan (margin x0.', np.float64(0.874))}
+E_dev_200000_4arm_revenue {'current': ('Nudge plan', np.float64(0.84)), 'v2_5f': ('Nudge plan (margin x0.', np.float64(0.837)), 'v2_5f_proof': ('Nudge plan (margin x0.', np.float64(0.837)), 'v2_3f_proof': ('Nudge plan (margin x0)', np.float64(0.853))}
+bench hillstrom
+bench megafon
+bench criteo10
+bench lenta

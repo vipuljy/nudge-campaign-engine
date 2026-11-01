@@ -1,0 +1,1018 @@
+{
+ "missing_values": {
+  "file": "missing_values",
+  "description": "15% of each measure missing, 5% of a text measure, 2% of outcomes, 1% of options blank",
+  "mb": 2.0,
+  "steps": {
+   "read_s": 0.12359404563903809,
+   "prepare_s": 0.17265653610229492,
+   "train_s": 34.55085778236389,
+   "plan_s": 1.609982967376709,
+   "curves_s": 3.5900261402130127,
+   "thorough_s": 45.32601308822632
+  },
+  "messages": [
+   [
+    "warning",
+    "197 rows have no value in \"option\" (which option the customer got) and will be left out."
+   ],
+   [
+    "warning",
+    "1.9% of rows have no usable outcome and will be left out."
+   ]
+  ],
+  "crash": null,
+  "rows": 20000,
+  "cols": 15,
+  "guess": {
+   "option": "option",
+   "control": "No message",
+   "outcome": "bought",
+   "id": "customer_id"
+  },
+  "guess_features": [
+   "x0",
+   "x1",
+   "x2",
+   "x3",
+   "x4",
+   "x5",
+   "x6",
+   "x7",
+   "x8",
+   "x9",
+   "region",
+   "joined_via"
+  ],
+  "dropped": [],
+  "kind": "binary",
+  "options": [
+   "Message"
+  ],
+  "fairness": {
+   "light": "green",
+   "reason": "The groups look alike on every measure, as a random test should.",
+   "max_gap": 0.024033660254303518,
+   "worst": "x8",
+   "threshold": 0.05
+  },
+  "plan": {
+   "recommended": "Nudge plan",
+   "rec_share": 0.7472979927946475,
+   "ladder_ok": true,
+   "diff_vs_usual": [
+    0.705038861249041,
+    -1.8435003352068966,
+    3.0502320779136323
+   ],
+   "n_test": 3886
+  },
+  "target_rows": 19430,
+  "thorough_winner": {
+   "Message": "S-learner"
+  },
+  "stopped_at": "finished (plan shown)"
+ },
+ "text_columns": {
+  "file": "text_columns",
+  "description": "text measures: city (60 values), gender, tier as text, a date, Yes/No, free text",
+  "mb": 2.9,
+  "steps": {
+   "read_s": 0.09703350067138672,
+   "prepare_s": 0.19857311248779297,
+   "train_s": 37.71680021286011,
+   "plan_s": 0.5569121837615967,
+   "curves_s": 2.9001054763793945,
+   "thorough_s": 44.6022162437439
+  },
+  "messages": [],
+  "crash": null,
+  "rows": 20000,
+  "cols": 21,
+  "guess": {
+   "option": "option",
+   "control": "No message",
+   "outcome": "bought",
+   "id": "customer_id"
+  },
+  "guess_features": [
+   "x0",
+   "x1",
+   "x2",
+   "x3",
+   "x4",
+   "x5",
+   "x6",
+   "x7",
+   "x8",
+   "x9",
+   "region",
+   "joined_via",
+   "city",
+   "gender",
+   "tier",
+   "signup_date",
+   "vip",
+   "notes"
+  ],
+  "dropped": [
+   "city",
+   "signup_date",
+   "notes"
+  ],
+  "kind": "binary",
+  "options": [
+   "Message"
+  ],
+  "fairness": {
+   "light": "green",
+   "reason": "The groups look alike on every measure, as a random test should.",
+   "max_gap": 0.020835428747503684,
+   "worst": "x0",
+   "threshold": 0.05
+  },
+  "plan": {
+   "recommended": "Contact everyone (Message)",
+   "rec_share": 1.0,
+   "ladder_ok": true,
+   "diff_vs_usual": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "n_test": 4000
+  },
+  "target_rows": 20000,
+  "thorough_winner": {
+   "Message": "DR-learner"
+  },
+  "stopped_at": "finished (plan shown)"
+ },
+ "extra_wrong_names": {
+  "file": "extra_wrong_names",
+  "description": "index column, odd names, control called \"Holdout\", outcome as yes/no, a constant and an empty column, an after-campaign column",
+  "mb": 2.8,
+  "steps": {
+   "read_s": 0.07489681243896484,
+   "prepare_s": 0.1819164752960205,
+   "train_s": 38.38082456588745,
+   "plan_s": 1.4999244213104248,
+   "curves_s": 2.6310794353485107,
+   "thorough_s": 39.514472007751465
+  },
+  "messages": [],
+  "crash": null,
+  "rows": 20000,
+  "cols": 19,
+  "guess": {
+   "option": "Treatment Group",
+   "control": "Holdout",
+   "outcome": "Purchased?",
+   "id": "customer_id"
+  },
+  "guess_features": [
+   "x0",
+   "x1",
+   "x2",
+   "Orders 30D",
+   "x5",
+   "x6",
+   "x7",
+   "x8",
+   "x9",
+   "region",
+   "joined_via",
+   "constant",
+   "empty"
+  ],
+  "user_fix": {
+   "control": "Holdout"
+  },
+  "dropped": [],
+  "kind": "binary",
+  "options": [
+   "Got SMS"
+  ],
+  "fairness": {
+   "light": "green",
+   "reason": "The groups look alike on every measure, as a random test should.",
+   "max_gap": 0.029500482114739095,
+   "worst": "region = north",
+   "threshold": 0.05
+  },
+  "plan": {
+   "recommended": "Nudge plan",
+   "rec_share": 0.92175,
+   "ladder_ok": true,
+   "diff_vs_usual": [
+    0.1729592583691819,
+    -1.3539418672483916,
+    1.417547739239924
+   ],
+   "n_test": 4000
+  },
+  "target_rows": 20000,
+  "thorough_winner": {
+   "Got SMS": "X-learner"
+  },
+  "stopped_at": "finished (plan shown)"
+ },
+ "extra_wrong_names_userfixed": {
+  "file": "extra_wrong_names_userfixed",
+  "description": "the same file after the user picks the right outcome (\"Purchased?\", yes/no text) in the dropdown",
+  "mb": 2.8,
+  "steps": {
+   "read_s": 0.04491233825683594,
+   "prepare_s": 0.1149606704711914,
+   "train_s": 29.74110770225525,
+   "plan_s": 1.2417786121368408,
+   "curves_s": 3.25004506111145,
+   "thorough_s": 45.50559973716736
+  },
+  "messages": [],
+  "crash": null,
+  "rows": 20000,
+  "cols": 19,
+  "guess": {
+   "option": "Treatment Group",
+   "control": "Holdout",
+   "outcome": "Purchased?",
+   "id": "customer_id"
+  },
+  "guess_features": [
+   "x0",
+   "x1",
+   "x2",
+   "Orders 30D",
+   "x5",
+   "x6",
+   "x7",
+   "x8",
+   "x9",
+   "region",
+   "joined_via",
+   "constant",
+   "empty"
+  ],
+  "user_fix": {
+   "control": "Holdout",
+   "outcome": "Purchased?"
+  },
+  "dropped": [],
+  "kind": "binary",
+  "options": [
+   "Got SMS"
+  ],
+  "fairness": {
+   "light": "green",
+   "reason": "The groups look alike on every measure, as a random test should.",
+   "max_gap": 0.029500482114739095,
+   "worst": "region = north",
+   "threshold": 0.05
+  },
+  "plan": {
+   "recommended": "Nudge plan",
+   "rec_share": 0.92175,
+   "ladder_ok": true,
+   "diff_vs_usual": [
+    0.1729592583691819,
+    -1.3539418672483916,
+    1.417547739239924
+   ],
+   "n_test": 4000
+  },
+  "target_rows": 20000,
+  "thorough_winner": {
+   "Got SMS": "X-learner"
+  },
+  "stopped_at": "finished (plan shown)"
+ },
+ "outcome_all_zero": {
+  "file": "outcome_all_zero",
+  "description": "nobody bought anything",
+  "mb": 2.2,
+  "steps": {
+   "read_s": 0.07879638671875
+  },
+  "messages": [
+   [
+    "error",
+    "The outcome \"bought\" is 0 for every customer (nobody bought). With no difference between customers, there is nothing to learn about what the campaign changed. Check that this is the right column and the right period."
+   ]
+  ],
+  "crash": null,
+  "rows": 20000,
+  "cols": 15,
+  "guess": {
+   "option": "option",
+   "control": "No message",
+   "outcome": "bought",
+   "id": "customer_id"
+  },
+  "guess_features": [
+   "x0",
+   "x1",
+   "x2",
+   "x3",
+   "x4",
+   "x5",
+   "x6",
+   "x7",
+   "x8",
+   "x9",
+   "region",
+   "joined_via"
+  ],
+  "stopped_at": "validate (error shown)"
+ },
+ "rows_500": {
+  "file": "rows_500",
+  "description": "500 rows",
+  "mb": 0.1,
+  "steps": {
+   "read_s": 0.024011611938476562,
+   "prepare_s": 0.05699753761291504,
+   "train_s": 7.110536336898804,
+   "plan_s": 0.1497659683227539,
+   "curves_s": 0.8502726554870605,
+   "thorough_s": 6.8888092041015625
+  },
+  "messages": [
+   [
+    "warning",
+    "Only 257 customers got \"No message\". Under about 1,000 per option, per-customer estimates are noisy; the ranges shown will be wide."
+   ],
+   [
+    "warning",
+    "Only 243 customers got \"Message\". Under about 1,000 per option, per-customer estimates are noisy; the ranges shown will be wide."
+   ]
+  ],
+  "crash": null,
+  "rows": 500,
+  "cols": 15,
+  "guess": {
+   "option": "option",
+   "control": "No message",
+   "outcome": "bought",
+   "id": "customer_id"
+  },
+  "guess_features": [
+   "x0",
+   "x1",
+   "x2",
+   "x3",
+   "x4",
+   "x5",
+   "x6",
+   "x7",
+   "x8",
+   "x9",
+   "region",
+   "joined_via"
+  ],
+  "dropped": [],
+  "kind": "binary",
+  "options": [
+   "Message"
+  ],
+  "fairness": {
+   "light": "green",
+   "reason": "The groups look alike on every measure, as a random test should.",
+   "max_gap": 0.23598915973894008,
+   "worst": "x7",
+   "threshold": 0.2684334038266388
+  },
+  "plan": {
+   "recommended": "Contact nobody",
+   "rec_share": 0.0,
+   "ladder_ok": true,
+   "diff_vs_usual": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "n_test": 100
+  },
+  "target_rows": 500,
+  "thorough_winner": {
+   "Message": "DR-learner"
+  },
+  "stopped_at": "finished (plan shown)"
+ },
+ "split_95_5": {
+  "file": "split_95_5",
+  "description": "95% got the message, 5% control (about 500 people)",
+  "mb": 1.1,
+  "steps": {
+   "read_s": 0.027953624725341797,
+   "prepare_s": 0.09866452217102051,
+   "train_s": 23.703288793563843,
+   "plan_s": 0.4979219436645508,
+   "curves_s": 1.5888569355010986,
+   "thorough_s": 30.64833664894104
+  },
+  "messages": [
+   [
+    "warning",
+    "Only 486 customers got \"No message\". Under about 1,000 per option, per-customer estimates are noisy; the ranges shown will be wide."
+   ]
+  ],
+  "crash": null,
+  "rows": 10000,
+  "cols": 15,
+  "guess": {
+   "option": "option",
+   "control": "No message",
+   "outcome": "bought",
+   "id": "customer_id"
+  },
+  "guess_features": [
+   "x0",
+   "x1",
+   "x2",
+   "x3",
+   "x4",
+   "x5",
+   "x6",
+   "x7",
+   "x8",
+   "x9",
+   "region",
+   "joined_via"
+  ],
+  "dropped": [],
+  "kind": "binary",
+  "options": [
+   "Message"
+  ],
+  "fairness": {
+   "light": "green",
+   "reason": "The groups look alike on every measure, as a random test should.",
+   "max_gap": 0.08078817062635639,
+   "worst": "x0",
+   "threshold": 0.19245008972987526
+  },
+  "plan": {
+   "recommended": "Contact nobody",
+   "rec_share": 0.0,
+   "ladder_ok": false,
+   "diff_vs_usual": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "n_test": 2000
+  },
+  "target_rows": 10000,
+  "thorough_winner": {
+   "Message": "DR-learner"
+  },
+  "stopped_at": "finished (plan shown)"
+ },
+ "non_random": {
+  "file": "non_random",
+  "description": "the message went to the top half by a spend-like measure (x3): NOT random",
+  "mb": 2.2,
+  "steps": {
+   "read_s": 0.06908369064331055,
+   "prepare_s": 0.10509777069091797,
+   "train_s": 38.413867712020874,
+   "plan_s": 1.2938952445983887,
+   "curves_s": 3.0769238471984863,
+   "thorough_s": 34.9816951751709
+  },
+  "messages": [],
+  "crash": null,
+  "rows": 20000,
+  "cols": 15,
+  "guess": {
+   "option": "option",
+   "control": "No message",
+   "outcome": "bought",
+   "id": "customer_id"
+  },
+  "guess_features": [
+   "x0",
+   "x1",
+   "x2",
+   "x3",
+   "x4",
+   "x5",
+   "x6",
+   "x7",
+   "x8",
+   "x9",
+   "region",
+   "joined_via"
+  ],
+  "dropped": [],
+  "kind": "binary",
+  "options": [
+   "Message"
+  ],
+  "fairness": {
+   "light": "red",
+   "reason": "The groups differ before the campaign, so options were probably not given at random.",
+   "max_gap": 2.6501395079716428,
+   "worst": "x3",
+   "threshold": 0.05
+  },
+  "plan": {
+   "recommended": "Contact everyone (Message)",
+   "rec_share": 1.0,
+   "ladder_ok": true,
+   "diff_vs_usual": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "n_test": 4000
+  },
+  "target_rows": 20000,
+  "thorough_winner": {
+   "Message": "Class transformation"
+  },
+  "stopped_at": "finished (plan shown)"
+ },
+ "duplicate_ids": {
+  "file": "duplicate_ids",
+  "description": "2,000 customers appear twice (10%)",
+  "mb": 2.4,
+  "steps": {
+   "read_s": 0.060235023498535156,
+   "prepare_s": 0.0870208740234375,
+   "train_s": 40.1700165271759,
+   "plan_s": 1.452925205230713,
+   "curves_s": 3.0003058910369873,
+   "thorough_s": 41.57977223396301
+  },
+  "messages": [
+   [
+    "warning",
+    "2,000 customers appear more than once (4,000 rows). That is fine if they were contacted more than once; Nudge keeps all rows of a customer in the same part when it tests itself. If they are copies, remove them first."
+   ]
+  ],
+  "crash": null,
+  "rows": 22000,
+  "cols": 15,
+  "guess": {
+   "option": "option",
+   "control": "No message",
+   "outcome": "bought",
+   "id": "customer_id"
+  },
+  "guess_features": [
+   "x0",
+   "x1",
+   "x2",
+   "x3",
+   "x4",
+   "x5",
+   "x6",
+   "x7",
+   "x8",
+   "x9",
+   "region",
+   "joined_via"
+  ],
+  "user_fix": {
+   "id": "customer_id"
+  },
+  "dropped": [],
+  "kind": "binary",
+  "options": [
+   "Message"
+  ],
+  "fairness": {
+   "light": "green",
+   "reason": "The groups look alike on every measure, as a random test should.",
+   "max_gap": 0.017217254012627595,
+   "worst": "x2",
+   "threshold": 0.05
+  },
+  "plan": {
+   "recommended": "Contact everyone (Message)",
+   "rec_share": 1.0,
+   "ladder_ok": false,
+   "diff_vs_usual": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "n_test": 4417
+  },
+  "target_rows": 22000,
+  "thorough_winner": {
+   "Message": "S-learner"
+  },
+  "stopped_at": "finished (plan shown)"
+ },
+ "options_4plus": {
+  "file": "options_4plus",
+  "description": "control + 4 options",
+  "mb": 4.6,
+  "steps": {
+   "read_s": 0.12981057167053223,
+   "prepare_s": 0.37434983253479004,
+   "train_s": 137.442476272583,
+   "plan_s": 6.807099342346191,
+   "curves_s": 5.262609958648682,
+   "thorough_s": 171.73346281051636
+  },
+  "messages": [],
+  "crash": null,
+  "rows": 40000,
+  "cols": 15,
+  "guess": {
+   "option": "option",
+   "control": "No message",
+   "outcome": "bought",
+   "id": "customer_id"
+  },
+  "guess_features": [
+   "x0",
+   "x1",
+   "x2",
+   "x3",
+   "x4",
+   "x5",
+   "x6",
+   "x7",
+   "x8",
+   "x9",
+   "region",
+   "joined_via"
+  ],
+  "dropped": [],
+  "kind": "binary",
+  "options": [
+   "Email reminder",
+   "Discount Rs20",
+   "WhatsApp reminder",
+   "SMS reminder"
+  ],
+  "fairness": {
+   "light": "green",
+   "reason": "The groups look alike on every measure, as a random test should.",
+   "max_gap": 0.041531166556508174,
+   "worst": "x9",
+   "threshold": 0.05218044516546319
+  },
+  "plan": {
+   "recommended": "Nudge plan",
+   "rec_share": 1.0,
+   "ladder_ok": true,
+   "diff_vs_usual": [
+    0.23028990652116388,
+    -2.5458388959573814,
+    3.356506343942791
+   ],
+   "n_test": 8000
+  },
+  "target_rows": 40000,
+  "thorough_winner": {
+   "Email reminder": "S-learner",
+   "Discount Rs20": "S-learner",
+   "WhatsApp reminder": "S-learner",
+   "SMS reminder": "S-learner"
+  },
+  "stopped_at": "finished (plan shown)"
+ },
+ "revenue": {
+  "file": "revenue",
+  "description": "outcome is revenue (\u20b9 amount)",
+  "mb": 2.2,
+  "steps": {
+   "read_s": 0.08130049705505371,
+   "prepare_s": 0.18652725219726562,
+   "train_s": 42.820213317871094,
+   "plan_s": 1.3256475925445557,
+   "curves_s": 3.362743616104126,
+   "thorough_s": 33.457603216171265
+  },
+  "messages": [],
+  "crash": null,
+  "rows": 20000,
+  "cols": 15,
+  "guess": {
+   "option": "option",
+   "control": "No message",
+   "outcome": "revenue",
+   "id": "customer_id"
+  },
+  "guess_features": [
+   "x0",
+   "x1",
+   "x2",
+   "x3",
+   "x4",
+   "x5",
+   "x6",
+   "x7",
+   "x8",
+   "x9",
+   "region",
+   "joined_via"
+  ],
+  "dropped": [],
+  "kind": "amount",
+  "options": [
+   "Message"
+  ],
+  "fairness": {
+   "light": "green",
+   "reason": "The groups look alike on every measure, as a random test should.",
+   "max_gap": 0.026082529690528825,
+   "worst": "x1",
+   "threshold": 0.05
+  },
+  "plan": {
+   "recommended": "Nudge plan",
+   "rec_share": 0.803,
+   "ladder_ok": true,
+   "diff_vs_usual": [
+    -0.2523626658282026,
+    -1.673521294789196,
+    1.2384357179043464
+   ],
+   "n_test": 4000
+  },
+  "target_rows": 20000,
+  "thorough_winner": {
+   "Message": "Class transformation"
+  },
+  "stopped_at": "finished (plan shown)"
+ },
+ "rows_10lakh": {
+  "file": "rows_10lakh",
+  "description": "10,00,000 rows",
+  "mb": 109.1,
+  "steps": {
+   "read_s": 1.6566710472106934,
+   "prepare_s": 2.704270839691162,
+   "train_s": 68.69086647033691,
+   "plan_s": 10.299081087112427,
+   "curves_s": 29.288142204284668
+  },
+  "messages": [
+   [
+    "warning",
+    "The file has 1,000,000 rows. Training uses a random 200,000 of them to stay fast; the download still scores every row."
+   ]
+  ],
+  "crash": null,
+  "rows": 1000000,
+  "cols": 15,
+  "guess": {
+   "option": "option",
+   "control": "No message",
+   "outcome": "bought",
+   "id": "customer_id"
+  },
+  "guess_features": [
+   "x0",
+   "x1",
+   "x2",
+   "x3",
+   "x4",
+   "x5",
+   "x6",
+   "x7",
+   "x8",
+   "x9",
+   "region",
+   "joined_via"
+  ],
+  "dropped": [],
+  "kind": "binary",
+  "options": [
+   "Message"
+  ],
+  "fairness": {
+   "light": "green",
+   "reason": "The groups look alike on every measure, as a random test should.",
+   "max_gap": 0.0033029576630709875,
+   "worst": "x0",
+   "threshold": 0.05
+  },
+  "plan": {
+   "recommended": "Nudge plan",
+   "rec_share": 0.781475,
+   "ladder_ok": false,
+   "diff_vs_usual": [
+    1.0422254277710903,
+    0.1467651082755838,
+    1.6388488032594666
+   ],
+   "n_test": 40000
+  },
+  "target_rows": 1000000,
+  "stopped_at": "finished (plan shown)"
+ },
+ "rows_1lakh": {
+  "file": "rows_1lakh",
+  "description": "1,00,000 rows (C4 timing)",
+  "mb": 10.9,
+  "steps": {
+   "read_s": 0.16857194900512695,
+   "prepare_s": 0.3836491107940674,
+   "train_s": 57.47974109649658,
+   "plan_s": 3.816941261291504,
+   "curves_s": 11.416181802749634
+  },
+  "messages": [],
+  "crash": null,
+  "rows": 100000,
+  "cols": 15,
+  "guess": {
+   "option": "option",
+   "control": "No message",
+   "outcome": "bought",
+   "id": "customer_id"
+  },
+  "guess_features": [
+   "x0",
+   "x1",
+   "x2",
+   "x3",
+   "x4",
+   "x5",
+   "x6",
+   "x7",
+   "x8",
+   "x9",
+   "region",
+   "joined_via"
+  ],
+  "dropped": [],
+  "kind": "binary",
+  "options": [
+   "Message"
+  ],
+  "fairness": {
+   "light": "green",
+   "reason": "The groups look alike on every measure, as a random test should.",
+   "max_gap": 0.009325756946900896,
+   "worst": "region = north",
+   "threshold": 0.05
+  },
+  "plan": {
+   "recommended": "Nudge plan",
+   "rec_share": 0.85405,
+   "ladder_ok": true,
+   "diff_vs_usual": [
+    0.9548607297722195,
+    0.08694692164282906,
+    1.859879233097192
+   ],
+   "n_test": 20000
+  },
+  "target_rows": 100000,
+  "stopped_at": "finished (plan shown)"
+ },
+ "x_not_a_csv": {
+  "file": "x_not_a_csv",
+  "description": "an Excel/zip file renamed .csv",
+  "mb": 0.0,
+  "steps": {},
+  "messages": [
+   [
+    "error",
+    "Could not read this file as a CSV (UnicodeDecodeError). Save it as comma-separated text and try again."
+   ]
+  ],
+  "crash": null,
+  "stopped_at": "read (handled by the page)"
+ },
+ "x_header_only": {
+  "file": "x_header_only",
+  "description": "header row, no data",
+  "mb": 0.0,
+  "steps": {
+   "read_s": 0.016810894012451172
+  },
+  "messages": [
+   [
+    "error",
+    "The file has column names but no rows of data. Export the file again with the customer rows."
+   ]
+  ],
+  "crash": null,
+  "rows": 0,
+  "cols": 4,
+  "guess": {
+   "option": "customer_id",
+   "control": null,
+   "outcome": null,
+   "id": "customer_id"
+  },
+  "guess_features": [
+   "option",
+   "x0"
+  ],
+  "stopped_at": "validate (error shown)"
+ },
+ "x_semicolon": {
+  "file": "x_semicolon",
+  "description": "semicolon-separated (European Excel export)",
+  "mb": 0.5,
+  "steps": {
+   "read_s": 0.025944948196411133,
+   "prepare_s": 0.06581568717956543,
+   "train_s": 22.5158109664917,
+   "plan_s": 0.2174692153930664,
+   "curves_s": 1.2646429538726807,
+   "thorough_s": 22.266977310180664
+  },
+  "messages": [],
+  "crash": null,
+  "rows": 5000,
+  "cols": 15,
+  "guess": {
+   "option": "option",
+   "control": "No message",
+   "outcome": "bought",
+   "id": "customer_id"
+  },
+  "guess_features": [
+   "x0",
+   "x1",
+   "x2",
+   "x3",
+   "x4",
+   "x5",
+   "x6",
+   "x7",
+   "x8",
+   "x9",
+   "region",
+   "joined_via"
+  ],
+  "dropped": [],
+  "kind": "binary",
+  "options": [
+   "Message"
+  ],
+  "fairness": {
+   "light": "green",
+   "reason": "The groups look alike on every measure, as a random test should.",
+   "max_gap": 0.06862536603563554,
+   "worst": "joined via = store",
+   "threshold": 0.084853058119545
+  },
+  "plan": {
+   "recommended": "Contact everyone (Message)",
+   "rec_share": 1.0,
+   "ladder_ok": false,
+   "diff_vs_usual": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "n_test": 1000
+  },
+  "target_rows": 5000,
+  "thorough_winner": {
+   "Message": "S-learner"
+  },
+  "stopped_at": "finished (plan shown)"
+ },
+ "x_no_control": {
+  "file": "x_no_control",
+  "description": "everyone got the message (no control group)",
+  "mb": 2.2,
+  "steps": {
+   "read_s": 0.06409072875976562
+  },
+  "messages": [
+   [
+    "error",
+    "Choose which value of \"region\" is the control group (customers who got nothing). Its values: \"north\", \"east\", \"south\". If every customer got some option, the file has no control group and nobody can tell what the campaign caused."
+   ]
+  ],
+  "crash": null,
+  "rows": 20000,
+  "cols": 15,
+  "guess": {
+   "option": "region",
+   "control": null,
+   "outcome": "bought",
+   "id": "customer_id"
+  },
+  "guess_features": [
+   "x0",
+   "x1",
+   "x2",
+   "x3",
+   "x4",
+   "x5",
+   "x6",
+   "x7",
+   "x8",
+   "x9",
+   "joined_via",
+   "option"
+  ],
+  "stopped_at": "validate (error shown)"
+ }
+}

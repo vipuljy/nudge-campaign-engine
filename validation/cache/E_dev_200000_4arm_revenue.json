@@ -1,0 +1,116 @@
+{
+ "variants": {
+  "current": {
+   "recommended": "Nudge plan",
+   "share_contacted": 0.921525,
+   "secs_decision": 5.915915489196777,
+   "measured_extra_per_customer": 8.904197622245931,
+   "message": null,
+   "A2_ratio": 0.8400619349107885,
+   "A2_low95": 0.8372085804291828,
+   "A2_high95": 0.8427432010204469
+  },
+  "v2_5f": {
+   "recommended": "Nudge plan (margin x0.25)",
+   "share_contacted": 0.992175,
+   "secs_decision": 71.59746193885803,
+   "measured_extra_per_customer": 8.496488129807105,
+   "message": null,
+   "vs_current": [
+    -0.4265300898357936,
+    -1.9030286905574991,
+    0.7837133105707602
+   ],
+   "signal_fired": false,
+   "proof": null,
+   "proof_fired": false,
+   "guard_switched": {
+    "SMS reminder": false,
+    "WhatsApp reminder": false,
+    "Discount Rs20": false
+   },
+   "reliable": {
+    "SMS reminder": true,
+    "WhatsApp reminder": true,
+    "Discount Rs20": true
+   },
+   "A2_ratio": 0.8371883461794034,
+   "A2_low95": 0.8341426715556004,
+   "A2_high95": 0.8399119433511253,
+   "true_per_customer": 7.829758694328177,
+   "A1_spearman_used": 0.6889606119881307
+  },
+  "v2_5f_proof": {
+   "recommended": "Nudge plan (margin x0.25)",
+   "share_contacted": 0.992175,
+   "secs_decision": 74.81128358840942,
+   "measured_extra_per_customer": 8.496488129807105,
+   "message": null,
+   "vs_current": [
+    -0.4265300898357936,
+    -1.9030286905574991,
+    0.7837133105707602
+   ],
+   "signal_fired": false,
+   "proof": {
+    "margin": "margin x0.25",
+    "gain": 2.939310028058894,
+    "low95": 2.1347533647438928,
+    "high95": 3.652713152366998,
+    "proven": true
+   },
+   "proof_fired": false,
+   "guard_switched": {
+    "SMS reminder": false,
+    "WhatsApp reminder": false,
+    "Discount Rs20": false
+   },
+   "reliable": {
+    "SMS reminder": true,
+    "WhatsApp reminder": true,
+    "Discount Rs20": true
+   },
+   "A2_ratio": 0.8371883461794034,
+   "A2_low95": 0.8341426715556004,
+   "A2_high95": 0.8399119433511253,
+   "true_per_customer": 7.829758694328177,
+   "A1_spearman_used": 0.6889606119881307
+  },
+  "v2_3f_proof": {
+   "recommended": "Nudge plan (margin x0)",
+   "share_contacted": 0.994,
+   "secs_decision": 73.16742300987244,
+   "measured_extra_per_customer": 9.117350454760398,
+   "message": null,
+   "vs_current": [
+    0.23657093186866743,
+    -1.2853688357099986,
+    1.5011636355588245
+   ],
+   "signal_fired": false,
+   "proof": {
+    "margin": "margin x0",
+    "gain": 2.0880724284003875,
+    "low95": 1.214312654553334,
+    "high95": 2.959988007096638,
+    "proven": true
+   },
+   "proof_fired": false,
+   "guard_switched": {
+    "SMS reminder": false,
+    "WhatsApp reminder": false,
+    "Discount Rs20": false
+   },
+   "reliable": {
+    "SMS reminder": true,
+    "WhatsApp reminder": true,
+    "Discount Rs20": true
+   },
+   "A2_ratio": 0.8525127533630579,
+   "A2_low95": 0.8497116195638486,
+   "A2_high95": 0.8552348686672655,
+   "true_per_customer": 7.973079383070697,
+   "A1_spearman_used": 0.6768149304046355
+  }
+ }
+}

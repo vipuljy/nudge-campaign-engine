@@ -77,6 +77,13 @@ def train(prep: dict, value_per_unit: float, cost: float, offers: dict, status=N
             'ranker': rob.ranker, 'fallback_reason': rob.fallback_reason, 'folds': rob.folds}
 
 
+def expected_seconds(n_rows: int, n_options: int) -> float:
+    """Rough time to build a plan on a 2-core machine like the free cloud (validation timing: 1 lakh rows, 1 option, about 60 s).
+    Training uses at most MAX_ROWS rows and 3 folds instead of 5 above 1,50,000 rows on the 80%."""
+    rows = min(n_rows, MAX_ROWS); folds = 3 if rows * 0.8 > 150_000 else 5
+    return 30 + 0.6 * rows / 1000 * max(n_options, 1) * folds / 5
+
+
 def _scale(res, value_per_unit):
     return res['fixed_scale'] or value_per_unit
 
@@ -132,13 +139,18 @@ def plan(res: dict, prep: dict, value_per_unit: float, cost: float, costs: dict 
     # differences: the point value is the direct difference of the two measured values; the bootstrap only gives the 95% range
     row = lambda t, q, base: [(t.loc[q, 'value_per_customer'] - t.loc[base, 'value_per_customer']) * k,
                               t.loc[q, 'vs_low95'] * k, t.loc[q, 'vs_high95'] * k]
+    # 3. final check on the untouched 20%: if the personalised plan earns less there than the simple plan, recommend the simple plan
+    #    (the 20% acts as a last yes/no gate, like the K4 go/no-go check; its numbers stay measured, not predicted)
+    audit_failed = bool(personalise and row(vs_blanket, 'Nudge plan', blanket)[0] < 0)
+    if audit_failed:
+        personalise = False
     recommended = 'Nudge plan' if personalise else blanket
     tiers = pd.qcut(pd.Series(gain).rank(method='first'), 3, labels=['Low', 'Medium', 'High']).values
     ladder = _ladder(te, tiers, ctrl, prep['kind'], value_per_unit)
     return {'pred': pred, 'rec': rec, 'gain': gain, 'share': share, 'best_opt': best_opt, 'n_test': n, 'n_choose': len(pool),
             'margin': margin, 'choice_values': {c: x * k for c, x in v.items()}, 'signal_message': signal_message,
             'signal': dict(eng.diag), 'ranker': res['ranker'], 'folds': res['folds'],
-            'money': money, 'blanket': blanket, 'personalise': personalise, 'recommended': recommended,
+            'money': money, 'blanket': blanket, 'personalise': personalise, 'recommended': recommended, 'audit_failed': audit_failed,
             'diff': {'usual': row(vs_usual, 'Nudge plan', 'Usual approach'), 'blanket': row(vs_blanket, 'Nudge plan', blanket)},
             'vs_usual_all': {q: row(vs_usual, q, 'Usual approach') for q in pol if q != 'Usual approach'},
             'rec_share': share if personalise else (0.0 if blanket == 'Contact nobody' else 1.0),

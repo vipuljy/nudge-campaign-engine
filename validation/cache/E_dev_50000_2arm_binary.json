@@ -1,0 +1,104 @@
+{
+ "variants": {
+  "current": {
+   "recommended": "Nudge plan",
+   "share_contacted": 0.5332,
+   "secs_decision": 0.6823117733001709,
+   "measured_extra_per_customer": 0.775095201119036,
+   "message": null,
+   "A2_ratio": 0.6765173504627878,
+   "A2_low95": 0.6604099449723343,
+   "A2_high95": 0.6901462541344484
+  },
+  "v2_5f": {
+   "recommended": "Nudge plan (margin x0.5)",
+   "share_contacted": 0.6389,
+   "secs_decision": 26.866570711135864,
+   "measured_extra_per_customer": 0.6222914851102268,
+   "message": null,
+   "vs_current": [
+    -0.18329716711839567,
+    -1.3442424201665815,
+    0.8520505657492911
+   ],
+   "signal_fired": false,
+   "proof": null,
+   "proof_fired": false,
+   "guard_switched": {
+    "Message": false
+   },
+   "reliable": {
+    "Message": true
+   },
+   "A2_ratio": 0.7059721524330754,
+   "A2_low95": 0.68855640079148,
+   "A2_high95": 0.7196758128837536,
+   "true_per_customer": 2.0677915923994594,
+   "A1_spearman_used": 0.6272668545686685
+  },
+  "v2_5f_proof": {
+   "recommended": "Contact everyone (Message)",
+   "share_contacted": 1.0,
+   "secs_decision": 28.016695261001587,
+   "measured_extra_per_customer": 0.4754368859221453,
+   "message": "Personalising was not clearly better than the simple plan on customers the model had not seen (the 95% range of the gain includes zero), so Nudge recommends the simple plan: contact everyone (message).",
+   "vs_current": [
+    -0.30426841606490035,
+    -1.9644523038752664,
+    1.374333652257362
+   ],
+   "signal_fired": false,
+   "proof": {
+    "margin": "margin x0.5",
+    "gain": 0.6702721801015429,
+    "low95": -0.10448796659534886,
+    "high95": 1.5189928309737226,
+    "proven": false
+   },
+   "proof_fired": true,
+   "guard_switched": {
+    "Message": false
+   },
+   "reliable": {
+    "Message": true
+   },
+   "A2_ratio": 0.31489390314507343,
+   "A2_low95": 0.27417039669826704,
+   "A2_high95": 0.34661660057299953,
+   "true_per_customer": 0.9223238667094007,
+   "A1_spearman_used": 0.6272668545686685
+  },
+  "v2_3f_proof": {
+   "recommended": "Contact everyone (Message)",
+   "share_contacted": 1.0,
+   "secs_decision": 16.08312678337097,
+   "measured_extra_per_customer": 0.4754368859221453,
+   "message": "Personalising was not clearly better than the simple plan on customers the model had not seen (the 95% range of the gain includes zero), so Nudge recommends the simple plan: contact everyone (message).",
+   "vs_current": [
+    -0.30426841606490035,
+    -1.9644523038752664,
+    1.374333652257362
+   ],
+   "signal_fired": false,
+   "proof": {
+    "margin": "margin x0",
+    "gain": 0.7169066760175438,
+    "low95": -0.31532899953021687,
+    "high95": 1.7479712716822986,
+    "proven": false
+   },
+   "proof_fired": true,
+   "guard_switched": {
+    "Message": false
+   },
+   "reliable": {
+    "Message": true
+   },
+   "A2_ratio": 0.31489390314507343,
+   "A2_low95": 0.27417039669826704,
+   "A2_high95": 0.34661660057299953,
+   "true_per_customer": 0.9223238667094007,
+   "A1_spearman_used": 0.6174546691505467
+  }
+ }
+}

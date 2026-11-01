@@ -1,0 +1,174 @@
+== Run 2 start 30 Oct 23:52
+-- sample 23:52
+{'recommended': 'Nudge plan', 'share_contacted': 0.95703125, 'diff_blanket': [np.float64(-3.5199677127401183), np.float64(-8.625606387567862), np.float64(1.4781264326685961)], 'app_v2_minus_everyone': [-3.5199677127401183, -8.625606387567862, 1.4781264326685961], 'note': "today's app recommends 'Contact everyone (Mens E-Mail)' on this sample (Run 1 / development)", 'page_exceptions': 0, 'caution_shown': True, 'caution_phrases': ['does not confirm it'], 'page_harness_error': None}
+-- a 23:55
+A_5000_2arm_binary 5 folds ensemble | A1 0.567 | A2 0.63 Nudge plan | 20 s
+A_5000_2arm_revenue 5 folds ensemble | A1 0.0 | A2 0.0 Contact nobody | 24 s
+A_5000_4arm_binary 5 folds ensemble | A1 0.268 | A2 0.6 Nudge plan | 33 s
+A_5000_4arm_revenue 5 folds ensemble | A1 0.219 | A2 0.548 Nudge plan | 44 s
+A_50000_2arm_binary 5 folds ensemble | A1 0.789 | A2 0.846 Nudge plan | 35 s
+A_50000_2arm_revenue 5 folds ensemble | A1 0.792 | A2 0.82 Nudge plan | 40 s
+A_50000_4arm_binary 5 folds ensemble | A1 0.706 | A2 0.778 Nudge plan | 106 s
+A_50000_4arm_revenue 5 folds ensemble | A1 0.518 | A2 0.796 Nudge plan | 94 s
+A_200000_2arm_binary 3 folds ensemble | A1 0.927 | A2 0.95 Nudge plan | 64 s
+A_200000_2arm_binary_5folds 5 folds ensemble | A1 0.927 | A2 0.943 Nudge plan | 88 s
+A_200000_2arm_revenue 3 folds ensemble | A1 0.921 | A2 0.95 Nudge plan | 61 s
+A_200000_2arm_revenue_5folds 5 folds ensemble | A1 0.921 | A2 0.947 Nudge plan | 95 s
+A_200000_4arm_binary 3 folds ensemble | A1 0.839 | A2 0.945 Nudge plan | 148 s
+A_200000_4arm_binary_5folds 5 folds ensemble | A1 0.838 | A2 0.94 Nudge plan | 196 s
+A_200000_4arm_revenue 3 folds ensemble | A1 0.782 | A2 0.905 Nudge plan | 131 s
+A_200000_4arm_revenue_5folds 5 folds ensemble | A1 0.779 | A2 0.906 Nudge plan | 193 s
+-- null 00:22
+null 9101 Contact nobody | signal fired True
+null 9102 Contact nobody | signal fired True
+null 9103 Contact nobody | signal fired True
+null 9104 Nudge plan | signal fired False
+null 9105 Contact nobody | signal fired True
+null 9106 Contact nobody | signal fired True
+null 9107 Contact nobody | signal fired True
+null 9108 Contact nobody | signal fired True
+null 9109 Contact nobody | signal fired True
+null 9110 Contact nobody | signal fired True
+null 9111 Contact nobody | signal fired True
+null 9112 Contact nobody | signal fired True
+null 9113 Contact nobody | signal fired True
+null 9114 Contact nobody | signal fired True
+null 9115 Contact everyone (Message) | signal fired True
+null 9116 Contact nobody | signal fired True
+null 9117 Contact nobody | signal fired True
+null 9118 Contact nobody | signal fired True
+null 9119 Contact nobody | signal fired True
+null 9120 Contact nobody | signal fired True
+-- d 00:38
+seed 1 signal True
+seed 2 signal True
+seed 3 signal True
+seed 4 signal True
+seed 5 signal True
+{'n_test': 10000, 'top_k': 2000, 'pairs': {'1-2': 0.953, '1-3': 0.95, '1-4': 0.9465, '1-5': 0.95, '2-3': 0.9495, '2-4': 0.952, '2-5': 0.951, '3-4': 0.9495, '3-5': 0.9475, '4-5': 0.946}, 'average_overlap': 0.9494999999999999, 'average_low95': 0.9450787500000001, 'average_high95': 0.9535725000000002, 'lowest_pair': '4-5', 'lowest_overlap': 0.946, 'pass': True, 'seed': 9022}
+-- C function path 00:43
+missing_values...
+  finished (plan shown); fairness green; messages 2
+text_columns...
+  finished (plan shown); fairness green; messages 0
+extra_wrong_names...
+  finished (plan shown); fairness green; messages 0
+extra_wrong_names_userfixed...
+  finished (plan shown); fairness green; messages 0
+outcome_all_zero...
+  validate (error shown); fairness None; messages 1
+rows_500...
+  finished (plan shown); fairness green; messages 2
+split_95_5...
+  finished (plan shown); fairness green; messages 1
+non_random...
+  finished (plan shown); fairness red; messages 0
+duplicate_ids...
+  finished (plan shown); fairness green; messages 1
+options_4plus...
+  finished (plan shown); fairness green; messages 0
+revenue...
+  finished (plan shown); fairness green; messages 0
+rows_10lakh...
+  finished (plan shown); fairness green; messages 1
+rows_1lakh...
+  finished (plan shown); fairness green; messages 0
+x_not_a_csv...
+  read (handled by the page); fairness None; messages 1
+x_header_only...
+  validate (error shown); fairness None; messages 1
+x_semicolon...
+  finished (plan shown); fairness green; messages 0
+x_no_control...
+  validate (error shown); fairness None; messages 1
+-- C page layer 01:05
+missing_values | stages: ['loaded', 'built (after rerun)', 'views/money.py', 'views/prove.py'] | EXCEPTIONS: 0 | harness: 
+text_columns | stages: ['loaded', 'built (after rerun)', 'views/money.py', 'views/prove.py'] | EXCEPTIONS: 0 | harness: 
+extra_wrong_names | stages: ['loaded', 'built (after rerun)', 'views/money.py', 'views/prove.py'] | EXCEPTIONS: 0 | harness: 
+extra_wrong_names_userfixed | stages: ['loaded', 'built (after rerun)', 'views/money.py', 'views/prove.py'] | EXCEPTIONS: 0 | harness: 
+outcome_all_zero | stages: ['loaded', 'no build button (page stopped earlier)'] | EXCEPTIONS: 0 | harness: 
+rows_500 | stages: ['loaded', 'built (after rerun)', 'views/money.py', 'views/prove.py'] | EXCEPTIONS: 0 | harness: 
+split_95_5 | stages: ['loaded', 'built (after rerun)', 'views/money.py', 'views/prove.py'] | EXCEPTIONS: 0 | harness: 
+non_random | stages: ['loaded', 'train anyway ticked', 'built (after rerun)', 'views/money.py', 'views/prove.py'] | EXCEPTIONS: 0 | harness: 
+duplicate_ids | stages: ['loaded', 'built (after rerun)', 'views/money.py', 'views/prove.py'] | EXCEPTIONS: 0 | harness: 
+options_4plus | stages: ['loaded'] | EXCEPTIONS: 0 | harness: RuntimeError: AppTest script run timed out after 900(s)
+Traceback (most recent call last):
+  File "C:\Users\vipul\Documents\CampaignROI\validation\apptest_page.py", line 36, in run_page
+    btn[0].cli
+revenue | stages: ['loaded'] | EXCEPTIONS: 0 | harness: RuntimeError: AppTest script run timed out after 900(s)
+Traceback (most recent call last):
+  File "C:\Users\vipul\Documents\CampaignROI\validation\apptest_page.py", line 36, in run_page
+    btn[0].cli
+rows_1lakh | stages: ['loaded', 'built (after rerun)', 'views/money.py', 'views/prove.py'] | EXCEPTIONS: 0 | harness: 
+x_header_only | stages: ['loaded', 'no build button (page stopped earlier)'] | EXCEPTIONS: 0 | harness: 
+x_semicolon | stages: ['loaded', 'built (after rerun)', 'views/money.py', 'views/prove.py'] | EXCEPTIONS: 0 | harness: 
+x_no_control | stages: ['loaded', 'no build button (page stopped earlier)'] | EXCEPTIONS: 0 | harness: 
+-- C4 timing 06:37
+1 {'read_s': 0.2, 'prepare_s': 0.3, 'train_s': 53.3, 'plan_s': 3.6, 'total_s': 58.5}
+2 {'read_s': 0.1, 'prepare_s': 0.4, 'train_s': 53.5, 'plan_s': 3.8, 'total_s': 59.0}
+3 {'read_s': 0.1, 'prepare_s': 0.2, 'train_s': 53.0, 'plan_s': 4.5, 'total_s': 58.8}
+median {'read_s': 0.1, 'prepare_s': 0.3, 'train_s': 53.3, 'plan_s': 3.8, 'total_s': 58.8} PASS
+-- B 06:40
+hillstrom ...
+  hillstrom: Likely-buyer model...
+    1 s
+  hillstrom: Nudge fast engine...
+    4 s
+  hillstrom: Nudge ensemble (thorough)...
+    8 s
+  hillstrom: econml CausalForestDML...
+    11 s
+  hillstrom: econml R-learner (NonParamDML)...
+    3 s
+  hillstrom: Nudge package (app default)...
+    36 s
+  hillstrom: scoring 7 rankings, 200 bootstrap repeats...
+megafon ...
+  megafon: Likely-buyer model...
+    2 s
+  megafon: Nudge fast engine...
+    8 s
+  megafon: Nudge ensemble (thorough)...
+    24 s
+  megafon: econml CausalForestDML...
+    683 s
+  megafon: econml R-learner (NonParamDML)...
+    11 s
+  megafon: Nudge package (app default)...
+    83 s
+  megafon: scoring 7 rankings, 200 bootstrap repeats...
+criteo10 ...
+  criteo10: Likely-buyer model...
+    2 s
+  criteo10: Nudge fast engine...
+    5 s
+  criteo10: Nudge ensemble (thorough)...
+    18 s
+  criteo10: econml CausalForestDML...
+    70 s
+  criteo10: econml R-learner (NonParamDML)...
+    8 s
+  criteo10: Nudge package (app default)...
+    90 s
+  criteo10: scoring 7 rankings, 200 bootstrap repeats...
+lenta ...
+  lenta: Likely-buyer model...
+    8 s
+  lenta: Nudge fast engine...
+    20 s
+  lenta: Nudge ensemble (thorough)...
+    57 s
+  lenta: econml CausalForestDML...
+    1229 s
+  lenta: econml R-learner (NonParamDML)...
+    25 s
+  lenta: Nudge package (app default)...
+    176 s
+  lenta: scoring 7 rankings, 200 bootstrap repeats...
+-- timing 2 100000 11:01
+RESULT 2 100000 {'read_prepare_s': 0.7, 'train_s': 54.0, 'plan_s': 6.1, 'total_s': 60.8} 428 MB
+-- timing 2 200000 11:02
+RESULT 2 200000 {'read_prepare_s': 1.3, 'train_s': 69.1, 'plan_s': 8.9, 'total_s': 79.3} 621 MB
+-- timing 12 100000 11:03
+RESULT 12 100000 {'read_prepare_s': 0.6, 'train_s': 58.1, 'plan_s': 3.8, 'total_s': 62.5} 434 MB
+== Run 2 end 31 Oct 11:04

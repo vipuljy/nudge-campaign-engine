@@ -1,0 +1,69 @@
+{
+ "n": 200000,
+ "arms": 4,
+ "outcome": "binary",
+ "seed": 9034,
+ "train_secs": 127.29477858543396,
+ "folds": 3,
+ "ranker": "ensemble",
+ "fallback_reason": null,
+ "n_test": 40000,
+ "A2": {
+  "per-option costs": {
+   "ratio": 0.9450563547839101,
+   "low95": 0.9436563479829588,
+   "high95": 0.9462579968021033,
+   "plan_per_customer": 8.776521921479475,
+   "oracle_per_customer": 9.286770970908133,
+   "personalise": true,
+   "recommended": "Nudge plan",
+   "margin": 0.0,
+   "share_contacted": 0.99105,
+   "signal_message": null,
+   "signal": {
+    "SMS reminder": {
+     "qini": 0.3563574963506091,
+     "qini_low95": 0.19656676388375535,
+     "qini_high95": 0.5041891916984125,
+     "reliable": true,
+     "ate": 5.2340492070825135
+    },
+    "Discount Rs20": {
+     "qini": 0.9372193199520953,
+     "qini_low95": 0.7929062990630336,
+     "qini_high95": 1.053849764700975,
+     "reliable": true,
+     "ate": 4.805025675350983
+    },
+    "WhatsApp reminder": {
+     "qini": 0.7026667156758408,
+     "qini_low95": 0.5694491447196355,
+     "qini_high95": 0.8463926986191126,
+     "reliable": true,
+     "ate": 6.29452986112409
+    }
+   },
+   "choice_values": {
+    "margin x0": 55.39830117980433,
+    "margin x0.1": 55.3691828080234,
+    "margin x0.25": 55.356102120272894,
+    "margin x0.5": 55.07463381477574,
+    "margin x1": 54.34900667153353,
+    "margin x2": 52.42250211125304,
+    "Contact everyone (WhatsApp reminder)": 51.34442624588035,
+    "Contact nobody": 46.06989638475626
+   }
+  }
+ },
+ "judged_cost": "per-option costs",
+ "A1": {
+  "per_option": {
+   "SMS reminder": 0.7353265338035105,
+   "WhatsApp reminder": 0.8536838233854755,
+   "Discount Rs20": 0.928261322143665
+  },
+  "spearman": 0.8390905597775503,
+  "low95": 0.8369728420735346,
+  "high95": 0.8412529365555447
+ }
+}

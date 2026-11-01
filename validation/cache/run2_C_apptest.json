@@ -1,0 +1,856 @@
+{
+ "missing_values": {
+  "file": "missing_values",
+  "stages": [
+   [
+    "loaded",
+    {
+     "errors": [],
+     "warnings": [
+      "197 rows have no value in \"option\" (which option the customer got) and will be left out.",
+      "1.9% of rows have no usable outcome and will be left out."
+     ],
+     "exceptions": []
+    }
+   ],
+   [
+    "built (after rerun)",
+    {
+     "errors": [],
+     "warnings": [
+      "197 rows have no value in \"option\" (which option the customer got) and will be left out.",
+      "1.9% of rows have no usable outcome and will be left out."
+     ],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/money.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/prove.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ]
+  ],
+  "success": [
+   "**Is the test fair? Yes.** The groups look alike on every measure, as a random test should. Largest gap between groups: 0.024 on *x8* (under 0.05 is what chance alone gives at this size)."
+  ],
+  "markdown_count": 20,
+  "plan_texts": [
+   "<style>\n.block-container { padding-top: 2.2rem; max-width: 1180px; }\n/* number cards: one grid, so all cards share the same height; 4 across on wide screens, 2x2 on laptops (under ~1,040 px of content), 1 on phones */\n.kpi-grid { container-type: inline-size; margin-bottom: 0.6rem; }\n.kpi-grid .cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.9rem; }\n@container (max-width: 1040px) { .kpi-grid .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }\n@container (max-width: 520px) { .kpi-grid .cards { grid-template-columns: minmax(0, 1fr); } }\n.kpi { container-type: inline-size; background: #EEF0FF; border-radius: 0.8rem; padding: 1rem 1.1rem 0.85rem;\n        display: flex; flex-direction: column; min-width: 0; }\n.kpi .top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.3rem 0.4rem; min-height: 1.4rem; }\n.kpi .label { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; color: #5B5A72; }\n.kpi .badge { font-size: 0.72rem; font-weight: 700; color: white; background: #4338CA; padding: 0.1rem 0.5rem;\n               border-radius: 1rem; white-space: nowrap; }\n.kpi .value { font-size: min(1.9rem, 12.5cqi); font-weight: 700; color: #4338CA; line-height: 1.2;\n               white-space: nowrap; margin: 0.35rem 0 0.25rem; }\n.kpi .value .vs { font-size: 0.6em; font-weight: 500; color: #5B5A72; }\n.kpi .note { font-size: 0.92rem; color: #1E1B3A; flex-grow: 1; }\n.kpi .source { font-size: 0.76rem; color: #5B5A72; margin-top: 0.6rem; overflow-wrap: anywhere; }\n.tag { display: inline-block; font-size: 0.66rem; font-weight: 600; letter-spacing: 0.02em; padding: 0.05rem 0.45rem;\n        border-radius: 1rem; margin-right: 0.25rem; vertical-align: middle; white-space: nowrap; }\n.tag.measured { background: #DCFCE7; color: #15803D; }\n.tag.assumed { background: #FEF3C7; color: #B45309; }\n.hero h1 { font-size: 2.3rem; line-height: 1.2; margin-bottom: 0.3rem; }\n.hero p { font-size: 1.1rem; color: #5B5A72; max-width: 760px; }\n.step { border: 1px solid #E2E4F0; border-radius: 0.8rem; padding: 0.9rem 1rem; height: 100%; }\n.step .num { display: inline-block; width: 1.7rem; height: 1.7rem; border-radius: 50%; background: #4338CA; color: white;\n              text-align: center; font-weight: 700; line-height: 1.7rem; margin-right: 0.5rem; }\n.step .title { font-weight: 700; font-size: 1.05rem; }\n.step .body { color: #5B5A72; font-size: 0.92rem; margin-top: 0.4rem; }\n.decision { border-left: 5px solid #4338CA; background: #EEF0FF; padding: 0.9rem 1.1rem; border-radius: 0.4rem; }\n.decision b.head { color: #4338CA; }\n.pill { display: inline-block; font-size: 0.8rem; padding: 0.1rem 0.55rem; margin: 0.1rem; border-radius: 1rem;\n         background: #F1F5F9; color: #1E1B3A; }\n/* the analyst button at the top of each page shows on phones only (on laptops it sits in the sidebar) */\n@media (min-width: 768px) { .st-key-phone_chat { display: none; } }\n.small-muted { font-size: 0.82rem; color: #5B5A72; }\n</style>",
+   "**Data:** missing_values.csv \u00b7 20,000 rows \u00b7 15 columns",
+   "<div class=\"decision\"><b class=\"head\">Do this:</b> Contact <b>75%</b> of customers (about 14,946 of 20,000) by SMS (\u20b90.10 each), with these options: Message to 75%. Leave the other 25% alone. On the untouched 20% this plan earns \u20b9141 per 1,000 customers (95% range \u2212\u20b92,582 to \u20b92,003) less than <i>contact everyone (message)</i>: the 5-fold check on the 80% preferred the personalised plan, but the untouched 20% does not confirm it, so treat it with caution and keep a control group.</div>",
+   "<div class=\"kpi-grid\"><div class=\"cards\"><div class=\"kpi\"><div class=\"top\"><span class=\"label\">Contact</span></div><div class=\"value\">75%</div><div class=\"note\">of customers</div><div class=\"source\"> 14,946 of 20,000</div></div><div class=\"kpi\"><div class=\"top\"><span class=\"label\">Extra profit</span></div><div class=\"value\">\u20b96,976</div><div class=\"note\">per 1,000 customers, vs contacting nobody</div><div class=\"source\"><span class=\"tag measured\">MEASURED</span><span class=\"tag assumed\">ASSUMED</span> \u20b9150 profit per extra purchase</div></div><div class=\"kpi\"><div class=\"top\"><span class=\"label\">vs usual approach</span></div><div class=\"value\">+\u20b9705</div><div class=\"note\">per 1,000 customers, same number of contacts</div><div class=\"source\"><span class=\"tag measured\">MEASURED</span> range \u2212\u20b91,844 to \u20b93,050</div></div><div class=\"kpi\"><div class=\"top\"><span class=\"label\">vs contact everyone (message)</span></div><div class=\"value\">\u2212\u20b9141</div><div class=\"note\">per 1,000 customers</div><div class=\"source\"><span class=\"tag measured\">MEASURED</span> range \u2212\u20b92,582 to \u20b92,003</div></div></div></div>",
+   "**Extra profit vs contacting nobody (untouched 20%)**",
+   "**Lift ladder: real lift by predicted group (untouched 20%)**",
+   "**High responders** \u00b7 33% of customers",
+   "Real lift: **+6.5 pts** (\u00b1 5.1 pts)",
+   "In the plan: 100% contacted, mostly Message",
+   "- x0: median 0.6648, higher than the others (-0.407)\n- x9: median -0.3793, lower than the others (0.208)\n- x1: median 0.1854, higher than the others (-0.1514)",
+   "**Medium responders** \u00b7 33% of customers",
+   "Real lift: **+6.4 pts** (\u00b1 5.1 pts)",
+   "In the plan: 100% contacted, mostly Message",
+   "- x9: median 0.1079, higher than the others (-0.0762)\n- x6: median -0.0587, lower than the others (0.0624)\n- x0: median 0.0448, higher than the others (-0.035)",
+   "**Low responders** \u00b7 33% of customers",
+   "Real lift: **+1.5 pts** (\u00b1 5.2 pts)",
+   "In the plan: 24% contacted, mostly No message",
+   "- x0: median -0.8333, lower than the others (0.3702)\n- x1: median -0.3403, lower than the others (0.1277)\n- x9: median 0.3185, higher than the others (-0.1474)",
+   "- **Two parts:** 15,544 customers to learn from and to choose the plan (80%), 3,886 untouched\n  until the end (20%). Every result above is measured on the untouched 20%, which played no part in any choice, so the winning plan's\n  numbers are not flattered.\n- **Honest scores:** the 80% is split into 5 parts by customer; each customer is scored by models trained on the other parts,\n  so no customer is scored by a model that saw them.\n- **Ranking:** three standard uplift learners (S, X and DR, as in Step 4) each rank the customers and the ranks are averaged.\n  The ranking is turned into a predicted extra outcome per customer by matching the measured lift in each tenth of customers (the order\n  of customers does not change).\n- **No reliable signal:** if no option's ranking beats a random order on the honest scores (95% range of the Qini includes zero),\n  Nudge does not personalise and says so.\n- **Choosing the plan:** personalised plans (a customer gets their personal best option only when it beats the best-on-average option\n  by a safety margin; several margins are tried) compete with the best simple plan (everyone, or nobody), all valued on the honest\n  scores. The simple plan wins unless a personalised one earns more.\n- **Usual approach:** a model of who buys when contacted (as in Step 5), contacting the same number of customers, most likely first.\n- **Measured value of a plan:** customers whose random option matches the plan's choice are averaged, weighted by how likely that option\n  was (inverse propensity weighting). 95% ranges: 200 bootstrap repeats, paired across plans.\n- **Rupees:** \u20b9150 profit per extra purchase, SMS \u20b90.10 per contact (assumptions you set above).",
+   "Repeats Step 4 of the project on your file: 5 uplift methods plus the S+X+DR ensemble, compared by 5-fold cross-validation, then the winner is scored once on the untouched 20% next to the fast engine. Takes about 30 seconds per option per 25,000 rows."
+  ]
+ },
+ "text_columns": {
+  "file": "text_columns",
+  "stages": [
+   [
+    "loaded",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "built (after rerun)",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/money.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/prove.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ]
+  ],
+  "success": [
+   "**Is the test fair? Yes.** The groups look alike on every measure, as a random test should. Largest gap between groups: 0.021 on *x0* (under 0.05 is what chance alone gives at this size)."
+  ],
+  "markdown_count": 20,
+  "plan_texts": [
+   "<style>\n.block-container { padding-top: 2.2rem; max-width: 1180px; }\n/* number cards: one grid, so all cards share the same height; 4 across on wide screens, 2x2 on laptops (under ~1,040 px of content), 1 on phones */\n.kpi-grid { container-type: inline-size; margin-bottom: 0.6rem; }\n.kpi-grid .cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.9rem; }\n@container (max-width: 1040px) { .kpi-grid .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }\n@container (max-width: 520px) { .kpi-grid .cards { grid-template-columns: minmax(0, 1fr); } }\n.kpi { container-type: inline-size; background: #EEF0FF; border-radius: 0.8rem; padding: 1rem 1.1rem 0.85rem;\n        display: flex; flex-direction: column; min-width: 0; }\n.kpi .top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.3rem 0.4rem; min-height: 1.4rem; }\n.kpi .label { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; color: #5B5A72; }\n.kpi .badge { font-size: 0.72rem; font-weight: 700; color: white; background: #4338CA; padding: 0.1rem 0.5rem;\n               border-radius: 1rem; white-space: nowrap; }\n.kpi .value { font-size: min(1.9rem, 12.5cqi); font-weight: 700; color: #4338CA; line-height: 1.2;\n               white-space: nowrap; margin: 0.35rem 0 0.25rem; }\n.kpi .value .vs { font-size: 0.6em; font-weight: 500; color: #5B5A72; }\n.kpi .note { font-size: 0.92rem; color: #1E1B3A; flex-grow: 1; }\n.kpi .source { font-size: 0.76rem; color: #5B5A72; margin-top: 0.6rem; overflow-wrap: anywhere; }\n.tag { display: inline-block; font-size: 0.66rem; font-weight: 600; letter-spacing: 0.02em; padding: 0.05rem 0.45rem;\n        border-radius: 1rem; margin-right: 0.25rem; vertical-align: middle; white-space: nowrap; }\n.tag.measured { background: #DCFCE7; color: #15803D; }\n.tag.assumed { background: #FEF3C7; color: #B45309; }\n.hero h1 { font-size: 2.3rem; line-height: 1.2; margin-bottom: 0.3rem; }\n.hero p { font-size: 1.1rem; color: #5B5A72; max-width: 760px; }\n.step { border: 1px solid #E2E4F0; border-radius: 0.8rem; padding: 0.9rem 1rem; height: 100%; }\n.step .num { display: inline-block; width: 1.7rem; height: 1.7rem; border-radius: 50%; background: #4338CA; color: white;\n              text-align: center; font-weight: 700; line-height: 1.7rem; margin-right: 0.5rem; }\n.step .title { font-weight: 700; font-size: 1.05rem; }\n.step .body { color: #5B5A72; font-size: 0.92rem; margin-top: 0.4rem; }\n.decision { border-left: 5px solid #4338CA; background: #EEF0FF; padding: 0.9rem 1.1rem; border-radius: 0.4rem; }\n.decision b.head { color: #4338CA; }\n.pill { display: inline-block; font-size: 0.8rem; padding: 0.1rem 0.55rem; margin: 0.1rem; border-radius: 1rem;\n         background: #F1F5F9; color: #1E1B3A; }\n/* the analyst button at the top of each page shows on phones only (on laptops it sits in the sidebar) */\n@media (min-width: 768px) { .st-key-phone_chat { display: none; } }\n.small-muted { font-size: 0.82rem; color: #5B5A72; }\n</style>",
+   "**Data:** text_columns.csv \u00b7 20,000 rows \u00b7 21 columns",
+   "<div class=\"decision\"><b class=\"head\">Do this:</b> <b>Send Message to everyone</b> by SMS (\u20b90.10 each). The engine found that personalising does not pay on this data: its learned safety margin gives every customer the option that works best on average (\u20b98,441 extra profit per 1,000 customers, measured on the untouched 20%).</div>",
+   "<div class=\"kpi-grid\"><div class=\"cards\"><div class=\"kpi\"><div class=\"top\"><span class=\"label\">Contact</span></div><div class=\"value\">100%</div><div class=\"note\">of customers</div><div class=\"source\"> 20,000 of 20,000</div></div><div class=\"kpi\"><div class=\"top\"><span class=\"label\">Extra profit</span></div><div class=\"value\">\u20b98,441</div><div class=\"note\">per 1,000 customers, vs contacting nobody</div><div class=\"source\"><span class=\"tag measured\">MEASURED</span><span class=\"tag assumed\">ASSUMED</span> \u20b9150 profit per extra purchase</div></div><div class=\"kpi\"><div class=\"top\"><span class=\"label\">vs usual approach</span></div><div class=\"value\">Same</div><div class=\"note\">at this share both contact the same customers; see Money for smaller budgets</div><div class=\"source\"> measured on the untouched 20% (4,000 customers)</div></div><div class=\"kpi\"><div class=\"top\"><span class=\"label\">Personalising</span></div><div class=\"value\">Not chosen</div><div class=\"note\">the engine gave everyone the same option</div><div class=\"source\"> its learned safety margin found no reliable gain</div></div></div></div>",
+   "**Extra profit vs contacting nobody (untouched 20%)**",
+   "**Lift ladder: real lift by predicted group (untouched 20%)**",
+   "**High responders** \u00b7 33% of customers",
+   "Real lift: **+9.4 pts** (\u00b1 5.0 pts)",
+   "In the plan: contacted (Message, like everyone)",
+   "- no measure sets this group clearly apart",
+   "**Medium responders** \u00b7 33% of customers",
+   "Real lift: **+4.9 pts** (\u00b1 5.0 pts)",
+   "In the plan: contacted (Message, like everyone)",
+   "- no measure sets this group clearly apart",
+   "**Low responders** \u00b7 33% of customers",
+   "Real lift: **+2.7 pts** (\u00b1 5.1 pts)",
+   "In the plan: contacted (Message, like everyone)",
+   "- no measure sets this group clearly apart",
+   "- **Two parts:** 16,000 customers to learn from and to choose the plan (80%), 4,000 untouched\n  until the end (20%). Every result above is measured on the untouched 20%, which played no part in any choice, so the winning plan's\n  numbers are not flattered.\n- **Honest scores:** the 80% is split into 5 parts by customer; each customer is scored by models trained on the other parts,\n  so no customer is scored by a model that saw them.\n- **Ranking:** three standard uplift learners (S, X and DR, as in Step 4) each rank the customers and the ranks are averaged.\n  The ranking is turned into a predicted extra outcome per customer by matching the measured lift in each tenth of customers (the order\n  of customers does not change).\n- **No reliable signal:** if no option's ranking beats a random order on the honest scores (95% range of the Qini includes zero),\n  Nudge does not personalise and says so.\n- **Choosing the plan:** personalised plans (a customer gets their personal best option only when it beats the best-on-average option\n  by a safety margin; several margins are tried) compete with the best simple plan (everyone, or nobody), all valued on the honest\n  scores. The simple plan wins unless a personalised one earns more.\n- **Usual approach:** a model of who buys when contacted (as in Step 5), contacting the same number of customers, most likely first.\n- **Measured value of a plan:** customers whose random option matches the plan's choice are averaged, weighted by how likely that option\n  was (inverse propensity weighting). 95% ranges: 200 bootstrap repeats, paired across plans.\n- **Rupees:** \u20b9150 profit per extra purchase, SMS \u20b90.10 per contact (assumptions you set above).",
+   "Repeats Step 4 of the project on your file: 5 uplift methods plus the S+X+DR ensemble, compared by 5-fold cross-validation, then the winner is scored once on the untouched 20% next to the fast engine. Takes about 30 seconds per option per 25,000 rows.",
+   "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact everyone with Message."
+  ]
+ },
+ "extra_wrong_names": {
+  "file": "extra_wrong_names",
+  "stages": [
+   [
+    "loaded",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "built (after rerun)",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/money.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/prove.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ]
+  ],
+  "success": [
+   "**Is the test fair? Yes.** The groups look alike on every measure, as a random test should. Largest gap between groups: 0.030 on *region = north* (under 0.05 is what chance alone gives at this size)."
+  ],
+  "markdown_count": 20,
+  "plan_texts": [
+   "<style>\n.block-container { padding-top: 2.2rem; max-width: 1180px; }\n/* number cards: one grid, so all cards share the same height; 4 across on wide screens, 2x2 on laptops (under ~1,040 px of content), 1 on phones */\n.kpi-grid { container-type: inline-size; margin-bottom: 0.6rem; }\n.kpi-grid .cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.9rem; }\n@container (max-width: 1040px) { .kpi-grid .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }\n@container (max-width: 520px) { .kpi-grid .cards { grid-template-columns: minmax(0, 1fr); } }\n.kpi { container-type: inline-size; background: #EEF0FF; border-radius: 0.8rem; padding: 1rem 1.1rem 0.85rem;\n        display: flex; flex-direction: column; min-width: 0; }\n.kpi .top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.3rem 0.4rem; min-height: 1.4rem; }\n.kpi .label { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; color: #5B5A72; }\n.kpi .badge { font-size: 0.72rem; font-weight: 700; color: white; background: #4338CA; padding: 0.1rem 0.5rem;\n               border-radius: 1rem; white-space: nowrap; }\n.kpi .value { font-size: min(1.9rem, 12.5cqi); font-weight: 700; color: #4338CA; line-height: 1.2;\n               white-space: nowrap; margin: 0.35rem 0 0.25rem; }\n.kpi .value .vs { font-size: 0.6em; font-weight: 500; color: #5B5A72; }\n.kpi .note { font-size: 0.92rem; color: #1E1B3A; flex-grow: 1; }\n.kpi .source { font-size: 0.76rem; color: #5B5A72; margin-top: 0.6rem; overflow-wrap: anywhere; }\n.tag { display: inline-block; font-size: 0.66rem; font-weight: 600; letter-spacing: 0.02em; padding: 0.05rem 0.45rem;\n        border-radius: 1rem; margin-right: 0.25rem; vertical-align: middle; white-space: nowrap; }\n.tag.measured { background: #DCFCE7; color: #15803D; }\n.tag.assumed { background: #FEF3C7; color: #B45309; }\n.hero h1 { font-size: 2.3rem; line-height: 1.2; margin-bottom: 0.3rem; }\n.hero p { font-size: 1.1rem; color: #5B5A72; max-width: 760px; }\n.step { border: 1px solid #E2E4F0; border-radius: 0.8rem; padding: 0.9rem 1rem; height: 100%; }\n.step .num { display: inline-block; width: 1.7rem; height: 1.7rem; border-radius: 50%; background: #4338CA; color: white;\n              text-align: center; font-weight: 700; line-height: 1.7rem; margin-right: 0.5rem; }\n.step .title { font-weight: 700; font-size: 1.05rem; }\n.step .body { color: #5B5A72; font-size: 0.92rem; margin-top: 0.4rem; }\n.decision { border-left: 5px solid #4338CA; background: #EEF0FF; padding: 0.9rem 1.1rem; border-radius: 0.4rem; }\n.decision b.head { color: #4338CA; }\n.pill { display: inline-block; font-size: 0.8rem; padding: 0.1rem 0.55rem; margin: 0.1rem; border-radius: 1rem;\n         background: #F1F5F9; color: #1E1B3A; }\n/* the analyst button at the top of each page shows on phones only (on laptops it sits in the sidebar) */\n@media (min-width: 768px) { .st-key-phone_chat { display: none; } }\n.small-muted { font-size: 0.82rem; color: #5B5A72; }\n</style>",
+   "**Data:** extra_wrong_names.csv \u00b7 20,000 rows \u00b7 19 columns",
+   "<div class=\"decision\"><b class=\"head\">Do this:</b> Contact <b>92%</b> of customers (about 18,435 of 20,000) by SMS (\u20b90.10 each), with these options: Got SMS to 92%. Leave the other 8% alone. On the untouched 20% this plan earns \u20b9365 per 1,000 customers (95% range \u2212\u20b9857 to \u20b91,410) more than <i>contact everyone (got sms)</i>: ahead, but the range includes zero, so keep a control group to confirm.</div>",
+   "<div class=\"kpi-grid\"><div class=\"cards\"><div class=\"kpi\"><div class=\"top\"><span class=\"label\">Contact</span></div><div class=\"value\">92%</div><div class=\"note\">of customers</div><div class=\"source\"> 18,435 of 20,000</div></div><div class=\"kpi\"><div class=\"top\"><span class=\"label\">Extra profit</span></div><div class=\"value\">\u20b95,711</div><div class=\"note\">per 1,000 customers, vs contacting nobody</div><div class=\"source\"><span class=\"tag measured\">MEASURED</span><span class=\"tag assumed\">ASSUMED</span> \u20b9150 profit per extra purchase</div></div><div class=\"kpi\"><div class=\"top\"><span class=\"label\">vs usual approach</span></div><div class=\"value\">+\u20b9173</div><div class=\"note\">per 1,000 customers, same number of contacts</div><div class=\"source\"><span class=\"tag measured\">MEASURED</span> range \u2212\u20b91,354 to \u20b91,418</div></div><div class=\"kpi\"><div class=\"top\"><span class=\"label\">vs contact everyone (got sms)</span></div><div class=\"value\">+\u20b9365</div><div class=\"note\">per 1,000 customers</div><div class=\"source\"><span class=\"tag measured\">MEASURED</span> range \u2212\u20b9857 to \u20b91,410</div></div></div></div>",
+   "**Extra profit vs contacting nobody (untouched 20%)**",
+   "**Lift ladder: real lift by predicted group (untouched 20%)**",
+   "**High responders** \u00b7 33% of customers",
+   "Real lift: **+6.7 pts** (\u00b1 5.1 pts)",
+   "In the plan: 100% contacted, mostly Got SMS",
+   "- x0: median 0.5329, higher than the others (-0.1906)\n- x8: median 0.3135, higher than the others (-0.1997)\n- region = south: 20%, lower than the others (43%)",
+   "**Medium responders** \u00b7 33% of customers",
+   "Real lift: **+6.0 pts** (\u00b1 5.1 pts)",
+   "In the plan: 100% contacted, mostly Got SMS",
+   "- orders, last 30 days: median -0.0656, lower than the others (0.0116)\n- x5: median 0.0564, higher than the others (-0.0518)\n- x8: median -0.0932, lower than the others (0.0181)",
+   "**Low responders** \u00b7 33% of customers",
+   "Real lift: **\u22121.9 pts** (\u00b1 5.0 pts)",
+   "In the plan: 77% contacted, mostly Got SMS",
+   "- x0: median -0.4246, lower than the others (0.2494)\n- region = south: 53%, higher than the others (27%)\n- x8: median -0.3283, lower than the others (0.1123)",
+   "- **Two parts:** 16,000 customers to learn from and to choose the plan (80%), 4,000 untouched\n  until the end (20%). Every result above is measured on the untouched 20%, which played no part in any choice, so the winning plan's\n  numbers are not flattered.\n- **Honest scores:** the 80% is split into 5 parts by customer; each customer is scored by models trained on the other parts,\n  so no customer is scored by a model that saw them.\n- **Ranking:** three standard uplift learners (S, X and DR, as in Step 4) each rank the customers and the ranks are averaged.\n  The ranking is turned into a predicted extra outcome per customer by matching the measured lift in each tenth of customers (the order\n  of customers does not change).\n- **No reliable signal:** if no option's ranking beats a random order on the honest scores (95% range of the Qini includes zero),\n  Nudge does not personalise and says so.\n- **Choosing the plan:** personalised plans (a customer gets their personal best option only when it beats the best-on-average option\n  by a safety margin; several margins are tried) compete with the best simple plan (everyone, or nobody), all valued on the honest\n  scores. The simple plan wins unless a personalised one earns more.\n- **Usual approach:** a model of who buys when contacted (as in Step 5), contacting the same number of customers, most likely first.\n- **Measured value of a plan:** customers whose random option matches the plan's choice are averaged, weighted by how likely that option\n  was (inverse propensity weighting). 95% ranges: 200 bootstrap repeats, paired across plans.\n- **Rupees:** \u20b9150 profit per extra purchase, SMS \u20b90.10 per contact (assumptions you set above).",
+   "Repeats Step 4 of the project on your file: 5 uplift methods plus the S+X+DR ensemble, compared by 5-fold cross-validation, then the winner is scored once on the untouched 20% next to the fast engine. Takes about 30 seconds per option per 25,000 rows."
+  ]
+ },
+ "extra_wrong_names_userfixed": {
+  "file": "extra_wrong_names_userfixed",
+  "stages": [
+   [
+    "loaded",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "built (after rerun)",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/money.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/prove.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ]
+  ],
+  "success": [
+   "**Is the test fair? Yes.** The groups look alike on every measure, as a random test should. Largest gap between groups: 0.030 on *region = north* (under 0.05 is what chance alone gives at this size)."
+  ],
+  "markdown_count": 20,
+  "plan_texts": [
+   "<style>\n.block-container { padding-top: 2.2rem; max-width: 1180px; }\n/* number cards: one grid, so all cards share the same height; 4 across on wide screens, 2x2 on laptops (under ~1,040 px of content), 1 on phones */\n.kpi-grid { container-type: inline-size; margin-bottom: 0.6rem; }\n.kpi-grid .cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.9rem; }\n@container (max-width: 1040px) { .kpi-grid .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }\n@container (max-width: 520px) { .kpi-grid .cards { grid-template-columns: minmax(0, 1fr); } }\n.kpi { container-type: inline-size; background: #EEF0FF; border-radius: 0.8rem; padding: 1rem 1.1rem 0.85rem;\n        display: flex; flex-direction: column; min-width: 0; }\n.kpi .top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.3rem 0.4rem; min-height: 1.4rem; }\n.kpi .label { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; color: #5B5A72; }\n.kpi .badge { font-size: 0.72rem; font-weight: 700; color: white; background: #4338CA; padding: 0.1rem 0.5rem;\n               border-radius: 1rem; white-space: nowrap; }\n.kpi .value { font-size: min(1.9rem, 12.5cqi); font-weight: 700; color: #4338CA; line-height: 1.2;\n               white-space: nowrap; margin: 0.35rem 0 0.25rem; }\n.kpi .value .vs { font-size: 0.6em; font-weight: 500; color: #5B5A72; }\n.kpi .note { font-size: 0.92rem; color: #1E1B3A; flex-grow: 1; }\n.kpi .source { font-size: 0.76rem; color: #5B5A72; margin-top: 0.6rem; overflow-wrap: anywhere; }\n.tag { display: inline-block; font-size: 0.66rem; font-weight: 600; letter-spacing: 0.02em; padding: 0.05rem 0.45rem;\n        border-radius: 1rem; margin-right: 0.25rem; vertical-align: middle; white-space: nowrap; }\n.tag.measured { background: #DCFCE7; color: #15803D; }\n.tag.assumed { background: #FEF3C7; color: #B45309; }\n.hero h1 { font-size: 2.3rem; line-height: 1.2; margin-bottom: 0.3rem; }\n.hero p { font-size: 1.1rem; color: #5B5A72; max-width: 760px; }\n.step { border: 1px solid #E2E4F0; border-radius: 0.8rem; padding: 0.9rem 1rem; height: 100%; }\n.step .num { display: inline-block; width: 1.7rem; height: 1.7rem; border-radius: 50%; background: #4338CA; color: white;\n              text-align: center; font-weight: 700; line-height: 1.7rem; margin-right: 0.5rem; }\n.step .title { font-weight: 700; font-size: 1.05rem; }\n.step .body { color: #5B5A72; font-size: 0.92rem; margin-top: 0.4rem; }\n.decision { border-left: 5px solid #4338CA; background: #EEF0FF; padding: 0.9rem 1.1rem; border-radius: 0.4rem; }\n.decision b.head { color: #4338CA; }\n.pill { display: inline-block; font-size: 0.8rem; padding: 0.1rem 0.55rem; margin: 0.1rem; border-radius: 1rem;\n         background: #F1F5F9; color: #1E1B3A; }\n/* the analyst button at the top of each page shows on phones only (on laptops it sits in the sidebar) */\n@media (min-width: 768px) { .st-key-phone_chat { display: none; } }\n.small-muted { font-size: 0.82rem; color: #5B5A72; }\n</style>",
+   "**Data:** extra_wrong_names_userfixed.csv \u00b7 20,000 rows \u00b7 19 columns",
+   "<div class=\"decision\"><b class=\"head\">Do this:</b> Contact <b>92%</b> of customers (about 18,435 of 20,000) by SMS (\u20b90.10 each), with these options: Got SMS to 92%. Leave the other 8% alone. On the untouched 20% this plan earns \u20b9365 per 1,000 customers (95% range \u2212\u20b9857 to \u20b91,410) more than <i>contact everyone (got sms)</i>: ahead, but the range includes zero, so keep a control group to confirm.</div>",
+   "<div class=\"kpi-grid\"><div class=\"cards\"><div class=\"kpi\"><div class=\"top\"><span class=\"label\">Contact</span></div><div class=\"value\">92%</div><div class=\"note\">of customers</div><div class=\"source\"> 18,435 of 20,000</div></div><div class=\"kpi\"><div class=\"top\"><span class=\"label\">Extra profit</span></div><div class=\"value\">\u20b95,711</div><div class=\"note\">per 1,000 customers, vs contacting nobody</div><div class=\"source\"><span class=\"tag measured\">MEASURED</span><span class=\"tag assumed\">ASSUMED</span> \u20b9150 profit per extra purchase</div></div><div class=\"kpi\"><div class=\"top\"><span class=\"label\">vs usual approach</span></div><div class=\"value\">+\u20b9173</div><div class=\"note\">per 1,000 customers, same number of contacts</div><div class=\"source\"><span class=\"tag measured\">MEASURED</span> range \u2212\u20b91,354 to \u20b91,418</div></div><div class=\"kpi\"><div class=\"top\"><span class=\"label\">vs contact everyone (got sms)</span></div><div class=\"value\">+\u20b9365</div><div class=\"note\">per 1,000 customers</div><div class=\"source\"><span class=\"tag measured\">MEASURED</span> range \u2212\u20b9857 to \u20b91,410</div></div></div></div>",
+   "**Extra profit vs contacting nobody (untouched 20%)**",
+   "**Lift ladder: real lift by predicted group (untouched 20%)**",
+   "**High responders** \u00b7 33% of customers",
+   "Real lift: **+6.7 pts** (\u00b1 5.1 pts)",
+   "In the plan: 100% contacted, mostly Got SMS",
+   "- x0: median 0.5329, higher than the others (-0.1906)\n- x8: median 0.3135, higher than the others (-0.1997)\n- region = south: 20%, lower than the others (43%)",
+   "**Medium responders** \u00b7 33% of customers",
+   "Real lift: **+6.0 pts** (\u00b1 5.1 pts)",
+   "In the plan: 100% contacted, mostly Got SMS",
+   "- orders, last 30 days: median -0.0656, lower than the others (0.0116)\n- x5: median 0.0564, higher than the others (-0.0518)\n- x8: median -0.0932, lower than the others (0.0181)",
+   "**Low responders** \u00b7 33% of customers",
+   "Real lift: **\u22121.9 pts** (\u00b1 5.0 pts)",
+   "In the plan: 77% contacted, mostly Got SMS",
+   "- x0: median -0.4246, lower than the others (0.2494)\n- region = south: 53%, higher than the others (27%)\n- x8: median -0.3283, lower than the others (0.1123)",
+   "- **Two parts:** 16,000 customers to learn from and to choose the plan (80%), 4,000 untouched\n  until the end (20%). Every result above is measured on the untouched 20%, which played no part in any choice, so the winning plan's\n  numbers are not flattered.\n- **Honest scores:** the 80% is split into 5 parts by customer; each customer is scored by models trained on the other parts,\n  so no customer is scored by a model that saw them.\n- **Ranking:** three standard uplift learners (S, X and DR, as in Step 4) each rank the customers and the ranks are averaged.\n  The ranking is turned into a predicted extra outcome per customer by matching the measured lift in each tenth of customers (the order\n  of customers does not change).\n- **No reliable signal:** if no option's ranking beats a random order on the honest scores (95% range of the Qini includes zero),\n  Nudge does not personalise and says so.\n- **Choosing the plan:** personalised plans (a customer gets their personal best option only when it beats the best-on-average option\n  by a safety margin; several margins are tried) compete with the best simple plan (everyone, or nobody), all valued on the honest\n  scores. The simple plan wins unless a personalised one earns more.\n- **Usual approach:** a model of who buys when contacted (as in Step 5), contacting the same number of customers, most likely first.\n- **Measured value of a plan:** customers whose random option matches the plan's choice are averaged, weighted by how likely that option\n  was (inverse propensity weighting). 95% ranges: 200 bootstrap repeats, paired across plans.\n- **Rupees:** \u20b9150 profit per extra purchase, SMS \u20b90.10 per contact (assumptions you set above).",
+   "Repeats Step 4 of the project on your file: 5 uplift methods plus the S+X+DR ensemble, compared by 5-fold cross-validation, then the winner is scored once on the untouched 20% next to the fast engine. Takes about 30 seconds per option per 25,000 rows."
+  ]
+ },
+ "outcome_all_zero": {
+  "file": "outcome_all_zero",
+  "stages": [
+   [
+    "loaded",
+    {
+     "errors": [
+      "The outcome \"bought\" is 0 for every customer (nobody bought). With no difference between customers, there is nothing to learn about what the campaign changed. Check that this is the right column and the right period."
+     ],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "no build button (page stopped earlier)",
+    {}
+   ]
+  ]
+ },
+ "rows_500": {
+  "file": "rows_500",
+  "stages": [
+   [
+    "loaded",
+    {
+     "errors": [],
+     "warnings": [
+      "Only 257 customers got \"No message\". Under about 1,000 per option, per-customer estimates are noisy; the ranges shown will be wide.",
+      "Only 243 customers got \"Message\". Under about 1,000 per option, per-customer estimates are noisy; the ranges shown will be wide."
+     ],
+     "exceptions": []
+    }
+   ],
+   [
+    "built (after rerun)",
+    {
+     "errors": [],
+     "warnings": [
+      "Only 257 customers got \"No message\". Under about 1,000 per option, per-customer estimates are noisy; the ranges shown will be wide.",
+      "Only 243 customers got \"Message\". Under about 1,000 per option, per-customer estimates are noisy; the ranges shown will be wide."
+     ],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/money.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/prove.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ]
+  ],
+  "success": [
+   "**Is the test fair? Yes.** The groups look alike on every measure, as a random test should. Largest gap between groups: 0.236 on *x7* (under 0.27 is what chance alone gives at this size)."
+  ],
+  "markdown_count": 20,
+  "plan_texts": [
+   "<style>\n.block-container { padding-top: 2.2rem; max-width: 1180px; }\n/* number cards: one grid, so all cards share the same height; 4 across on wide screens, 2x2 on laptops (under ~1,040 px of content), 1 on phones */\n.kpi-grid { container-type: inline-size; margin-bottom: 0.6rem; }\n.kpi-grid .cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.9rem; }\n@container (max-width: 1040px) { .kpi-grid .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }\n@container (max-width: 520px) { .kpi-grid .cards { grid-template-columns: minmax(0, 1fr); } }\n.kpi { container-type: inline-size; background: #EEF0FF; border-radius: 0.8rem; padding: 1rem 1.1rem 0.85rem;\n        display: flex; flex-direction: column; min-width: 0; }\n.kpi .top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.3rem 0.4rem; min-height: 1.4rem; }\n.kpi .label { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; color: #5B5A72; }\n.kpi .badge { font-size: 0.72rem; font-weight: 700; color: white; background: #4338CA; padding: 0.1rem 0.5rem;\n               border-radius: 1rem; white-space: nowrap; }\n.kpi .value { font-size: min(1.9rem, 12.5cqi); font-weight: 700; color: #4338CA; line-height: 1.2;\n               white-space: nowrap; margin: 0.35rem 0 0.25rem; }\n.kpi .value .vs { font-size: 0.6em; font-weight: 500; color: #5B5A72; }\n.kpi .note { font-size: 0.92rem; color: #1E1B3A; flex-grow: 1; }\n.kpi .source { font-size: 0.76rem; color: #5B5A72; margin-top: 0.6rem; overflow-wrap: anywhere; }\n.tag { display: inline-block; font-size: 0.66rem; font-weight: 600; letter-spacing: 0.02em; padding: 0.05rem 0.45rem;\n        border-radius: 1rem; margin-right: 0.25rem; vertical-align: middle; white-space: nowrap; }\n.tag.measured { background: #DCFCE7; color: #15803D; }\n.tag.assumed { background: #FEF3C7; color: #B45309; }\n.hero h1 { font-size: 2.3rem; line-height: 1.2; margin-bottom: 0.3rem; }\n.hero p { font-size: 1.1rem; color: #5B5A72; max-width: 760px; }\n.step { border: 1px solid #E2E4F0; border-radius: 0.8rem; padding: 0.9rem 1rem; height: 100%; }\n.step .num { display: inline-block; width: 1.7rem; height: 1.7rem; border-radius: 50%; background: #4338CA; color: white;\n              text-align: center; font-weight: 700; line-height: 1.7rem; margin-right: 0.5rem; }\n.step .title { font-weight: 700; font-size: 1.05rem; }\n.step .body { color: #5B5A72; font-size: 0.92rem; margin-top: 0.4rem; }\n.decision { border-left: 5px solid #4338CA; background: #EEF0FF; padding: 0.9rem 1.1rem; border-radius: 0.4rem; }\n.decision b.head { color: #4338CA; }\n.pill { display: inline-block; font-size: 0.8rem; padding: 0.1rem 0.55rem; margin: 0.1rem; border-radius: 1rem;\n         background: #F1F5F9; color: #1E1B3A; }\n/* the analyst button at the top of each page shows on phones only (on laptops it sits in the sidebar) */\n@media (min-width: 768px) { .st-key-phone_chat { display: none; } }\n.small-muted { font-size: 0.82rem; color: #5B5A72; }\n</style>",
+   "**Data:** rows_500.csv \u00b7 500 rows \u00b7 15 columns",
+   "<div class=\"decision\"><b class=\"head\">Do this:</b> <b>Do not run this campaign at \u20b90.10 per contact.</b> No option earns back its cost. Try a cheaper channel above, or a cheaper offer.</div>",
+   "<div class=\"kpi-grid\"><div class=\"cards\"><div class=\"kpi\"><div class=\"top\"><span class=\"label\">Contact</span></div><div class=\"value\">0%</div><div class=\"note\">of customers</div><div class=\"source\"> 0 of 500</div></div><div class=\"kpi\"><div class=\"top\"><span class=\"label\">Extra profit</span></div><div class=\"value\">\u20b90</div><div class=\"note\">per 1,000 customers, vs contacting nobody</div><div class=\"source\"><span class=\"tag measured\">MEASURED</span><span class=\"tag assumed\">ASSUMED</span> \u20b9150 profit per extra purchase</div></div><div class=\"kpi\"><div class=\"top\"><span class=\"label\">vs usual approach</span></div><div class=\"value\">Same</div><div class=\"note\">at this share both contact the same customers; see Money for smaller budgets</div><div class=\"source\"> measured on the untouched 20% (100 customers)</div></div><div class=\"kpi\"><div class=\"top\"><span class=\"label\">Personalising</span></div><div class=\"value\">Not chosen</div><div class=\"note\">the engine gave everyone the same option</div><div class=\"source\"> its learned safety margin found no reliable gain</div></div></div></div>",
+   "**Extra profit vs contacting nobody (untouched 20%)**",
+   "**Lift ladder: real lift by predicted group (untouched 20%)**",
+   "**High responders** \u00b7 33% of customers",
+   "Real lift: **+10.2 pts** (\u00b1 31.0 pts)",
+   "In the plan: not contacted",
+   "- x0: median -0.3872, lower than the others (0.2669)\n- x6: median 0.3632, higher than the others (0.0154)\n- x1: median 0.1926, higher than the others (-0.2925)",
+   "**Medium responders** \u00b7 33% of customers",
+   "Real lift: **\u22123.3 pts** (\u00b1 35.0 pts)",
+   "In the plan: not contacted",
+   "- x6: median 0.0705, lower than the others (0.0959)\n- region = south: 33%, higher than the others (22%)\n- region = north: 36%, lower than the others (48%)",
+   "**Low responders** \u00b7 34% of customers",
+   "Real lift: **\u221228.5 pts** (\u00b1 32.9 pts)",
+   "In the plan: not contacted",
+   "- region = north: 56%, higher than the others (38%)\n- x4: median -0.3801, lower than the others (-0.03205)\n- x2: median 0.3365, higher than the others (0.1045)",
+   "- **Two parts:** 400 customers to learn from and to choose the plan (80%), 100 untouched\n  until the end (20%). Every result above is measured on the untouched 20%, which played no part in any choice, so the winning plan's\n  numbers are not flattered.\n- **Honest scores:** the 80% is split into 5 parts by customer; each customer is scored by models trained on the other parts,\n  so no customer is scored by a model that saw them.\n- **Ranking:** three standard uplift learners (S, X and DR, as in Step 4) each rank the customers and the ranks are averaged.\n  The ranking is turned into a predicted extra outcome per customer by matching the measured lift in each tenth of customers (the order\n  of customers does not change).\n- **No reliable signal:** if no option's ranking beats a random order on the honest scores (95% range of the Qini includes zero),\n  Nudge does not personalise and says so.\n- **Choosing the plan:** personalised plans (a customer gets their personal best option only when it beats the best-on-average option\n  by a safety margin; several margins are tried) compete with the best simple plan (everyone, or nobody), all valued on the honest\n  scores. The simple plan wins unless a personalised one earns more.\n- **Usual approach:** a model of who buys when contacted (as in Step 5), contacting the same number of customers, most likely first.\n- **Measured value of a plan:** customers whose random option matches the plan's choice are averaged, weighted by how likely that option\n  was (inverse propensity weighting). 95% ranges: 200 bootstrap repeats, paired across plans.\n- **Rupees:** \u20b9150 profit per extra purchase, SMS \u20b90.10 per contact (assumptions you set above).",
+   "Repeats Step 4 of the project on your file: 5 uplift methods plus the S+X+DR ensemble, compared by 5-fold cross-validation, then the winner is scored once on the untouched 20% next to the fast engine. Takes about 30 seconds per option per 25,000 rows.",
+   "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody."
+  ]
+ },
+ "split_95_5": {
+  "file": "split_95_5",
+  "stages": [
+   [
+    "loaded",
+    {
+     "errors": [],
+     "warnings": [
+      "Only 486 customers got \"No message\". Under about 1,000 per option, per-customer estimates are noisy; the ranges shown will be wide."
+     ],
+     "exceptions": []
+    }
+   ],
+   [
+    "built (after rerun)",
+    {
+     "errors": [],
+     "warnings": [
+      "Only 486 customers got \"No message\". Under about 1,000 per option, per-customer estimates are noisy; the ranges shown will be wide."
+     ],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/money.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/prove.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ]
+  ],
+  "success": [
+   "**Is the test fair? Yes.** The groups look alike on every measure, as a random test should. Largest gap between groups: 0.081 on *x0* (under 0.19 is what chance alone gives at this size)."
+  ],
+  "markdown_count": 20,
+  "plan_texts": [
+   "<style>\n.block-container { padding-top: 2.2rem; max-width: 1180px; }\n/* number cards: one grid, so all cards share the same height; 4 across on wide screens, 2x2 on laptops (under ~1,040 px of content), 1 on phones */\n.kpi-grid { container-type: inline-size; margin-bottom: 0.6rem; }\n.kpi-grid .cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.9rem; }\n@container (max-width: 1040px) { .kpi-grid .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }\n@container (max-width: 520px) { .kpi-grid .cards { grid-template-columns: minmax(0, 1fr); } }\n.kpi { container-type: inline-size; background: #EEF0FF; border-radius: 0.8rem; padding: 1rem 1.1rem 0.85rem;\n        display: flex; flex-direction: column; min-width: 0; }\n.kpi .top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.3rem 0.4rem; min-height: 1.4rem; }\n.kpi .label { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; color: #5B5A72; }\n.kpi .badge { font-size: 0.72rem; font-weight: 700; color: white; background: #4338CA; padding: 0.1rem 0.5rem;\n               border-radius: 1rem; white-space: nowrap; }\n.kpi .value { font-size: min(1.9rem, 12.5cqi); font-weight: 700; color: #4338CA; line-height: 1.2;\n               white-space: nowrap; margin: 0.35rem 0 0.25rem; }\n.kpi .value .vs { font-size: 0.6em; font-weight: 500; color: #5B5A72; }\n.kpi .note { font-size: 0.92rem; color: #1E1B3A; flex-grow: 1; }\n.kpi .source { font-size: 0.76rem; color: #5B5A72; margin-top: 0.6rem; overflow-wrap: anywhere; }\n.tag { display: inline-block; font-size: 0.66rem; font-weight: 600; letter-spacing: 0.02em; padding: 0.05rem 0.45rem;\n        border-radius: 1rem; margin-right: 0.25rem; vertical-align: middle; white-space: nowrap; }\n.tag.measured { background: #DCFCE7; color: #15803D; }\n.tag.assumed { background: #FEF3C7; color: #B45309; }\n.hero h1 { font-size: 2.3rem; line-height: 1.2; margin-bottom: 0.3rem; }\n.hero p { font-size: 1.1rem; color: #5B5A72; max-width: 760px; }\n.step { border: 1px solid #E2E4F0; border-radius: 0.8rem; padding: 0.9rem 1rem; height: 100%; }\n.step .num { display: inline-block; width: 1.7rem; height: 1.7rem; border-radius: 50%; background: #4338CA; color: white;\n              text-align: center; font-weight: 700; line-height: 1.7rem; margin-right: 0.5rem; }\n.step .title { font-weight: 700; font-size: 1.05rem; }\n.step .body { color: #5B5A72; font-size: 0.92rem; margin-top: 0.4rem; }\n.decision { border-left: 5px solid #4338CA; background: #EEF0FF; padding: 0.9rem 1.1rem; border-radius: 0.4rem; }\n.decision b.head { color: #4338CA; }\n.pill { display: inline-block; font-size: 0.8rem; padding: 0.1rem 0.55rem; margin: 0.1rem; border-radius: 1rem;\n         background: #F1F5F9; color: #1E1B3A; }\n/* the analyst button at the top of each page shows on phones only (on laptops it sits in the sidebar) */\n@media (min-width: 768px) { .st-key-phone_chat { display: none; } }\n.small-muted { font-size: 0.82rem; color: #5B5A72; }\n</style>",
+   "**Data:** split_95_5.csv \u00b7 10,000 rows \u00b7 15 columns",
+   "<div class=\"decision\"><b class=\"head\">Do this:</b> <b>Do not run this campaign at \u20b90.10 per contact.</b> No option earns back its cost. Try a cheaper channel above, or a cheaper offer.</div>",
+   "<div class=\"kpi-grid\"><div class=\"cards\"><div class=\"kpi\"><div class=\"top\"><span class=\"label\">Contact</span></div><div class=\"value\">0%</div><div class=\"note\">of customers</div><div class=\"source\"> 0 of 10,000</div></div><div class=\"kpi\"><div class=\"top\"><span class=\"label\">Extra profit</span></div><div class=\"value\">\u20b90</div><div class=\"note\">per 1,000 customers, vs contacting nobody</div><div class=\"source\"><span class=\"tag measured\">MEASURED</span><span class=\"tag assumed\">ASSUMED</span> \u20b9150 profit per extra purchase</div></div><div class=\"kpi\"><div class=\"top\"><span class=\"label\">vs usual approach</span></div><div class=\"value\">Same</div><div class=\"note\">at this share both contact the same customers; see Money for smaller budgets</div><div class=\"source\"> measured on the untouched 20% (2,000 customers)</div></div><div class=\"kpi\"><div class=\"top\"><span class=\"label\">Personalising</span></div><div class=\"value\">Not chosen</div><div class=\"note\">the engine gave everyone the same option</div><div class=\"source\"> its learned safety margin found no reliable gain</div></div></div></div>",
+   "**Extra profit vs contacting nobody (untouched 20%)**",
+   "**Lift ladder: real lift by predicted group (untouched 20%)**",
+   "**High responders** \u00b7 33% of customers",
+   "Real lift: **+9.1 pts** (\u00b1 14.6 pts)",
+   "In the plan: not contacted",
+   "- x0: median 0.0526, higher than the others (-0.0556)",
+   "**Medium responders** \u00b7 33% of customers",
+   "Real lift: **\u22124.9 pts** (\u00b1 21.1 pts)",
+   "In the plan: not contacted",
+   "- x0: median -0.1098, lower than the others (0.0227)\n- x3: median 0.1333, higher than the others (-0.03375)",
+   "**Low responders** \u00b7 33% of customers",
+   "Real lift: **+2.2 pts** (\u00b1 17.9 pts)",
+   "In the plan: not contacted",
+   "- no measure sets this group clearly apart",
+   "- **Two parts:** 8,000 customers to learn from and to choose the plan (80%), 2,000 untouched\n  until the end (20%). Every result above is measured on the untouched 20%, which played no part in any choice, so the winning plan's\n  numbers are not flattered.\n- **Honest scores:** the 80% is split into 5 parts by customer; each customer is scored by models trained on the other parts,\n  so no customer is scored by a model that saw them.\n- **Ranking:** three standard uplift learners (S, X and DR, as in Step 4) each rank the customers and the ranks are averaged.\n  The ranking is turned into a predicted extra outcome per customer by matching the measured lift in each tenth of customers (the order\n  of customers does not change).\n- **No reliable signal:** if no option's ranking beats a random order on the honest scores (95% range of the Qini includes zero),\n  Nudge does not personalise and says so.\n- **Choosing the plan:** personalised plans (a customer gets their personal best option only when it beats the best-on-average option\n  by a safety margin; several margins are tried) compete with the best simple plan (everyone, or nobody), all valued on the honest\n  scores. The simple plan wins unless a personalised one earns more.\n- **Usual approach:** a model of who buys when contacted (as in Step 5), contacting the same number of customers, most likely first.\n- **Measured value of a plan:** customers whose random option matches the plan's choice are averaged, weighted by how likely that option\n  was (inverse propensity weighting). 95% ranges: 200 bootstrap repeats, paired across plans.\n- **Rupees:** \u20b9150 profit per extra purchase, SMS \u20b90.10 per contact (assumptions you set above).",
+   "Repeats Step 4 of the project on your file: 5 uplift methods plus the S+X+DR ensemble, compared by 5-fold cross-validation, then the winner is scored once on the untouched 20% next to the fast engine. Takes about 30 seconds per option per 25,000 rows.",
+   "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact nobody."
+  ]
+ },
+ "non_random": {
+  "file": "non_random",
+  "stages": [
+   [
+    "loaded",
+    {
+     "errors": [
+      "**Is the test fair? No.** The groups differ before the campaign, so options were probably not given at random. Largest gap between groups: 2.650 on *x3* (under 0.05 is what chance alone gives at this size)."
+     ],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "train anyway ticked",
+    {
+     "errors": [
+      "**Is the test fair? No.** The groups differ before the campaign, so options were probably not given at random. Largest gap between groups: 2.650 on *x3* (under 0.05 is what chance alone gives at this size)."
+     ],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "built (after rerun)",
+    {
+     "errors": [
+      "**Is the test fair? No.** The groups differ before the campaign, so options were probably not given at random. Largest gap between groups: 2.650 on *x3* (under 0.05 is what chance alone gives at this size)."
+     ],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/money.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/prove.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ]
+  ],
+  "success": [],
+  "markdown_count": 21,
+  "plan_texts": [
+   "<style>\n.block-container { padding-top: 2.2rem; max-width: 1180px; }\n/* number cards: one grid, so all cards share the same height; 4 across on wide screens, 2x2 on laptops (under ~1,040 px of content), 1 on phones */\n.kpi-grid { container-type: inline-size; margin-bottom: 0.6rem; }\n.kpi-grid .cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.9rem; }\n@container (max-width: 1040px) { .kpi-grid .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }\n@container (max-width: 520px) { .kpi-grid .cards { grid-template-columns: minmax(0, 1fr); } }\n.kpi { container-type: inline-size; background: #EEF0FF; border-radius: 0.8rem; padding: 1rem 1.1rem 0.85rem;\n        display: flex; flex-direction: column; min-width: 0; }\n.kpi .top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.3rem 0.4rem; min-height: 1.4rem; }\n.kpi .label { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; color: #5B5A72; }\n.kpi .badge { font-size: 0.72rem; font-weight: 700; color: white; background: #4338CA; padding: 0.1rem 0.5rem;\n               border-radius: 1rem; white-space: nowrap; }\n.kpi .value { font-size: min(1.9rem, 12.5cqi); font-weight: 700; color: #4338CA; line-height: 1.2;\n               white-space: nowrap; margin: 0.35rem 0 0.25rem; }\n.kpi .value .vs { font-size: 0.6em; font-weight: 500; color: #5B5A72; }\n.kpi .note { font-size: 0.92rem; color: #1E1B3A; flex-grow: 1; }\n.kpi .source { font-size: 0.76rem; color: #5B5A72; margin-top: 0.6rem; overflow-wrap: anywhere; }\n.tag { display: inline-block; font-size: 0.66rem; font-weight: 600; letter-spacing: 0.02em; padding: 0.05rem 0.45rem;\n        border-radius: 1rem; margin-right: 0.25rem; vertical-align: middle; white-space: nowrap; }\n.tag.measured { background: #DCFCE7; color: #15803D; }\n.tag.assumed { background: #FEF3C7; color: #B45309; }\n.hero h1 { font-size: 2.3rem; line-height: 1.2; margin-bottom: 0.3rem; }\n.hero p { font-size: 1.1rem; color: #5B5A72; max-width: 760px; }\n.step { border: 1px solid #E2E4F0; border-radius: 0.8rem; padding: 0.9rem 1rem; height: 100%; }\n.step .num { display: inline-block; width: 1.7rem; height: 1.7rem; border-radius: 50%; background: #4338CA; color: white;\n              text-align: center; font-weight: 700; line-height: 1.7rem; margin-right: 0.5rem; }\n.step .title { font-weight: 700; font-size: 1.05rem; }\n.step .body { color: #5B5A72; font-size: 0.92rem; margin-top: 0.4rem; }\n.decision { border-left: 5px solid #4338CA; background: #EEF0FF; padding: 0.9rem 1.1rem; border-radius: 0.4rem; }\n.decision b.head { color: #4338CA; }\n.pill { display: inline-block; font-size: 0.8rem; padding: 0.1rem 0.55rem; margin: 0.1rem; border-radius: 1rem;\n         background: #F1F5F9; color: #1E1B3A; }\n/* the analyst button at the top of each page shows on phones only (on laptops it sits in the sidebar) */\n@media (min-width: 768px) { .st-key-phone_chat { display: none; } }\n.small-muted { font-size: 0.82rem; color: #5B5A72; }\n</style>",
+   "**Data:** non_random.csv \u00b7 20,000 rows \u00b7 15 columns",
+   "**Why this matters.** If the company chose who got the campaign (often its best customers), those customers would have bought more\nanyway, and any model learns that difference, not the campaign's effect. In Step 10 of this project (Dunnhumby, where the company chose\nthe targets), the targeted group already spent 6.3\u00d7 more *before* the campaign, and two careful analyses of the same campaign gave\n**+10.7%** and **\u22126.5%**: opposite answers, both confident.\n\n**Do this instead: run a random pilot first.** Pick the customers you would contact, randomly hold back a share of them, run the campaign,\nthen upload that file here.",
+   "<div class=\"decision\"><b class=\"head\">Do this:</b> <b>Send Message to everyone</b> by SMS (\u20b90.10 each). The engine found that personalising does not pay on this data: its learned safety margin gives every customer the option that works best on average (\u20b926,343 extra profit per 1,000 customers, measured on the untouched 20%).</div>",
+   "<div class=\"kpi-grid\"><div class=\"cards\"><div class=\"kpi\"><div class=\"top\"><span class=\"label\">Contact</span></div><div class=\"value\">100%</div><div class=\"note\">of customers</div><div class=\"source\"> 20,000 of 20,000</div></div><div class=\"kpi\"><div class=\"top\"><span class=\"label\">Extra profit</span></div><div class=\"value\">\u20b926,343</div><div class=\"note\">per 1,000 customers, vs contacting nobody</div><div class=\"source\"><span class=\"tag measured\">MEASURED</span><span class=\"tag assumed\">ASSUMED</span> \u20b9150 profit per extra purchase</div></div><div class=\"kpi\"><div class=\"top\"><span class=\"label\">vs usual approach</span></div><div class=\"value\">Same</div><div class=\"note\">at this share both contact the same customers; see Money for smaller budgets</div><div class=\"source\"> measured on the untouched 20% (4,000 customers)</div></div><div class=\"kpi\"><div class=\"top\"><span class=\"label\">Personalising</span></div><div class=\"value\">Not chosen</div><div class=\"note\">the engine gave everyone the same option</div><div class=\"source\"> its learned safety margin found no reliable gain</div></div></div></div>",
+   "**Extra profit vs contacting nobody (untouched 20%)**",
+   "**Lift ladder: real lift by predicted group (untouched 20%)**",
+   "**High responders** \u00b7 33% of customers",
+   "Real lift: **+22.1 pts** (\u00b1 5.1 pts)",
+   "In the plan: contacted (Message, like everyone)",
+   "- x5: median -0.7442, lower than the others (0.3068)\n- x3: median 0.4288, higher than the others (-0.0709)\n- x0: median -0.2486, lower than the others (0.1492)",
+   "**Medium responders** \u00b7 33% of customers",
+   "Real lift: **+15.5 pts** (\u00b1 4.9 pts)",
+   "In the plan: contacted (Message, like everyone)",
+   "- x3: median -0.0754, lower than the others (0.0784)\n- x5: median 0.0466, higher than the others (-0.0589)\n- x4: median 0.0986, higher than the others (-0.0471)",
+   "**Low responders** \u00b7 33% of customers",
+   "Real lift: **+12.0 pts** (\u00b1 4.9 pts)",
+   "In the plan: contacted (Message, like everyone)",
+   "- x5: median 0.5425, higher than the others (-0.2951)\n- x3: median -0.06975, lower than the others (0.1328)\n- x0: median 0.2571, higher than the others (-0.08835)",
+   "- **Two parts:** 16,000 customers to learn from and to choose the plan (80%), 4,000 untouched\n  until the end (20%). Every result above is measured on the untouched 20%, which played no part in any choice, so the winning plan's\n  numbers are not flattered.\n- **Honest scores:** the 80% is split into 5 parts by customer; each customer is scored by models trained on the other parts,\n  so no customer is scored by a model that saw them.\n- **Ranking:** three standard uplift learners (S, X and DR, as in Step 4) each rank the customers and the ranks are averaged.\n  The ranking is turned into a predicted extra outcome per customer by matching the measured lift in each tenth of customers (the order\n  of customers does not change).\n- **No reliable signal:** if no option's ranking beats a random order on the honest scores (95% range of the Qini includes zero),\n  Nudge does not personalise and says so.\n- **Choosing the plan:** personalised plans (a customer gets their personal best option only when it beats the best-on-average option\n  by a safety margin; several margins are tried) compete with the best simple plan (everyone, or nobody), all valued on the honest\n  scores. The simple plan wins unless a personalised one earns more.\n- **Usual approach:** a model of who buys when contacted (as in Step 5), contacting the same number of customers, most likely first.\n- **Measured value of a plan:** customers whose random option matches the plan's choice are averaged, weighted by how likely that option\n  was (inverse propensity weighting). 95% ranges: 200 bootstrap repeats, paired across plans.\n- **Rupees:** \u20b9150 profit per extra purchase, SMS \u20b90.10 per contact (assumptions you set above).",
+   "Repeats Step 4 of the project on your file: 5 uplift methods plus the S+X+DR ensemble, compared by 5-fold cross-validation, then the winner is scored once on the untouched 20% next to the fast engine. Takes about 30 seconds per option per 25,000 rows."
+  ]
+ },
+ "duplicate_ids": {
+  "file": "duplicate_ids",
+  "stages": [
+   [
+    "loaded",
+    {
+     "errors": [],
+     "warnings": [
+      "2,000 customers appear more than once (4,000 rows). That is fine if they were contacted more than once; Nudge keeps all rows of a customer in the same part when it tests itself. If they are copies, remove them first."
+     ],
+     "exceptions": []
+    }
+   ],
+   [
+    "built (after rerun)",
+    {
+     "errors": [],
+     "warnings": [
+      "2,000 customers appear more than once (4,000 rows). That is fine if they were contacted more than once; Nudge keeps all rows of a customer in the same part when it tests itself. If they are copies, remove them first."
+     ],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/money.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/prove.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ]
+  ],
+  "success": [
+   "**Is the test fair? Yes.** The groups look alike on every measure, as a random test should. Largest gap between groups: 0.017 on *x2* (under 0.05 is what chance alone gives at this size)."
+  ],
+  "markdown_count": 20,
+  "plan_texts": [
+   "<style>\n.block-container { padding-top: 2.2rem; max-width: 1180px; }\n/* number cards: one grid, so all cards share the same height; 4 across on wide screens, 2x2 on laptops (under ~1,040 px of content), 1 on phones */\n.kpi-grid { container-type: inline-size; margin-bottom: 0.6rem; }\n.kpi-grid .cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.9rem; }\n@container (max-width: 1040px) { .kpi-grid .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }\n@container (max-width: 520px) { .kpi-grid .cards { grid-template-columns: minmax(0, 1fr); } }\n.kpi { container-type: inline-size; background: #EEF0FF; border-radius: 0.8rem; padding: 1rem 1.1rem 0.85rem;\n        display: flex; flex-direction: column; min-width: 0; }\n.kpi .top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.3rem 0.4rem; min-height: 1.4rem; }\n.kpi .label { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; color: #5B5A72; }\n.kpi .badge { font-size: 0.72rem; font-weight: 700; color: white; background: #4338CA; padding: 0.1rem 0.5rem;\n               border-radius: 1rem; white-space: nowrap; }\n.kpi .value { font-size: min(1.9rem, 12.5cqi); font-weight: 700; color: #4338CA; line-height: 1.2;\n               white-space: nowrap; margin: 0.35rem 0 0.25rem; }\n.kpi .value .vs { font-size: 0.6em; font-weight: 500; color: #5B5A72; }\n.kpi .note { font-size: 0.92rem; color: #1E1B3A; flex-grow: 1; }\n.kpi .source { font-size: 0.76rem; color: #5B5A72; margin-top: 0.6rem; overflow-wrap: anywhere; }\n.tag { display: inline-block; font-size: 0.66rem; font-weight: 600; letter-spacing: 0.02em; padding: 0.05rem 0.45rem;\n        border-radius: 1rem; margin-right: 0.25rem; vertical-align: middle; white-space: nowrap; }\n.tag.measured { background: #DCFCE7; color: #15803D; }\n.tag.assumed { background: #FEF3C7; color: #B45309; }\n.hero h1 { font-size: 2.3rem; line-height: 1.2; margin-bottom: 0.3rem; }\n.hero p { font-size: 1.1rem; color: #5B5A72; max-width: 760px; }\n.step { border: 1px solid #E2E4F0; border-radius: 0.8rem; padding: 0.9rem 1rem; height: 100%; }\n.step .num { display: inline-block; width: 1.7rem; height: 1.7rem; border-radius: 50%; background: #4338CA; color: white;\n              text-align: center; font-weight: 700; line-height: 1.7rem; margin-right: 0.5rem; }\n.step .title { font-weight: 700; font-size: 1.05rem; }\n.step .body { color: #5B5A72; font-size: 0.92rem; margin-top: 0.4rem; }\n.decision { border-left: 5px solid #4338CA; background: #EEF0FF; padding: 0.9rem 1.1rem; border-radius: 0.4rem; }\n.decision b.head { color: #4338CA; }\n.pill { display: inline-block; font-size: 0.8rem; padding: 0.1rem 0.55rem; margin: 0.1rem; border-radius: 1rem;\n         background: #F1F5F9; color: #1E1B3A; }\n/* the analyst button at the top of each page shows on phones only (on laptops it sits in the sidebar) */\n@media (min-width: 768px) { .st-key-phone_chat { display: none; } }\n.small-muted { font-size: 0.82rem; color: #5B5A72; }\n</style>",
+   "**Data:** duplicate_ids.csv \u00b7 22,000 rows \u00b7 15 columns",
+   "<div class=\"decision\"><b class=\"head\">Do this:</b> <b>Send Message to everyone</b> by SMS (\u20b90.10 each). The engine found that personalising does not pay on this data: its learned safety margin gives every customer the option that works best on average (\u20b95,975 extra profit per 1,000 customers, measured on the untouched 20%).</div>",
+   "<div class=\"kpi-grid\"><div class=\"cards\"><div class=\"kpi\"><div class=\"top\"><span class=\"label\">Contact</span></div><div class=\"value\">100%</div><div class=\"note\">of customers</div><div class=\"source\"> 22,000 of 22,000</div></div><div class=\"kpi\"><div class=\"top\"><span class=\"label\">Extra profit</span></div><div class=\"value\">\u20b95,975</div><div class=\"note\">per 1,000 customers, vs contacting nobody</div><div class=\"source\"><span class=\"tag measured\">MEASURED</span><span class=\"tag assumed\">ASSUMED</span> \u20b9150 profit per extra purchase</div></div><div class=\"kpi\"><div class=\"top\"><span class=\"label\">vs usual approach</span></div><div class=\"value\">Same</div><div class=\"note\">at this share both contact the same customers; see Money for smaller budgets</div><div class=\"source\"> measured on the untouched 20% (4,417 customers)</div></div><div class=\"kpi\"><div class=\"top\"><span class=\"label\">Personalising</span></div><div class=\"value\">Not chosen</div><div class=\"note\">the engine gave everyone the same option</div><div class=\"source\"> its learned safety margin found no reliable gain</div></div></div></div>",
+   "**Extra profit vs contacting nobody (untouched 20%)**",
+   "**Lift ladder: real lift by predicted group (untouched 20%)**",
+   "**High responders** \u00b7 33% of customers",
+   "Real lift: **+5.5 pts** (\u00b1 5.0 pts)",
+   "In the plan: contacted (Message, like everyone)",
+   "- x0: median 0.4052, higher than the others (-0.2915)\n- x1: median 0.3191, higher than the others (-0.2344)\n- x5: median -0.3544, lower than the others (0.1352)",
+   "**Medium responders** \u00b7 33% of customers",
+   "Real lift: **+2.3 pts** (\u00b1 4.8 pts)",
+   "In the plan: contacted (Message, like everyone)",
+   "- no measure sets this group clearly apart",
+   "**Low responders** \u00b7 33% of customers",
+   "Real lift: **+3.7 pts** (\u00b1 4.8 pts)",
+   "In the plan: contacted (Message, like everyone)",
+   "- x0: median -0.6437, lower than the others (0.2215)\n- x1: median -0.4323, lower than the others (0.1452)\n- x5: median 0.2192, higher than the others (-0.1446)",
+   "- **Two parts:** 17,583 customers to learn from and to choose the plan (80%), 4,417 untouched\n  until the end (20%). Every result above is measured on the untouched 20%, which played no part in any choice, so the winning plan's\n  numbers are not flattered.\n- **Honest scores:** the 80% is split into 5 parts by customer; each customer is scored by models trained on the other parts,\n  so no customer is scored by a model that saw them.\n- **Ranking:** three standard uplift learners (S, X and DR, as in Step 4) each rank the customers and the ranks are averaged.\n  The ranking is turned into a predicted extra outcome per customer by matching the measured lift in each tenth of customers (the order\n  of customers does not change).\n- **No reliable signal:** if no option's ranking beats a random order on the honest scores (95% range of the Qini includes zero),\n  Nudge does not personalise and says so.\n- **Choosing the plan:** personalised plans (a customer gets their personal best option only when it beats the best-on-average option\n  by a safety margin; several margins are tried) compete with the best simple plan (everyone, or nobody), all valued on the honest\n  scores. The simple plan wins unless a personalised one earns more.\n- **Usual approach:** a model of who buys when contacted (as in Step 5), contacting the same number of customers, most likely first.\n- **Measured value of a plan:** customers whose random option matches the plan's choice are averaged, weighted by how likely that option\n  was (inverse propensity weighting). 95% ranges: 200 bootstrap repeats, paired across plans.\n- **Rupees:** \u20b9150 profit per extra purchase, SMS \u20b90.10 per contact (assumptions you set above).",
+   "Repeats Step 4 of the project on your file: 5 uplift methods plus the S+X+DR ensemble, compared by 5-fold cross-validation, then the winner is scored once on the untouched 20% next to the fast engine. Takes about 30 seconds per option per 25,000 rows."
+  ]
+ },
+ "options_4plus": {
+  "file": "options_4plus",
+  "stages": [
+   [
+    "loaded",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "built (after rerun)",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/money.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/prove.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ]
+  ],
+  "success": [
+   "**Is the test fair? Yes.** The groups look alike on every measure, as a random test should. Largest gap between groups: 0.042 on *x9* (under 0.05 is what chance alone gives at this size)."
+  ],
+  "markdown_count": 20,
+  "plan_texts": [
+   "<style>\n.block-container { padding-top: 2.2rem; max-width: 1180px; }\n/* number cards: one grid, so all cards share the same height; 4 across on wide screens, 2x2 on laptops (under ~1,040 px of content), 1 on phones */\n.kpi-grid { container-type: inline-size; margin-bottom: 0.6rem; }\n.kpi-grid .cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.9rem; }\n@container (max-width: 1040px) { .kpi-grid .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }\n@container (max-width: 520px) { .kpi-grid .cards { grid-template-columns: minmax(0, 1fr); } }\n.kpi { container-type: inline-size; background: #EEF0FF; border-radius: 0.8rem; padding: 1rem 1.1rem 0.85rem;\n        display: flex; flex-direction: column; min-width: 0; }\n.kpi .top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.3rem 0.4rem; min-height: 1.4rem; }\n.kpi .label { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; color: #5B5A72; }\n.kpi .badge { font-size: 0.72rem; font-weight: 700; color: white; background: #4338CA; padding: 0.1rem 0.5rem;\n               border-radius: 1rem; white-space: nowrap; }\n.kpi .value { font-size: min(1.9rem, 12.5cqi); font-weight: 700; color: #4338CA; line-height: 1.2;\n               white-space: nowrap; margin: 0.35rem 0 0.25rem; }\n.kpi .value .vs { font-size: 0.6em; font-weight: 500; color: #5B5A72; }\n.kpi .note { font-size: 0.92rem; color: #1E1B3A; flex-grow: 1; }\n.kpi .source { font-size: 0.76rem; color: #5B5A72; margin-top: 0.6rem; overflow-wrap: anywhere; }\n.tag { display: inline-block; font-size: 0.66rem; font-weight: 600; letter-spacing: 0.02em; padding: 0.05rem 0.45rem;\n        border-radius: 1rem; margin-right: 0.25rem; vertical-align: middle; white-space: nowrap; }\n.tag.measured { background: #DCFCE7; color: #15803D; }\n.tag.assumed { background: #FEF3C7; color: #B45309; }\n.hero h1 { font-size: 2.3rem; line-height: 1.2; margin-bottom: 0.3rem; }\n.hero p { font-size: 1.1rem; color: #5B5A72; max-width: 760px; }\n.step { border: 1px solid #E2E4F0; border-radius: 0.8rem; padding: 0.9rem 1rem; height: 100%; }\n.step .num { display: inline-block; width: 1.7rem; height: 1.7rem; border-radius: 50%; background: #4338CA; color: white;\n              text-align: center; font-weight: 700; line-height: 1.7rem; margin-right: 0.5rem; }\n.step .title { font-weight: 700; font-size: 1.05rem; }\n.step .body { color: #5B5A72; font-size: 0.92rem; margin-top: 0.4rem; }\n.decision { border-left: 5px solid #4338CA; background: #EEF0FF; padding: 0.9rem 1.1rem; border-radius: 0.4rem; }\n.decision b.head { color: #4338CA; }\n.pill { display: inline-block; font-size: 0.8rem; padding: 0.1rem 0.55rem; margin: 0.1rem; border-radius: 1rem;\n         background: #F1F5F9; color: #1E1B3A; }\n/* the analyst button at the top of each page shows on phones only (on laptops it sits in the sidebar) */\n@media (min-width: 768px) { .st-key-phone_chat { display: none; } }\n.small-muted { font-size: 0.82rem; color: #5B5A72; }\n</style>",
+   "**Data:** options_4plus.csv \u00b7 40,000 rows \u00b7 15 columns",
+   "<div class=\"decision\"><b class=\"head\">Do this:</b> Contact <b>100%</b> of customers (about 40,000 of 40,000) by SMS (\u20b90.10 each), with these options: Discount Rs20 to 63%, Email reminder to 22%, SMS reminder to 8%, WhatsApp reminder to 7%. Leave the other 0% alone. On the untouched 20% this plan earns \u20b9230 per 1,000 customers (95% range \u2212\u20b92,546 to \u20b93,357) more than <i>contact everyone (discount rs20)</i>: ahead, but the range includes zero, so keep a control group to confirm.</div>",
+   "<div class=\"kpi-grid\"><div class=\"cards\"><div class=\"kpi\"><div class=\"top\"><span class=\"label\">Contact</span></div><div class=\"value\">100%</div><div class=\"note\">of customers</div><div class=\"source\"> 40,000 of 40,000</div></div><div class=\"kpi\"><div class=\"top\"><span class=\"label\">Extra profit</span></div><div class=\"value\">\u20b911,222</div><div class=\"note\">per 1,000 customers, vs contacting nobody</div><div class=\"source\"><span class=\"tag measured\">MEASURED</span><span class=\"tag assumed\">ASSUMED</span> \u20b9150 profit per extra purchase</div></div><div class=\"kpi\"><div class=\"top\"><span class=\"label\">vs usual approach</span></div><div class=\"value\">Same</div><div class=\"note\">at this share both contact the same customers; see Money for smaller budgets</div><div class=\"source\"> measured on the untouched 20% (8,000 customers)</div></div><div class=\"kpi\"><div class=\"top\"><span class=\"label\">vs contact everyone (discount rs20)</span></div><div class=\"value\">+\u20b9230</div><div class=\"note\">per 1,000 customers</div><div class=\"source\"><span class=\"tag measured\">MEASURED</span> range \u2212\u20b92,546 to \u20b93,357</div></div></div></div>",
+   "**Extra profit vs contacting nobody (untouched 20%)**",
+   "**Lift ladder: real lift by predicted group (untouched 20%)**",
+   "**High responders** \u00b7 33% of customers",
+   "Real lift: **+9.4 pts** (\u00b1 4.0 pts)",
+   "In the plan: 100% contacted, mostly Discount Rs20",
+   "- x2: median 0.7054, higher than the others (-0.4065)\n- x6: median 0.5593, higher than the others (-0.241)\n- x4: median -0.1018, lower than the others (0.0213)",
+   "**Medium responders** \u00b7 33% of customers",
+   "Real lift: **+4.6 pts** (\u00b1 4.1 pts)",
+   "In the plan: 100% contacted, mostly Discount Rs20",
+   "- x2: median -0.1375, lower than the others (0.08665)\n- x1: median 0.1049, higher than the others (-0.06605)\n- x0: median 0.1592, higher than the others (-0.0692)",
+   "**Low responders** \u00b7 33% of customers",
+   "Real lift: **+1.0 pts** (\u00b1 4.0 pts)",
+   "In the plan: 100% contacted, mostly Email reminder",
+   "- x2: median -0.6346, lower than the others (0.3305)\n- x6: median -0.3618, lower than the others (0.2085)\n- x0: median -0.205, lower than the others (0.1051)",
+   "- **Two parts:** 32,000 customers to learn from and to choose the plan (80%), 8,000 untouched\n  until the end (20%). Every result above is measured on the untouched 20%, which played no part in any choice, so the winning plan's\n  numbers are not flattered.\n- **Honest scores:** the 80% is split into 5 parts by customer; each customer is scored by models trained on the other parts,\n  so no customer is scored by a model that saw them.\n- **Ranking:** three standard uplift learners (S, X and DR, as in Step 4) each rank the customers and the ranks are averaged.\n  The ranking is turned into a predicted extra outcome per customer by matching the measured lift in each tenth of customers (the order\n  of customers does not change).\n- **No reliable signal:** if no option's ranking beats a random order on the honest scores (95% range of the Qini includes zero),\n  Nudge does not personalise and says so.\n- **Choosing the plan:** personalised plans (a customer gets their personal best option only when it beats the best-on-average option\n  by a safety margin; several margins are tried) compete with the best simple plan (everyone, or nobody), all valued on the honest\n  scores. The simple plan wins unless a personalised one earns more.\n- **Usual approach:** a model of who buys when contacted (as in Step 5), contacting the same number of customers, most likely first.\n- **Measured value of a plan:** customers whose random option matches the plan's choice are averaged, weighted by how likely that option\n  was (inverse propensity weighting). 95% ranges: 200 bootstrap repeats, paired across plans.\n- **Rupees:** \u20b9150 profit per extra purchase, SMS \u20b90.10 per contact (assumptions you set above).",
+   "Repeats Step 4 of the project on your file: 5 uplift methods plus the S+X+DR ensemble, compared by 5-fold cross-validation, then the winner is scored once on the untouched 20% next to the fast engine. Takes about 30 seconds per option per 25,000 rows."
+  ]
+ },
+ "revenue": {
+  "file": "revenue",
+  "stages": [
+   [
+    "loaded",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "built (after rerun)",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/money.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/prove.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ]
+  ],
+  "success": [
+   "**Is the test fair? Yes.** The groups look alike on every measure, as a random test should. Largest gap between groups: 0.026 on *x1* (under 0.05 is what chance alone gives at this size)."
+  ],
+  "markdown_count": 20,
+  "plan_texts": [
+   "<style>\n.block-container { padding-top: 2.2rem; max-width: 1180px; }\n/* number cards: one grid, so all cards share the same height; 4 across on wide screens, 2x2 on laptops (under ~1,040 px of content), 1 on phones */\n.kpi-grid { container-type: inline-size; margin-bottom: 0.6rem; }\n.kpi-grid .cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.9rem; }\n@container (max-width: 1040px) { .kpi-grid .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }\n@container (max-width: 520px) { .kpi-grid .cards { grid-template-columns: minmax(0, 1fr); } }\n.kpi { container-type: inline-size; background: #EEF0FF; border-radius: 0.8rem; padding: 1rem 1.1rem 0.85rem;\n        display: flex; flex-direction: column; min-width: 0; }\n.kpi .top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.3rem 0.4rem; min-height: 1.4rem; }\n.kpi .label { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; color: #5B5A72; }\n.kpi .badge { font-size: 0.72rem; font-weight: 700; color: white; background: #4338CA; padding: 0.1rem 0.5rem;\n               border-radius: 1rem; white-space: nowrap; }\n.kpi .value { font-size: min(1.9rem, 12.5cqi); font-weight: 700; color: #4338CA; line-height: 1.2;\n               white-space: nowrap; margin: 0.35rem 0 0.25rem; }\n.kpi .value .vs { font-size: 0.6em; font-weight: 500; color: #5B5A72; }\n.kpi .note { font-size: 0.92rem; color: #1E1B3A; flex-grow: 1; }\n.kpi .source { font-size: 0.76rem; color: #5B5A72; margin-top: 0.6rem; overflow-wrap: anywhere; }\n.tag { display: inline-block; font-size: 0.66rem; font-weight: 600; letter-spacing: 0.02em; padding: 0.05rem 0.45rem;\n        border-radius: 1rem; margin-right: 0.25rem; vertical-align: middle; white-space: nowrap; }\n.tag.measured { background: #DCFCE7; color: #15803D; }\n.tag.assumed { background: #FEF3C7; color: #B45309; }\n.hero h1 { font-size: 2.3rem; line-height: 1.2; margin-bottom: 0.3rem; }\n.hero p { font-size: 1.1rem; color: #5B5A72; max-width: 760px; }\n.step { border: 1px solid #E2E4F0; border-radius: 0.8rem; padding: 0.9rem 1rem; height: 100%; }\n.step .num { display: inline-block; width: 1.7rem; height: 1.7rem; border-radius: 50%; background: #4338CA; color: white;\n              text-align: center; font-weight: 700; line-height: 1.7rem; margin-right: 0.5rem; }\n.step .title { font-weight: 700; font-size: 1.05rem; }\n.step .body { color: #5B5A72; font-size: 0.92rem; margin-top: 0.4rem; }\n.decision { border-left: 5px solid #4338CA; background: #EEF0FF; padding: 0.9rem 1.1rem; border-radius: 0.4rem; }\n.decision b.head { color: #4338CA; }\n.pill { display: inline-block; font-size: 0.8rem; padding: 0.1rem 0.55rem; margin: 0.1rem; border-radius: 1rem;\n         background: #F1F5F9; color: #1E1B3A; }\n/* the analyst button at the top of each page shows on phones only (on laptops it sits in the sidebar) */\n@media (min-width: 768px) { .st-key-phone_chat { display: none; } }\n.small-muted { font-size: 0.82rem; color: #5B5A72; }\n</style>",
+   "**Data:** revenue.csv \u00b7 20,000 rows \u00b7 15 columns",
+   "<div class=\"decision\"><b class=\"head\">Do this:</b> Contact <b>80%</b> of customers (about 16,060 of 20,000) by SMS (\u20b90.10 each), with these options: Message to 80%. Leave the other 20% alone. On the untouched 20% this plan earns \u20b9983 per 1,000 customers (95% range \u2212\u20b92,115 to \u20b9231) less than <i>contact everyone (message)</i>: the 5-fold check on the 80% preferred the personalised plan, but the untouched 20% does not confirm it, so treat it with caution and keep a control group.</div>",
+   "<div class=\"kpi-grid\"><div class=\"cards\"><div class=\"kpi\"><div class=\"top\"><span class=\"label\">Contact</span></div><div class=\"value\">80%</div><div class=\"note\">of customers</div><div class=\"source\"> 16,060 of 20,000</div></div><div class=\"kpi\"><div class=\"top\"><span class=\"label\">Extra profit</span></div><div class=\"value\">\u20b94,585</div><div class=\"note\">per 1,000 customers, vs contacting nobody</div><div class=\"source\"><span class=\"tag measured\">MEASURED</span><span class=\"tag assumed\">ASSUMED</span> 15% margin</div></div><div class=\"kpi\"><div class=\"top\"><span class=\"label\">vs usual approach</span></div><div class=\"value\">\u2212\u20b9252</div><div class=\"note\">per 1,000 customers, same number of contacts</div><div class=\"source\"><span class=\"tag measured\">MEASURED</span> range \u2212\u20b91,674 to \u20b91,238</div></div><div class=\"kpi\"><div class=\"top\"><span class=\"label\">vs contact everyone (message)</span></div><div class=\"value\">\u2212\u20b9983</div><div class=\"note\">per 1,000 customers</div><div class=\"source\"><span class=\"tag measured\">MEASURED</span> range \u2212\u20b92,115 to \u20b9231</div></div></div></div>",
+   "**Extra profit vs contacting nobody (untouched 20%)**",
+   "**Lift ladder: real lift by predicted group (untouched 20%)**",
+   "**High responders** \u00b7 33% of customers",
+   "Real lift: **\u20b97.62 per customer** (\u00b1 \u20b94.65 per customer)",
+   "In the plan: 100% contacted, mostly Message",
+   "- x2: median 0.544, higher than the others (-0.2267)\n- x0: median 0.2253, higher than the others (-0.1718)\n- x5: median 0.2435, higher than the others (-0.2014)",
+   "**Medium responders** \u00b7 33% of customers",
+   "Real lift: **\u20b95.77 per customer** (\u00b1 \u20b94.35 per customer)",
+   "In the plan: 100% contacted, mostly Message",
+   "- x7: median -0.1857, lower than the others (0.0757)\n- x3: median -0.1465, lower than the others (0.0825)\n- x1: median 0.0616, higher than the others (-0.0348)",
+   "**Low responders** \u00b7 33% of customers",
+   "Real lift: **\u20b93.61 per customer** (\u00b1 \u20b94.57 per customer)",
+   "In the plan: 41% contacted, mostly No message",
+   "- x1: median -0.4351, lower than the others (0.1613)\n- x0: median -0.4951, lower than the others (0.1236)\n- x2: median -0.3548, lower than the others (0.164)",
+   "- **Two parts:** 16,000 customers to learn from and to choose the plan (80%), 4,000 untouched\n  until the end (20%). Every result above is measured on the untouched 20%, which played no part in any choice, so the winning plan's\n  numbers are not flattered.\n- **Honest scores:** the 80% is split into 5 parts by customer; each customer is scored by models trained on the other parts,\n  so no customer is scored by a model that saw them.\n- **Ranking:** three standard uplift learners (S, X and DR, as in Step 4) each rank the customers and the ranks are averaged.\n  The ranking is turned into a predicted extra outcome per customer by matching the measured lift in each tenth of customers (the order\n  of customers does not change).\n- **No reliable signal:** if no option's ranking beats a random order on the honest scores (95% range of the Qini includes zero),\n  Nudge does not personalise and says so.\n- **Choosing the plan:** personalised plans (a customer gets their personal best option only when it beats the best-on-average option\n  by a safety margin; several margins are tried) compete with the best simple plan (everyone, or nobody), all valued on the honest\n  scores. The simple plan wins unless a personalised one earns more.\n- **Usual approach:** a model of who buys when contacted (as in Step 5), contacting the same number of customers, most likely first.\n- **Measured value of a plan:** customers whose random option matches the plan's choice are averaged, weighted by how likely that option\n  was (inverse propensity weighting). 95% ranges: 200 bootstrap repeats, paired across plans.\n- **Rupees:** 15% margin, SMS \u20b90.10 per contact (assumptions you set above).",
+   "Repeats Step 4 of the project on your file: 5 uplift methods plus the S+X+DR ensemble, compared by 5-fold cross-validation, then the winner is scored once on the untouched 20% next to the fast engine. Takes about 30 seconds per option per 25,000 rows."
+  ]
+ },
+ "rows_1lakh": {
+  "file": "rows_1lakh",
+  "stages": [
+   [
+    "loaded",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "built (after rerun)",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/money.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/prove.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ]
+  ],
+  "success": [
+   "**Is the test fair? Yes.** The groups look alike on every measure, as a random test should. Largest gap between groups: 0.009 on *region = north* (under 0.05 is what chance alone gives at this size)."
+  ],
+  "markdown_count": 20,
+  "plan_texts": [
+   "<style>\n.block-container { padding-top: 2.2rem; max-width: 1180px; }\n/* number cards: one grid, so all cards share the same height; 4 across on wide screens, 2x2 on laptops (under ~1,040 px of content), 1 on phones */\n.kpi-grid { container-type: inline-size; margin-bottom: 0.6rem; }\n.kpi-grid .cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.9rem; }\n@container (max-width: 1040px) { .kpi-grid .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }\n@container (max-width: 520px) { .kpi-grid .cards { grid-template-columns: minmax(0, 1fr); } }\n.kpi { container-type: inline-size; background: #EEF0FF; border-radius: 0.8rem; padding: 1rem 1.1rem 0.85rem;\n        display: flex; flex-direction: column; min-width: 0; }\n.kpi .top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.3rem 0.4rem; min-height: 1.4rem; }\n.kpi .label { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; color: #5B5A72; }\n.kpi .badge { font-size: 0.72rem; font-weight: 700; color: white; background: #4338CA; padding: 0.1rem 0.5rem;\n               border-radius: 1rem; white-space: nowrap; }\n.kpi .value { font-size: min(1.9rem, 12.5cqi); font-weight: 700; color: #4338CA; line-height: 1.2;\n               white-space: nowrap; margin: 0.35rem 0 0.25rem; }\n.kpi .value .vs { font-size: 0.6em; font-weight: 500; color: #5B5A72; }\n.kpi .note { font-size: 0.92rem; color: #1E1B3A; flex-grow: 1; }\n.kpi .source { font-size: 0.76rem; color: #5B5A72; margin-top: 0.6rem; overflow-wrap: anywhere; }\n.tag { display: inline-block; font-size: 0.66rem; font-weight: 600; letter-spacing: 0.02em; padding: 0.05rem 0.45rem;\n        border-radius: 1rem; margin-right: 0.25rem; vertical-align: middle; white-space: nowrap; }\n.tag.measured { background: #DCFCE7; color: #15803D; }\n.tag.assumed { background: #FEF3C7; color: #B45309; }\n.hero h1 { font-size: 2.3rem; line-height: 1.2; margin-bottom: 0.3rem; }\n.hero p { font-size: 1.1rem; color: #5B5A72; max-width: 760px; }\n.step { border: 1px solid #E2E4F0; border-radius: 0.8rem; padding: 0.9rem 1rem; height: 100%; }\n.step .num { display: inline-block; width: 1.7rem; height: 1.7rem; border-radius: 50%; background: #4338CA; color: white;\n              text-align: center; font-weight: 700; line-height: 1.7rem; margin-right: 0.5rem; }\n.step .title { font-weight: 700; font-size: 1.05rem; }\n.step .body { color: #5B5A72; font-size: 0.92rem; margin-top: 0.4rem; }\n.decision { border-left: 5px solid #4338CA; background: #EEF0FF; padding: 0.9rem 1.1rem; border-radius: 0.4rem; }\n.decision b.head { color: #4338CA; }\n.pill { display: inline-block; font-size: 0.8rem; padding: 0.1rem 0.55rem; margin: 0.1rem; border-radius: 1rem;\n         background: #F1F5F9; color: #1E1B3A; }\n/* the analyst button at the top of each page shows on phones only (on laptops it sits in the sidebar) */\n@media (min-width: 768px) { .st-key-phone_chat { display: none; } }\n.small-muted { font-size: 0.82rem; color: #5B5A72; }\n</style>",
+   "**Data:** rows_1lakh.csv \u00b7 1,00,000 rows \u00b7 15 columns",
+   "<div class=\"decision\"><b class=\"head\">Do this:</b> Contact <b>85%</b> of customers (about 85,405 of 1,00,000) by SMS (\u20b90.10 each), with these options: Message to 85%. Leave the other 15% alone. On the untouched 20% this plan earns \u20b9251 per 1,000 customers (95% range \u2212\u20b9459 to \u20b91,074) more than <i>contact everyone (message)</i>: ahead, but the range includes zero, so keep a control group to confirm.</div>",
+   "<div class=\"kpi-grid\"><div class=\"cards\"><div class=\"kpi\"><div class=\"top\"><span class=\"label\">Contact</span></div><div class=\"value\">85%</div><div class=\"note\">of customers</div><div class=\"source\"> 85,405 of 1,00,000</div></div><div class=\"kpi\"><div class=\"top\"><span class=\"label\">Extra profit</span></div><div class=\"value\">\u20b96,766</div><div class=\"note\">per 1,000 customers, vs contacting nobody</div><div class=\"source\"><span class=\"tag measured\">MEASURED</span><span class=\"tag assumed\">ASSUMED</span> \u20b9150 profit per extra purchase</div></div><div class=\"kpi\"><div class=\"top\"><span class=\"label\">vs usual approach</span></div><div class=\"value\">+\u20b9955</div><div class=\"note\">per 1,000 customers, same number of contacts</div><div class=\"source\"><span class=\"tag measured\">MEASURED</span> range \u20b987 to \u20b91,860</div></div><div class=\"kpi\"><div class=\"top\"><span class=\"label\">vs contact everyone (message)</span></div><div class=\"value\">+\u20b9251</div><div class=\"note\">per 1,000 customers</div><div class=\"source\"><span class=\"tag measured\">MEASURED</span> range \u2212\u20b9459 to \u20b91,074</div></div></div></div>",
+   "**Extra profit vs contacting nobody (untouched 20%)**",
+   "**Lift ladder: real lift by predicted group (untouched 20%)**",
+   "**High responders** \u00b7 33% of customers",
+   "Real lift: **+10.3 pts** (\u00b1 2.3 pts)",
+   "In the plan: 100% contacted, mostly Message",
+   "- x0: median 0.8211, higher than the others (-0.4072)\n- x1: median 0.4497, higher than the others (-0.2781)\n- x3: median 0.193, higher than the others (-0.1228)",
+   "**Medium responders** \u00b7 33% of customers",
+   "Real lift: **+3.0 pts** (\u00b1 2.2 pts)",
+   "In the plan: 100% contacted, mostly Message",
+   "- x1: median 0.1224, higher than the others (-0.1071)\n- x3: median -0.1159, lower than the others (0.0459)\n- x0: median -0.00235, lower than the others (0.0122)",
+   "**Low responders** \u00b7 33% of customers",
+   "Real lift: **\u22120.1 pts** (\u00b1 2.2 pts)",
+   "In the plan: 56% contacted, mostly Message",
+   "- x0: median -0.6683, lower than the others (0.4115)\n- x1: median -0.5605, lower than the others (0.2971)\n- x2: median -0.1009, lower than the others (0.0173)",
+   "- **Two parts:** 80,000 customers to learn from and to choose the plan (80%), 20,000 untouched\n  until the end (20%). Every result above is measured on the untouched 20%, which played no part in any choice, so the winning plan's\n  numbers are not flattered.\n- **Honest scores:** the 80% is split into 5 parts by customer; each customer is scored by models trained on the other parts,\n  so no customer is scored by a model that saw them.\n- **Ranking:** three standard uplift learners (S, X and DR, as in Step 4) each rank the customers and the ranks are averaged.\n  The ranking is turned into a predicted extra outcome per customer by matching the measured lift in each tenth of customers (the order\n  of customers does not change).\n- **No reliable signal:** if no option's ranking beats a random order on the honest scores (95% range of the Qini includes zero),\n  Nudge does not personalise and says so.\n- **Choosing the plan:** personalised plans (a customer gets their personal best option only when it beats the best-on-average option\n  by a safety margin; several margins are tried) compete with the best simple plan (everyone, or nobody), all valued on the honest\n  scores. The simple plan wins unless a personalised one earns more.\n- **Usual approach:** a model of who buys when contacted (as in Step 5), contacting the same number of customers, most likely first.\n- **Measured value of a plan:** customers whose random option matches the plan's choice are averaged, weighted by how likely that option\n  was (inverse propensity weighting). 95% ranges: 200 bootstrap repeats, paired across plans.\n- **Rupees:** \u20b9150 profit per extra purchase, SMS \u20b90.10 per contact (assumptions you set above).",
+   "Repeats Step 4 of the project on your file: 5 uplift methods plus the S+X+DR ensemble, compared by 5-fold cross-validation, then the winner is scored once on the untouched 20% next to the fast engine. Takes about 30 seconds per option per 25,000 rows."
+  ]
+ },
+ "x_not_a_csv": {
+  "file": "x_not_a_csv",
+  "note": "not readable by pandas (UnicodeDecodeError); the page shows its read error before this point"
+ },
+ "x_header_only": {
+  "file": "x_header_only",
+  "stages": [
+   [
+    "loaded",
+    {
+     "errors": [
+      "The file has column names but no rows of data. Export the file again with the customer rows."
+     ],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "no build button (page stopped earlier)",
+    {}
+   ]
+  ]
+ },
+ "x_semicolon": {
+  "file": "x_semicolon",
+  "stages": [
+   [
+    "loaded",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "built (after rerun)",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/money.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/prove.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ]
+  ],
+  "success": [
+   "**Is the test fair? Yes.** The groups look alike on every measure, as a random test should. Largest gap between groups: 0.069 on *joined via = store* (under 0.08 is what chance alone gives at this size)."
+  ],
+  "markdown_count": 20,
+  "plan_texts": [
+   "<style>\n.block-container { padding-top: 2.2rem; max-width: 1180px; }\n/* number cards: one grid, so all cards share the same height; 4 across on wide screens, 2x2 on laptops (under ~1,040 px of content), 1 on phones */\n.kpi-grid { container-type: inline-size; margin-bottom: 0.6rem; }\n.kpi-grid .cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.9rem; }\n@container (max-width: 1040px) { .kpi-grid .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }\n@container (max-width: 520px) { .kpi-grid .cards { grid-template-columns: minmax(0, 1fr); } }\n.kpi { container-type: inline-size; background: #EEF0FF; border-radius: 0.8rem; padding: 1rem 1.1rem 0.85rem;\n        display: flex; flex-direction: column; min-width: 0; }\n.kpi .top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.3rem 0.4rem; min-height: 1.4rem; }\n.kpi .label { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; color: #5B5A72; }\n.kpi .badge { font-size: 0.72rem; font-weight: 700; color: white; background: #4338CA; padding: 0.1rem 0.5rem;\n               border-radius: 1rem; white-space: nowrap; }\n.kpi .value { font-size: min(1.9rem, 12.5cqi); font-weight: 700; color: #4338CA; line-height: 1.2;\n               white-space: nowrap; margin: 0.35rem 0 0.25rem; }\n.kpi .value .vs { font-size: 0.6em; font-weight: 500; color: #5B5A72; }\n.kpi .note { font-size: 0.92rem; color: #1E1B3A; flex-grow: 1; }\n.kpi .source { font-size: 0.76rem; color: #5B5A72; margin-top: 0.6rem; overflow-wrap: anywhere; }\n.tag { display: inline-block; font-size: 0.66rem; font-weight: 600; letter-spacing: 0.02em; padding: 0.05rem 0.45rem;\n        border-radius: 1rem; margin-right: 0.25rem; vertical-align: middle; white-space: nowrap; }\n.tag.measured { background: #DCFCE7; color: #15803D; }\n.tag.assumed { background: #FEF3C7; color: #B45309; }\n.hero h1 { font-size: 2.3rem; line-height: 1.2; margin-bottom: 0.3rem; }\n.hero p { font-size: 1.1rem; color: #5B5A72; max-width: 760px; }\n.step { border: 1px solid #E2E4F0; border-radius: 0.8rem; padding: 0.9rem 1rem; height: 100%; }\n.step .num { display: inline-block; width: 1.7rem; height: 1.7rem; border-radius: 50%; background: #4338CA; color: white;\n              text-align: center; font-weight: 700; line-height: 1.7rem; margin-right: 0.5rem; }\n.step .title { font-weight: 700; font-size: 1.05rem; }\n.step .body { color: #5B5A72; font-size: 0.92rem; margin-top: 0.4rem; }\n.decision { border-left: 5px solid #4338CA; background: #EEF0FF; padding: 0.9rem 1.1rem; border-radius: 0.4rem; }\n.decision b.head { color: #4338CA; }\n.pill { display: inline-block; font-size: 0.8rem; padding: 0.1rem 0.55rem; margin: 0.1rem; border-radius: 1rem;\n         background: #F1F5F9; color: #1E1B3A; }\n/* the analyst button at the top of each page shows on phones only (on laptops it sits in the sidebar) */\n@media (min-width: 768px) { .st-key-phone_chat { display: none; } }\n.small-muted { font-size: 0.82rem; color: #5B5A72; }\n</style>",
+   "**Data:** x_semicolon.csv \u00b7 5,000 rows \u00b7 15 columns",
+   "<div class=\"decision\"><b class=\"head\">Do this:</b> <b>Send Message to everyone</b> by SMS (\u20b90.10 each). The engine found that personalising does not pay on this data: its learned safety margin gives every customer the option that works best on average (\u20b96,134 extra profit per 1,000 customers, measured on the untouched 20%).</div>",
+   "<div class=\"kpi-grid\"><div class=\"cards\"><div class=\"kpi\"><div class=\"top\"><span class=\"label\">Contact</span></div><div class=\"value\">100%</div><div class=\"note\">of customers</div><div class=\"source\"> 5,000 of 5,000</div></div><div class=\"kpi\"><div class=\"top\"><span class=\"label\">Extra profit</span></div><div class=\"value\">\u20b96,134</div><div class=\"note\">per 1,000 customers, vs contacting nobody</div><div class=\"source\"><span class=\"tag measured\">MEASURED</span><span class=\"tag assumed\">ASSUMED</span> \u20b9150 profit per extra purchase</div></div><div class=\"kpi\"><div class=\"top\"><span class=\"label\">vs usual approach</span></div><div class=\"value\">Same</div><div class=\"note\">at this share both contact the same customers; see Money for smaller budgets</div><div class=\"source\"> measured on the untouched 20% (1,000 customers)</div></div><div class=\"kpi\"><div class=\"top\"><span class=\"label\">Personalising</span></div><div class=\"value\">Not chosen</div><div class=\"note\">the engine gave everyone the same option</div><div class=\"source\"> its learned safety margin found no reliable gain</div></div></div></div>",
+   "**Extra profit vs contacting nobody (untouched 20%)**",
+   "**Lift ladder: real lift by predicted group (untouched 20%)**",
+   "**High responders** \u00b7 33% of customers",
+   "Real lift: **+5.9 pts** (\u00b1 10.4 pts)",
+   "In the plan: contacted (Message, like everyone)",
+   "- x7: median 0.118, higher than the others (-0.0454)\n- joined via = store: 22%, lower than the others (27%)",
+   "**Medium responders** \u00b7 33% of customers",
+   "Real lift: **+6.7 pts** (\u00b1 10.3 pts)",
+   "In the plan: contacted (Message, like everyone)",
+   "- joined via = web: 20%, lower than the others (26%)\n- joined via = app: 30%, higher than the others (25%)\n- x6: median -0.1295, lower than the others (0.0457)",
+   "**Low responders** \u00b7 33% of customers",
+   "Real lift: **\u22121.9 pts** (\u00b1 10.0 pts)",
+   "In the plan: contacted (Message, like everyone)",
+   "- x6: median 0.1275, higher than the others (-0.0693)\n- x8: median -0.1125, lower than the others (0.02755)\n- joined via = app: 23%, lower than the others (28%)",
+   "- **Two parts:** 4,000 customers to learn from and to choose the plan (80%), 1,000 untouched\n  until the end (20%). Every result above is measured on the untouched 20%, which played no part in any choice, so the winning plan's\n  numbers are not flattered.\n- **Honest scores:** the 80% is split into 5 parts by customer; each customer is scored by models trained on the other parts,\n  so no customer is scored by a model that saw them.\n- **Ranking:** three standard uplift learners (S, X and DR, as in Step 4) each rank the customers and the ranks are averaged.\n  The ranking is turned into a predicted extra outcome per customer by matching the measured lift in each tenth of customers (the order\n  of customers does not change).\n- **No reliable signal:** if no option's ranking beats a random order on the honest scores (95% range of the Qini includes zero),\n  Nudge does not personalise and says so.\n- **Choosing the plan:** personalised plans (a customer gets their personal best option only when it beats the best-on-average option\n  by a safety margin; several margins are tried) compete with the best simple plan (everyone, or nobody), all valued on the honest\n  scores. The simple plan wins unless a personalised one earns more.\n- **Usual approach:** a model of who buys when contacted (as in Step 5), contacting the same number of customers, most likely first.\n- **Measured value of a plan:** customers whose random option matches the plan's choice are averaged, weighted by how likely that option\n  was (inverse propensity weighting). 95% ranges: 200 bootstrap repeats, paired across plans.\n- **Rupees:** \u20b9150 profit per extra purchase, SMS \u20b90.10 per contact (assumptions you set above).",
+   "Repeats Step 4 of the project on your file: 5 uplift methods plus the S+X+DR ensemble, compared by 5-fold cross-validation, then the winner is scored once on the untouched 20% next to the fast engine. Takes about 30 seconds per option per 25,000 rows.",
+   "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact everyone with Message."
+  ]
+ },
+ "x_no_control": {
+  "file": "x_no_control",
+  "stages": [
+   [
+    "loaded",
+    {
+     "errors": [
+      "Choose which value of \"region\" is the control group (customers who got nothing). Its values: \"north\", \"east\", \"south\". If every customer got some option, the file has no control group and nobody can tell what the campaign caused."
+     ],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "no build button (page stopped earlier)",
+    {}
+   ]
+  ]
+ }
+}

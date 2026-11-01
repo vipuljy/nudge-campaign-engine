@@ -1,0 +1,392 @@
+{
+ "secs_scores": 232.6802544593811,
+ "secs_by_model": {
+  "fast": 37.975728273391724,
+  "ensemble": 183.54229402542114,
+  "likely": 10.914913654327393
+ },
+ "variants": {
+  "fast/full": {
+   "per_option": {
+    "Womens E-Mail": {
+     "used": "fast",
+     "test_qini": -0.048763302271253896,
+     "rank_unchanged": true,
+     "slope_calibrated": -0.6504224051144214,
+     "reliable": true
+    },
+    "Mens E-Mail": {
+     "used": "fast",
+     "test_qini": -0.07684528986633729,
+     "rank_unchanged": true,
+     "slope_calibrated": -0.4651183600416876,
+     "reliable": true
+    }
+   },
+   "measured_extra_per_customer": [
+    12.245147081212863,
+    3.708337227050254,
+    22.48263226010204
+   ],
+   "recommended": "Nudge plan (margin x1)",
+   "message": null,
+   "share_contacted": 0.982578125,
+   "oof_diag": {
+    "Womens E-Mail": {
+     "oof_qini": {
+      "fast": 0.0711263835480499,
+      "likely": 0.03251373190806964,
+      "ensemble": 0.05917339883487707
+     },
+     "used": "fast",
+     "guard_switched": false,
+     "oof_qini_used_low95": 0.028775905781296924,
+     "oof_qini_used_high95": 0.11770374501283164,
+     "reliable": true,
+     "ate_oof": 0.533944530983436
+    },
+    "Mens E-Mail": {
+     "oof_qini": {
+      "fast": 0.05723042266619921,
+      "likely": 0.027469169592998027,
+      "ensemble": 0.06030997337243446
+     },
+     "used": "fast",
+     "guard_switched": false,
+     "oof_qini_used_low95": 0.02083455309200048,
+     "oof_qini_used_high95": 0.09895126068926022,
+     "reliable": true,
+     "ate_oof": 0.7403876849128549
+    }
+   }
+  },
+  "fast/no_guard": {
+   "per_option": {
+    "Womens E-Mail": {
+     "used": "fast",
+     "test_qini": -0.048763302271253896,
+     "rank_unchanged": true,
+     "slope_calibrated": -0.6504224051144214,
+     "reliable": true
+    },
+    "Mens E-Mail": {
+     "used": "fast",
+     "test_qini": -0.07684528986633729,
+     "rank_unchanged": true,
+     "slope_calibrated": -0.4651183600416876,
+     "reliable": true
+    }
+   },
+   "measured_extra_per_customer": [
+    12.245147081212863,
+    3.708337227050254,
+    22.48263226010204
+   ],
+   "recommended": "Nudge plan (margin x1)",
+   "message": null,
+   "share_contacted": 0.982578125,
+   "oof_diag": {
+    "Womens E-Mail": {
+     "oof_qini": {
+      "fast": 0.0711263835480499,
+      "likely": 0.03251373190806964,
+      "ensemble": 0.05917339883487707
+     },
+     "used": "fast",
+     "guard_switched": false,
+     "oof_qini_used_low95": 0.028775905781296924,
+     "oof_qini_used_high95": 0.11770374501283164,
+     "reliable": true,
+     "ate_oof": 0.533944530983436
+    },
+    "Mens E-Mail": {
+     "oof_qini": {
+      "fast": 0.05723042266619921,
+      "likely": 0.027469169592998027,
+      "ensemble": 0.06030997337243446
+     },
+     "used": "fast",
+     "guard_switched": false,
+     "oof_qini_used_low95": 0.02083455309200048,
+     "oof_qini_used_high95": 0.09895126068926022,
+     "reliable": true,
+     "ate_oof": 0.7403876849128549
+    }
+   }
+  },
+  "fast/no_signal_rule": {
+   "per_option": {
+    "Womens E-Mail": {
+     "used": "fast",
+     "test_qini": -0.048763302271253896,
+     "rank_unchanged": true,
+     "slope_calibrated": -0.6504224051144214,
+     "reliable": true
+    },
+    "Mens E-Mail": {
+     "used": "fast",
+     "test_qini": -0.07684528986633729,
+     "rank_unchanged": true,
+     "slope_calibrated": -0.4651183600416876,
+     "reliable": true
+    }
+   },
+   "measured_extra_per_customer": [
+    12.245147081212863,
+    3.708337227050254,
+    22.48263226010204
+   ],
+   "recommended": "Nudge plan (margin x1)",
+   "message": null,
+   "share_contacted": 0.982578125,
+   "oof_diag": {
+    "Womens E-Mail": {
+     "oof_qini": {
+      "fast": 0.0711263835480499,
+      "likely": 0.03251373190806964,
+      "ensemble": 0.05917339883487707
+     },
+     "used": "fast",
+     "guard_switched": false,
+     "oof_qini_used_low95": 0.028775905781296924,
+     "oof_qini_used_high95": 0.11770374501283164,
+     "reliable": true,
+     "ate_oof": 0.533944530983436
+    },
+    "Mens E-Mail": {
+     "oof_qini": {
+      "fast": 0.05723042266619921,
+      "likely": 0.027469169592998027,
+      "ensemble": 0.06030997337243446
+     },
+     "used": "fast",
+     "guard_switched": false,
+     "oof_qini_used_low95": 0.02083455309200048,
+     "oof_qini_used_high95": 0.09895126068926022,
+     "reliable": true,
+     "ate_oof": 0.7403876849128549
+    }
+   }
+  },
+  "fast/no_calibration": {
+   "per_option": {
+    "Womens E-Mail": {
+     "used": "fast",
+     "test_qini": -0.048763302271253896,
+     "rank_unchanged": true,
+     "slope_calibrated": -0.2706957928229623,
+     "reliable": true
+    },
+    "Mens E-Mail": {
+     "used": "fast",
+     "test_qini": -0.07684528986633729,
+     "rank_unchanged": true,
+     "slope_calibrated": -0.4445118644068026,
+     "reliable": true
+    }
+   },
+   "measured_extra_per_customer": [
+    11.319156685675468,
+    1.8585612839818784,
+    20.717308660656993
+   ],
+   "recommended": "Nudge plan (margin x2)",
+   "message": null,
+   "share_contacted": 0.960078125,
+   "oof_diag": {
+    "Womens E-Mail": {
+     "oof_qini": {
+      "fast": 0.0711263835480499,
+      "likely": 0.03251373190806964,
+      "ensemble": 0.05917339883487707
+     },
+     "used": "fast",
+     "guard_switched": false,
+     "oof_qini_used_low95": 0.028775905781296924,
+     "oof_qini_used_high95": 0.11770374501283164,
+     "reliable": true,
+     "ate_oof": 0.533944530983436
+    },
+    "Mens E-Mail": {
+     "oof_qini": {
+      "fast": 0.05723042266619921,
+      "likely": 0.027469169592998027,
+      "ensemble": 0.06030997337243446
+     },
+     "used": "fast",
+     "guard_switched": false,
+     "oof_qini_used_low95": 0.02083455309200048,
+     "oof_qini_used_high95": 0.09895126068926022,
+     "reliable": true,
+     "ate_oof": 0.7403876849128549
+    }
+   }
+  },
+  "ensemble/full": {
+   "per_option": {
+    "Womens E-Mail": {
+     "used": "ensemble",
+     "test_qini": -0.04018523946338033,
+     "rank_unchanged": true,
+     "slope_calibrated": -0.5618208981384186,
+     "reliable": true
+    },
+    "Mens E-Mail": {
+     "used": "ensemble",
+     "test_qini": -0.050166746494899384,
+     "rank_unchanged": true,
+     "slope_calibrated": -0.2894892878328578,
+     "reliable": true
+    }
+   },
+   "measured_extra_per_customer": [
+    9.128778014241862,
+    0.554348964089429,
+    19.065793282862614
+   ],
+   "recommended": "Nudge plan (margin x0.1)",
+   "message": null,
+   "share_contacted": 0.95703125,
+   "oof_diag": {
+    "Womens E-Mail": {
+     "oof_qini": {
+      "fast": 0.0711263835480499,
+      "likely": 0.03251373190806964,
+      "ensemble": 0.05917339883487707
+     },
+     "used": "ensemble",
+     "guard_switched": false,
+     "oof_qini_used_low95": 0.014447901592080436,
+     "oof_qini_used_high95": 0.10615056188994171,
+     "reliable": true,
+     "ate_oof": 0.533944530983436
+    },
+    "Mens E-Mail": {
+     "oof_qini": {
+      "fast": 0.05723042266619921,
+      "likely": 0.027469169592998027,
+      "ensemble": 0.06030997337243446
+     },
+     "used": "ensemble",
+     "guard_switched": false,
+     "oof_qini_used_low95": 0.02323196593777633,
+     "oof_qini_used_high95": 0.09999274508526042,
+     "reliable": true,
+     "ate_oof": 0.7403876849128549
+    }
+   }
+  },
+  "ensemble/no_guard": {
+   "per_option": {
+    "Womens E-Mail": {
+     "used": "ensemble",
+     "test_qini": -0.04018523946338033,
+     "rank_unchanged": true,
+     "slope_calibrated": -0.5618208981384186,
+     "reliable": true
+    },
+    "Mens E-Mail": {
+     "used": "ensemble",
+     "test_qini": -0.050166746494899384,
+     "rank_unchanged": true,
+     "slope_calibrated": -0.2894892878328578,
+     "reliable": true
+    }
+   },
+   "measured_extra_per_customer": [
+    9.128778014241862,
+    0.554348964089429,
+    19.065793282862614
+   ],
+   "recommended": "Nudge plan (margin x0.1)",
+   "message": null,
+   "share_contacted": 0.95703125,
+   "oof_diag": {
+    "Womens E-Mail": {
+     "oof_qini": {
+      "fast": 0.0711263835480499,
+      "likely": 0.03251373190806964,
+      "ensemble": 0.05917339883487707
+     },
+     "used": "ensemble",
+     "guard_switched": false,
+     "oof_qini_used_low95": 0.014447901592080436,
+     "oof_qini_used_high95": 0.10615056188994171,
+     "reliable": true,
+     "ate_oof": 0.533944530983436
+    },
+    "Mens E-Mail": {
+     "oof_qini": {
+      "fast": 0.05723042266619921,
+      "likely": 0.027469169592998027,
+      "ensemble": 0.06030997337243446
+     },
+     "used": "ensemble",
+     "guard_switched": false,
+     "oof_qini_used_low95": 0.02323196593777633,
+     "oof_qini_used_high95": 0.09999274508526042,
+     "reliable": true,
+     "ate_oof": 0.7403876849128549
+    }
+   }
+  },
+  "ensemble/no_signal_rule": {
+   "per_option": {
+    "Womens E-Mail": {
+     "used": "ensemble",
+     "test_qini": -0.04018523946338033,
+     "rank_unchanged": true,
+     "slope_calibrated": -0.5618208981384186,
+     "reliable": true
+    },
+    "Mens E-Mail": {
+     "used": "ensemble",
+     "test_qini": -0.050166746494899384,
+     "rank_unchanged": true,
+     "slope_calibrated": -0.2894892878328578,
+     "reliable": true
+    }
+   },
+   "measured_extra_per_customer": [
+    9.128778014241862,
+    0.554348964089429,
+    19.065793282862614
+   ],
+   "recommended": "Nudge plan (margin x0.1)",
+   "message": null,
+   "share_contacted": 0.95703125,
+   "oof_diag": {
+    "Womens E-Mail": {
+     "oof_qini": {
+      "fast": 0.0711263835480499,
+      "likely": 0.03251373190806964,
+      "ensemble": 0.05917339883487707
+     },
+     "used": "ensemble",
+     "guard_switched": false,
+     "oof_qini_used_low95": 0.014447901592080436,
+     "oof_qini_used_high95": 0.10615056188994171,
+     "reliable": true,
+     "ate_oof": 0.533944530983436
+    },
+    "Mens E-Mail": {
+     "oof_qini": {
+      "fast": 0.05723042266619921,
+      "likely": 0.027469169592998027,
+      "ensemble": 0.06030997337243446
+     },
+     "used": "ensemble",
+     "guard_switched": false,
+     "oof_qini_used_low95": 0.02323196593777633,
+     "oof_qini_used_high95": 0.09999274508526042,
+     "reliable": true,
+     "ate_oof": 0.7403876849128549
+    }
+   }
+  }
+ },
+ "slope_app_engine": {
+  "Womens E-Mail": -0.06350193519865929,
+  "Mens E-Mail": -0.21134155180464867
+ }
+}

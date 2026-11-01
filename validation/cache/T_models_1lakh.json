@@ -1,0 +1,228 @@
+{
+ "INVALID_threads_not_enforced__ensemble@2threads_100000rows_5folds": {
+  "secs": {
+   "read_prepare": 0.48885631561279297,
+   "planner_train": 9.56560754776001,
+   "current_plan_step": 2.035184144973755,
+   "scores_kfold": 79.56471991539001,
+   "plan": 4.6808812618255615,
+   "current_app_total": 12.089648008346558,
+   "v2_total": 96.33524918556213
+  },
+  "secs_by_model": {
+   "ensemble": 79.30393767356873
+  },
+  "peak_memory_mb": 381.059072,
+  "rows": 100000,
+  "folds": 5,
+  "recommended": "Nudge plan (margin x0)"
+ },
+ "INVALID_threads_not_enforced__fast@2threads_100000rows_5folds": {
+  "secs": {
+   "read_prepare": 0.578805685043335,
+   "planner_train": 13.055790185928345,
+   "current_plan_step": 2.283970355987549,
+   "scores_kfold": 19.039461374282837,
+   "plan": 6.226438999176025,
+   "current_app_total": 15.918566226959229,
+   "v2_total": 41.18446660041809
+  },
+  "secs_by_model": {
+   "fast": 18.827451705932617
+  },
+  "peak_memory_mb": 373.817344,
+  "rows": 100000,
+  "folds": 5,
+  "recommended": "Nudge plan (margin x0.1)"
+ },
+ "INVALID_threads_not_enforced__ensemble@2threads_200000rows_5folds": {
+  "secs": {
+   "read_prepare": 0.9607460498809814,
+   "planner_train": 16.84964656829834,
+   "current_plan_step": 4.497452020645142,
+   "scores_kfold": 115.92981815338135,
+   "plan": 12.437116146087646,
+   "current_app_total": 22.307844638824463,
+   "v2_total": 150.67477893829346
+  },
+  "secs_by_model": {
+   "ensemble": 115.41882252693176
+  },
+  "peak_memory_mb": 520.433664,
+  "rows": 200000,
+  "folds": 5,
+  "recommended": "Nudge plan (margin x0)"
+ },
+ "INVALID_threads_not_enforced__fast@2threads_200000rows_5folds": {
+  "secs": {
+   "read_prepare": 0.485522985458374,
+   "planner_train": 17.460785150527954,
+   "current_plan_step": 4.4595067501068115,
+   "scores_kfold": 25.791422605514526,
+   "plan": 12.496015071868896,
+   "current_app_total": 22.40581488609314,
+   "v2_total": 60.69325256347656
+  },
+  "secs_by_model": {
+   "fast": 25.488866806030273
+  },
+  "peak_memory_mb": 512.270336,
+  "rows": 200000,
+  "folds": 5,
+  "recommended": "Nudge plan (margin x0)"
+ },
+ "INVALID_threads_not_enforced__ensemble@2threads_100000rows_3folds": {
+  "secs": {
+   "read_prepare": 0.25487327575683594,
+   "planner_train": 10.94759726524353,
+   "current_plan_step": 2.338494062423706,
+   "scores_kfold": 52.112488985061646,
+   "plan": 5.777043581008911,
+   "current_app_total": 13.540964603424072,
+   "v2_total": 71.43049716949463
+  },
+  "secs_by_model": {
+   "ensemble": 51.9431586265564
+  },
+  "peak_memory_mb": 376.291328,
+  "rows": 100000,
+  "folds": 3,
+  "recommended": "Nudge plan (margin x0.1)"
+ },
+ "ensemble@12threads_100000rows_5folds": {
+  "secs": {
+   "read_prepare": 0.2635664939880371,
+   "planner_train": 12.057742595672607,
+   "current_plan_step": 2.40627384185791,
+   "scores_kfold": 82.16831135749817,
+   "plan": 5.434519052505493,
+   "current_app_total": 14.727582931518555,
+   "v2_total": 102.33041334152222
+  },
+  "secs_by_model": {
+   "ensemble": 81.95902132987976
+  },
+  "peak_memory_mb": 384.53248,
+  "rows": 100000,
+  "folds": 5,
+  "recommended": "Nudge plan (margin x0)"
+ },
+ "fast@12threads_100000rows_5folds": {
+  "secs": {
+   "read_prepare": 0.25597453117370605,
+   "planner_train": 11.969801187515259,
+   "current_plan_step": 2.4109511375427246,
+   "scores_kfold": 18.115734338760376,
+   "plan": 5.481198072433472,
+   "current_app_total": 14.63672685623169,
+   "v2_total": 38.23365926742554
+  },
+  "secs_by_model": {
+   "fast": 17.934170484542847
+  },
+  "peak_memory_mb": 374.870016,
+  "rows": 100000,
+  "folds": 5,
+  "recommended": "Nudge plan (margin x0.1)"
+ },
+ "ensemble@2threads_100000rows_5folds": {
+  "secs": {
+   "read_prepare": 0.26197266578674316,
+   "planner_train": 12.549542903900146,
+   "current_plan_step": 3.1039035320281982,
+   "scores_kfold": 88.07795763015747,
+   "plan": 4.7138512134552,
+   "current_app_total": 15.915419101715088,
+   "v2_total": 108.70722794532776
+  },
+  "secs_by_model": {
+   "ensemble": 87.91643500328064
+  },
+  "peak_memory_mb": 378.253312,
+  "rows": 100000,
+  "folds": 5,
+  "recommended": "Nudge plan (margin x0)",
+  "avg_cores_busy": 1.7621658514190295,
+  "pinned_cores": true
+ },
+ "fast@2threads_100000rows_5folds": {
+  "secs": {
+   "read_prepare": 0.4825551509857178,
+   "planner_train": 16.468673944473267,
+   "current_plan_step": 3.7903671264648438,
+   "scores_kfold": 23.31520915031433,
+   "plan": 3.246480703353882,
+   "current_app_total": 20.741596221923828,
+   "v2_total": 47.30328607559204
+  },
+  "secs_by_model": {
+   "fast": 23.174389362335205
+  },
+  "peak_memory_mb": 371.355648,
+  "rows": 100000,
+  "folds": 5,
+  "recommended": "Nudge plan (margin x0.1)",
+  "avg_cores_busy": 1.6943452251847946,
+  "pinned_cores": true
+ },
+ "ensemble@2threads_200000rows_5folds": {
+  "secs": {
+   "read_prepare": 0.5193202495574951,
+   "planner_train": 23.119664669036865,
+   "current_plan_step": 5.739251613616943,
+   "scores_kfold": 143.4836130142212,
+   "plan": 7.153669595718384,
+   "current_app_total": 29.378236532211304,
+   "v2_total": 180.01551914215088
+  },
+  "secs_by_model": {
+   "ensemble": 143.2392554283142
+  },
+  "peak_memory_mb": 523.583488,
+  "rows": 200000,
+  "folds": 5,
+  "recommended": "Nudge plan (margin x0)",
+  "avg_cores_busy": 1.6308411000511018,
+  "pinned_cores": true
+ },
+ "fast@2threads_200000rows_5folds": {
+  "secs": {
+   "read_prepare": 0.5239620208740234,
+   "planner_train": 23.618448972702026,
+   "current_plan_step": 5.8743932247161865,
+   "scores_kfold": 33.47651696205139,
+   "plan": 7.372782945632935,
+   "current_app_total": 30.016804218292236,
+   "v2_total": 70.86610412597656
+  },
+  "secs_by_model": {
+   "fast": 33.29267430305481
+  },
+  "peak_memory_mb": 509.878272,
+  "rows": 200000,
+  "folds": 5,
+  "recommended": "Nudge plan (margin x0)",
+  "avg_cores_busy": 1.5010896593691667,
+  "pinned_cores": true
+ },
+ "ensemble@2threads_100000rows_3folds": {
+  "secs": {
+   "read_prepare": 0.28733181953430176,
+   "planner_train": 13.403218746185303,
+   "current_plan_step": 3.21734881401062,
+   "scores_kfold": 42.98287272453308,
+   "plan": 3.4134786128997803,
+   "current_app_total": 16.907899379730225,
+   "v2_total": 63.304250717163086
+  },
+  "secs_by_model": {
+   "ensemble": 42.86777877807617
+  },
+  "peak_memory_mb": 371.05664,
+  "rows": 100000,
+  "folds": 3,
+  "recommended": "Nudge plan (margin x0.1)",
+  "avg_cores_busy": 1.5276281674654992,
+  "pinned_cores": true
+ }
+}

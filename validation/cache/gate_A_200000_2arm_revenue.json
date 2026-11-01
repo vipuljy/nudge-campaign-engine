@@ -1,0 +1,84 @@
+{
+ "n": 200000,
+ "arms": 2,
+ "outcome": "revenue",
+ "seed": 9132,
+ "train_secs": 62.66228771209717,
+ "folds": 3,
+ "ranker": "ensemble",
+ "fallback_reason": null,
+ "n_test": 40000,
+ "A2": {
+  "contact Rs5": {
+   "ratio": 0.9497407663295994,
+   "low95": 0.9474049426818167,
+   "high95": 0.9519123437854545,
+   "plan_per_customer": 2.834870760991709,
+   "oracle_per_customer": 2.9848889944436605,
+   "personalise": true,
+   "recommended": "Nudge plan",
+   "margin": 0.0,
+   "share_contacted": 0.59335,
+   "signal_message": null,
+   "signal": {
+    "Message": {
+     "qini": 2.8716919954718865,
+     "qini_low95": 2.5303589479109947,
+     "qini_high95": 3.249222152468276,
+     "reliable": true,
+     "ate": 23.0909889793912
+    }
+   },
+   "choice_values": {
+    "margin x0": 49.35348012916998,
+    "margin x0.1": 49.34688146576346,
+    "margin x0.25": 49.341058426090044,
+    "margin x0.5": 49.34135960728945,
+    "margin x1": 49.26757113812785,
+    "margin x2": 48.907470664619375,
+    "Contact everyone (Message)": 47.84256965673858,
+    "Contact nobody": 45.91527296292123
+   }
+  },
+  "contact Rs1.02": {
+   "ratio": 0.9713656628430393,
+   "low95": 0.969980679652168,
+   "high95": 0.9726812384475394,
+   "plan_per_customer": 5.505494889615761,
+   "oracle_per_customer": 5.667788249279902,
+   "personalise": true,
+   "recommended": "Nudge plan",
+   "margin": 0.1,
+   "share_contacted": 0.866975,
+   "signal_message": null,
+   "signal": {
+    "Message": {
+     "qini": 2.8716919954718865,
+     "qini_low95": 2.5303589479109947,
+     "qini_high95": 3.249222152468276,
+     "reliable": true,
+     "ate": 23.0909889793912
+    }
+   },
+   "choice_values": {
+    "margin x0": 52.327981986587595,
+    "margin x0.1": 52.333337037274646,
+    "margin x0.25": 52.261834298197286,
+    "margin x0.5": 52.194459425984434,
+    "margin x1": 51.82256965673859,
+    "margin x2": 51.82256965673859,
+    "Contact everyone (Message)": 51.82256965673859,
+    "Contact nobody": 45.91527296292123
+   }
+  }
+ },
+ "judged_cost": "contact Rs5",
+ "A1": {
+  "per_option": {
+   "Message": 0.9208691297680248
+  },
+  "spearman": 0.9208691297680248,
+  "low95": 0.9189366201869061,
+  "high95": 0.9224750511990386
+ }
+}

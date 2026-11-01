@@ -1,0 +1,571 @@
+{
+ "rows_500": {
+  "file": "rows_500",
+  "stages": [
+   [
+    "loaded",
+    {
+     "errors": [],
+     "warnings": [
+      "Only 257 customers got \"No message\". Under about 1,000 per option, per-customer estimates are noisy; the ranges shown will be wide.",
+      "Only 243 customers got \"Message\". Under about 1,000 per option, per-customer estimates are noisy; the ranges shown will be wide."
+     ],
+     "exceptions": []
+    }
+   ],
+   [
+    "built (after rerun)",
+    {
+     "errors": [],
+     "warnings": [
+      "Only 257 customers got \"No message\". Under about 1,000 per option, per-customer estimates are noisy; the ranges shown will be wide.",
+      "Only 243 customers got \"Message\". Under about 1,000 per option, per-customer estimates are noisy; the ranges shown will be wide."
+     ],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/money.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": [
+      "The `value` 0 is less than the `min_value` 1000.\nFile \"C:\\Users\\vipul\\Documents\\CampaignROI\\app\\app.py\", line 29, in <module>\n    page.run()\nFile \"C:\\Users\\vipul\\Documents\\CampaignROI\\app\\views\\money.py\", line 56, in <module>\n    base = st.number_input('Customers in your base', 1_000, 100_000_000,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
+     ]
+    }
+   ],
+   [
+    "views/prove.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ]
+  ],
+  "success": [
+   "**Is the test fair? Yes.** The groups look alike on every measure, as a random test should. Largest gap between groups: 0.236 on *x7* (under 0.27 is what chance alone gives at this size)."
+  ],
+  "markdown_count": 20
+ },
+ "missing_values": {
+  "file": "missing_values",
+  "stages": [
+   [
+    "loaded",
+    {
+     "errors": [],
+     "warnings": [
+      "1.9% of rows have no usable outcome and will be left out."
+     ],
+     "exceptions": []
+    }
+   ],
+   [
+    "built (after rerun)",
+    {
+     "errors": [],
+     "warnings": [
+      "1.9% of rows have no usable outcome and will be left out."
+     ],
+     "exceptions": [
+      "Input data must be 2 dimensional and non empty.\nFile \"C:\\Users\\vipul\\Documents\\CampaignROI\\validation\\.venv\\Lib\\site-packages\\lightgbm\\sklearn.py\", line 1171, in fit\n    self._Booster = train(\n                    ^^^^^^\nFile \"C:\\Users\\vipul\\Documents\\CampaignROI\\validation\\.venv\\Lib\\site-packages\\lightgbm\\engine.py\", line 296, in train\n    booster = Booster(params=params, train_set=train_set)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFile \"C:\\Users\\vipul\\Documents\\CampaignROI\\validation\\.venv\\Lib\\site-packages\\lightgbm\\basic.py\", line 3758, in __init__\n    train_set.construct()\nFile \"C:\\Users\\vipul\\Documents\\CampaignROI\\validation\\.venv\\Lib\\site-packages\\lightgbm\\basic.py\", line 2574, in construct\n    self._lazy_init(\nFile \"C:\\Users\\vipul\\Documents\\CampaignROI\\validation\\.venv\\Lib\\site-packages\\lightgbm\\basic.py\", line 2101, in _lazy_init\n    data, feature_name, categorical_feature, self.pandas_categorical = _data_from_pandas(\n                                                                       ^^^^^^^^^^^^^^^^^^\nFile \"C:\\Users\\vipul\\Documents\\CampaignROI\\validation\\.venv\\Lib\\site-packages\\lightgbm\\basic.py\", line 759, in _data_from_pandas\n    raise ValueError(\"Input data must be 2 dimensional and non empty.\")"
+     ]
+    }
+   ],
+   [
+    "views/money.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/prove.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ]
+  ],
+  "success": [
+   "**Is the test fair? Yes.** The groups look alike on every measure, as a random test should. Largest gap between groups: 0.024 on *x8* (under 0.05 is what chance alone gives at this size)."
+  ],
+  "markdown_count": 3
+ },
+ "text_columns": {
+  "file": "text_columns",
+  "stages": [
+   [
+    "loaded",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "built (after rerun)",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/money.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/prove.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ]
+  ],
+  "success": [
+   "**Is the test fair? Yes.** The groups look alike on every measure, as a random test should. Largest gap between groups: 0.021 on *x0* (under 0.05 is what chance alone gives at this size)."
+  ],
+  "markdown_count": 20
+ },
+ "extra_wrong_names": {
+  "file": "extra_wrong_names",
+  "stages": [
+   [
+    "loaded",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "built (after rerun)",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/money.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/prove.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ]
+  ],
+  "success": [
+   "**Is the test fair? Yes.** The groups look alike on every measure, as a random test should. Largest gap between groups: 0.030 on *region = north* (under 0.05 is what chance alone gives at this size)."
+  ],
+  "markdown_count": 20
+ },
+ "extra_wrong_names_userfixed": {
+  "file": "extra_wrong_names_userfixed",
+  "stages": [
+   [
+    "loaded",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "built (after rerun)",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/money.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/prove.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ]
+  ],
+  "success": [
+   "**Is the test fair? Yes.** The groups look alike on every measure, as a random test should. Largest gap between groups: 0.030 on *region = north* (under 0.05 is what chance alone gives at this size)."
+  ],
+  "markdown_count": 20
+ },
+ "outcome_all_zero": {
+  "file": "outcome_all_zero",
+  "stages": [
+   [
+    "loaded",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "built (after rerun)",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/money.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/prove.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ]
+  ],
+  "success": [
+   "**Is the test fair? Yes.** The groups look alike on every measure, as a random test should. Largest gap between groups: 0.038 on *x6* (under 0.05 is what chance alone gives at this size)."
+  ],
+  "markdown_count": 20
+ },
+ "split_95_5": {
+  "file": "split_95_5",
+  "stages": [
+   [
+    "loaded",
+    {
+     "errors": [],
+     "warnings": [
+      "Only 486 customers got \"No message\". Under about 1,000 per option, per-customer estimates are noisy; the ranges shown will be wide."
+     ],
+     "exceptions": []
+    }
+   ],
+   [
+    "built (after rerun)",
+    {
+     "errors": [],
+     "warnings": [
+      "Only 486 customers got \"No message\". Under about 1,000 per option, per-customer estimates are noisy; the ranges shown will be wide."
+     ],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/money.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/prove.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ]
+  ],
+  "success": [
+   "**Is the test fair? Yes.** The groups look alike on every measure, as a random test should. Largest gap between groups: 0.081 on *x0* (under 0.19 is what chance alone gives at this size)."
+  ],
+  "markdown_count": 20
+ },
+ "non_random": {
+  "file": "non_random",
+  "stages": [
+   [
+    "loaded",
+    {
+     "errors": [
+      "**Is the test fair? No.** The groups differ before the campaign, so options were probably not given at random. Largest gap between groups: 2.650 on *x3* (under 0.05 is what chance alone gives at this size)."
+     ],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "train anyway ticked",
+    {
+     "errors": [
+      "**Is the test fair? No.** The groups differ before the campaign, so options were probably not given at random. Largest gap between groups: 2.650 on *x3* (under 0.05 is what chance alone gives at this size)."
+     ],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "built (after rerun)",
+    {
+     "errors": [
+      "**Is the test fair? No.** The groups differ before the campaign, so options were probably not given at random. Largest gap between groups: 2.650 on *x3* (under 0.05 is what chance alone gives at this size)."
+     ],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/money.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/prove.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ]
+  ],
+  "success": [],
+  "markdown_count": 21
+ },
+ "duplicate_ids": {
+  "file": "duplicate_ids",
+  "stages": [
+   [
+    "loaded",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "built (after rerun)",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/money.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/prove.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ]
+  ],
+  "success": [
+   "**Is the test fair? Yes.** The groups look alike on every measure, as a random test should. Largest gap between groups: 0.017 on *x2* (under 0.05 is what chance alone gives at this size)."
+  ],
+  "markdown_count": 20
+ },
+ "options_4plus": {
+  "file": "options_4plus",
+  "stages": [
+   [
+    "loaded",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "built (after rerun)",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/money.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/prove.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ]
+  ],
+  "success": [
+   "**Is the test fair? Yes.** The groups look alike on every measure, as a random test should. Largest gap between groups: 0.042 on *x9* (under 0.05 is what chance alone gives at this size)."
+  ],
+  "markdown_count": 20
+ },
+ "revenue": {
+  "file": "revenue",
+  "stages": [
+   [
+    "loaded",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "built (after rerun)",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/money.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/prove.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ]
+  ],
+  "success": [
+   "**Is the test fair? Yes.** The groups look alike on every measure, as a random test should. Largest gap between groups: 0.026 on *x1* (under 0.05 is what chance alone gives at this size)."
+  ],
+  "markdown_count": 20
+ },
+ "x_not_a_csv": {
+  "file": "x_not_a_csv",
+  "note": "not readable by pandas (UnicodeDecodeError); the page shows its read error before this point"
+ },
+ "x_header_only": {
+  "file": "x_header_only",
+  "stages": [
+   [
+    "loaded",
+    {
+     "errors": [
+      "Choose which option value is the control group (customers who got nothing). Without a control group nobody can tell what the campaign caused.",
+      "The option column needs at least two values: one option and the control."
+     ],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "no build button (page stopped earlier)",
+    {}
+   ]
+  ]
+ },
+ "x_semicolon": {
+  "file": "x_semicolon",
+  "stages": [
+   [
+    "loaded",
+    {
+     "errors": [
+      "Choose the option column and the outcome column."
+     ],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "no build button (page stopped earlier)",
+    {}
+   ]
+  ]
+ },
+ "x_no_control": {
+  "file": "x_no_control",
+  "stages": [
+   [
+    "loaded",
+    {
+     "errors": [],
+     "warnings": [
+      "Make sure \"north\" really means customers got nothing. If every customer got some option, there is no control group and nobody can tell what the campaign caused."
+     ],
+     "exceptions": []
+    }
+   ],
+   [
+    "built (after rerun)",
+    {
+     "errors": [],
+     "warnings": [
+      "Make sure \"north\" really means customers got nothing. If every customer got some option, there is no control group and nobody can tell what the campaign caused."
+     ],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/money.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ],
+   [
+    "views/prove.py",
+    {
+     "errors": [],
+     "warnings": [],
+     "exceptions": []
+    }
+   ]
+  ],
+  "success": [
+   "**Is the test fair? Yes.** The groups look alike on every measure, as a random test should. Largest gap between groups: 0.041 on *x4* (under 0.05 is what chance alone gives at this size)."
+  ],
+  "markdown_count": 20
+ }
+}

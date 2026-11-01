@@ -1,0 +1,32 @@
+{
+ "dataset": "megafon",
+ "measured_fix_minus_current": [
+  0.03999318777955785,
+  -0.3035618621436109,
+  0.3352670001003582
+ ],
+ "current": {
+  "recommended": "Nudge plan",
+  "kind": "personalised",
+  "share_contacted": 0.707975,
+  "measured_extra_per_customer": [
+   11.631357225206806,
+   10.591628549596892,
+   12.547380226459362
+  ],
+  "qini": 0.2139492074263834,
+  "decide_s": 5.202000617980957
+ },
+ "fix": {
+  "recommended": "Nudge plan (margin x0)",
+  "kind": "personalised",
+  "share_contacted": 0.709625,
+  "measured_extra_per_customer": [
+   11.671350412986364,
+   10.61421200274886,
+   12.505402918088567
+  ],
+  "qini": 0.21443451135125982,
+  "decide_s": 100.74596452713013
+ }
+}

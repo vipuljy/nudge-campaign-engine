@@ -1,0 +1,104 @@
+{
+ "variants": {
+  "current": {
+   "recommended": "Contact everyone (Message)",
+   "share_contacted": 1.0,
+   "secs_decision": 0.08988046646118164,
+   "measured_extra_per_customer": 0.6207016575248719,
+   "message": null,
+   "A2_ratio": 0.28656365219138863,
+   "A2_low95": 0.1703238872167126,
+   "A2_high95": 0.39084926204200854
+  },
+  "v2_5f": {
+   "recommended": "Nudge plan (margin x1)",
+   "share_contacted": 0.736,
+   "secs_decision": 5.903456926345825,
+   "measured_extra_per_customer": 2.5812211411739865,
+   "message": null,
+   "vs_current": [
+    1.841165013271544,
+    -2.6651693178650793,
+    6.349560079393971
+   ],
+   "signal_fired": false,
+   "proof": null,
+   "proof_fired": false,
+   "guard_switched": {
+    "Message": false
+   },
+   "reliable": {
+    "Message": true
+   },
+   "A2_ratio": 0.5224408780750135,
+   "A2_low95": 0.4449034992161515,
+   "A2_high95": 0.5966881964773196,
+   "true_per_customer": 1.4651920235116225,
+   "A1_spearman_used": 0.4054777534777535
+  },
+  "v2_5f_proof": {
+   "recommended": "Contact everyone (Message)",
+   "share_contacted": 1.0,
+   "secs_decision": 6.053056478500366,
+   "measured_extra_per_customer": 0.6207016575248719,
+   "message": "Personalising was not clearly better than the simple plan on customers the model had not seen (the 95% range of the gain includes zero), so Nudge recommends the simple plan: contact everyone (message).",
+   "vs_current": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "signal_fired": false,
+   "proof": {
+    "margin": "margin x1",
+    "gain": 1.6015910591600186,
+    "low95": -0.3476607854735667,
+    "high95": 3.6902077626977117,
+    "proven": false
+   },
+   "proof_fired": true,
+   "guard_switched": {
+    "Message": false
+   },
+   "reliable": {
+    "Message": true
+   },
+   "A2_ratio": 0.28656365219138863,
+   "A2_low95": 0.1703238872167126,
+   "A2_high95": 0.39084926204200854,
+   "true_per_customer": 0.8036713722828083,
+   "A1_spearman_used": 0.4054777534777535
+  },
+  "v2_3f_proof": {
+   "recommended": "Nudge plan (margin x1)",
+   "share_contacted": 0.791,
+   "secs_decision": 4.184017658233643,
+   "measured_extra_per_customer": 1.6092461825454736,
+   "message": null,
+   "vs_current": [
+    0.9931359862223109,
+    -2.8602158845247665,
+    4.550319696232865
+   ],
+   "signal_fired": false,
+   "proof": {
+    "margin": "margin x1",
+    "gain": 2.623624338637737,
+    "low95": 0.83366497464591,
+    "high95": 4.538618472987466,
+    "proven": true
+   },
+   "proof_fired": false,
+   "guard_switched": {
+    "Message": false
+   },
+   "reliable": {
+    "Message": true
+   },
+   "A2_ratio": 0.5033421083467343,
+   "A2_low95": 0.4268697897072611,
+   "A2_high95": 0.5739063036488934,
+   "true_per_customer": 1.4116292832301431,
+   "A1_spearman_used": 0.448031644031644
+  }
+ }
+}

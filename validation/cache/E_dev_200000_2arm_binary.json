@@ -1,0 +1,104 @@
+{
+ "variants": {
+  "current": {
+   "recommended": "Nudge plan",
+   "share_contacted": 0.569775,
+   "secs_decision": 2.4324562549591064,
+   "measured_extra_per_customer": 1.7930789755652348,
+   "message": null,
+   "A2_ratio": 0.8431873622926872,
+   "A2_low95": 0.8382057714593435,
+   "A2_high95": 0.8480648167527086
+  },
+  "v2_5f": {
+   "recommended": "Nudge plan (margin x0)",
+   "share_contacted": 0.566475,
+   "secs_decision": 41.06036019325256,
+   "measured_extra_per_customer": 1.9973017051819393,
+   "message": null,
+   "vs_current": [
+    0.2192324772062068,
+    -0.2272675158701378,
+    0.7792025647556774
+   ],
+   "signal_fired": false,
+   "proof": null,
+   "proof_fired": false,
+   "guard_switched": {
+    "Message": false
+   },
+   "reliable": {
+    "Message": true
+   },
+   "A2_ratio": 0.877246530085094,
+   "A2_low95": 0.8734604813100039,
+   "A2_high95": 0.8817914248179044,
+   "true_per_customer": 2.549481016936349,
+   "A1_spearman_used": 0.8294117555498275
+  },
+  "v2_5f_proof": {
+   "recommended": "Nudge plan (margin x0)",
+   "share_contacted": 0.566475,
+   "secs_decision": 45.66002535820007,
+   "measured_extra_per_customer": 1.9973017051819393,
+   "message": null,
+   "vs_current": [
+    0.2192324772062068,
+    -0.2272675158701378,
+    0.7792025647556774
+   ],
+   "signal_fired": false,
+   "proof": {
+    "margin": "margin x0",
+    "gain": 1.822970984741072,
+    "low95": 1.4031762732084212,
+    "high95": 2.196535294065489,
+    "proven": true
+   },
+   "proof_fired": false,
+   "guard_switched": {
+    "Message": false
+   },
+   "reliable": {
+    "Message": true
+   },
+   "A2_ratio": 0.877246530085094,
+   "A2_low95": 0.8734604813100039,
+   "A2_high95": 0.8817914248179044,
+   "true_per_customer": 2.549481016936349,
+   "A1_spearman_used": 0.8294117555498275
+  },
+  "v2_3f_proof": {
+   "recommended": "Nudge plan (margin x1)",
+   "share_contacted": 0.725375,
+   "secs_decision": 30.01788020133972,
+   "measured_extra_per_customer": 1.203298552284557,
+   "message": null,
+   "vs_current": [
+    -0.6012771275787949,
+    -1.1824155947676673,
+    -0.04262073965204127
+   ],
+   "signal_fired": false,
+   "proof": {
+    "margin": "margin x1",
+    "gain": 1.6229074026917294,
+    "low95": 1.3117207341832897,
+    "high95": 1.9167316733115454,
+    "proven": true
+   },
+   "proof_fired": false,
+   "guard_switched": {
+    "Message": false
+   },
+   "reliable": {
+    "Message": true
+   },
+   "A2_ratio": 0.8302779983589021,
+   "A2_low95": 0.8256942152118234,
+   "A2_high95": 0.8353918544357827,
+   "true_per_customer": 2.4129796163349884,
+   "A1_spearman_used": 0.8259266230485779
+  }
+ }
+}

@@ -1,0 +1,60 @@
+{
+ "n": 5000,
+ "arms": 2,
+ "outcome": "revenue",
+ "seed": 112,
+ "null": false,
+ "measured_fix_minus_current": [
+  0.0,
+  0.0,
+  0.0
+ ],
+ "current": {
+  "recommended": "Contact everyone (Message)",
+  "kind": "everyone",
+  "share_contacted": 1.0,
+  "measured_extra_per_customer": [
+   -1.2323375842069082,
+   -13.392716185992532,
+   9.956920101900064
+  ],
+  "qini": 2.387678608044618,
+  "decide_s": 0.10826373100280762,
+  "A2": {
+   "ratio": 0.31808549788704515,
+   "low95": 0.1982535406601684,
+   "high95": 0.4153064063003869,
+   "plan_per_customer": 0.9906102289903745,
+   "oracle_per_customer": 3.114289194479871
+  },
+  "A1": {
+   "spearman": 0.5316465756465757,
+   "low95": 0.4923826560284434,
+   "high95": 0.5696997269276746
+  }
+ },
+ "fix": {
+  "recommended": "Contact everyone (Message)",
+  "kind": "everyone",
+  "share_contacted": 1.0,
+  "measured_extra_per_customer": [
+   -1.2323375842069082,
+   -13.392716185992532,
+   9.956920101900064
+  ],
+  "qini": 3.356002240169748,
+  "decide_s": 3.344170331954956,
+  "A2": {
+   "ratio": 0.31808549788704515,
+   "low95": 0.1982535406601684,
+   "high95": 0.4153064063003869,
+   "plan_per_customer": 0.9906102289903745,
+   "oracle_per_customer": 3.114289194479871
+  },
+  "A1": {
+   "spearman": 0.533972165972166,
+   "low95": 0.4923015817354873,
+   "high95": 0.580444918367749
+  }
+ }
+}

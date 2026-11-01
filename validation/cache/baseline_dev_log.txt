@@ -1,0 +1,5 @@
+dev BASELINE (current app rule) 50k 2-arm binary: spearman 0.605, plan/oracle 0.666 (Nudge plan)
+dev BASELINE (current app rule) 50k 2-arm revenue: spearman 0.620, plan/oracle 0.702 (Nudge plan)
+dev BASELINE (current app rule) 50k 4-arm binary: spearman 0.507, plan/oracle 0.735 (Nudge plan)
+dev BASELINE (current app rule) 50k 4-arm revenue: spearman 0.434, plan/oracle 0.679 (Nudge plan)
+dev BASELINE null: do not personalise in 17 of 20

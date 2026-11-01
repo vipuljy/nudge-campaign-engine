@@ -1,0 +1,14 @@
+missing_values | stages: ['loaded', 'built (after rerun)', 'views/money.py', 'views/prove.py'] | EXCEPTIONS: 1 | harness: 
+text_columns | stages: ['loaded', 'built (after rerun)', 'views/money.py', 'views/prove.py'] | EXCEPTIONS: 0 | harness: 
+extra_wrong_names | stages: ['loaded', 'built (after rerun)', 'views/money.py', 'views/prove.py'] | EXCEPTIONS: 0 | harness: 
+extra_wrong_names_userfixed | stages: ['loaded', 'built (after rerun)', 'views/money.py', 'views/prove.py'] | EXCEPTIONS: 0 | harness: 
+outcome_all_zero | stages: ['loaded', 'built (after rerun)', 'views/money.py', 'views/prove.py'] | EXCEPTIONS: 0 | harness: 
+rows_500 | stages: ['loaded', 'built (after rerun)', 'views/money.py', 'views/prove.py'] | EXCEPTIONS: 1 | harness: 
+split_95_5 | stages: ['loaded', 'built (after rerun)', 'views/money.py', 'views/prove.py'] | EXCEPTIONS: 0 | harness: 
+non_random | stages: ['loaded', 'train anyway ticked', 'built (after rerun)', 'views/money.py', 'views/prove.py'] | EXCEPTIONS: 0 | harness: 
+duplicate_ids | stages: ['loaded', 'built (after rerun)', 'views/money.py', 'views/prove.py'] | EXCEPTIONS: 0 | harness: 
+options_4plus | stages: ['loaded', 'built (after rerun)', 'views/money.py', 'views/prove.py'] | EXCEPTIONS: 0 | harness: 
+revenue | stages: ['loaded', 'built (after rerun)', 'views/money.py', 'views/prove.py'] | EXCEPTIONS: 0 | harness: 
+x_header_only | stages: ['loaded', 'no build button (page stopped earlier)'] | EXCEPTIONS: 0 | harness: 
+x_semicolon | stages: ['loaded', 'no build button (page stopped earlier)'] | EXCEPTIONS: 0 | harness: 
+x_no_control | stages: ['loaded', 'built (after rerun)', 'views/money.py', 'views/prove.py'] | EXCEPTIONS: 0 | harness: 

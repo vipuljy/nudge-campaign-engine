@@ -1,0 +1,115 @@
+{
+ "variants": {
+  "current": {
+   "recommended": "Nudge plan",
+   "share_contacted": 0.2819,
+   "secs_decision": 3.008000612258911,
+   "measured_extra_per_customer": 1.5944508975442029,
+   "message": null,
+   "A2_ratio": 0.7247581409101657,
+   "A2_low95": 0.7155311490196359,
+   "A2_high95": 0.7333467432459515,
+   "true_per_customer": 1.2508631375
+  },
+  "fast_file": {
+   "recommended": "Nudge plan (margin x0)",
+   "share_contacted": 0.146125,
+   "secs_decision": 58.8379921913147,
+   "measured_extra_per_customer": 1.2514425534904061,
+   "message": null,
+   "vs_current": [
+    -0.37727417039985717,
+    -1.0039669381897194,
+    0.15491696536465444
+   ],
+   "signal_fired": false,
+   "proof": null,
+   "proof_fired": false,
+   "guard_switched": {
+    "Message": false
+   },
+   "reliable": {
+    "Message": true
+   },
+   "A2_ratio": 0.7084355955499211,
+   "A2_low95": 0.6987585645779384,
+   "A2_high95": 0.7177376546528295,
+   "true_per_customer": 1.2226919875
+  },
+  "fast_file_noguard": {
+   "recommended": "Nudge plan (margin x0)",
+   "share_contacted": 0.146125,
+   "secs_decision": 58.055331230163574,
+   "measured_extra_per_customer": 1.2514425534904061,
+   "message": null,
+   "vs_current": [
+    -0.37727417039985717,
+    -1.0039669381897194,
+    0.15491696536465444
+   ],
+   "signal_fired": false,
+   "proof": null,
+   "proof_fired": false,
+   "guard_switched": {
+    "Message": false
+   },
+   "reliable": {
+    "Message": true
+   },
+   "A2_ratio": 0.7084355955499211,
+   "A2_low95": 0.6987585645779384,
+   "A2_high95": 0.7177376546528295,
+   "true_per_customer": 1.2226919875
+  },
+  "ensemble_file": {
+   "recommended": "Nudge plan (margin x0.5)",
+   "share_contacted": 0.223725,
+   "secs_decision": 165.21798396110535,
+   "measured_extra_per_customer": 1.6730796779662438,
+   "message": null,
+   "vs_current": [
+    0.032447381328377295,
+    -0.4828889821060872,
+    0.49115295695362554
+   ],
+   "signal_fired": false,
+   "proof": null,
+   "proof_fired": false,
+   "guard_switched": {
+    "Message": false
+   },
+   "reliable": {
+    "Message": true
+   },
+   "A2_ratio": 0.8113913737015158,
+   "A2_low95": 0.8053499651737026,
+   "A2_high95": 0.8179969042769802,
+   "true_per_customer": 1.4003838
+  },
+  "ensemble_file_noguard": {
+   "recommended": "Nudge plan (margin x0.5)",
+   "share_contacted": 0.223725,
+   "secs_decision": 165.74965834617615,
+   "measured_extra_per_customer": 1.6730796779662438,
+   "message": null,
+   "vs_current": [
+    0.032447381328377295,
+    -0.4828889821060872,
+    0.49115295695362554
+   ],
+   "signal_fired": false,
+   "proof": null,
+   "proof_fired": false,
+   "guard_switched": {
+    "Message": false
+   },
+   "reliable": {
+    "Message": true
+   },
+   "A2_ratio": 0.8113913737015158,
+   "A2_low95": 0.8053499651737026,
+   "A2_high95": 0.8179969042769802,
+   "true_per_customer": 1.4003838
+  }
+ }
+}

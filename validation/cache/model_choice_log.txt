@@ -1,0 +1,12 @@
+M_dev_5000_2arm_binary {'fast': (0.415, 0.0428, 1), 'ensemble': (0.359, 0.0574, 8), 'ensemble_cf': (0.414, 0.0621, 13)}
+M_dev_5000_2arm_revenue {'fast': (0.287, 2.3663, 1), 'ensemble': (0.302, 0.8025, 9), 'ensemble_cf': (0.329, 0.979, 11)}
+M_dev_5000_4arm_binary {'fast': (0.4, -0.3922, 2), 'ensemble': (0.373, 0.0722, 28), 'ensemble_cf': (0.409, -0.1582, 33)}
+M_dev_5000_4arm_revenue {'fast': (0.408, 0.1925, 1), 'ensemble': (0.254, 0.9748, 23), 'ensemble_cf': (0.318, 0.7551, 27)}
+M_dev_50000_2arm_binary {'fast': (0.599, 0.016, 7), 'ensemble': (0.769, 0.0196, 15), 'ensemble_cf': (0.817, 0.0249, 56)}
+M_dev_50000_2arm_revenue {'fast': (0.596, 0.7386, 7), 'ensemble': (0.757, 0.9492, 16), 'ensemble_cf': (0.786, 0.9455, 58)}
+M_dev_50000_4arm_binary {'fast': (0.522, 0.485, 12), 'ensemble': (0.708, 0.6364, 29), 'ensemble_cf': (0.763, 0.6604, 63)}
+M_dev_50000_4arm_revenue {'fast': (0.5, 0.3567, 10), 'ensemble': (0.666, 0.5866, 27), 'ensemble_cf': (0.714, 0.6014, 59)}
+M_dev_200000_2arm_binary {'fast': (0.809, 0.0341, 10), 'ensemble': (0.887, 0.0363, 18), 'ensemble_cf': (0.907, 0.0368, 175)}
+M_dev_200000_2arm_revenue {'fast': (0.805, 3.2626, 9), 'ensemble': (0.903, 3.435, 19), 'ensemble_cf': (0.916, 3.5069, 181)}
+M_dev_200000_4arm_binary {'fast': (0.735, 0.5685, 24), 'ensemble': (0.843, 0.7151, 53), 'ensemble_cf': (0.867, 0.7383, 235)}
+M_dev_200000_4arm_revenue {'fast': (0.666, 0.5623, 22), 'ensemble': (0.81, 0.693, 43), 'ensemble_cf': (0.837, 0.7281, 232)}

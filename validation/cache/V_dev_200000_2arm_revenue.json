@@ -1,0 +1,286 @@
+{
+ "secs_scores": 175.37944412231445,
+ "secs_by_model": {
+  "fast": 30.204509496688843,
+  "ensemble": 136.58196234703064,
+  "likely": 8.099658250808716
+ },
+ "variants": {
+  "fast/full": {
+   "per_option": {
+    "Message": {
+     "used": "fast",
+     "test_qini": 3.270366175343449,
+     "rank_unchanged": true,
+     "slope_calibrated": 1.512208552501225,
+     "reliable": true
+    }
+   },
+   "measured_extra_per_customer": [
+    3.1929373150262563,
+    1.865483979030864,
+    4.452438289498939
+   ],
+   "recommended": "Nudge plan (margin x2)",
+   "message": null,
+   "share_contacted": 0.60535,
+   "oof_diag": {
+    "Message": {
+     "oof_qini": {
+      "fast": 2.2153897747688855,
+      "likely": 0.8419306860602127,
+      "ensemble": 2.4786087285579113
+     },
+     "used": "fast",
+     "guard_switched": false,
+     "oof_qini_used_low95": 1.8070920455470305,
+     "oof_qini_used_high95": 2.6462460769904257,
+     "reliable": true,
+     "ate_oof": 19.05910334155564
+    }
+   },
+   "A2_ratio": 0.8628066275424927,
+   "A2_low95": 0.858337694626394,
+   "A2_high95": 0.8674424988507077,
+   "true_per_customer": 2.58963544661834,
+   "A1_spearman_used": 0.8254063619172102
+  },
+  "fast/no_guard": {
+   "per_option": {
+    "Message": {
+     "used": "fast",
+     "test_qini": 3.270366175343449,
+     "rank_unchanged": true,
+     "slope_calibrated": 1.512208552501225,
+     "reliable": true
+    }
+   },
+   "measured_extra_per_customer": [
+    3.1929373150262563,
+    1.865483979030864,
+    4.452438289498939
+   ],
+   "recommended": "Nudge plan (margin x2)",
+   "message": null,
+   "share_contacted": 0.60535,
+   "oof_diag": {
+    "Message": {
+     "oof_qini": {
+      "fast": 2.2153897747688855,
+      "likely": 0.8419306860602127,
+      "ensemble": 2.4786087285579113
+     },
+     "used": "fast",
+     "guard_switched": false,
+     "oof_qini_used_low95": 1.8070920455470305,
+     "oof_qini_used_high95": 2.6462460769904257,
+     "reliable": true,
+     "ate_oof": 19.05910334155564
+    }
+   },
+   "A2_ratio": 0.8628066275424927,
+   "A2_low95": 0.858337694626394,
+   "A2_high95": 0.8674424988507077,
+   "true_per_customer": 2.58963544661834,
+   "A1_spearman_used": 0.8254063619172102
+  },
+  "fast/no_signal_rule": {
+   "per_option": {
+    "Message": {
+     "used": "fast",
+     "test_qini": 3.270366175343449,
+     "rank_unchanged": true,
+     "slope_calibrated": 1.512208552501225,
+     "reliable": true
+    }
+   },
+   "measured_extra_per_customer": [
+    3.1929373150262563,
+    1.865483979030864,
+    4.452438289498939
+   ],
+   "recommended": "Nudge plan (margin x2)",
+   "message": null,
+   "share_contacted": 0.60535,
+   "oof_diag": {
+    "Message": {
+     "oof_qini": {
+      "fast": 2.2153897747688855,
+      "likely": 0.8419306860602127,
+      "ensemble": 2.4786087285579113
+     },
+     "used": "fast",
+     "guard_switched": false,
+     "oof_qini_used_low95": 1.8070920455470305,
+     "oof_qini_used_high95": 2.6462460769904257,
+     "reliable": true,
+     "ate_oof": 19.05910334155564
+    }
+   },
+   "A2_ratio": 0.8628066275424927,
+   "A2_low95": 0.858337694626394,
+   "A2_high95": 0.8674424988507077,
+   "true_per_customer": 2.58963544661834,
+   "A1_spearman_used": 0.8254063619172102
+  },
+  "fast/no_calibration": {
+   "per_option": {
+    "Message": {
+     "used": "fast",
+     "test_qini": 3.270366175343449,
+     "rank_unchanged": true,
+     "slope_calibrated": 0.9327083880654762,
+     "reliable": true
+    }
+   },
+   "measured_extra_per_customer": [
+    3.3970719933787903,
+    2.078703751104005,
+    4.649515024540069
+   ],
+   "recommended": "Nudge plan (margin x1)",
+   "message": null,
+   "share_contacted": 0.530425,
+   "oof_diag": {
+    "Message": {
+     "oof_qini": {
+      "fast": 2.2153897747688855,
+      "likely": 0.8419306860602127,
+      "ensemble": 2.4786087285579113
+     },
+     "used": "fast",
+     "guard_switched": false,
+     "oof_qini_used_low95": 1.8070920455470305,
+     "oof_qini_used_high95": 2.6462460769904257,
+     "reliable": true,
+     "ate_oof": 19.05910334155564
+    }
+   },
+   "A2_ratio": 0.8759330078950138,
+   "A2_low95": 0.8722278666026861,
+   "A2_high95": 0.8800207678459065,
+   "true_per_customer": 2.6290330807597275,
+   "A1_spearman_used": 0.825406369070504
+  },
+  "ensemble/full": {
+   "per_option": {
+    "Message": {
+     "used": "ensemble",
+     "test_qini": 3.42209603380579,
+     "rank_unchanged": true,
+     "slope_calibrated": 1.3402893685201793,
+     "reliable": true
+    }
+   },
+   "measured_extra_per_customer": [
+    3.516468081368157,
+    2.183559268435769,
+    4.677704096849589
+   ],
+   "recommended": "Nudge plan (margin x0.25)",
+   "message": null,
+   "share_contacted": 0.551275,
+   "oof_diag": {
+    "Message": {
+     "oof_qini": {
+      "fast": 2.2153897747688855,
+      "likely": 0.8419306860602127,
+      "ensemble": 2.4786087285579113
+     },
+     "used": "ensemble",
+     "guard_switched": false,
+     "oof_qini_used_low95": 2.062718371402453,
+     "oof_qini_used_high95": 2.8895608143293203,
+     "reliable": true,
+     "ate_oof": 19.05910334155564
+    }
+   },
+   "A2_ratio": 0.9354003859868434,
+   "A2_low95": 0.932776330773838,
+   "A2_high95": 0.9378650501601857,
+   "true_per_customer": 2.807518995573209,
+   "A1_spearman_used": 0.9070457646722092
+  },
+  "ensemble/no_guard": {
+   "per_option": {
+    "Message": {
+     "used": "ensemble",
+     "test_qini": 3.42209603380579,
+     "rank_unchanged": true,
+     "slope_calibrated": 1.3402893685201793,
+     "reliable": true
+    }
+   },
+   "measured_extra_per_customer": [
+    3.516468081368157,
+    2.183559268435769,
+    4.677704096849589
+   ],
+   "recommended": "Nudge plan (margin x0.25)",
+   "message": null,
+   "share_contacted": 0.551275,
+   "oof_diag": {
+    "Message": {
+     "oof_qini": {
+      "fast": 2.2153897747688855,
+      "likely": 0.8419306860602127,
+      "ensemble": 2.4786087285579113
+     },
+     "used": "ensemble",
+     "guard_switched": false,
+     "oof_qini_used_low95": 2.062718371402453,
+     "oof_qini_used_high95": 2.8895608143293203,
+     "reliable": true,
+     "ate_oof": 19.05910334155564
+    }
+   },
+   "A2_ratio": 0.9354003859868434,
+   "A2_low95": 0.932776330773838,
+   "A2_high95": 0.9378650501601857,
+   "true_per_customer": 2.807518995573209,
+   "A1_spearman_used": 0.9070457646722092
+  },
+  "ensemble/no_signal_rule": {
+   "per_option": {
+    "Message": {
+     "used": "ensemble",
+     "test_qini": 3.42209603380579,
+     "rank_unchanged": true,
+     "slope_calibrated": 1.3402893685201793,
+     "reliable": true
+    }
+   },
+   "measured_extra_per_customer": [
+    3.516468081368157,
+    2.183559268435769,
+    4.677704096849589
+   ],
+   "recommended": "Nudge plan (margin x0.25)",
+   "message": null,
+   "share_contacted": 0.551275,
+   "oof_diag": {
+    "Message": {
+     "oof_qini": {
+      "fast": 2.2153897747688855,
+      "likely": 0.8419306860602127,
+      "ensemble": 2.4786087285579113
+     },
+     "used": "ensemble",
+     "guard_switched": false,
+     "oof_qini_used_low95": 2.062718371402453,
+     "oof_qini_used_high95": 2.8895608143293203,
+     "reliable": true,
+     "ate_oof": 19.05910334155564
+    }
+   },
+   "A2_ratio": 0.9354003859868434,
+   "A2_low95": 0.932776330773838,
+   "A2_high95": 0.9378650501601857,
+   "true_per_customer": 2.807518995573209,
+   "A1_spearman_used": 0.9070457646722092
+  }
+ },
+ "slope_app_engine": {
+  "Message": 0.8533417958547268
+ }
+}

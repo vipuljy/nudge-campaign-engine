@@ -1,0 +1,251 @@
+{
+ "secs_scores": 725.1860628128052,
+ "secs_by_model": {
+  "fast": 116.41853833198547,
+  "ensemble": 564.2748634815216,
+  "likely": 43.10714936256409
+ },
+ "variants": {
+  "fast/full": {
+   "per_option": {
+    "treat": {
+     "used": "likely",
+     "test_qini": 0.004725708104846096,
+     "rank_unchanged": null,
+     "slope_calibrated": null,
+     "reliable": false
+    }
+   },
+   "measured_extra_per_customer": [
+    0.15844365162053717,
+    -0.7980428787569875,
+    1.1587534372884551
+   ],
+   "recommended": "Contact everyone (treat)",
+   "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact everyone (treat).",
+   "share_contacted": 1.0,
+   "oof_diag": {
+    "treat": {
+     "oof_qini": {
+      "fast": -0.0002700579988953065,
+      "likely": -6.134940567597029e-05,
+      "ensemble": 0.0003331935406956383
+     },
+     "used": "likely",
+     "guard_switched": true,
+     "oof_qini_used_low95": -0.0008324778474144825,
+     "oof_qini_used_high95": 0.0008447740556461096,
+     "reliable": false,
+     "ate_oof": 0.008144985808106936
+    }
+   }
+  },
+  "fast/no_guard": {
+   "per_option": {
+    "treat": {
+     "used": "fast",
+     "test_qini": -0.0026476838629514513,
+     "rank_unchanged": null,
+     "slope_calibrated": null,
+     "reliable": false
+    }
+   },
+   "measured_extra_per_customer": [
+    0.15844365162053717,
+    -0.7980428787569875,
+    1.1587534372884551
+   ],
+   "recommended": "Contact everyone (treat)",
+   "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact everyone (treat).",
+   "share_contacted": 1.0,
+   "oof_diag": {
+    "treat": {
+     "oof_qini": {
+      "fast": -0.0002700579988953065,
+      "likely": -6.134940567597029e-05,
+      "ensemble": 0.0003331935406956383
+     },
+     "used": "fast",
+     "guard_switched": false,
+     "oof_qini_used_low95": -0.0012638121501827519,
+     "oof_qini_used_high95": 0.000575378654920442,
+     "reliable": false,
+     "ate_oof": 0.008144985808106936
+    }
+   }
+  },
+  "fast/no_signal_rule": {
+   "per_option": {
+    "treat": {
+     "used": "likely",
+     "test_qini": 0.004725708104846096,
+     "rank_unchanged": true,
+     "slope_calibrated": 1.566732565470832,
+     "reliable": false
+    }
+   },
+   "measured_extra_per_customer": [
+    0.34237337341901863,
+    -0.6247576589912728,
+    1.3463893351018508
+   ],
+   "recommended": "Nudge plan (margin x0.1)",
+   "message": null,
+   "share_contacted": 0.653225,
+   "oof_diag": {
+    "treat": {
+     "oof_qini": {
+      "fast": -0.0002700579988953065,
+      "likely": -6.134940567597029e-05,
+      "ensemble": 0.0003331935406956383
+     },
+     "used": "likely",
+     "guard_switched": true,
+     "oof_qini_used_low95": -0.0008324778474144825,
+     "oof_qini_used_high95": 0.0008447740556461096,
+     "reliable": false,
+     "ate_oof": 0.008144985808106936
+    }
+   }
+  },
+  "fast/no_calibration": {
+   "per_option": {
+    "treat": {
+     "used": "likely",
+     "test_qini": 0.004725708104846096,
+     "rank_unchanged": null,
+     "slope_calibrated": null,
+     "reliable": false
+    }
+   },
+   "measured_extra_per_customer": [
+    0.15844365162053717,
+    -0.7980428787569875,
+    1.1587534372884551
+   ],
+   "recommended": "Contact everyone (treat)",
+   "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact everyone (treat).",
+   "share_contacted": 1.0,
+   "oof_diag": {
+    "treat": {
+     "oof_qini": {
+      "fast": -0.0002700579988953065,
+      "likely": -6.134940567597029e-05,
+      "ensemble": 0.0003331935406956383
+     },
+     "used": "likely",
+     "guard_switched": true,
+     "oof_qini_used_low95": -0.0008324778474144825,
+     "oof_qini_used_high95": 0.0008447740556461096,
+     "reliable": false,
+     "ate_oof": 0.008144985808106936
+    }
+   }
+  },
+  "ensemble/full": {
+   "per_option": {
+    "treat": {
+     "used": "ensemble",
+     "test_qini": 0.0023883451818356377,
+     "rank_unchanged": null,
+     "slope_calibrated": null,
+     "reliable": false
+    }
+   },
+   "measured_extra_per_customer": [
+    0.15844365162053717,
+    -0.7980428787569875,
+    1.1587534372884551
+   ],
+   "recommended": "Contact everyone (treat)",
+   "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact everyone (treat).",
+   "share_contacted": 1.0,
+   "oof_diag": {
+    "treat": {
+     "oof_qini": {
+      "fast": -0.0002700579988953065,
+      "likely": -6.134940567597029e-05,
+      "ensemble": 0.0003331935406956383
+     },
+     "used": "ensemble",
+     "guard_switched": false,
+     "oof_qini_used_low95": -0.0004726389186691196,
+     "oof_qini_used_high95": 0.001073355423105619,
+     "reliable": false,
+     "ate_oof": 0.008144985808106936
+    }
+   }
+  },
+  "ensemble/no_guard": {
+   "per_option": {
+    "treat": {
+     "used": "ensemble",
+     "test_qini": 0.0023883451818356377,
+     "rank_unchanged": null,
+     "slope_calibrated": null,
+     "reliable": false
+    }
+   },
+   "measured_extra_per_customer": [
+    0.15844365162053717,
+    -0.7980428787569875,
+    1.1587534372884551
+   ],
+   "recommended": "Contact everyone (treat)",
+   "message": "No reliable signal: on customers the model had not seen, its ranking did not beat a random order (the 95% range includes zero). So Nudge does not personalise and recommends the simple plan: contact everyone (treat).",
+   "share_contacted": 1.0,
+   "oof_diag": {
+    "treat": {
+     "oof_qini": {
+      "fast": -0.0002700579988953065,
+      "likely": -6.134940567597029e-05,
+      "ensemble": 0.0003331935406956383
+     },
+     "used": "ensemble",
+     "guard_switched": false,
+     "oof_qini_used_low95": -0.0004726389186691196,
+     "oof_qini_used_high95": 0.001073355423105619,
+     "reliable": false,
+     "ate_oof": 0.008144985808106936
+    }
+   }
+  },
+  "ensemble/no_signal_rule": {
+   "per_option": {
+    "treat": {
+     "used": "ensemble",
+     "test_qini": 0.0023883451818356377,
+     "rank_unchanged": true,
+     "slope_calibrated": 0.12715070409682258,
+     "reliable": false
+    }
+   },
+   "measured_extra_per_customer": [
+    -0.18863569714411554,
+    -1.258290843020955,
+    0.7598026525405461
+   ],
+   "recommended": "Nudge plan (margin x2)",
+   "message": null,
+   "share_contacted": 0.91765,
+   "oof_diag": {
+    "treat": {
+     "oof_qini": {
+      "fast": -0.0002700579988953065,
+      "likely": -6.134940567597029e-05,
+      "ensemble": 0.0003331935406956383
+     },
+     "used": "ensemble",
+     "guard_switched": false,
+     "oof_qini_used_low95": -0.0004726389186691196,
+     "oof_qini_used_high95": 0.001073355423105619,
+     "reliable": false,
+     "ate_oof": 0.008144985808106936
+    }
+   }
+  }
+ },
+ "slope_app_engine": {
+  "treat": -0.02197202819466752
+ }
+}

@@ -1,0 +1,568 @@
+{
+ "secs_scores": 670.4879019260406,
+ "secs_by_model": {
+  "fast": 81.66183710098267,
+  "ensemble": 561.336544752121,
+  "likely": 27.09816575050354
+ },
+ "variants": {
+  "fast/full": {
+   "per_option": {
+    "SMS reminder": {
+     "used": "fast",
+     "test_qini": 0.2538256511664265,
+     "rank_unchanged": null,
+     "slope_calibrated": null,
+     "reliable": false
+    },
+    "WhatsApp reminder": {
+     "used": "fast",
+     "test_qini": 0.7858116116698233,
+     "rank_unchanged": true,
+     "slope_calibrated": 1.2564562247877258,
+     "reliable": true
+    },
+    "Discount Rs20": {
+     "used": "fast",
+     "test_qini": 0.6112887804745119,
+     "rank_unchanged": true,
+     "slope_calibrated": 1.4452231383354277,
+     "reliable": true
+    }
+   },
+   "measured_extra_per_customer": [
+    8.110312181913308,
+    4.368868528287853,
+    11.926433879580001
+   ],
+   "recommended": "Nudge plan (margin x0.5)",
+   "message": null,
+   "share_contacted": 1.0,
+   "oof_diag": {
+    "SMS reminder": {
+     "oof_qini": {
+      "fast": 0.18932273036369285,
+      "likely": 0.08037249643891053,
+      "ensemble": 0.38973817939693856
+     },
+     "used": "fast",
+     "guard_switched": false,
+     "oof_qini_used_low95": -0.07152680207775665,
+     "oof_qini_used_high95": 0.4758355550311037,
+     "reliable": false,
+     "ate_oof": 4.834066882662881
+    },
+    "WhatsApp reminder": {
+     "oof_qini": {
+      "fast": 0.5668957563892634,
+      "likely": 0.41973029009528107,
+      "ensemble": 0.7090551233410687
+     },
+     "used": "fast",
+     "guard_switched": false,
+     "oof_qini_used_low95": 0.28312876402407366,
+     "oof_qini_used_high95": 0.8417641085196376,
+     "reliable": true,
+     "ate_oof": 6.609230336255472
+    },
+    "Discount Rs20": {
+     "oof_qini": {
+      "fast": 0.44477930318212233,
+      "likely": 0.16291694327386264,
+      "ensemble": 0.5969371244160411
+     },
+     "used": "fast",
+     "guard_switched": false,
+     "oof_qini_used_low95": 0.1743606318854379,
+     "oof_qini_used_high95": 0.7013261824029581,
+     "reliable": true,
+     "ate_oof": 4.160834992142206
+    }
+   },
+   "A2_ratio": 0.6564092613993853,
+   "A2_low95": 0.6474021715276146,
+   "A2_high95": 0.6652274731726748,
+   "true_per_customer": 6.105832687174558,
+   "A1_spearman_used": 0.3864516649166659
+  },
+  "fast/no_guard": {
+   "per_option": {
+    "SMS reminder": {
+     "used": "fast",
+     "test_qini": 0.2538256511664265,
+     "rank_unchanged": null,
+     "slope_calibrated": null,
+     "reliable": false
+    },
+    "WhatsApp reminder": {
+     "used": "fast",
+     "test_qini": 0.7858116116698233,
+     "rank_unchanged": true,
+     "slope_calibrated": 1.2564562247877258,
+     "reliable": true
+    },
+    "Discount Rs20": {
+     "used": "fast",
+     "test_qini": 0.6112887804745119,
+     "rank_unchanged": true,
+     "slope_calibrated": 1.4452231383354277,
+     "reliable": true
+    }
+   },
+   "measured_extra_per_customer": [
+    8.110312181913308,
+    4.368868528287853,
+    11.926433879580001
+   ],
+   "recommended": "Nudge plan (margin x0.5)",
+   "message": null,
+   "share_contacted": 1.0,
+   "oof_diag": {
+    "SMS reminder": {
+     "oof_qini": {
+      "fast": 0.18932273036369285,
+      "likely": 0.08037249643891053,
+      "ensemble": 0.38973817939693856
+     },
+     "used": "fast",
+     "guard_switched": false,
+     "oof_qini_used_low95": -0.07152680207775665,
+     "oof_qini_used_high95": 0.4758355550311037,
+     "reliable": false,
+     "ate_oof": 4.834066882662881
+    },
+    "WhatsApp reminder": {
+     "oof_qini": {
+      "fast": 0.5668957563892634,
+      "likely": 0.41973029009528107,
+      "ensemble": 0.7090551233410687
+     },
+     "used": "fast",
+     "guard_switched": false,
+     "oof_qini_used_low95": 0.28312876402407366,
+     "oof_qini_used_high95": 0.8417641085196376,
+     "reliable": true,
+     "ate_oof": 6.609230336255472
+    },
+    "Discount Rs20": {
+     "oof_qini": {
+      "fast": 0.44477930318212233,
+      "likely": 0.16291694327386264,
+      "ensemble": 0.5969371244160411
+     },
+     "used": "fast",
+     "guard_switched": false,
+     "oof_qini_used_low95": 0.1743606318854379,
+     "oof_qini_used_high95": 0.7013261824029581,
+     "reliable": true,
+     "ate_oof": 4.160834992142206
+    }
+   },
+   "A2_ratio": 0.6564092613993853,
+   "A2_low95": 0.6474021715276146,
+   "A2_high95": 0.6652274731726748,
+   "true_per_customer": 6.105832687174558,
+   "A1_spearman_used": 0.3864516649166659
+  },
+  "fast/no_signal_rule": {
+   "per_option": {
+    "SMS reminder": {
+     "used": "fast",
+     "test_qini": 0.2538256511664265,
+     "rank_unchanged": true,
+     "slope_calibrated": -0.4201046568290704,
+     "reliable": false
+    },
+    "WhatsApp reminder": {
+     "used": "fast",
+     "test_qini": 0.7858116116698233,
+     "rank_unchanged": true,
+     "slope_calibrated": 1.2564562247877258,
+     "reliable": true
+    },
+    "Discount Rs20": {
+     "used": "fast",
+     "test_qini": 0.6112887804745119,
+     "rank_unchanged": true,
+     "slope_calibrated": 1.4452231383354277,
+     "reliable": true
+    }
+   },
+   "measured_extra_per_customer": [
+    9.203652554275564,
+    5.757927436119947,
+    13.306473428813838
+   ],
+   "recommended": "Nudge plan (margin x0.25)",
+   "message": null,
+   "share_contacted": 1.0,
+   "oof_diag": {
+    "SMS reminder": {
+     "oof_qini": {
+      "fast": 0.18932273036369285,
+      "likely": 0.08037249643891053,
+      "ensemble": 0.38973817939693856
+     },
+     "used": "fast",
+     "guard_switched": false,
+     "oof_qini_used_low95": -0.07152680207775665,
+     "oof_qini_used_high95": 0.4758355550311037,
+     "reliable": false,
+     "ate_oof": 4.834066882662881
+    },
+    "WhatsApp reminder": {
+     "oof_qini": {
+      "fast": 0.5668957563892634,
+      "likely": 0.41973029009528107,
+      "ensemble": 0.7090551233410687
+     },
+     "used": "fast",
+     "guard_switched": false,
+     "oof_qini_used_low95": 0.28312876402407366,
+     "oof_qini_used_high95": 0.8417641085196376,
+     "reliable": true,
+     "ate_oof": 6.609230336255472
+    },
+    "Discount Rs20": {
+     "oof_qini": {
+      "fast": 0.44477930318212233,
+      "likely": 0.16291694327386264,
+      "ensemble": 0.5969371244160411
+     },
+     "used": "fast",
+     "guard_switched": false,
+     "oof_qini_used_low95": 0.1743606318854379,
+     "oof_qini_used_high95": 0.7013261824029581,
+     "reliable": true,
+     "ate_oof": 4.160834992142206
+    }
+   },
+   "A2_ratio": 0.7392925850614075,
+   "A2_low95": 0.7304298945747959,
+   "A2_high95": 0.7453453222525516,
+   "true_per_customer": 6.87680247172385,
+   "A1_spearman_used": 0.545188955699374
+  },
+  "fast/no_calibration": {
+   "per_option": {
+    "SMS reminder": {
+     "used": "fast",
+     "test_qini": 0.2538256511664265,
+     "rank_unchanged": null,
+     "slope_calibrated": null,
+     "reliable": false
+    },
+    "WhatsApp reminder": {
+     "used": "fast",
+     "test_qini": 0.7858116116698233,
+     "rank_unchanged": true,
+     "slope_calibrated": 0.4336227061944167,
+     "reliable": true
+    },
+    "Discount Rs20": {
+     "used": "fast",
+     "test_qini": 0.6112887804745119,
+     "rank_unchanged": true,
+     "slope_calibrated": 0.4051041450801519,
+     "reliable": true
+    }
+   },
+   "measured_extra_per_customer": [
+    9.374936642253807,
+    5.5989991779631785,
+    13.140835500288857
+   ],
+   "recommended": "Nudge plan (margin x1)",
+   "message": null,
+   "share_contacted": 1.0,
+   "oof_diag": {
+    "SMS reminder": {
+     "oof_qini": {
+      "fast": 0.18932273036369285,
+      "likely": 0.08037249643891053,
+      "ensemble": 0.38973817939693856
+     },
+     "used": "fast",
+     "guard_switched": false,
+     "oof_qini_used_low95": -0.07152680207775665,
+     "oof_qini_used_high95": 0.4758355550311037,
+     "reliable": false,
+     "ate_oof": 4.834066882662881
+    },
+    "WhatsApp reminder": {
+     "oof_qini": {
+      "fast": 0.5668957563892634,
+      "likely": 0.41973029009528107,
+      "ensemble": 0.7090551233410687
+     },
+     "used": "fast",
+     "guard_switched": false,
+     "oof_qini_used_low95": 0.28312876402407366,
+     "oof_qini_used_high95": 0.8417641085196376,
+     "reliable": true,
+     "ate_oof": 6.609230336255472
+    },
+    "Discount Rs20": {
+     "oof_qini": {
+      "fast": 0.44477930318212233,
+      "likely": 0.16291694327386264,
+      "ensemble": 0.5969371244160411
+     },
+     "used": "fast",
+     "guard_switched": false,
+     "oof_qini_used_low95": 0.1743606318854379,
+     "oof_qini_used_high95": 0.7013261824029581,
+     "reliable": true,
+     "ate_oof": 4.160834992142206
+    }
+   },
+   "A2_ratio": 0.7442147661940998,
+   "A2_low95": 0.7373054322697837,
+   "A2_high95": 0.7502535191097537,
+   "true_per_customer": 6.922587953769174,
+   "A1_spearman_used": 0.3864517641085176
+  },
+  "ensemble/full": {
+   "per_option": {
+    "SMS reminder": {
+     "used": "ensemble",
+     "test_qini": 0.20501136348743776,
+     "rank_unchanged": true,
+     "slope_calibrated": 0.05963086562460638,
+     "reliable": true
+    },
+    "WhatsApp reminder": {
+     "used": "ensemble",
+     "test_qini": 0.7871598226033194,
+     "rank_unchanged": true,
+     "slope_calibrated": 0.8953954682353366,
+     "reliable": true
+    },
+    "Discount Rs20": {
+     "used": "ensemble",
+     "test_qini": 0.9513124214882595,
+     "rank_unchanged": true,
+     "slope_calibrated": 1.6360511561251982,
+     "reliable": true
+    }
+   },
+   "measured_extra_per_customer": [
+    9.715981508070456,
+    5.695645296815834,
+    13.300062743153424
+   ],
+   "recommended": "Nudge plan (margin x0)",
+   "message": null,
+   "share_contacted": 1.0,
+   "oof_diag": {
+    "SMS reminder": {
+     "oof_qini": {
+      "fast": 0.18932273036369285,
+      "likely": 0.08037249643891053,
+      "ensemble": 0.38973817939693856
+     },
+     "used": "ensemble",
+     "guard_switched": false,
+     "oof_qini_used_low95": 0.12462429554869763,
+     "oof_qini_used_high95": 0.7159276312420352,
+     "reliable": true,
+     "ate_oof": 4.834066882662881
+    },
+    "WhatsApp reminder": {
+     "oof_qini": {
+      "fast": 0.5668957563892634,
+      "likely": 0.41973029009528107,
+      "ensemble": 0.7090551233410687
+     },
+     "used": "ensemble",
+     "guard_switched": false,
+     "oof_qini_used_low95": 0.39921900223880014,
+     "oof_qini_used_high95": 0.9991522037905843,
+     "reliable": true,
+     "ate_oof": 6.609230336255472
+    },
+    "Discount Rs20": {
+     "oof_qini": {
+      "fast": 0.44477930318212233,
+      "likely": 0.16291694327386264,
+      "ensemble": 0.5969371244160411
+     },
+     "used": "ensemble",
+     "guard_switched": false,
+     "oof_qini_used_low95": 0.31802365083276546,
+     "oof_qini_used_high95": 0.8233621165517397,
+     "reliable": true,
+     "ate_oof": 4.160834992142206
+    }
+   },
+   "A2_ratio": 0.8498936967678595,
+   "A2_low95": 0.8432842505388416,
+   "A2_high95": 0.8553629297311665,
+   "true_per_customer": 7.905599478114978,
+   "A1_spearman_used": 0.7228165264879819
+  },
+  "ensemble/no_guard": {
+   "per_option": {
+    "SMS reminder": {
+     "used": "ensemble",
+     "test_qini": 0.20501136348743776,
+     "rank_unchanged": true,
+     "slope_calibrated": 0.05963086562460638,
+     "reliable": true
+    },
+    "WhatsApp reminder": {
+     "used": "ensemble",
+     "test_qini": 0.7871598226033194,
+     "rank_unchanged": true,
+     "slope_calibrated": 0.8953954682353366,
+     "reliable": true
+    },
+    "Discount Rs20": {
+     "used": "ensemble",
+     "test_qini": 0.9513124214882595,
+     "rank_unchanged": true,
+     "slope_calibrated": 1.6360511561251982,
+     "reliable": true
+    }
+   },
+   "measured_extra_per_customer": [
+    9.715981508070456,
+    5.695645296815834,
+    13.300062743153424
+   ],
+   "recommended": "Nudge plan (margin x0)",
+   "message": null,
+   "share_contacted": 1.0,
+   "oof_diag": {
+    "SMS reminder": {
+     "oof_qini": {
+      "fast": 0.18932273036369285,
+      "likely": 0.08037249643891053,
+      "ensemble": 0.38973817939693856
+     },
+     "used": "ensemble",
+     "guard_switched": false,
+     "oof_qini_used_low95": 0.12462429554869763,
+     "oof_qini_used_high95": 0.7159276312420352,
+     "reliable": true,
+     "ate_oof": 4.834066882662881
+    },
+    "WhatsApp reminder": {
+     "oof_qini": {
+      "fast": 0.5668957563892634,
+      "likely": 0.41973029009528107,
+      "ensemble": 0.7090551233410687
+     },
+     "used": "ensemble",
+     "guard_switched": false,
+     "oof_qini_used_low95": 0.39921900223880014,
+     "oof_qini_used_high95": 0.9991522037905843,
+     "reliable": true,
+     "ate_oof": 6.609230336255472
+    },
+    "Discount Rs20": {
+     "oof_qini": {
+      "fast": 0.44477930318212233,
+      "likely": 0.16291694327386264,
+      "ensemble": 0.5969371244160411
+     },
+     "used": "ensemble",
+     "guard_switched": false,
+     "oof_qini_used_low95": 0.31802365083276546,
+     "oof_qini_used_high95": 0.8233621165517397,
+     "reliable": true,
+     "ate_oof": 4.160834992142206
+    }
+   },
+   "A2_ratio": 0.8498936967678595,
+   "A2_low95": 0.8432842505388416,
+   "A2_high95": 0.8553629297311665,
+   "true_per_customer": 7.905599478114978,
+   "A1_spearman_used": 0.7228165264879819
+  },
+  "ensemble/no_signal_rule": {
+   "per_option": {
+    "SMS reminder": {
+     "used": "ensemble",
+     "test_qini": 0.20501136348743776,
+     "rank_unchanged": true,
+     "slope_calibrated": 0.05963086562460638,
+     "reliable": true
+    },
+    "WhatsApp reminder": {
+     "used": "ensemble",
+     "test_qini": 0.7871598226033194,
+     "rank_unchanged": true,
+     "slope_calibrated": 0.8953954682353366,
+     "reliable": true
+    },
+    "Discount Rs20": {
+     "used": "ensemble",
+     "test_qini": 0.9513124214882595,
+     "rank_unchanged": true,
+     "slope_calibrated": 1.6360511561251982,
+     "reliable": true
+    }
+   },
+   "measured_extra_per_customer": [
+    9.715981508070456,
+    5.695645296815834,
+    13.300062743153424
+   ],
+   "recommended": "Nudge plan (margin x0)",
+   "message": null,
+   "share_contacted": 1.0,
+   "oof_diag": {
+    "SMS reminder": {
+     "oof_qini": {
+      "fast": 0.18932273036369285,
+      "likely": 0.08037249643891053,
+      "ensemble": 0.38973817939693856
+     },
+     "used": "ensemble",
+     "guard_switched": false,
+     "oof_qini_used_low95": 0.12462429554869763,
+     "oof_qini_used_high95": 0.7159276312420352,
+     "reliable": true,
+     "ate_oof": 4.834066882662881
+    },
+    "WhatsApp reminder": {
+     "oof_qini": {
+      "fast": 0.5668957563892634,
+      "likely": 0.41973029009528107,
+      "ensemble": 0.7090551233410687
+     },
+     "used": "ensemble",
+     "guard_switched": false,
+     "oof_qini_used_low95": 0.39921900223880014,
+     "oof_qini_used_high95": 0.9991522037905843,
+     "reliable": true,
+     "ate_oof": 6.609230336255472
+    },
+    "Discount Rs20": {
+     "oof_qini": {
+      "fast": 0.44477930318212233,
+      "likely": 0.16291694327386264,
+      "ensemble": 0.5969371244160411
+     },
+     "used": "ensemble",
+     "guard_switched": false,
+     "oof_qini_used_low95": 0.31802365083276546,
+     "oof_qini_used_high95": 0.8233621165517397,
+     "reliable": true,
+     "ate_oof": 4.160834992142206
+    }
+   },
+   "A2_ratio": 0.8498936967678595,
+   "A2_low95": 0.8432842505388416,
+   "A2_high95": 0.8553629297311665,
+   "true_per_customer": 7.905599478114978,
+   "A1_spearman_used": 0.7228165264879819
+  }
+ },
+ "slope_app_engine": {
+  "SMS reminder": 0.031369771157869354,
+  "WhatsApp reminder": 0.46914245860622983,
+  "Discount Rs20": 0.5091348583773784
+ }
+}
